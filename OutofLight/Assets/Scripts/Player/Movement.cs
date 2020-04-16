@@ -10,7 +10,6 @@ public class Movement : MonoBehaviour {
     private Vector3 swipeDirection;
     void Awake() {
         touchInput = GetComponent<TouchInput>();
-        rb2D = GetComponent<Rigidbody>();
     }
 
     void Start() {
