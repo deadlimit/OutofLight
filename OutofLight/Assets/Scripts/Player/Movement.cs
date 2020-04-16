@@ -6,10 +6,14 @@ public class Movement : MonoBehaviour {
 
     TouchInput touchInput;
 
+    public GameEvent ArrivedAtTarget;
+    public GameEvent StartedMoving;
+
     private bool isMoving;
     private Vector3 swipeDirection;
     void Awake() {
         touchInput = GetComponent<TouchInput>();
+        
     }
 
     void Start() {
@@ -20,26 +24,31 @@ public class Movement : MonoBehaviour {
 
         swipeDirection = touchInput.GetDirection();
 
-        if(swipeDirection != Vector3.zero && !isMoving) {
+        
+        if (swipeDirection != Vector3.zero && !isMoving) {
             isMoving = true;
+            
             Vector3 destination = swipeDirection + transform.position;
             StartCoroutine(Move(destination));
+            
         }
     }
 
 
     IEnumerator Move(Vector3 direction) {
+        StartedMoving.Raise();
 
         float startTime = 0;
         float endTime = 1;
         
-        while(startTime < endTime) {
-            transform.position = Vector3.Lerp(transform.position, direction, .1f);
+        while (startTime < endTime) {
+            transform.position = Vector3.Lerp(transform.position, direction, 10 * Time.deltaTime);
             startTime += Time.deltaTime;
+            
             yield return null;
         }
-
-       isMoving = false;
+        ArrivedAtTarget.Raise();
+        isMoving = false;
     }
 
 
