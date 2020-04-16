@@ -24,9 +24,9 @@ public class RaycastCheck : MonoBehaviour {
         Ray ray = new Ray(origin.position, direction - new Vector3(0, .5f, 0));
         
         RaycastHit hitInfo;
-        bool hit = Physics.Raycast(ray, out hitInfo);
+        bool isValidTile = Physics.Raycast(ray, out hitInfo);
 
-        if (hit && hitInfo.transform.gameObject.CompareTag("Tile")) {
+        if (isValidTile && hitInfo.transform.gameObject.CompareTag("Tile")) {
             nearbyTiles.Add(hitInfo.transform.gameObject);
         }
         
