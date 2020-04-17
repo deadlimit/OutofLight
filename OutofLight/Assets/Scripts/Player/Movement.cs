@@ -66,7 +66,6 @@ public class Movement : MonoBehaviour {
         swipeDirection = touchInput.GetDirection();
 
         if (swipeDirection != Vector3.zero && !isMoving) {
-
             if (!CheckIfValidDirection(swipeDirection)) {
                 Debug.Log("No valid tile!");
             } else {
@@ -94,6 +93,7 @@ public class Movement : MonoBehaviour {
         }
 
         ArrivedAtTarget.Raise();
+        Debug.Log("Raised");
         isMoving = false;
     }
 
@@ -102,7 +102,6 @@ public class Movement : MonoBehaviour {
             float comparingX = (int)vector.x - (int)transform.position.x;
             float comparingZ = (int)vector.z - (int)transform.position.z;
             Vector3 newV = new Vector3(comparingX, 0, comparingZ);
-
             if (newV == direction)
                 return true;
         }
