@@ -11,6 +11,8 @@ public class Movement : MonoBehaviour {
     private Vector3 swipeDirection;
     private TouchInput touchInput;
 
+    public bool UseKeyboard;
+
 
     void Awake() {
         touchInput = GetComponent<TouchInput>();
@@ -22,9 +24,44 @@ public class Movement : MonoBehaviour {
 
     void Update() {
 
+        if (UseKeyboard)
+            KeyboardInput();
+        else
+            SwipeInput();
+
+    }
+
+    private void KeyboardInput() {
+        Vector3 direction = Vector3.zero;
+
+        if (Input.GetKeyDown(KeyCode.W)) {
+            direction = Vector3.forward;
+        } 
+        if (Input.GetKeyDown(KeyCode.S)) {
+            direction = Vector3.back;
+        }
+        if (Input.GetKeyDown(KeyCode.A)) {
+            direction = Vector3.left;
+        }
+        if (Input.GetKeyDown(KeyCode.D)) {
+            direction = Vector3.right;
+        }
+
+        if(direction != Vector3.zero && !isMoving) {
+            if (!CheckIfValidDirection(direction)) {
+                Debug.Log("No valid tile!");
+            } else {
+                isMoving = true;
+                Vector3 destination = direction + transform.position;
+                StartCoroutine(Move(destination));
+            }
+        }
+
+    }
+
+    private void SwipeInput() {
         swipeDirection = touchInput.GetDirection();
 
-        
         if (swipeDirection != Vector3.zero && !isMoving) {
 
             if (!CheckIfValidDirection(swipeDirection)) {
@@ -34,8 +71,8 @@ public class Movement : MonoBehaviour {
                 Vector3 destination = swipeDirection + transform.position;
                 StartCoroutine(Move(destination));
             }
-           
-            
+
+
         }
     }
 

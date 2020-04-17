@@ -15,4 +15,5 @@ public class ValidMoveDirections : ScriptableObject {
         validMoveDirections.Clear();
     }
 
+
 }
