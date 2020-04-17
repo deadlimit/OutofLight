@@ -59,11 +59,12 @@ public class Movement : MonoBehaviour {
 
     private bool CheckIfValidDirection(Vector3 direction) {
         foreach(Vector3 vector in ValidMoveDirections.validMoveDirections) {
-            print(vector.x + " " + direction.x);
-            print(vector.z + " " + direction.z);
-            if (vector.x.Equals(direction.x) || vector.z.Equals(direction.z)) {
+            float comparingX = (int)vector.x - (int)transform.position.x;
+            float comparingZ = (int)vector.z - (int)transform.position.z;
+            Vector3 newV = new Vector3(comparingX, 0, comparingZ);
+
+            if (newV == direction)
                 return true;
-            }
         }
 
         return false;
