@@ -1,19 +1,19 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Movement : MonoBehaviour {
 
-    TouchInput touchInput;
-
     public GameEvent ArrivedAtTarget;
     public GameEvent StartedMoving;
+    public ValidMoveDirections ValidMoveDirections;
 
     private bool isMoving;
     private Vector3 swipeDirection;
+    private TouchInput touchInput;
+
+
     void Awake() {
         touchInput = GetComponent<TouchInput>();
-        
     }
 
     void Start() {
@@ -26,10 +26,15 @@ public class Movement : MonoBehaviour {
 
         
         if (swipeDirection != Vector3.zero && !isMoving) {
-            isMoving = true;
-            
-            Vector3 destination = swipeDirection + transform.position;
-            StartCoroutine(Move(destination));
+
+            if (!CheckIfValidDirection(swipeDirection)) {
+                Debug.Log("No valid tile!");
+            } else {
+                isMoving = true;
+                Vector3 destination = swipeDirection + transform.position;
+                StartCoroutine(Move(destination));
+            }
+           
             
         }
     }
@@ -47,8 +52,21 @@ public class Movement : MonoBehaviour {
             
             yield return null;
         }
+
         ArrivedAtTarget.Raise();
         isMoving = false;
+    }
+
+    private bool CheckIfValidDirection(Vector3 direction) {
+        foreach(Vector3 vector in ValidMoveDirections.validMoveDirections) {
+            print(vector.x + " " + direction.x);
+            print(vector.z + " " + direction.z);
+            if (vector.x.Equals(direction.x) || vector.z.Equals(direction.z)) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
 

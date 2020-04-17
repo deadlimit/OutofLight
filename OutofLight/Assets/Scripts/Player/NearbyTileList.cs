@@ -1,18 +1,34 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class RaycastCheck : MonoBehaviour {
+public class NearbyTileList: MonoBehaviour {
+
+    public ValidMoveDirections validMoveDirections;
 
     private List<GameObject> nearbyTiles = new List<GameObject>();
+   
 
     private Color highlightColor = Color.red;
     private Color defaultColor = Color.white;
 
-    private void Awake() {
+    private void Start() {
         UpdateNearbyTiles(transform);
     }
 
+    public void ResetTileColors() {
+        ChangeTileColor(defaultColor);
+    }
+
+    public void UpdateNearbyTiles(Transform origin) {
+        validMoveDirections.ClearList();
+        nearbyTiles.Clear();
+        CastRays(origin);
+        ChangeTileColor(highlightColor);
+        PopulateValidMoveList();
+    }
+
+
+    #region Private methods
     private void CastRays(Transform origin) {
         Ray(origin, Vector3.forward);
         Ray(origin, Vector3.back);
@@ -37,17 +53,13 @@ public class RaycastCheck : MonoBehaviour {
             tile.GetComponent<Tile>().HighlightTile(color);
         }
     }
-    
-    public void ResetTileColors() {
-        ChangeTileColor(defaultColor);
-    } 
-   
-    public void UpdateNearbyTiles(Transform origin) {
-        nearbyTiles.Clear();
-        CastRays(origin);
-        ChangeTileColor(highlightColor);
-    }
 
+    private void PopulateValidMoveList() {
+        foreach(GameObject tile in nearbyTiles) {
+            validMoveDirections.AddToList(tile.transform.position);
+        }
+    }
+    #endregion
 
 
 }
