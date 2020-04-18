@@ -56,7 +56,6 @@ public class Movement : MonoBehaviour {
         if(direction != Vector3.zero && !isMoving) {
             if (!CheckIfValidDirection(direction)) {
                 Debug.Log("No valid tile!");
-                transform.LookAt(direction);
             } else {
                 isMoving = true;
                 Vector3 destination = direction + transform.position;
@@ -72,7 +71,6 @@ public class Movement : MonoBehaviour {
 
         if (swipeDirection != Vector3.zero && !isMoving) {
             if (!CheckIfValidDirection(swipeDirection)) {
-                Debug.Log("No valid tile!");
                 transform.LookAt(swipeDirection);
             } else {
                 isMoving = true;
