@@ -10,13 +10,17 @@ public class Movement : MonoBehaviour {
     private bool isMoving;
     private Vector3 swipeDirection;
     private Vector3 direction;
+    private Rigidbody rb2D;
     private TouchInput touchInput;
 
     public bool UseKeyboard;
+    [SerializeField]
+    private float timeToMove = 0; 
 
 
     void Awake() {
         touchInput = GetComponent<TouchInput>();
+        rb2D = GetComponent<Rigidbody>();
     }
 
     void Start() {
@@ -52,6 +56,7 @@ public class Movement : MonoBehaviour {
         if(direction != Vector3.zero && !isMoving) {
             if (!CheckIfValidDirection(direction)) {
                 Debug.Log("No valid tile!");
+                transform.LookAt(direction);
             } else {
                 isMoving = true;
                 Vector3 destination = direction + transform.position;
@@ -68,6 +73,7 @@ public class Movement : MonoBehaviour {
         if (swipeDirection != Vector3.zero && !isMoving) {
             if (!CheckIfValidDirection(swipeDirection)) {
                 Debug.Log("No valid tile!");
+                transform.LookAt(swipeDirection);
             } else {
                 isMoving = true;
                 Vector3 destination = swipeDirection + transform.position;
@@ -83,12 +89,14 @@ public class Movement : MonoBehaviour {
         StartedMoving.Raise();
 
         float startTime = 0;
-        float endTime = 1;
-        
-        while (startTime < endTime) {
-            transform.position = Vector3.Lerp(transform.position, direction, 10 * Time.deltaTime);
+
+
+        while (startTime < timeToMove) {
+            transform.position = Vector3.MoveTowards(transform.position, direction, .6f * Time.deltaTime);
+
+            transform.LookAt(direction);
+
             startTime += Time.deltaTime;
-            
             yield return null;
         }
 

@@ -310,7 +310,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1377228321}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1291080874
 MonoBehaviour:
@@ -398,6 +398,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8469413278564613524, guid: deeed05254701eb46b58f979f2addd6b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7195421420775240389, guid: deeed05254701eb46b58f979f2addd6b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: -4694338623589209743, guid: deeed05254701eb46b58f979f2addd6b,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -458,10 +468,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1389706179863368070, guid: deeed05254701eb46b58f979f2addd6b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: deeed05254701eb46b58f979f2addd6b,
         type: 3}
       propertyPath: m_Name
       value: Dave med lykta
+      objectReference: {fileID: 0}
+    - target: {fileID: -444521105353760620, guid: deeed05254701eb46b58f979f2addd6b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: deeed05254701eb46b58f979f2addd6b, type: 3}
@@ -529,6 +549,7 @@ MonoBehaviour:
   ValidMoveDirections: {fileID: 11400000, guid: b685b32982e43d34088519d89e77eea9,
     type: 2}
   UseKeyboard: 1
+  timeToMove: 2
 --- !u!114 &1377228325
 MonoBehaviour:
   m_ObjectHideFlags: 0
