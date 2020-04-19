@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lockedDirection: {x: 0, y: 0, z: 0}
-  lockDirection: 1
+  lockDirection: 0
   newLayer: 3
 --- !u!1 &510102846
 GameObject:
@@ -662,7 +662,7 @@ MonoBehaviour:
   StartedMoving: {fileID: 11400000, guid: 37e1f53acba6d5547bdec44c33be60ac, type: 2}
   ValidMoveDirections: {fileID: 11400000, guid: b685b32982e43d34088519d89e77eea9,
     type: 2}
-  UseKeyboard: 1
+  UseKeyboard: 0
   timeToMove: 2
 --- !u!114 &1377228325
 MonoBehaviour:
