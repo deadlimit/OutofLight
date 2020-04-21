@@ -99,7 +99,6 @@ public class Movement : MonoBehaviour {
         }
 
         ArrivedAtTarget.Raise();
-        Debug.Log("Raised");
         isMoving = false;
     }
 
