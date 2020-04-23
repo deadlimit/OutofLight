@@ -10,7 +10,6 @@ public class Movement : MonoBehaviour {
     private bool isMoving;
     private Vector3 swipeDirection;
     private Vector3 direction;
-    private Rigidbody rb2D;
     private TouchInput touchInput;
 
     public bool UseKeyboard;
@@ -20,7 +19,6 @@ public class Movement : MonoBehaviour {
 
     void Awake() {
         touchInput = GetComponent<TouchInput>();
-        rb2D = GetComponent<Rigidbody>();
     }
 
     void Start() {
@@ -103,7 +101,7 @@ public class Movement : MonoBehaviour {
     }
 
     private bool CheckIfValidDirection(Vector3 direction) {
-        foreach(Vector3 vector in ValidMoveDirections.validMoveDirections) {
+        foreach(Vector3 vector in ValidMoveDirections.getDirectionList()) {
             float comparingX = (int)vector.x - (int)transform.position.x;
             float comparingZ = (int)vector.z - (int)transform.position.z;
             Vector3 newV = new Vector3(comparingX, 0, comparingZ);

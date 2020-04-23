@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class ValidMoveDirections : ScriptableObject {
 
-    public List<Vector3> validMoveDirections = new List<Vector3>();
+    private List<Vector3> validMoveDirections = new List<Vector3>();
 
     public void AddToList(Vector3 vector) {
         validMoveDirections.Add(vector);
@@ -13,6 +13,10 @@ public class ValidMoveDirections : ScriptableObject {
 
     public void ClearList() {
         validMoveDirections.Clear();
+    }
+
+    public List<Vector3> getDirectionList() {
+        return validMoveDirections;
     }
 
 
