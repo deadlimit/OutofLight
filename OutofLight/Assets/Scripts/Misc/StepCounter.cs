@@ -4,22 +4,21 @@ public class StepCounter : MonoBehaviour {
 
     public GameEvent StepsDepleted;
 
-    public IntVariable LightSteps;
+    public IntVariable stepAmount;
 
     [SerializeField]
     private int startingSteps;
 
     void Awake() {
-        LightSteps.SetNewValue(startingSteps);
+        stepAmount.SetNewValue(startingSteps);
     }   
 
     public void DecrementStep() {
-        LightSteps.DecrementValue();
-        CheckIfStepsDepleted();
+        stepAmount.DecrementValue();
     }
     
-    private void CheckIfStepsDepleted() {
-        if (LightSteps.GetValue() <= 0)
+    public void CheckIfStepsDepleted() {
+        if (stepAmount.GetValue() <= 0)
             StepsDepleted.Raise();
     }
 

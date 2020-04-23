@@ -1,14 +1,20 @@
 ﻿using UnityEngine;
 
 [CreateAssetMenu]
-public class GameState : ScriptableObject{
+public class GameState : ScriptableObject {
 
     [SerializeField]
     private State gameState;
     
-    public void SwitchState(State newState) {
-        gameState = newState;
+
+    public void EnterDarkMode() {
+        gameState = State.DARK;
     }
+
+    public void EnterLightMode() {
+        gameState = State.LIGHT;
+    }
+
 
     public State CurrentState() {
         return gameState;
