@@ -5,9 +5,12 @@ using UnityEngine;
 public class SafeZone : MonoBehaviour {
 
     public BoolVariable InsideSafezone;
+    public IntVariable stepAmount;
 
     [SerializeField][Header("Initialt värde vid start")]
     private bool insideSafezone;
+    [SerializeField][Header("Påfyll av steg")]
+    private int refillStepAmount;
 
     void Start() {
         InsideSafezone.ChangeValue(insideSafezone);
@@ -15,6 +18,8 @@ public class SafeZone : MonoBehaviour {
     void OnTriggerEnter(Collider other) {
         if (other.gameObject.CompareTag("Player")){
             InsideSafezone.ChangeValue(true);
+            if (stepAmount.GetValue() < refillStepAmount)
+                stepAmount.ChangeValue(refillStepAmount);
         }
     }
 

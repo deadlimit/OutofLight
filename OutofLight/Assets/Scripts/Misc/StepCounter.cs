@@ -2,27 +2,28 @@
 
 public class StepCounter : MonoBehaviour {
 
-    public GameEvent StepsDepleted;
-
+    public GameEvent stepsDepleted;
+    public BoolVariable safezone;
     public IntVariable stepAmount;
 
     [SerializeField]
-    private int startingSteps;
+    private int startingStepsAmount;
 
     void Awake() {
-        stepAmount.SetNewValue(startingSteps);
+        stepAmount.ChangeValue(-100);
+        stepAmount.ChangeValue(startingStepsAmount);
     }   
 
     public void DecrementStep() {
-        stepAmount.DecrementValue();
-        print("Decrement step raised!");
+        if (!safezone.IsTrue()) {
+            stepAmount.DecrementValue();
+        }
+        
     }
     
     public void CheckIfStepsDepleted() {
         if (stepAmount.GetValue() <= 0)
-            StepsDepleted.Raise();
-
-        print("Check if step raised!");
+            stepsDepleted.Raise();
     }
 
 

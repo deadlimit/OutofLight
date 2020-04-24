@@ -10,20 +10,21 @@ public class UIUpdater : MonoBehaviour {
     public IntVariable steps;
 
     void Start() {
+        
+    }
+
+    void Update() {
         UpdateGameState();
         UpdateSteps();
     }
 
 
     public void UpdateGameState() {
-
         gameStateText.text = "Game State: " + gameState.CurrentState();
-        print("Update State raised!");
     }
 
     public void UpdateSteps() {
         amountOfStepsText.text = "Steps: " + steps.GetValue();
-        print("Update Steps raised!");
     }
 
 }

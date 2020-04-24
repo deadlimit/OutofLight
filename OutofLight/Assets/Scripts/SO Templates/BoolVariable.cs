@@ -12,7 +12,7 @@ public class BoolVariable : ScriptableObject {
         isTrue = value;
     }
 
-    public bool GetValue() {
+    public bool IsTrue() {
         return isTrue;
     }
 }

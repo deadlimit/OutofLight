@@ -5,10 +5,13 @@ public class GameState : ScriptableObject {
 
     [SerializeField]
     private State gameState;
+
+    public GameEvent Darkmode;
     
 
     public void EnterDarkMode() {
         gameState = State.DARK;
+        Darkmode.Raise(); 
     }
 
     public void EnterLightMode() {
