@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StepsDepleted: {fileID: 11400000, guid: 4c2e06c27b0df1f4f823b7f68a26b972, type: 2}
   stepAmount: {fileID: 11400000, guid: 88431f49dcf46fb45aa9686e9310270c, type: 2}
-  startingSteps: 2
+  startingSteps: 10
 --- !u!114 &8534830947963694269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,6 +65,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8534830947963694268}
         m_MethodName: DecrementStep
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8534830947963694268}
+        m_MethodName: CheckIfStepsDepleted
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

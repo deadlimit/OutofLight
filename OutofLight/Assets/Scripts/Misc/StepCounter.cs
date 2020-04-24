@@ -15,11 +15,14 @@ public class StepCounter : MonoBehaviour {
 
     public void DecrementStep() {
         stepAmount.DecrementValue();
+        print("Decrement step raised!");
     }
     
     public void CheckIfStepsDepleted() {
         if (stepAmount.GetValue() <= 0)
             StepsDepleted.Raise();
+
+        print("Check if step raised!");
     }
 
 

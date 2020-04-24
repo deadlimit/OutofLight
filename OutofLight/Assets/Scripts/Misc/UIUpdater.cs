@@ -18,10 +18,12 @@ public class UIUpdater : MonoBehaviour {
     public void UpdateGameState() {
 
         gameStateText.text = "Game State: " + gameState.CurrentState();
+        print("Update State raised!");
     }
 
     public void UpdateSteps() {
         amountOfStepsText.text = "Steps: " + steps.GetValue();
+        print("Update Steps raised!");
     }
 
 }
