@@ -135,9 +135,11 @@ GameObject:
   - component: {fileID: 891021047}
   m_Layer: 0
   m_Name: Camera
+=======
   - component: {fileID: 189906907}
   - component: {fileID: 189906906}
   m_Layer: 0
+  m_Name: Directional Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -256,8 +258,11 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 891021046}
+=======
   m_GameObject: {fileID: 594699953}
+>>>>>>> 5a6bf994df99318257af2970d430b96050f86bac
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
