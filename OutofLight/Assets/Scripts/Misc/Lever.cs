@@ -13,6 +13,7 @@ public class Lever : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.E)) {
                 print("Level pulled!");
                 LeverPulled.Raise();
+                GetComponent<Lever>().enabled = false;
             }
         }
     }
