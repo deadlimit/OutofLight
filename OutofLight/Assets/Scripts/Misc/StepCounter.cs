@@ -16,7 +16,7 @@ public class StepCounter : MonoBehaviour {
 
     public void DecrementStep() {
         if (!safezone.IsTrue()) {
-            stepAmount.DecrementValue();
+            stepAmount.ChangeValue(-1);
         }
         
     }

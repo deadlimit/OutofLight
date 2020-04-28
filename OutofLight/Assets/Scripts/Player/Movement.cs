@@ -81,7 +81,7 @@ public class Movement : MonoBehaviour {
     }
 
 
-    IEnumerator Move(Vector3 direction) {
+    public IEnumerator Move(Vector3 direction) {
         StartedMoving.Raise();
 
         float startTime = 0;
