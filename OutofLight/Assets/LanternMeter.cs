@@ -7,8 +7,14 @@ public class LanternMeter : MonoBehaviour {
 
     private Slider lanternSlider;
 
+    public IntVariable stepAmount;
+
     void Awake() {
         lanternSlider = GetComponent<Slider>();
+    }
+
+    public void UpdateBar() {
+        print("UPDATEBAR!");
     }
 
 }
