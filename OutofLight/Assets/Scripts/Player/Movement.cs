@@ -11,6 +11,8 @@ public class Movement : MonoBehaviour {
     private Vector3 swipeDirection;
     private Vector3 direction;
     private TouchInput touchInput;
+    private BoxCollider _collider;
+    private Rigidbody _rigidbody;
 
     public bool UseKeyboard;
     [SerializeField]
@@ -18,6 +20,8 @@ public class Movement : MonoBehaviour {
 
 
     void Awake() {
+        _rigidbody = GetComponent<Rigidbody>();
+        _collider = GetComponent<BoxCollider>();
         touchInput = GetComponent<TouchInput>();
     }
 
@@ -78,6 +82,11 @@ public class Movement : MonoBehaviour {
 
 
         }
+    }
+    
+    public void Fall() {
+        _rigidbody.isKinematic = false;
+        _collider.enabled = false;
     }
 
 
