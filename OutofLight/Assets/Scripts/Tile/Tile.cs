@@ -9,6 +9,9 @@ public class Tile : MonoBehaviour {
 
     void Awake() {
         mesh = GetComponent<MeshRenderer>();
+        if (trapTile) {
+            mesh.enabled = false;
+        }
     }
 
     public void HighlightTile(Color color ) {
