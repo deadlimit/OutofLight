@@ -16,9 +16,16 @@ public class TrapTileCheck : MonoBehaviour {
 
         if(isValidTile && hit.transform.gameObject.CompareTag("Tile")) {
             if (hit.transform.gameObject.GetComponent<Tile>().trapTile) {
-                StandingOnTrapTile.Raise();
+                StartCoroutine(TrapTileSequence());
             }
         }
+    }
+
+    private IEnumerator TrapTileSequence() {
+        GetComponentInParent<Animator>().SetTrigger("Trap");
+        yield return new WaitForSeconds(1);
+
+        StandingOnTrapTile.Raise();
     }
 
 }
