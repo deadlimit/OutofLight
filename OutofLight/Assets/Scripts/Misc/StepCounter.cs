@@ -2,7 +2,7 @@
 
 public class StepCounter : MonoBehaviour {
 
-    public GameEvent stepsDepleted;
+    //public GameEvent stepsDepleted;
     public BoolVariable safezone;
     public IntVariable stepAmount;
 
@@ -21,10 +21,10 @@ public class StepCounter : MonoBehaviour {
         
     }
     
-    public void CheckIfStepsDepleted() {
+    /*public void CheckIfStepsDepleted() {
         if (stepAmount.GetValue() <= 0)
             stepsDepleted.Raise();
-    }
+    }*/
 
 
 }
