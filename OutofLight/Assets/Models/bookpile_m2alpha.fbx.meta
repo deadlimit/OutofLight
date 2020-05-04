@@ -3,7 +3,27 @@ guid: 30f01b3c24af1ad44bceb56a3ea174d5
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BookC1
+    second: {fileID: 2100000, guid: 7749c35b0f386314faf4ec6ea6e0e6cf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Books2alpha
+    second: {fileID: 2100000, guid: d6f9747797525254ea900cf4951f7823, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Books2p
+    second: {fileID: 2100000, guid: 781349095bbd739499d08a15cd5fcd0e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Invis
+    second: {fileID: 2100000, guid: b8962ca469bce794ba9a75526de0b965, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
