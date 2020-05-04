@@ -6,6 +6,8 @@ public class Lantern : MonoBehaviour {
 
     private Light lanternLight;
 
+    public Material lightCubeMaterial;
+
     [SerializeField]
     private float decreaseLightModifier;
 
