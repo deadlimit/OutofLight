@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class TouchInput : MonoBehaviour {
 
@@ -7,15 +8,49 @@ public class TouchInput : MonoBehaviour {
 
     public GameEvent DoubleTap;
 
+    public bool onCooldown;
+
     void Update() {
         GetSwipeDirection();
 
         GetDoubleTap();
+
+        if (!onCooldown)
+            TouchRay();
     }
 
+    private IEnumerator CooldownTimer() {
+        onCooldown = true;
+        yield return new WaitForSeconds(2);
+        onCooldown = false;
+    } 
+
+
     private void GetDoubleTap() {
-        if (theTouch.tapCount == 2) {
-            DoubleTap.Raise();
+        if(Input.touchCount > 0) {
+            if (theTouch.tapCount == 2) {
+                DoubleTap.Raise();
+            }
+        }
+        
+    }
+
+    private void TouchRay() {
+        if(Input.touchCount > 0) {
+
+            RaycastHit hit;
+
+            Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
+
+            if (Physics.Raycast(ray, out hit)) {
+                IInteractable temp = hit.transform.gameObject.GetComponent<IInteractable>();
+                Debug.Log(temp);
+                if (temp == null) return;
+
+                temp.Use();
+                StartCoroutine(CooldownTimer());
+                
+            }
         }
     }
 
