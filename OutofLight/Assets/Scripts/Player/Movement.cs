@@ -5,7 +5,7 @@ public class Movement : MonoBehaviour {
 
     public GameEvent ArrivedAtTarget;
     public GameEvent StartedMoving;
-    public ValidMoveDirections ValidMoveDirections;
+    public Vector3List ValidMoveDirections;
 
     private bool isMoving;
     private Vector3 swipeDirection;

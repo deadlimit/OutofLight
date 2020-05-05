@@ -3,9 +3,11 @@ using UnityEngine;
 
 public class NearbyTileList: MonoBehaviour {
 
-    public ValidMoveDirections validMoveDirections;
+    public Vector3List validMoveDirections;
+    public NearbyDoorList nearbyDoorList;
 
     private List<GameObject> nearbyTiles = new List<GameObject>();
+    private List<GameObject> doorList = new List<GameObject>();
 
     private Color highlightColor = Color.red;
     private Color defaultColor = Color.white;
@@ -20,10 +22,12 @@ public class NearbyTileList: MonoBehaviour {
 
     public void UpdateNearbyTiles(Transform origin) {
         validMoveDirections.ClearList();
+        nearbyDoorList.ClearList();
         nearbyTiles.Clear();
+        doorList.Clear();
         CastRays(origin);
         ChangeTileColor(highlightColor);
-        PopulateValidMoveList();
+        PopulateLists();
     }
 
 
@@ -40,11 +44,14 @@ public class NearbyTileList: MonoBehaviour {
         var ray = new Ray(origin.position, direction - new Vector3(0, .5f, 0));
         
         RaycastHit hitInfo;
-        var isValidTile = Physics.Raycast(ray, out hitInfo);
+        var hitObject = Physics.Raycast(ray, out hitInfo);
         Debug.DrawLine(origin.position, direction);
-        if (isValidTile && hitInfo.transform.gameObject.CompareTag("Tile")) {
+        if (hitObject && hitInfo.transform.gameObject.CompareTag("Tile")) {
             nearbyTiles.Add(hitInfo.transform.gameObject);
-            
+        }
+
+        if (hitInfo.transform.gameObject.CompareTag("Door")) {
+            doorList.Add(hitInfo.transform.gameObject);
         }
         Debug.DrawRay(origin.position, direction - new Vector3(0, .5f, 0), Color.red, 2);
     }
@@ -55,9 +62,13 @@ public class NearbyTileList: MonoBehaviour {
         }
     }
 
-    private void PopulateValidMoveList() {
+    private void PopulateLists() {
         foreach(var tile in nearbyTiles) {
             validMoveDirections.AddToList(tile.transform.position);
+        }
+
+        foreach(var door in doorList) {
+            nearbyDoorList.AddToList(door.GetComponent<Door>());
         }
     }
     #endregion

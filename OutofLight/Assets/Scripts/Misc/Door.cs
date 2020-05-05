@@ -1,24 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class Door : MonoBehaviour {
+public class Door : MonoBehaviour, IInteractable {
 
-    public void MoveUp() {
-        StartCoroutine(Move());
+    public int newSceneIndex;
+
+    [SerializeField] private bool closeToDoor;
+  
+    public void IsCloseToDoor(bool value) {
+        closeToDoor = value;
     }
 
-    private IEnumerator Move() {
-
-        float startTime = 0;
-        float endTime = 2;
-        var targetPosition = transform.position + (Vector3.up * 2.25f);
-
-        while (startTime < endTime) {
-            transform.position = Vector3.MoveTowards(transform.position, targetPosition, Time.deltaTime);
-            startTime += Time.deltaTime;
-            yield return null;
-        }
+    public void Use() {
+        if(closeToDoor)
+            SceneManager.LoadScene(newSceneIndex);  
     }
+
 
 }
