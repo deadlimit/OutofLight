@@ -12,7 +12,7 @@ public class Movement : MonoBehaviour {
     private Vector3 direction;
     private TouchInput touchInput;
 
-    public bool UseKeyboard;
+    public BoolVariable UseKeyboard;
     [SerializeField]
     private float timeToMove = 0; 
 
@@ -27,7 +27,7 @@ public class Movement : MonoBehaviour {
 
     void Update() {
 
-        if (UseKeyboard)
+        if (UseKeyboard.IsTrue())
             KeyboardInput();
         else
             SwipeInput();
