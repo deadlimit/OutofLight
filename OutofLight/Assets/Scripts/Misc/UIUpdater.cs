@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class UIUpdater : MonoBehaviour {
 
-    public Text amountOfStepsText, gameStateText;
+    public Text amountOfStepsText, gameStateText, darkStepsText;
     public GameState gameState;
-    public IntVariable steps;
+    public IntVariable steps, darkSteps;
     public Image fadeImage;
 
     void Start() {
@@ -18,6 +18,7 @@ public class UIUpdater : MonoBehaviour {
     void Update() {
         UpdateGameState();
         UpdateSteps();
+        UpdateDarkSteps();
     }
 
 
@@ -29,4 +30,8 @@ public class UIUpdater : MonoBehaviour {
         amountOfStepsText.text = "Steps: " + steps.GetValue();
     }
 
+    public void UpdateDarkSteps()
+    {
+        darkStepsText.text = "Dark Steps: " + darkSteps.GetValue();
+    }
 }

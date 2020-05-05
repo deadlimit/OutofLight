@@ -21,6 +21,7 @@ public class StepCounter : MonoBehaviour {
         darkStepAmount.ChangeValue(-100);
         darkStepAmount.ChangeValue(startingDarkSteps);
         gameOverText.enabled = false;
+        gameState.EnterLightMode();
     }
 
     private void Update()
