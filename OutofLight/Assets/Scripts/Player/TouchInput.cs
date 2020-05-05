@@ -5,8 +5,18 @@ public class TouchInput : MonoBehaviour {
     private Touch theTouch;
     private Vector3 touchStartPosition, touchEndPoisition, direction;
 
+    public GameEvent DoubleTap;
+
     void Update() {
         GetSwipeDirection();
+
+        GetDoubleTap();
+    }
+
+    private void GetDoubleTap() {
+        if (theTouch.tapCount == 2) {
+            DoubleTap.Raise();
+        }
     }
 
     private void GetSwipeDirection() {
