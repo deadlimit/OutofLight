@@ -8,9 +8,11 @@ public class UIUpdater : MonoBehaviour {
     public Text amountOfStepsText, gameStateText;
     public GameState gameState;
     public IntVariable steps;
+    public Image fadeImage;
 
     void Start() {
-        
+        fadeImage.enabled = true;
+        fadeImage.CrossFadeAlpha(0.1f, 3f, false);
     }
 
     void Update() {
