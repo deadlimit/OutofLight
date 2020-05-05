@@ -15,12 +15,12 @@ public class SafeZone : MonoBehaviour {
     void Start() {
         InsideSafezone.ChangeValue(insideSafezone);
     }
-    void OnTriggerEnter(Collider other) {
-        if (other.gameObject.CompareTag("Player")){
-            InsideSafezone.ChangeValue(true);
-            if (stepAmount.GetValue() < refillStepAmount)
-                stepAmount.ChangeValue(refillStepAmount);
-        }
+    void OnTriggerEnter(Collider other)
+    {
+        if (!other.gameObject.CompareTag("Player")) return;
+        InsideSafezone.ChangeValue(true);
+        if (stepAmount.GetValue() < refillStepAmount)
+            stepAmount.ChangeValue(refillStepAmount);
     }
 
     void OnTriggerExit(Collider other) {

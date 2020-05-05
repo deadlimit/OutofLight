@@ -11,13 +11,16 @@ public class Movement : MonoBehaviour {
     private Vector3 swipeDirection;
     private Vector3 direction;
     private TouchInput touchInput;
+    private Transform thisTransform;
 
     public BoolVariable UseKeyboard;
     [SerializeField]
     private float timeToMove = 0; 
 
 
-    void Awake() {
+    void Awake()
+    {
+        thisTransform = GetComponent<Transform>();
         touchInput = GetComponent<TouchInput>();
     }
 
@@ -49,17 +52,16 @@ public class Movement : MonoBehaviour {
         }
         if (Input.GetKeyDown(KeyCode.D)) {
             direction = Vector3.right;
-        } 
+        }
 
-        if(direction != Vector3.zero && !isMoving) {
-            if (!CheckIfValidDirection(direction)) {
-                Debug.Log("No valid tile!");
-            } else {
-                isMoving = true;
-                Vector3 destination = direction + transform.position;
-                StartCoroutine(Move(destination));
-                direction = Vector3.zero;
-            }
+        if (direction == Vector3.zero || isMoving) return;
+        if (!CheckIfValidDirection(direction)) {
+            Debug.Log("No valid tile!");
+        } else {
+            isMoving = true;
+            var destination = direction + transform.position;
+            StartCoroutine(Move(destination));
+            direction = Vector3.zero;
         }
 
     }
@@ -67,21 +69,18 @@ public class Movement : MonoBehaviour {
     private void SwipeInput() {
         swipeDirection = touchInput.GetDirection();
 
-        if (swipeDirection != Vector3.zero && !isMoving) {
-            if (!CheckIfValidDirection(swipeDirection)) {
-                transform.LookAt(swipeDirection);
-            } else {
-                isMoving = true;
-                Vector3 destination = swipeDirection + transform.position;
-                StartCoroutine(Move(destination));
-            }
-
-
+        if (swipeDirection == Vector3.zero || isMoving) return;
+        if (!CheckIfValidDirection(swipeDirection)) {
+            transform.LookAt(swipeDirection);
+        } else {
+            isMoving = true;
+            var destination = swipeDirection + transform.position;
+            StartCoroutine(Move(destination));
         }
     }
 
 
-    public IEnumerator Move(Vector3 direction) {
+    private IEnumerator Move(Vector3 direction) {
         StartedMoving.Raise();
 
         float startTime = 0;
@@ -101,10 +100,11 @@ public class Movement : MonoBehaviour {
     }
 
     private bool CheckIfValidDirection(Vector3 direction) {
-        foreach(Vector3 vector in ValidMoveDirections.getDirectionList()) {
-            float comparingX = (int)vector.x - (int)transform.position.x;
-            float comparingZ = (int)vector.z - (int)transform.position.z;
-            Vector3 newV = new Vector3(comparingX, 0, comparingZ);
+        foreach(var vector in ValidMoveDirections.getDirectionList()) {
+            var position = thisTransform.position;
+            float comparingX = (int)vector.x - (int)position.x;
+            float comparingZ = (int)vector.z - (int)position.z;
+            var newV = new Vector3(comparingX, 0, comparingZ);
             if (newV == direction)
                 return true;
         }

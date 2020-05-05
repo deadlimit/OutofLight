@@ -22,15 +22,15 @@ public class UIUpdater : MonoBehaviour {
     }
 
 
-    public void UpdateGameState() {
+    private void UpdateGameState() {
         gameStateText.text = "Game State: " + gameState.CurrentState();
     }
 
-    public void UpdateSteps() {
+    private void UpdateSteps() {
         amountOfStepsText.text = "Steps: " + steps.GetValue();
     }
 
-    public void UpdateDarkSteps()
+    private void UpdateDarkSteps()
     {
         darkStepsText.text = "Dark Steps: " + darkSteps.GetValue();
     }

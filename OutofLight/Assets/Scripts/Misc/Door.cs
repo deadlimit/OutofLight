@@ -12,7 +12,7 @@ public class Door : MonoBehaviour {
 
         float startTime = 0;
         float endTime = 2;
-        Vector3 targetPosition = transform.position + (Vector3.up * 2.25f);
+        var targetPosition = transform.position + (Vector3.up * 2.25f);
 
         while (startTime < endTime) {
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, Time.deltaTime);

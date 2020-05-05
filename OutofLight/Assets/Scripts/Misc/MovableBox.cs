@@ -21,7 +21,7 @@ public class MovableBox : MonoBehaviour {
     IEnumerator Move(Vector3 direction) {
 
         float startTime = 0;
-        Vector3 endPosition = direction + transform.position;
+        var endPosition = direction + transform.position;
 
         while (startTime < 2) {
             transform.position = Vector3.MoveTowards(transform.position, endPosition, 1.5f * Time.deltaTime);

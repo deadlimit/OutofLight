@@ -4,7 +4,7 @@ using System.Collections;
 public class TouchInput : MonoBehaviour {
 
     private Touch theTouch;
-    private Vector3 touchStartPosition, touchEndPoisition, direction;
+    private Vector3 touchStartPosition, touchEndPosition, direction;
 
     public GameEvent DoubleTap;
     public bool onCooldown;
@@ -58,10 +58,10 @@ public class TouchInput : MonoBehaviour {
             if (theTouch.phase == TouchPhase.Began) {
                 touchStartPosition = theTouch.position;
             }  else if (theTouch.phase == TouchPhase.Moved || theTouch.phase == TouchPhase.Ended) {
-                touchEndPoisition = theTouch.position;
+                touchEndPosition = theTouch.position;
 
-                float x = touchEndPoisition.x - touchStartPosition.x;
-                float y = touchEndPoisition.y - touchStartPosition.y;
+                float x = touchEndPosition.x - touchStartPosition.x;
+                float y = touchEndPosition.y - touchStartPosition.y;
 
                 if (Mathf.Abs(x) == 0 && Mathf.Abs(y) == 0)
                     direction = Vector3.zero;

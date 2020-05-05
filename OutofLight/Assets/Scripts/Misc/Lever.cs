@@ -8,14 +8,13 @@ public class Lever : MonoBehaviour {
 
     private bool isPlayerInRange; 
 
-    void Update() {
-        if (isPlayerInRange) {
-            if (Input.GetKeyDown(KeyCode.E)) {
-                print("Level pulled!");
-                LeverPulled.Raise();
-                GetComponent<Lever>().enabled = false;
-            }
-        }
+    void Update()
+    {
+        if (!isPlayerInRange) return;
+        if (!Input.GetKeyDown(KeyCode.E)) return;
+        print("Level pulled!");
+        LeverPulled.Raise();
+        GetComponent<Lever>().enabled = false;
     }
 
     void OnTriggerStay(Collider other) {

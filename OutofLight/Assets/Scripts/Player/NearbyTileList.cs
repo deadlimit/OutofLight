@@ -37,10 +37,10 @@ public class NearbyTileList: MonoBehaviour {
 
     private void Ray(Transform origin, Vector3 direction) {
         
-        Ray ray = new Ray(origin.position, direction - new Vector3(0, .5f, 0));
+        var ray = new Ray(origin.position, direction - new Vector3(0, .5f, 0));
         
         RaycastHit hitInfo;
-        bool isValidTile = Physics.Raycast(ray, out hitInfo);
+        var isValidTile = Physics.Raycast(ray, out hitInfo);
         Debug.DrawLine(origin.position, direction);
         if (isValidTile && hitInfo.transform.gameObject.CompareTag("Tile")) {
             nearbyTiles.Add(hitInfo.transform.gameObject);
@@ -50,13 +50,13 @@ public class NearbyTileList: MonoBehaviour {
     }
 
     private void ChangeTileColor(Color color) {
-        foreach(GameObject tile in nearbyTiles) {
+        foreach(var tile in nearbyTiles) {
             tile.GetComponent<Tile>().HighlightTile(color);
         }
     }
 
     private void PopulateValidMoveList() {
-        foreach(GameObject tile in nearbyTiles) {
+        foreach(var tile in nearbyTiles) {
             validMoveDirections.AddToList(tile.transform.position);
         }
     }

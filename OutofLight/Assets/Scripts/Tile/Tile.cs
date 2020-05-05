@@ -29,7 +29,7 @@ public class Tile : MonoBehaviour {
     }
 
     IEnumerator Rotate() {
-        Vector3 targetAngle = transform.eulerAngles + 180 * Vector3.down;
+        var targetAngle = transform.eulerAngles + 180 * Vector3.down;
         while(transform.rotation.z != 180) {
             transform.eulerAngles = Vector3.Lerp(transform.eulerAngles, targetAngle, Time.deltaTime * 10);
             yield return null;

@@ -1261,7 +1261,6 @@ GameObject:
   - component: {fileID: 2600679641243785388}
   - component: {fileID: 2600679641243785391}
   - component: {fileID: 2600679641243785392}
-  - component: {fileID: 2600679641243785393}
   m_Layer: 2
   m_Name: Dave
   m_TagString: Player
@@ -1364,33 +1363,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DoubleTap: {fileID: 11400000, guid: 1732c54b4c672d849a2f81f0763ece85, type: 2}
   onCooldown: 0
---- !u!114 &2600679641243785393
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6284374487733111915}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f624fc09539ff242ad601509638ac53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 1732c54b4c672d849a2f81f0763ece85, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2600679641243785390}
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Jump
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &6332218525703953548
 GameObject:
   m_ObjectHideFlags: 0

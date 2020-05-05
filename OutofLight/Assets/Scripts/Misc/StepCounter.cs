@@ -45,14 +45,12 @@ public class StepCounter : MonoBehaviour {
     }
     public void AddDarkStep()
     {
-        if (gameState.CurrentState() == State.DARK)
-        {
-            darkStepAmount.ChangeValue(+1);
-            Debug.Log("Dark Steps Is: " + darkStepAmount.GetValue());
-        }
+        if (gameState.CurrentState() != State.DARK) return;
+        darkStepAmount.ChangeValue(+1);
+        Debug.Log("Dark Steps Is: " + darkStepAmount.GetValue());
     }
 
-    public void CheckIfStepsDepleted() {
+    private void CheckIfStepsDepleted() {
         if (stepAmount.GetValue() <= 0)
             stepsDepleted.Raise();
     }
