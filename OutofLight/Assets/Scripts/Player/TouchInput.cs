@@ -21,7 +21,7 @@ public class TouchInput : MonoBehaviour {
 
     private IEnumerator CooldownTimer() {
         onCooldown = true;
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         onCooldown = false;
     } 
 
@@ -44,12 +44,13 @@ public class TouchInput : MonoBehaviour {
 
             if (Physics.Raycast(ray, out hit)) {
                 IInteractable temp = hit.transform.gameObject.GetComponent<IInteractable>();
-                Debug.Log(temp);
-                if (temp == null) return;
-
-                temp.Use();
-                StartCoroutine(CooldownTimer());
                 
+                if (temp == null) return;
+                Debug.Log(temp);
+
+                StartCoroutine(CooldownTimer());
+                temp.Use();
+
             }
         }
     }

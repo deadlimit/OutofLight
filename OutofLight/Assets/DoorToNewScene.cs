@@ -14,6 +14,7 @@ public class DoorToNewScene : MonoBehaviour, IInteractable {
     
 
     void OnTriggerEnter(Collider other) {
+        Debug.Log("SOmething entered");
         if (other.gameObject.CompareTag("Player")){
             canUseDoor = true;
         }
@@ -30,7 +31,7 @@ public class DoorToNewScene : MonoBehaviour, IInteractable {
     }
 
     public void Use() {
-        //if(canUseDoor)
+        if(canUseDoor)
             LoadNewScene();
     }
 }

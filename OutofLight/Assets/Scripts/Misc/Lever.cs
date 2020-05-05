@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Lever : MonoBehaviour {
+public class Lever : MonoBehaviour, IInteractable {
 
     public GameEvent LeverPulled;
 
@@ -28,6 +28,11 @@ public class Lever : MonoBehaviour {
         if (other.gameObject.CompareTag("Player")) {
             isPlayerInRange = false;
         }
+    }
+
+    public void Use() {
+        Debug.Log("RAISED");
+        LeverPulled.Raise();
     }
 
 }
