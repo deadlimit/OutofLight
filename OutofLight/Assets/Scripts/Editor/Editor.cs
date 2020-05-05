@@ -13,6 +13,6 @@ public class EventEditor : Editor {
         if (GUILayout.Button("Raise")) {
             e.Raise();
         }
-
+            
     }
 }
