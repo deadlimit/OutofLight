@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Lever : MonoBehaviour {
+public class Lever : MonoBehaviour, IInteractable {
 
     public GameEvent LeverPulled;
     public BoolVariable LeverNoPulled;
@@ -31,4 +31,10 @@ public class Lever : MonoBehaviour {
         }
     }
 
+    public void Use() {
+        print("Level pulled!");
+        LeverPulled.Raise();
+        LeverNoPulled.ChangeValue(true);
+        GetComponent<Lever>().enabled = false;
+    }
 }

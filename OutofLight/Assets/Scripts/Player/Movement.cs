@@ -6,6 +6,7 @@ public class Movement : MonoBehaviour {
     public GameEvent ArrivedAtTarget;
     public GameEvent StartedMoving;
     public Vector3List ValidMoveDirections;
+    public SpawnPosition SpawnPosition;
 
     private bool isMoving;
     private Vector3 swipeDirection;
@@ -15,17 +16,20 @@ public class Movement : MonoBehaviour {
 
     public BoolVariable UseKeyboard;
     [SerializeField]
-    private float timeToMove = 0; 
+    private float timeToMove = 0;
 
 
-    void Awake()
-    {
+    void Awake() {
         thisTransform = GetComponent<Transform>();
+
         touchInput = GetComponent<TouchInput>();
     }
 
     void Start() {
         isMoving = false;
+        if (Time.time > 1f)
+            thisTransform.position = SpawnPosition.spawnPosition;
+
     }
 
     void Update() {
@@ -34,7 +38,7 @@ public class Movement : MonoBehaviour {
             KeyboardInput();
         else
             SwipeInput();
-           
+
 
     }
 
@@ -43,7 +47,7 @@ public class Movement : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.W)) {
             direction = Vector3.forward;
-        } 
+        }
         if (Input.GetKeyDown(KeyCode.S)) {
             direction = Vector3.back;
         }
@@ -100,7 +104,7 @@ public class Movement : MonoBehaviour {
     }
 
     private bool CheckIfValidDirection(Vector3 direction) {
-        foreach(var vector in ValidMoveDirections.getDirectionList()) {
+        foreach (var vector in ValidMoveDirections.getDirectionList()) {
             var position = thisTransform.position;
             float comparingX = (int)vector.x - (int)position.x;
             float comparingZ = (int)vector.z - (int)position.z;
@@ -111,6 +115,5 @@ public class Movement : MonoBehaviour {
 
         return false;
     }
-
 
 }

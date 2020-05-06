@@ -17,6 +17,9 @@ public class DoorRoom3To4 : MonoBehaviour
     {
         paper.enabled = false;
         room3Locked.enabled = false;
+        if (!leverPulled.IsTrue()) {
+            GetComponent<Door>().enabled = false;
+        }
     }
 
     public void Use()
@@ -27,7 +30,7 @@ public class DoorRoom3To4 : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player") && leverPulled)
+        if (other.gameObject.CompareTag("Player") && !leverPulled.IsTrue())
         {
             paper.enabled = true;
             room3Locked.enabled = true;
@@ -45,7 +48,6 @@ public class DoorRoom3To4 : MonoBehaviour
 
     public void UnlockDoor()
     {
-        gameObject.AddComponent<Door>();
-        GetComponent<Door>().newSceneIndex = 5;
+        GetComponent<Door>().enabled = true;
     }
 }
