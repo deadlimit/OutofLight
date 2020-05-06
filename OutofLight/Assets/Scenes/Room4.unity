@@ -399,7 +399,7 @@ RectTransform:
   - {fileID: 1410521683}
   - {fileID: 661131196}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -478,6 +478,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 03d7ec3c9fa43084da5c26075b282524, type: 2}
+    - target: {fileID: 2269515626932823718, guid: 1fda805ea6102e1478f6f49d6ed2abd0,
+        type: 3}
+      propertyPath: newSceneIndex
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2269515626932823720, guid: 1fda805ea6102e1478f6f49d6ed2abd0,
         type: 3}
       propertyPath: m_Name
@@ -2179,7 +2184,7 @@ Transform:
   m_LocalScale: {x: 5.1, y: 2, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1337454703 stripped
 GameObject:

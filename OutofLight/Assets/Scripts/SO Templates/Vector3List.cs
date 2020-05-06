@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class ValidMoveDirections : ScriptableObject {
+public class Vector3List : ScriptableObject {
 
-    private List<Vector3> validMoveDirections = new List<Vector3>();
+    private List<Vector3> list = new List<Vector3>();
 
     public void AddToList(Vector3 vector) {
-        validMoveDirections.Add(vector);
+        list.Add(vector);
     }
 
     public void ClearList() {
-        validMoveDirections.Clear();
+        list.Clear();
     }
 
     public List<Vector3> getDirectionList() {
-        return validMoveDirections;
+        return list;
     }
 
 
