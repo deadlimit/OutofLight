@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2269515626932823716}
   - component: {fileID: 2269515626932823717}
   - component: {fileID: 2269515626932823718}
-  - component: {fileID: 878777278972426349}
   m_Layer: 0
   m_Name: Door
   m_TagString: Door
@@ -108,31 +107,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newSceneIndex: 1
+  NewSceneLoad: {fileID: 11400000, guid: 890bb5f74d85698498bd6513c3c54ab6, type: 2}
+  spawnPosition: {fileID: 11400000, guid: cbe7b2b21a462584f87ab3a0650894e1, type: 2}
   closeToDoor: 0
---- !u!114 &878777278972426349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2269515626932823720}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f624fc09539ff242ad601509638ac53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 7e9319118fa44b746b8c6a01e15d7ec6, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2269515626932823718}
-        m_MethodName: DoorRay
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2

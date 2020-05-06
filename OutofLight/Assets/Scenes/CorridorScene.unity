@@ -340,12 +340,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 177671431}
   m_CullTransparentMesh: 0
---- !u!4 &247765276 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8820734978045533201, guid: 0696c8eb50c6eb14f83e1c3e9c3f6d15,
-    type: 3}
-  m_PrefabInstance: {fileID: 812745851}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &287321611
 GameObject:
   m_ObjectHideFlags: 0
@@ -791,9 +785,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2600679641243785388, guid: 0696c8eb50c6eb14f83e1c3e9c3f6d15,
         type: 3}
-      propertyPath: UseKeyboard
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: SpawnPosition
+      value: 
+      objectReference: {fileID: 11400000, guid: 1eb3d7e2146cb2a4491e49ff4db4b671,
+        type: 2}
     - target: {fileID: 6284374487733111915, guid: 0696c8eb50c6eb14f83e1c3e9c3f6d15,
         type: 3}
       propertyPath: m_Name
@@ -966,100 +961,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -5}
   m_SizeDelta: {x: 0, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1001 &1164466346
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 247765276}
-    m_Modifications:
-    - target: {fileID: 2224816506837145536, guid: 99bd4a5987a79bf4db878eef23417e47,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2224816506837145536, guid: 99bd4a5987a79bf4db878eef23417e47,
-        type: 3}
-      propertyPath: m_Intensity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5204358599155268694, guid: 99bd4a5987a79bf4db878eef23417e47,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.0136
-      objectReference: {fileID: 0}
-    - target: {fileID: 5204358599155268694, guid: 99bd4a5987a79bf4db878eef23417e47,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.0048
-      objectReference: {fileID: 0}
-    - target: {fileID: 5204358599155268694, guid: 99bd4a5987a79bf4db878eef23417e47,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.0331
-      objectReference: {fileID: 0}
-    - target: {fileID: 5204358599155268694, guid: 99bd4a5987a79bf4db878eef23417e47,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.5022352
-      objectReference: {fileID: 0}
-    - target: {fileID: 5204358599155268694, guid: 99bd4a5987a79bf4db878eef23417e47,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.14991893
-      objectReference: {fileID: 0}
-    - target: {fileID: 5204358599155268694, guid: 99bd4a5987a79bf4db878eef23417e47,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.24359494
-      objectReference: {fileID: 0}
-    - target: {fileID: 5204358599155268694, guid: 99bd4a5987a79bf4db878eef23417e47,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.81605494
-      objectReference: {fileID: 0}
-    - target: {fileID: 5204358599155268694, guid: 99bd4a5987a79bf4db878eef23417e47,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5204358599155268694, guid: 99bd4a5987a79bf4db878eef23417e47,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 63.22
-      objectReference: {fileID: 0}
-    - target: {fileID: 5204358599155268694, guid: 99bd4a5987a79bf4db878eef23417e47,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5204358599155268694, guid: 99bd4a5987a79bf4db878eef23417e47,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 33.241
-      objectReference: {fileID: 0}
-    - target: {fileID: 5204358599155268694, guid: 99bd4a5987a79bf4db878eef23417e47,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.008
-      objectReference: {fileID: 0}
-    - target: {fileID: 5204358599155268694, guid: 99bd4a5987a79bf4db878eef23417e47,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.008
-      objectReference: {fileID: 0}
-    - target: {fileID: 5204358599155268694, guid: 99bd4a5987a79bf4db878eef23417e47,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.008
-      objectReference: {fileID: 0}
-    - target: {fileID: 9107053922718109253, guid: 99bd4a5987a79bf4db878eef23417e47,
-        type: 3}
-      propertyPath: m_Name
-      value: lantern_m1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 99bd4a5987a79bf4db878eef23417e47, type: 3}
 --- !u!1 &1361715154
 GameObject:
   m_ObjectHideFlags: 0
@@ -1332,7 +1233,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1619,7 +1520,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1815141499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1634,10 +1535,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amountOfStepsText: {fileID: 1979245605}
   gameStateText: {fileID: 1583043674}
-  darkStepsText: {fileID: 0}
+  darkStepsText: {fileID: 177671433}
   gameState: {fileID: 11400000, guid: b9d24d1580db6704589ca6d940777d03, type: 2}
   steps: {fileID: 11400000, guid: 88431f49dcf46fb45aa9686e9310270c, type: 2}
-  darkSteps: {fileID: 0}
+  darkSteps: {fileID: 11400000, guid: 813f415f9d92ae5418f8d31e6358aa9a, type: 2}
   fadeImage: {fileID: 1612654771}
 --- !u!114 &1815141500
 MonoBehaviour:
@@ -2302,6 +2203,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdb8f1962f709af4fb3b72f548c7f921, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  newSceneIndex: 0
+  NewSceneLoad: {fileID: 0}
+  spawn: {fileID: 0}
+  otherSide: {x: 0, y: 0, z: 0}
+  closeToDoor: 0
 --- !u!114 &1656989137830045927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2345,7 +2251,7 @@ GameObject:
   - component: {fileID: 1656989137830045927}
   m_Layer: 0
   m_Name: LockedDoor
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2362,33 +2268,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdb8f1962f709af4fb3b72f548c7f921, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3299080924137481889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3299080924137481902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f624fc09539ff242ad601509638ac53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 01350d9ba6d14a44e802f03cacb5dac4, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3299080924137481888}
-        m_MethodName: MoveUp
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  newSceneIndex: 4
+  NewSceneLoad: {fileID: 11400000, guid: 890bb5f74d85698498bd6513c3c54ab6, type: 2}
+  spawn: {fileID: 11400000, guid: 1eb3d7e2146cb2a4491e49ff4db4b671, type: 2}
+  otherSide: {x: 3.5, y: 0, z: 6.5}
+  closeToDoor: 0
 --- !u!23 &3299080924137481890
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2476,10 +2360,9 @@ GameObject:
   - component: {fileID: 3299080924137481890}
   - component: {fileID: 3299080924137481891}
   - component: {fileID: 3299080924137481888}
-  - component: {fileID: 3299080924137481889}
   m_Layer: 0
   m_Name: DoorToRoom3
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2496,33 +2379,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdb8f1962f709af4fb3b72f548c7f921, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4568172310024942881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4568172310024942894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f624fc09539ff242ad601509638ac53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 01350d9ba6d14a44e802f03cacb5dac4, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4568172310024942880}
-        m_MethodName: MoveUp
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  newSceneIndex: 3
+  NewSceneLoad: {fileID: 11400000, guid: 890bb5f74d85698498bd6513c3c54ab6, type: 2}
+  spawn: {fileID: 11400000, guid: 1eb3d7e2146cb2a4491e49ff4db4b671, type: 2}
+  otherSide: {x: 0.5, y: 0, z: 7.5}
+  closeToDoor: 0
 --- !u!23 &4568172310024942882
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2610,10 +2471,9 @@ GameObject:
   - component: {fileID: 4568172310024942882}
   - component: {fileID: 4568172310024942883}
   - component: {fileID: 4568172310024942880}
-  - component: {fileID: 4568172310024942881}
   m_Layer: 0
   m_Name: DoorToRoom2
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2631,10 +2491,9 @@ GameObject:
   - component: {fileID: 4726748362769736430}
   - component: {fileID: 4726748362769736431}
   - component: {fileID: 4726748362769736428}
-  - component: {fileID: 4726748362769736429}
   m_Layer: 0
   m_Name: DoorToRoom1
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2673,33 +2532,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdb8f1962f709af4fb3b72f548c7f921, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4726748362769736429
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4726748362769736418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f624fc09539ff242ad601509638ac53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 01350d9ba6d14a44e802f03cacb5dac4, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4726748362769736428}
-        m_MethodName: MoveUp
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  newSceneIndex: 2
+  NewSceneLoad: {fileID: 11400000, guid: 890bb5f74d85698498bd6513c3c54ab6, type: 2}
+  spawn: {fileID: 11400000, guid: 1eb3d7e2146cb2a4491e49ff4db4b671, type: 2}
+  otherSide: {x: 0, y: 0, z: 0}
+  closeToDoor: 0
 --- !u!23 &4726748362769736430
 MeshRenderer:
   m_ObjectHideFlags: 0
