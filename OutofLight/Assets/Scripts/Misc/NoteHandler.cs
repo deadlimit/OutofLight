@@ -6,17 +6,33 @@ using UnityEngine.UI;
 public class NoteHandler : MonoBehaviour
 {
     public Image paper;
+    public Text noteText;
 
-    [SerializeField]
-    private GameEvent notePickup;
+
     void Start()
     {
-        paper.gameObject.SetActive(false);
+        paper.enabled = false;
+        noteText.enabled = false;
     }
 
-    public void PaperPickedUp()
+    private void OnTriggerEnter(Collider other)
     {
-        paper.gameObject.SetActive(true);
+        if (other.gameObject.CompareTag("Player"))
+        {
+            paper.enabled = true;
+            noteText.enabled = true;
+        }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            paper.enabled = false;
+            noteText.enabled = false;
+        }
+    }
+
+
 
 }
