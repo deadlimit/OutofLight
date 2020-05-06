@@ -4,10 +4,8 @@ using UnityEngine;
 public class NearbyTileList: MonoBehaviour {
 
     public Vector3List validMoveDirections;
-    public NearbyDoorList nearbyDoorList;
 
     private List<GameObject> nearbyTiles = new List<GameObject>();
-    private List<GameObject> doorList = new List<GameObject>();
 
     private Color highlightColor = Color.red;
     private Color defaultColor = Color.white;
@@ -22,9 +20,7 @@ public class NearbyTileList: MonoBehaviour {
 
     public void UpdateNearbyTiles(Transform origin) {
         validMoveDirections.ClearList();
-        nearbyDoorList.ClearList();
         nearbyTiles.Clear();
-        doorList.Clear();
         CastRays(origin);
         ChangeTileColor(highlightColor);
         PopulateLists();
@@ -50,9 +46,6 @@ public class NearbyTileList: MonoBehaviour {
             nearbyTiles.Add(hitInfo.transform.gameObject);
         }
 
-        if (hitInfo.transform.gameObject.CompareTag("Door")) {
-            doorList.Add(hitInfo.transform.gameObject);
-        }
         Debug.DrawRay(origin.position, direction - new Vector3(0, .5f, 0), Color.red, 2);
     }
 
@@ -66,11 +59,8 @@ public class NearbyTileList: MonoBehaviour {
         foreach(var tile in nearbyTiles) {
             validMoveDirections.AddToList(tile.transform.position);
         }
-
-        foreach(var door in doorList) {
-            nearbyDoorList.AddToList(door.GetComponent<Door>());
-        }
     }
+
     #endregion
 
 

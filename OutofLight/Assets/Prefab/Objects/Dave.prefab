@@ -537,11 +537,12 @@ GameObject:
   m_Component:
   - component: {fileID: 2600679641315112487}
   - component: {fileID: 2600679641315112488}
+  - component: {fileID: 2636372487803077544}
   - component: {fileID: 2600679641315112489}
   - component: {fileID: 2600679641315112490}
-  m_Layer: 2
-  m_Name: TileCheck
-  m_TagString: Untagged
+  m_Layer: 0
+  m_Name: Raycasts
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -574,6 +575,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   validMoveDirections: {fileID: 11400000, guid: b685b32982e43d34088519d89e77eea9,
     type: 2}
+--- !u!114 &2636372487803077544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2600679641315112486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73fea6a6428a0ca458c4e5d9324ef5b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2600679641315112489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -592,6 +605,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2600679641315112488}
         m_MethodName: ResetTileColors
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2636372487803077544}
+        m_MethodName: ClearDoorList
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -628,6 +652,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2636372487803077544}
+        m_MethodName: UpdateDoorList
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2728322679776336638
 GameObject:
   m_ObjectHideFlags: 0
@@ -639,7 +674,7 @@ GameObject:
   - component: {fileID: 6756461785964541430}
   m_Layer: 2
   m_Name: Armature
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -702,7 +737,7 @@ GameObject:
   - component: {fileID: 1931239114754161683}
   m_Layer: 2
   m_Name: Character
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
