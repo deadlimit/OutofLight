@@ -40,6 +40,7 @@ public class ScreenCreep : MonoBehaviour
         {
             creep.CrossFadeAlpha(255f, creepDuration, false);
         }
+        else creep.CrossFadeAlpha(0.1f, creepDuration, false);
     }
 
 

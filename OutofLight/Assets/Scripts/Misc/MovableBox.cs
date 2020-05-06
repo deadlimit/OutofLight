@@ -13,7 +13,7 @@ public class MovableBox : MonoBehaviour {
     void OnTriggerEnter(Collider other) {
         if (other.gameObject.CompareTag("Player")) {
             Vector3 moveDirection = CalculatedMoveDirection(transform.position - other.gameObject.transform.position);
-            //gameObject.layer = newLayer;
+            gameObject.layer = newLayer;
             StartCoroutine(Move(moveDirection));
         }
     }
