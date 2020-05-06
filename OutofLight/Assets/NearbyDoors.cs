@@ -25,10 +25,11 @@ public class NearbyDoors : MonoBehaviour {
         if (list.Count <= 0) return;
 
         foreach(var door in list) {
-            door.GetComponent<Door>().IsCloseToDoor(value);
+            var newdoor = door.GetComponent<Door>();
+            if (newdoor == null) return;
+            newdoor.IsCloseToDoor(value);
         }
     }
-
     private void CastRays(Transform origin) {
         Ray(origin, Vector3.forward);
         Ray(origin, Vector3.back);
