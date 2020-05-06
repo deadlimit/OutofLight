@@ -7,6 +7,7 @@ public class Fuel : MonoBehaviour {
     private Transform _transform;
     public GameEvent FuelPickedUp;
     public IntVariable stepAmount;
+    public bool rotate;
 
     [SerializeField]
     private int refillAmount;
@@ -16,6 +17,7 @@ public class Fuel : MonoBehaviour {
     }
 
     void Update() {
+        if (rotate)
         Rotate();
     }
 
@@ -28,7 +30,7 @@ public class Fuel : MonoBehaviour {
     void OnTriggerEnter(Collider other) {
         if (other.gameObject.CompareTag("Player")) {
             FuelPickedUp.Raise();
-            stepAmount.ChangeValue(+refillAmount);
+            stepAmount.ChangeValue(refillAmount);
             Destroy(gameObject);
         }
     }
