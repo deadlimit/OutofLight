@@ -5,6 +5,7 @@ using UnityEngine;
 public class Lever : MonoBehaviour {
 
     public GameEvent LeverPulled;
+    public BoolVariable LeverNoPulled;
 
     private bool isPlayerInRange; 
 
@@ -14,6 +15,7 @@ public class Lever : MonoBehaviour {
         if (!Input.GetKeyDown(KeyCode.E)) return;
         print("Level pulled!");
         LeverPulled.Raise();
+        LeverNoPulled.IsTrue();
         GetComponent<Lever>().enabled = false;
     }
 

@@ -1340,6 +1340,8 @@ GameObject:
   - component: {fileID: 2600679641243785388}
   - component: {fileID: 2600679641243785391}
   - component: {fileID: 2600679641243785392}
+  - component: {fileID: 7206449439155567157}
+  - component: {fileID: 3472170124708652256}
   m_Layer: 2
   m_Name: Dave
   m_TagString: Player
@@ -1444,6 +1446,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DoubleTap: {fileID: 11400000, guid: 1732c54b4c672d849a2f81f0763ece85, type: 2}
   onCooldown: 0
+--- !u!65 &7206449439155567157
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6284374487733111915}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7547116, y: 0.5533488, z: 0.77376413}
+  m_Center: {x: -0.011907816, y: 1.1783255, z: -0.0071446896}
+--- !u!54 &3472170124708652256
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6284374487733111915}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &6332218525703953548
 GameObject:
   m_ObjectHideFlags: 0
@@ -2126,7 +2157,6 @@ Transform:
   m_Father: {fileID: 8126878445724475581}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &467266995
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -2316,6 +2346,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 553155799}
   m_PrefabAsset: {fileID: 0}
+
 --- !u!1001 &1119077595
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2326,7 +2357,7 @@ PrefabInstance:
     - target: {fileID: 2224816506837145536, guid: 99bd4a5987a79bf4db878eef23417e47,
         type: 3}
       propertyPath: m_Intensity
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3003328436078391922, guid: 99bd4a5987a79bf4db878eef23417e47,
         type: 3}
@@ -2417,6 +2448,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 6
+
       objectReference: {fileID: 0}
     - target: {fileID: 5204358599155268694, guid: 99bd4a5987a79bf4db878eef23417e47,
         type: 3}
@@ -2461,7 +2493,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1119077595}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1478869397
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2

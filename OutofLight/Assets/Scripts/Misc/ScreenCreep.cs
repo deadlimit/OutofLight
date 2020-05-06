@@ -28,12 +28,12 @@ public class ScreenCreep : MonoBehaviour
     {
         if (darkStepAmount.GetValue() == 4)
         {
-            creep.CrossFadeAlpha(100f, creepDuration, false);
+            creep.CrossFadeAlpha(125f, creepDuration, false);
         }
 
         if (darkStepAmount.GetValue() == 5)
         {
-            creep.CrossFadeAlpha(175f, creepDuration, false);
+            creep.CrossFadeAlpha(200f, creepDuration, false);
         }
 
         if (darkStepAmount.GetValue() >= 6)
