@@ -28,7 +28,7 @@ public class Fuel : MonoBehaviour {
     void OnTriggerEnter(Collider other) {
         if (other.gameObject.CompareTag("Player")) {
             FuelPickedUp.Raise();
-            stepAmount.ChangeValue(refillAmount);
+            stepAmount.ChangeValue(+refillAmount);
             Destroy(gameObject);
         }
     }
