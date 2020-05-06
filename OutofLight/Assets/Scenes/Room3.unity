@@ -376,7 +376,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 98.43298, y: -43.41101, z: -47.281982}
 --- !u!1001 &136428917
 PrefabInstance:
@@ -665,6 +665,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Safezone
+      objectReference: {fileID: 0}
+    - target: {fileID: 2789390351587808290, guid: c8a9f2d692386164a97b8be1e74de35e,
+        type: 3}
+      propertyPath: refillStepAmount
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2789390351587808300, guid: c8a9f2d692386164a97b8be1e74de35e,
         type: 3}
@@ -2877,7 +2882,7 @@ RectTransform:
   - {fileID: 1347015811}
   - {fileID: 694788643}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4102,5 +4107,5 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: -90, y: 90, z: 0}
