@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2789390350865307102
 Transform:
   m_ObjectHideFlags: 0
@@ -4864,6 +4864,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InsideSafezone: {fileID: 11400000, guid: 8f854e48a0a7e9141b3e08409ccb05d2, type: 2}
   stepAmount: {fileID: 11400000, guid: 88431f49dcf46fb45aa9686e9310270c, type: 2}
+  darkSteps: {fileID: 11400000, guid: 813f415f9d92ae5418f8d31e6358aa9a, type: 2}
   insideSafezone: 0
   refillStepAmount: 2
 --- !u!108 &2789390351587808291

@@ -6,11 +6,15 @@ public class SafeZone : MonoBehaviour {
 
     public BoolVariable InsideSafezone;
     public IntVariable stepAmount;
+    public IntVariable darkSteps;
 
     [SerializeField][Header("Initialt värde vid start")]
     private bool insideSafezone;
     [SerializeField][Header("Påfyll av steg")]
     private int refillStepAmount;
+    [SerializeField]
+    [Header("Borttag av Dark Steps")]
+    private int removeAmount;
 
     void Start() {
         InsideSafezone.ChangeValue(insideSafezone);
@@ -20,7 +24,12 @@ public class SafeZone : MonoBehaviour {
         if (!other.gameObject.CompareTag("Player")) return;
         InsideSafezone.ChangeValue(true);
         if (stepAmount.GetValue() < refillStepAmount)
-            stepAmount.ChangeValue(refillStepAmount);
+            stepAmount.ChangeValue(+refillStepAmount);
+        if (darkSteps.GetValue() >= 0)
+        {
+            darkSteps.ChangeValue(-removeAmount);
+        }
+        
     }
 
     void OnTriggerExit(Collider other) {

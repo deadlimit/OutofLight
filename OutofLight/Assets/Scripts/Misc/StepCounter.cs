@@ -27,7 +27,7 @@ public class StepCounter : MonoBehaviour {
     private void Update()
     {
         CheckIfStepsDepleted();
-        if (darkStepAmount.GetValue() >= 6)
+        if (darkStepAmount.GetValue() >= 7)
         {
             gameOverText.enabled = true;
         }
@@ -56,6 +56,10 @@ public class StepCounter : MonoBehaviour {
     private void CheckIfStepsDepleted() {
         if (stepAmount.GetValue() <= 0)
             stepsDepleted.Raise();
+        if (stepAmount.GetValue() > 0)
+        {
+            gameState.EnterLightMode();
+        }
     }
 
 
