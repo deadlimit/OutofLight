@@ -6,7 +6,6 @@ public class Movement : MonoBehaviour {
     public GameEvent ArrivedAtTarget;
     public GameEvent StartedMoving;
     public Vector3List ValidMoveDirections;
-    public SpawnPosition SpawnPosition;
 
     private bool isMoving;
     private Vector3 swipeDirection;
@@ -22,15 +21,11 @@ public class Movement : MonoBehaviour {
     void Awake()
     {
         thisTransform = GetComponent<Transform>();
-        
         touchInput = GetComponent<TouchInput>();
     }
 
     void Start() {
         isMoving = false;
-        if (Time.time > 1f) 
-            thisTransform.position = SpawnPosition.spawnPosition;
-        
     }
 
     void Update() {
@@ -116,5 +111,6 @@ public class Movement : MonoBehaviour {
 
         return false;
     }
+
 
 }
