@@ -324,6 +324,18 @@ Transform:
   m_Father: {fileID: 450821635}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &84853531 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3420134833927638325, guid: bce9bd44cf73bf2408cc867f651ea0e4,
+    type: 3}
+  m_PrefabInstance: {fileID: 3420134834053321978}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &404360326
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -982,6 +994,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2086274728673907369, guid: 0696c8eb50c6eb14f83e1c3e9c3f6d15,
+        type: 3}
+      propertyPath: decreaseLightModifier
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2086274728673907369, guid: 0696c8eb50c6eb14f83e1c3e9c3f6d15,
+        type: 3}
+      propertyPath: stepsAmount
+      value: 
+      objectReference: {fileID: 11400000, guid: 88431f49dcf46fb45aa9686e9310270c,
+        type: 2}
+    - target: {fileID: 2086274728673907369, guid: 0696c8eb50c6eb14f83e1c3e9c3f6d15,
+        type: 3}
+      propertyPath: fuelSlider
+      value: 
+      objectReference: {fileID: 84853531}
     - target: {fileID: 3472170124708652256, guid: 0696c8eb50c6eb14f83e1c3e9c3f6d15,
         type: 3}
       propertyPath: m_Constraints
@@ -991,6 +1019,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Dave
+      objectReference: {fileID: 0}
+    - target: {fileID: 6853577156026910578, guid: 0696c8eb50c6eb14f83e1c3e9c3f6d15,
+        type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7020492330692705912, guid: 0696c8eb50c6eb14f83e1c3e9c3f6d15,
         type: 3}
