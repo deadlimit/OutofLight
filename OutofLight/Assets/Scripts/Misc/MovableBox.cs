@@ -3,10 +3,12 @@ using UnityEngine;
 
 public class MovableBox : MonoBehaviour, IInteractable {
 
-    [SerializeField]
-    public Vector3 lockedDirection;
-    [SerializeField]
-    private int tileMoves;
+    [Header("Ange vilket håll lådan ska gå röra sig åt")]
+    [SerializeField] public Vector3 lockedDirection;
+
+    [Header("Ange antal tiles lådan rör sig åt hållet angivet ovan")]
+    [SerializeField] private int tileMoves;
+
     private bool canBeMoved;
 
     public GameEvent UpdateTiles;
