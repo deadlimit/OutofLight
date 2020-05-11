@@ -38,8 +38,6 @@ public class Movement : MonoBehaviour {
             KeyboardInput();
         else
             SwipeInput();
-
-
     }
 
     private void KeyboardInput() {
