@@ -1,21 +1,29 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class MovableBox : MonoBehaviour {
+public class MovableBox : MonoBehaviour, IInteractable {
 
     [SerializeField]
-    private Vector3 lockedDirection;
+    public Vector3 lockedDirection;
     [SerializeField]
-    private bool lockDirection;
-    [SerializeField][Header("Layernummer, tilldelas efter kollision (så spelaren inte går igenom lådan)")]
-    private int newLayer;
+    private int tileMoves;
+    private bool canBeMoved;
 
-    void OnTriggerEnter(Collider other) {
-        if (other.gameObject.CompareTag("Player")) {
-            Vector3 moveDirection = CalculatedMoveDirection(transform.position - other.gameObject.transform.position);
-            gameObject.layer = newLayer;
-            StartCoroutine(Move(moveDirection));
-        }
+    public GameEvent UpdateTiles;
+
+    public void Use() {
+        if (canBeMoved && tileMoves > 0)
+            StartCoroutine(Move(lockedDirection));
+    }
+
+    void OnTriggerStay(Collider other) {
+        if (other.gameObject.CompareTag("Player"))
+            canBeMoved = true;
+    }
+
+    void OnTriggerExit(Collider other) {
+        if (other.gameObject.CompareTag("Player"))
+            canBeMoved = false;
     }
 
     IEnumerator Move(Vector3 direction) {
@@ -29,25 +37,10 @@ public class MovableBox : MonoBehaviour {
             startTime += Time.deltaTime;
             yield return null;
         }
+        tileMoves--;
+        UpdateTiles.Raise();
 
     }
 
-    private Vector3 CalculatedMoveDirection(Vector3 direction) {
-        //TODO: Gör den här bättre
-        if (!lockDirection) {
-            if (direction.x > 0)
-                return Vector3.right;
-            else if (direction.x < -.9f)
-                return Vector3.left;
-            else if (direction.z > .9f)
-                return Vector3.forward;
-            else
-                return Vector3.back;
-        } else
-            return lockedDirection;
-        
-
-        
-    }
 
 }
