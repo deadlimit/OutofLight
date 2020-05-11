@@ -15,7 +15,7 @@ public class StepCounter : MonoBehaviour {
     [SerializeField]
     private int startingDarkSteps;
 
-    void Awake() {
+    private void Awake() {
         stepAmount.ChangeValue(-100);
         stepAmount.ChangeValue(startingStepsAmount);
         darkStepAmount.ChangeValue(-100);
@@ -33,24 +33,22 @@ public class StepCounter : MonoBehaviour {
         }
     }
 
-    public void DecrementStep() {
-        if (!safezone.IsTrue()) {
-            stepAmount.ChangeValue(-1);
-            if (stepAmount.GetValue() <= 0)
-            {
-                gameState.EnterDarkMode();
-            }
+    public void DecrementStep()
+    {
+        if (safezone.IsTrue()) return;
+        stepAmount.ChangeValue(-1);
+        if (stepAmount.GetValue() <= 0)
+        {
+            gameState.EnterDarkMode();
         }
-        
+
     }
     public void AddDarkStep()
     {
-        if (gameState.CurrentState() != State.DARK) return;
-        if (!safezone.IsTrue())
-        {
-            darkStepAmount.ChangeValue(+1);
-            Debug.Log("Dark Steps Is: " + darkStepAmount.GetValue());
-        }
+        if (gameState.CurrentState() != State.DARK || safezone.IsTrue()) return;
+
+        darkStepAmount.ChangeValue(+1);
+        Debug.Log("Dark Steps Is: " + darkStepAmount.GetValue());
     }
 
     private void CheckIfStepsDepleted() {

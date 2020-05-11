@@ -11,7 +11,7 @@ public class Tile : MonoBehaviour {
     public bool isTrapTile;
 
 
-    void Awake() {
+    private void Awake() {
 
         mesh = GetComponent<MeshRenderer>();
     }
@@ -28,7 +28,7 @@ public class Tile : MonoBehaviour {
         
     }
 
-    IEnumerator Rotate() {
+    private IEnumerator Rotate() {
         var targetAngle = transform.eulerAngles + 180 * Vector3.down;
         while(transform.rotation.z != 180) {
             transform.eulerAngles = Vector3.Lerp(transform.eulerAngles, targetAngle, Time.deltaTime * 10);

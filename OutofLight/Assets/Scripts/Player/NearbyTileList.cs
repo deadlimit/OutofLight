@@ -39,8 +39,7 @@ public class NearbyTileList: MonoBehaviour {
         
         var ray = new Ray(origin.position, direction - new Vector3(0, .5f, 0));
         
-        RaycastHit hitInfo;
-        var hitObject = Physics.Raycast(ray, out hitInfo);
+        var hitObject = Physics.Raycast(ray, out var hitInfo);
         Debug.DrawLine(origin.position, direction);
         if (hitObject && hitInfo.transform.gameObject.CompareTag("Tile")) {
             nearbyTiles.Add(hitInfo.transform.gameObject);

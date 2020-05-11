@@ -9,7 +9,7 @@ public class Lever : MonoBehaviour, IInteractable {
 
     private bool isPlayerInRange; 
 
-    void Update()
+    private void Update()
     {
         if (!isPlayerInRange) return;
         if (!Input.GetKeyDown(KeyCode.E)) return;
@@ -19,16 +19,16 @@ public class Lever : MonoBehaviour, IInteractable {
         GetComponent<Lever>().enabled = false;
     }
 
-    void OnTriggerStay(Collider other) {
-        if (other.gameObject.CompareTag("Player")) {
-            isPlayerInRange = true;
-        }
+    private void OnTriggerStay(Collider other)
+    {
+        if (!other.gameObject.CompareTag("Player")) return;
+        isPlayerInRange = true;
     }
 
-    void OnTriggerExit(Collider other) {
-        if (other.gameObject.CompareTag("Player")) {
-            isPlayerInRange = false;
-        }
+    private void OnTriggerExit(Collider other)
+    {
+        if (!other.gameObject.CompareTag("Player")) return;
+        isPlayerInRange = false;
     }
 
     public void Use() {

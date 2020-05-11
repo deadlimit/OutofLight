@@ -12,27 +12,27 @@ public class Fuel : MonoBehaviour {
     [SerializeField]
     private int refillAmount;
 
-    void Awake() {
+    private void Awake() {
         _transform = GetComponent<Transform>(); 
     }
 
-    void Update() {
+    private void Update() {
         if (rotate)
-        Rotate();
+            Rotate();
     }
 
     private void Rotate(){
-        Vector3 angle = new Vector3(Random.Range(1, 360), Random.Range(1, 360), Random.Range(1, 360));
+        var angle = new Vector3(Random.Range(1, 360), Random.Range(1, 360), Random.Range(1, 360));
 
         _transform.Rotate(angle * Time.deltaTime / 10, Space.World);
     }
 
-    void OnTriggerEnter(Collider other) {
-        if (other.gameObject.CompareTag("Player")) {
-            FuelPickedUp.Raise();
-            stepAmount.ChangeValue(+refillAmount);
-            Destroy(gameObject);
-        }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!other.gameObject.CompareTag("Player")) return;
+        FuelPickedUp.Raise();
+        stepAmount.ChangeValue(+refillAmount);
+        Destroy(gameObject);
     }
 
 }

@@ -12,7 +12,7 @@ public class LockedDoorScript : MonoBehaviour
     public Button returnToMenu;
 
     private bool isUnlocked;
-    void Start()
+    private void Start()
     {
         doorLocked.enabled = false;
         doorPartiallyLocked.enabled = false;

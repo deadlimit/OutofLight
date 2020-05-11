@@ -10,12 +10,12 @@ public class ScreenCreep : MonoBehaviour
     public IntVariable darkStepAmount;
     public float creepDuration;
 
-    void Start()
+    private void Start()
     {
         creep.enabled = false;
     }
 
-    void Update()
+    private void Update()
     {
         if (gameState.CurrentState() == State.DARK && darkStepAmount.GetValue() >= 3)
         {

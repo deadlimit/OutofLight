@@ -10,12 +10,12 @@ public class UIUpdater : MonoBehaviour {
     public IntVariable steps, darkSteps;
     public Image fadeImage;
 
-    void Start() {
+    private void Start() {
         fadeImage.enabled = true;
         fadeImage.CrossFadeAlpha(0.1f, 3f, false);
     }
 
-    void Update() {
+    private void Update() {
         UpdateGameState();
         UpdateSteps();
         UpdateDarkSteps();

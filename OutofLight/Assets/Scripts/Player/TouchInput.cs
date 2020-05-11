@@ -9,7 +9,7 @@ public class TouchInput : MonoBehaviour {
     public GameEvent DoubleTap;
     public bool onCooldown;
 
-    void Update() {
+    private void Update() {
         GetSwipeDirection();
 
         GetDoubleTap();
@@ -28,13 +28,11 @@ public class TouchInput : MonoBehaviour {
 
         if (Input.touchCount <= 0) return;
 
-        RaycastHit hit;
-
         var ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
 
-        if (!Physics.Raycast(ray, out hit)) return;
+        if (!Physics.Raycast(ray, out var hit)) return;
 
-        IInteractable temp = hit.transform.gameObject.GetComponent<IInteractable>();
+        var temp = hit.transform.gameObject.GetComponent<IInteractable>();
 
         if (temp == null) return;
 

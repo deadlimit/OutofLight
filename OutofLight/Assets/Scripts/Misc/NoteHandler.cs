@@ -17,20 +17,16 @@ public class NoteHandler : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            paper.enabled = true;
-            noteText.enabled = true;
-        }
+        if (!other.gameObject.CompareTag("Player")) return;
+        paper.enabled = true;
+        noteText.enabled = true;
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            paper.enabled = false;
-            noteText.enabled = false;
-        }
+        if (!other.gameObject.CompareTag("Player")) return;
+        paper.enabled = false;
+        noteText.enabled = false;
     }
 
 

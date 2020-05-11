@@ -19,12 +19,12 @@ public class Door : MonoBehaviour, IInteractable {
         closeToDoor = value;
     }
 
-    public void Use() {
-        if (closeToDoor) {
-            NewSceneLoad.Raise();
-            spawn.spawnPosition = otherSide;
-            SceneManager.LoadScene(newSceneIndex);
-        }
+    public void Use()
+    {
+        if (!closeToDoor) return;
+        NewSceneLoad.Raise();
+        spawn.spawnPosition = otherSide;
+        SceneManager.LoadScene(newSceneIndex);
     }
 
 

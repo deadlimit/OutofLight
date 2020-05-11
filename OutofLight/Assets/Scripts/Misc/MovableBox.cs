@@ -18,17 +18,17 @@ public class MovableBox : MonoBehaviour, IInteractable {
             StartCoroutine(Move(lockedDirection));
     }
 
-    void OnTriggerStay(Collider other) {
+    private void OnTriggerStay(Collider other) {
         if (other.gameObject.CompareTag("Player"))
             canBeMoved = true;
     }
 
-    void OnTriggerExit(Collider other) {
+    private void OnTriggerExit(Collider other) {
         if (other.gameObject.CompareTag("Player"))
             canBeMoved = false;
     }
 
-    IEnumerator Move(Vector3 direction) {
+    private IEnumerator Move(Vector3 direction) {
 
         float startTime = 0;
         var endPosition = direction + transform.position;

@@ -19,20 +19,20 @@ public class Movement : MonoBehaviour {
     private float timeToMove = 0;
 
 
-    void Awake() {
+    private void Awake() {
         thisTransform = GetComponent<Transform>();
 
         touchInput = GetComponent<TouchInput>();
     }
 
-    void Start() {
+    private void Start() {
         isMoving = false;
         if (Time.time > 1f)
             thisTransform.position = SpawnPosition.spawnPosition;
 
     }
 
-    void Update() {
+    private void Update() {
 
         if (UseKeyboard.IsTrue())
             KeyboardInput();
@@ -60,7 +60,6 @@ public class Movement : MonoBehaviour {
 
         if (direction == Vector3.zero || isMoving) return;
         if (!CheckIfValidDirection(direction)) {
-            Debug.Log("No valid tile!");
         } else {
             isMoving = true;
             var destination = direction + transform.position;
@@ -104,7 +103,7 @@ public class Movement : MonoBehaviour {
     }
 
     private bool CheckIfValidDirection(Vector3 direction) {
-        foreach (var vector in ValidMoveDirections.getDirectionList()) {
+        foreach (var vector in ValidMoveDirections.GetDirectionList()) {
             var position = thisTransform.position;
             float comparingX = (int)vector.x - (int)position.x;
             float comparingZ = (int)vector.z - (int)position.z;

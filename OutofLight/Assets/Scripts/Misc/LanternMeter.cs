@@ -9,7 +9,7 @@ public class LanternMeter : MonoBehaviour {
 
     public IntVariable stepAmount;
 
-    void Awake() {
+    private void Awake() {
         lanternSlider = GetComponent<Slider>();
     }
 

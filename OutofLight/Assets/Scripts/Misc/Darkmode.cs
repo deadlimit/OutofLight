@@ -11,7 +11,7 @@ public class Darkmode : MonoBehaviour {
     [SerializeField]
     private int darksteps;
 
-    void Start() {
+    private void Start() {
         GameOver.SetActive(false);
     }
 

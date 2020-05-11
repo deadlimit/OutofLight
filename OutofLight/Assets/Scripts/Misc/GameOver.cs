@@ -8,7 +8,7 @@ public class GameOver : MonoBehaviour {
     public GameState gameState;
     public IntVariable stepAmount;
 
-    void Awake() {
+    private void Awake() {
         gameState.EnterLightMode();
     }
 
