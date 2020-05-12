@@ -12,8 +12,7 @@ GameObject:
   - component: {fileID: 7330667373951269886}
   - component: {fileID: 2654360475397827301}
   - component: {fileID: 2219025937004912916}
-  - component: {fileID: 2219025937004912919}
-  m_Layer: 2
+  m_Layer: 9
   m_Name: Lever
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,22 +92,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.19615705, y: 0.19615716, z: 1.3600004}
-  m_Center: {x: -0.000000022351747, y: -0.0000000037253085, z: -0.58}
---- !u!114 &2219025937004912919
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2219025937004912917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a89f5204e5e98d7448e85504517b635a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LeverPulled: {fileID: 11400000, guid: 01350d9ba6d14a44e802f03cacb5dac4, type: 2}
-  LeverNoPulled: {fileID: 0}
+  m_Size: {x: 2, y: 2, z: 1.35}
+  m_Center: {x: 0, y: -1, z: -0.08}
 --- !u!1 &2451974892252761484
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,7 +103,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1467175072798211999}
-  m_Layer: 0
+  - component: {fileID: 1725095157}
+  - component: {fileID: 1725095156}
+  m_Layer: 9
   m_Name: lever_m1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,6 +128,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!65 &1725095157
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2451974892252761484}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 1, z: 0.5}
+  m_Center: {x: 0, y: 1, z: 0.03}
+--- !u!114 &1725095156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2451974892252761484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a89f5204e5e98d7448e85504517b635a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LeverPulled: {fileID: 11400000, guid: 01350d9ba6d14a44e802f03cacb5dac4, type: 2}
+  LeverNoPulled: {fileID: 11400000, guid: 0457d74e3bbbcd948b4466db44f3a14c, type: 2}
 --- !u!1 &3812039776198544913
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,7 +166,7 @@ GameObject:
   - component: {fileID: 2728140373840975799}
   - component: {fileID: 1696380835494547114}
   - component: {fileID: 5922608290522487597}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LeverHub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
