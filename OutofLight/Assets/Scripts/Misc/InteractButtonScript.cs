@@ -17,7 +17,7 @@ public class InteractButtonScript : MonoBehaviour
         interact.gameObject.SetActive(false);
     }
 
-    void Update()
+    private void Update()
     {
         if (isClose)
         {
