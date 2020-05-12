@@ -10,12 +10,15 @@ public class UIUpdater : MonoBehaviour {
     public IntVariable steps, darkSteps;
     public Image fadeImage;
     public GameObject returnB;
+    public GameObject interactB;
 
     private void Start() {
         fadeImage.enabled = true;
         fadeImage.CrossFadeAlpha(0.1f, 3f, false);
         returnB = GameObject.Find("ReturnToMenuButton");
         returnB.gameObject.SetActive(true);
+        interactB = GameObject.Find("InteractButton");
+        interactB.gameObject.SetActive(false);
     }
 
     private void Update() {
