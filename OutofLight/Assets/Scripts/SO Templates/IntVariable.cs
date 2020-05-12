@@ -5,14 +5,11 @@ public class IntVariable : ScriptableObject {
     [SerializeField]
     private int value;
 
-    public void ChangeValue(int value) {
+    public void ChangeValue(int value)
+    {
+        var newValue = this.value += value;
 
-        int newValue = this.value += value;
-
-        if (newValue < 0)
-            this.value = 0;
-        else 
-            this.value = newValue;
+        this.value = newValue < 0 ? 0 : newValue;
     }
 
     public int GetValue() {

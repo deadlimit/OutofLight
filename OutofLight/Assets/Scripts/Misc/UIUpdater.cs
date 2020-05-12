@@ -11,14 +11,14 @@ public class UIUpdater : MonoBehaviour {
     public Image fadeImage;
     public GameObject returnB;
 
-    void Start() {
+    private void Start() {
         fadeImage.enabled = true;
         fadeImage.CrossFadeAlpha(0.1f, 3f, false);
         returnB = GameObject.Find("ReturnToMenuButton");
         returnB.gameObject.SetActive(true);
     }
 
-    void Update() {
+    private void Update() {
         UpdateGameState();
         UpdateSteps();
         UpdateDarkSteps();

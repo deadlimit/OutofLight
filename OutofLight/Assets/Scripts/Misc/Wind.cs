@@ -16,13 +16,13 @@ public class Wind : MonoBehaviour {
     private bool trapActive;
 
 
-    void Awake() {
+    private void Awake() {
         wind = GetComponent<ParticleSystem>();
         triggerCollider = GetComponent<BoxCollider>();
         trapActive = false;
     }
 
-    void Update() {
+    private void Update() {
 
         startTime += Time.deltaTime;
 
@@ -31,13 +31,13 @@ public class Wind : MonoBehaviour {
         }
     }
     
-    void OnTriggerEnter(Collider other) {
+    private void OnTriggerEnter(Collider other) {
         if(other.gameObject.CompareTag("Player")) {
             StepAmount.ChangeValue(lossAmount);
         }
     }
 
-    IEnumerator ActivateTrap() {
+    private IEnumerator ActivateTrap() {
         trapActive = true;
         wind.Play();
         triggerCollider.enabled = true;

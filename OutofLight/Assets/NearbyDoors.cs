@@ -25,9 +25,9 @@ public class NearbyDoors : MonoBehaviour {
         if (list.Count <= 0) return;
 
         foreach(var door in list) {
-            var newdoor = door.GetComponent<Door>();
-            if (newdoor == null) return;
-            newdoor.IsCloseToDoor(value);
+            var newDoor = door.GetComponent<Door>();
+            if (newDoor == null) return;
+            newDoor.IsCloseToDoor(value);
         }
     }
     private void CastRays(Transform origin) {
@@ -41,8 +41,7 @@ public class NearbyDoors : MonoBehaviour {
 
         var ray = new Ray(origin.position, direction - new Vector3(0, .5f, 0));
 
-        RaycastHit hitInfo;
-        var hitObject = Physics.Raycast(ray, out hitInfo);
+        var hitObject = Physics.Raycast(ray, out var hitInfo);
         Debug.DrawLine(origin.position, direction);
         if (hitObject && hitInfo.transform.gameObject.CompareTag("Door")) {
             list.Add(hitInfo.transform.gameObject);

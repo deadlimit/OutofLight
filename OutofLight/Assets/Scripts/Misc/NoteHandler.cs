@@ -24,6 +24,7 @@ public class NoteHandler : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+
         if (other.gameObject.CompareTag("Player"))
         {
             paper.enabled = true;
@@ -40,6 +41,7 @@ public class NoteHandler : MonoBehaviour
             noteText.enabled = false;
             button.SetActive(false);
         }
+
     }
 
     public void doneReading()

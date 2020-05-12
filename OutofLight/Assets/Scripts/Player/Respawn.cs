@@ -10,7 +10,7 @@ public class Respawn : MonoBehaviour
     [SerializeField]
     private int currentScene;
 
-    void Update()
+    private void Update()
     {
         if (gameOverText.enabled == true)
         {

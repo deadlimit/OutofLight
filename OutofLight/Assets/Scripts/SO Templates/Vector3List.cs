@@ -15,7 +15,7 @@ public class Vector3List : ScriptableObject {
         list.Clear();
     }
 
-    public List<Vector3> getDirectionList() {
+    public List<Vector3> GetDirectionList() {
         return list;
     }
 

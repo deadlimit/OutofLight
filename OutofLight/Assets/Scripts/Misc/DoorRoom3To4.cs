@@ -30,20 +30,16 @@ public class DoorRoom3To4 : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player") && !leverPulled.IsTrue())
-        {
-            paper.enabled = true;
-            room3Locked.enabled = true;
-        }
+        if (!other.gameObject.CompareTag("Player") || leverPulled.IsTrue()) return;
+        paper.enabled = true;
+        room3Locked.enabled = true;
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            paper.enabled = false;
-            room3Locked.enabled = false;
-        }
+        if (!other.gameObject.CompareTag("Player")) return;
+        paper.enabled = false;
+        room3Locked.enabled = false;
     }
 
     public void UnlockDoor()

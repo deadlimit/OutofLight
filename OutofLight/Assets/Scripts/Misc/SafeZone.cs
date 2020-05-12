@@ -16,10 +16,10 @@ public class SafeZone : MonoBehaviour {
     [Header("Borttag av Dark Steps")]
     private int removeAmount;
 
-    void Start() {
+    private void Start() {
         InsideSafezone.ChangeValue(insideSafezone);
     }
-    void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (!other.gameObject.CompareTag("Player")) return;
         InsideSafezone.ChangeValue(true);
@@ -32,7 +32,7 @@ public class SafeZone : MonoBehaviour {
         
     }
 
-    void OnTriggerExit(Collider other) {
+    private void OnTriggerExit(Collider other) {
         if (other.gameObject.CompareTag("Player")) {
             InsideSafezone.ChangeValue(false);
         }
