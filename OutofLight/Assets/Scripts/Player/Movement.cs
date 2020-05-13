@@ -15,8 +15,8 @@ public class Movement : MonoBehaviour {
     private Transform thisTransform;
 
     public BoolVariable UseKeyboard;
-    [SerializeField]
-    private float timeToMove = 0;
+    [SerializeField] private float timeToMove;
+    [SerializeField] private float speed;
 
 
     private void Awake() {
@@ -88,7 +88,7 @@ public class Movement : MonoBehaviour {
 
 
         while (startTime < timeToMove) {
-            transform.position = Vector3.MoveTowards(transform.position, direction, .6f * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, direction, .6f * Time.deltaTime * speed);
 
             transform.LookAt(direction);
 
