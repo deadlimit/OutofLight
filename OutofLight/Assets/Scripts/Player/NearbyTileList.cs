@@ -7,7 +7,7 @@ public class NearbyTileList: MonoBehaviour {
 
     private List<GameObject> nearbyTiles = new List<GameObject>();
 
-    private Color highlightColor = Color.red;
+    public Color highlightColor = Color.red;
     private Color defaultColor = Color.white;
 
     private void Start() {
