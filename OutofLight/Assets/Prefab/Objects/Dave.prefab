@@ -1104,6 +1104,7 @@ MonoBehaviour:
   SpawnPosition: {fileID: 11400000, guid: 1eb3d7e2146cb2a4491e49ff4db4b671, type: 2}
   UseKeyboard: {fileID: 11400000, guid: 980e7e8b695bb6f46b6566f6279707b8, type: 2}
   timeToMove: 2
+  speed: 0
 --- !u!114 &2291619330867451633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1143,8 +1144,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6337890760d02e41a728a2a79cac4f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DoubleTap: {fileID: 11400000, guid: 1732c54b4c672d849a2f81f0763ece85, type: 2}
-  onCooldown: 0
 --- !u!65 &7329579916221728256
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1846,7 +1845,6 @@ GameObject:
   m_Component:
   - component: {fileID: 9097565075402011493}
   - component: {fileID: 1420021256396204390}
-  - component: {fileID: 6237800695179624962}
   - component: {fileID: 7148223760915031674}
   - component: {fileID: 7125516159815182525}
   m_Layer: 0
@@ -1885,18 +1883,6 @@ MonoBehaviour:
   validMoveDirections: {fileID: 11400000, guid: b685b32982e43d34088519d89e77eea9,
     type: 2}
   highlightColor: {r: 1, g: 0, b: 0, a: 0.2}
---- !u!114 &6237800695179624962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7045970926450075185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73fea6a6428a0ca458c4e5d9324ef5b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7148223760915031674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1915,17 +1901,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1420021256396204390}
         m_MethodName: ResetTileColors
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 6237800695179624962}
-        m_MethodName: ClearDoorList
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1957,17 +1932,6 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 9097565075402011493}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 6237800695179624962}
-        m_MethodName: UpdateDoorList
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
