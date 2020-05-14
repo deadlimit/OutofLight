@@ -5,26 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour, IInteractable {
 
-    public int newSceneIndex;
-
+    public TransitInfo transitInfo;
+    
     public GameEvent NewSceneLoad;
 
     public SpawnPosition spawn;
-
-    public Vector3 otherSide;
-
-    [SerializeField] private bool closeToDoor;
-
-    public void IsCloseToDoor(bool value) {
-        closeToDoor = value;
-    }
-
+    
     public void Use()
     {
-        if (!closeToDoor) return;
         NewSceneLoad.Raise();
-        spawn.spawnPosition = otherSide;
-        SceneManager.LoadScene(newSceneIndex);
+        spawn.spawnPosition = transitInfo.otherSide;
+        SceneManager.LoadScene(transitInfo.sceneNumber);
     }
 
 
