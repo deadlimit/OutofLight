@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu]
+[CreateAssetMenu(menuName = "Variables/Int")]
 public class IntVariable : ScriptableObject {
     [SerializeField]
     private int value;

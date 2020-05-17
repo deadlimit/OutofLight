@@ -9,4 +9,8 @@ public class ReturnButton : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+
+    public void Inventory() {
+        Debug.Log("Inventory button");
+    }
 }
