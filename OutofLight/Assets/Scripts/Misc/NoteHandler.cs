@@ -24,6 +24,7 @@ public class NoteHandler : MonoBehaviour
     void Start()
     {
         paper.enabled = false;
+        paper.GetComponent<Animation>();
         noteText.enabled = false;
         noteText.text = content.getText();
         button = GameObject.Find("ReadButton");
@@ -46,7 +47,7 @@ public class NoteHandler : MonoBehaviour
         {
             paper.enabled = true;
             noteText.enabled = true;
-            button.SetActive(true);           
+            button.SetActive(true);
         }
     }
 
