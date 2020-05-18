@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Globalization;
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,17 +13,17 @@ public class JournalHandler : MonoBehaviour {
     public Text day;
     public Text header;
     public Text entry;
+    public Button close;
+    
 
-    private GameObject[] uiComponents;
-
-    public void Awake() {
-        uiComponents = {background, day, header, entry};
+    public void Awake()
+    {
         ChangeUIComponentsVisible(false);
     }
 
     public void DisplayJournalPage() {
         ChangeUIComponentsVisible(true);
-        JournalPage page = journal.latest;
+        var page = journal.latest;
         if (page == null) return; 
         day.text = page.day;
         header.text = page.header;
@@ -31,14 +31,20 @@ public class JournalHandler : MonoBehaviour {
     }
 
     public void Close() {
+        Debug.Log("wefwef");
         day.text = null;
         header.text = null;
         entry.text = null;
         ChangeUIComponentsVisible(false);
     }
 
-    private void ChangeUIComponentsVisible(bool visible) {
-        foreach(var comp in uiComponents)
-            comp.SetActive(visible);
+    private void ChangeUIComponentsVisible(bool visible)
+    {
+        background.enabled = visible;
+        day.enabled = visible;
+        header.enabled = visible;
+        entry.enabled = visible;
+        close.gameObject.SetActive(visible);
+        
     }
 }
