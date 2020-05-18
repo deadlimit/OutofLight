@@ -20,6 +20,7 @@ public class UIUpdater : MonoBehaviour {
         interactB = GameObject.Find("InteractButton");
         interactB.gameObject.SetActive(false);
         roomText.enabled = true;
+        roomText.CrossFadeAlpha(0.1f, 4f, false);
     }
 
     private void Update() {
@@ -32,7 +33,7 @@ public class UIUpdater : MonoBehaviour {
     private void DisplayScene()
     {
         roomText.text = SceneManager.GetActiveScene().name;
-        roomText.CrossFadeAlpha(0.1f, 5f, false);
+        roomText.CrossFadeAlpha(0.1f, 4f, false);
     }
 
 
