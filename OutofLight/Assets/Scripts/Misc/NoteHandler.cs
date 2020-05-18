@@ -9,8 +9,17 @@ public class NoteHandler : MonoBehaviour
     public Text noteText;
     public StringList content;
 
+    private Transform _transform;
     private GameObject button;
     private bool isDoneReading;
+
+    [SerializeField]
+    private bool rotate;
+
+    void Awake()
+    {
+        _transform = GetComponent<Transform>();
+    }
 
     void Start()
     {
@@ -20,6 +29,14 @@ public class NoteHandler : MonoBehaviour
         button = GameObject.Find("ReadButton");
         button.gameObject.SetActive(false);
         isDoneReading = false;       
+    }
+
+    private void Update()
+    {
+        if (rotate)
+        {
+            Rotate();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -50,7 +67,13 @@ public class NoteHandler : MonoBehaviour
         paper.enabled = false;
         noteText.enabled = false;
         button.SetActive(false);
-    } 
+    }
+    private void Rotate()
+    {
+        var angle = new Vector3(Random.Range(1, 360), Random.Range(1, 360), Random.Range(1, 360));
+
+        _transform.Rotate(angle * Time.deltaTime / 10, Space.World);
+    }
 
 }
 
