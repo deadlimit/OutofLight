@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class JournalBehavior : MonoBehaviour, IInteractable {
 
-    public GameObject journalUIPrefab;
+    public GameEvent PageFound;
     public JournalPage page;
     public Journal journal;
     public void Use() {
-        
         journal.Add(page);
+        PageFound.Raise();
         Destroy(gameObject);
     }
 }
