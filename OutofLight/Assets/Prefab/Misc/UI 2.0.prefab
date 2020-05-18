@@ -718,9 +718,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14cdb90563f35ce479573705ff159ac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amountOfStepsText: {fileID: 0}
-  gameStateText: {fileID: 0}
-  darkStepsText: {fileID: 0}
   roomText: {fileID: 6065075080151376148}
   gameState: {fileID: 11400000, guid: b9d24d1580db6704589ca6d940777d03, type: 2}
   steps: {fileID: 11400000, guid: 88431f49dcf46fb45aa9686e9310270c, type: 2}
@@ -1367,6 +1364,8 @@ GameObject:
   - component: {fileID: 5764028672614625563}
   - component: {fileID: 3149237809418193646}
   - component: {fileID: 6550962374505375692}
+  - component: {fileID: 52070736601921629}
+  - component: {fileID: 5936040438324684797}
   m_Layer: 5
   m_Name: InteractButton
   m_TagString: Untagged
@@ -1486,6 +1485,60 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interact: {fileID: 11400000, guid: 769e9d45634bceb49adf7cfc4d74245f, type: 2}
+--- !u!114 &52070736601921629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8407735154253382566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f624fc09539ff242ad601509638ac53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 37e1f53acba6d5547bdec44c33be60ac, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6550962374505375692}
+        m_MethodName: Reset
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5936040438324684797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8407735154253382566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f624fc09539ff242ad601509638ac53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 0}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6550962374505375692}
+        m_MethodName: SetNewInteract
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8695788616620391019
 GameObject:
   m_ObjectHideFlags: 0
