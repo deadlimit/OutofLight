@@ -18,6 +18,7 @@ public class UIJournal : MonoBehaviour {
     private void OnEnable() {
         for (int i = 0; i < slots.Length; i++) {
             slots[i].image.sprite = journal.journal[i] == null ? emptySlot : occupiedSlot;
+            slotTexts[i].text = journal.journal[i] == null ? null : journal.journal[i].day;
         }
     }
 
