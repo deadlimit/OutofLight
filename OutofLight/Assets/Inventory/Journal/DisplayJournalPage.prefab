@@ -168,7 +168,7 @@ GameObject:
   - component: {fileID: 4156053362566443199}
   - component: {fileID: 4156053362566443200}
   m_Layer: 5
-  m_Name: JournalPageUI
+  m_Name: DisplayJournalPage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -246,12 +246,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   journal: {fileID: 11400000, guid: 5d111ad1152b49e45a8d8633010986d3, type: 2}
-  JournalPageUI: {fileID: 2785662515727607791}
-  background: {fileID: 2785662515727607789}
   day: {fileID: 2785662516029886219}
   header: {fileID: 2235454267605144730}
   entry: {fileID: 2235454265988546303}
-  close: {fileID: 9025518161683986746}
 --- !u!114 &4156053362566443200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,7 +266,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4156053362566443199}
-        m_MethodName: DisplayJournalPage
+        m_MethodName: Close
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -469,7 +466,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 264, y: -296}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1214215764661481753
