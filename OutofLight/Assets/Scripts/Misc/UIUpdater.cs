@@ -10,16 +10,15 @@ public class UIUpdater : MonoBehaviour {
     public GameState gameState;
     public IntVariable steps, darkSteps;
     public Image fadeImage;
-    public GameObject returnB, interactB;
+    public GameObject returnB;
 
     private void Start() {
         fadeImage.enabled = true;
         fadeImage.CrossFadeAlpha(0.1f, 3f, false);
         returnB = GameObject.Find("ReturnToMenuButton");
         returnB.gameObject.SetActive(true);
-        interactB = GameObject.Find("InteractButton");
-        interactB.gameObject.SetActive(false);
         roomText.enabled = true;
+        roomText.CrossFadeAlpha(0.1f, 5f, false);
     }
 
     private void Update() {
@@ -32,7 +31,6 @@ public class UIUpdater : MonoBehaviour {
     private void DisplayScene()
     {
         roomText.text = SceneManager.GetActiveScene().name;
-        roomText.CrossFadeAlpha(0.1f, 5f, false);
     }
 
 
