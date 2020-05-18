@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class UIUpdater : MonoBehaviour {
 
-    public Text amountOfStepsText, gameStateText, darkStepsText;
+    public Text amountOfStepsText, gameStateText, darkStepsText, roomText;
     public GameState gameState;
     public IntVariable steps, darkSteps;
     public Image fadeImage;
-    public GameObject returnB;
-    public GameObject interactB;
+    public GameObject returnB, interactB;
+
 
     private void Start() {
         fadeImage.enabled = true;
@@ -19,6 +19,7 @@ public class UIUpdater : MonoBehaviour {
         returnB.gameObject.SetActive(true);
         interactB = GameObject.Find("InteractButton");
         interactB.gameObject.SetActive(false);
+        roomText.enabled = false;
     }
 
     private void Update() {
