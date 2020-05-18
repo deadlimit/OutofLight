@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu]
+[CreateAssetMenu(menuName = "Variables/Bool")]
 public class BoolVariable : ScriptableObject {
 
     [SerializeField]

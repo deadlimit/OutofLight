@@ -8,7 +8,6 @@ public class StepCounter : MonoBehaviour {
     public IntVariable stepAmount;
     public GameState gameState;
     public IntVariable darkStepAmount;
-    public Text gameOverText;
 
     [SerializeField]
     private int startingStepsAmount;
@@ -20,17 +19,13 @@ public class StepCounter : MonoBehaviour {
         stepAmount.ChangeValue(startingStepsAmount);
         darkStepAmount.ChangeValue(-100);
         darkStepAmount.ChangeValue(startingDarkSteps);
-        gameOverText.enabled = false;
         gameState.EnterLightMode();
     }
 
     private void Update()
     {
         CheckIfStepsDepleted();
-        if (darkStepAmount.GetValue() >= 7)
-        {
-            gameOverText.enabled = true;
-        }
+        
     }
 
     public void DecrementStep()
