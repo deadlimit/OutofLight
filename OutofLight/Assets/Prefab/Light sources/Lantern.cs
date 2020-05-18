@@ -13,7 +13,7 @@ public class Lantern : MonoBehaviour {
     [SerializeField]
     private float decreaseLightModifier;
 
-    void Awake() {
+    private void Awake() {
         lanternLight = GetComponentInChildren<Light>();
     }
 
@@ -28,23 +28,5 @@ public class Lantern : MonoBehaviour {
         lanternLight.range = Mathf.Lerp(fuelSlider.value, stepsAmount.GetValue(), Time.deltaTime * decreaseLightModifier);
     }
 
-    //Gammal, snyggare kod av Jonathan:
-    //public void ChangeLight() {
-        //StartCoroutine(DecreaseLight());
-    //}
-
-
-
-    //private IEnumerator DecreaseLight() {
-
-        //float startTime = 0;
-        //float endTime = 2;
-
-        //while(startTime < endTime) {
-            //lanternLight.range -= decreaseLightModifier * Time.deltaTime;
-            //startTime += Time.deltaTime;
-            //yield return null;
-        //}
-    //}
 
 }

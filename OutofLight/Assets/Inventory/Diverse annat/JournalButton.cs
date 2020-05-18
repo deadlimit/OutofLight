@@ -18,7 +18,6 @@ public class JournalButton : MonoBehaviour {
         ChangeOnClick();
     }
     
-    
     private void OpenJournal() {
         var journal = (GameObject)Instantiate(journalUI, GameObject.FindWithTag("UI").transform.position, Quaternion.identity, GameObject.FindWithTag("UI").transform);
         internalReference = journal;
