@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Net.Cache;
+using UnityEditor.Rendering;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class UIJournal : MonoBehaviour {
@@ -11,14 +13,15 @@ public class UIJournal : MonoBehaviour {
     public Text[] slotTexts;
 
     private void Awake(){
-        slots = GetComponentsInChildren<Button>();
-        slotTexts = GetComponentsInChildren<Text>();
+        Fill();
     }
 
-    private void OnEnable() {
-        for (int i = 0; i < slots.Length; i++) {
-            slots[i].image.sprite = journal.journal[i] == null ? emptySlot : occupiedSlot;
-            slotTexts[i].text = journal.journal[i] == null ? null : journal.journal[i].day;
+    private void Fill() {
+        foreach (var page in journal.journal) {
+            if (page == null) continue;
+            slots[page.journalPageEntry].image.sprite = occupiedSlot;
+            slotTexts[page.journalPageEntry].text = page.day;
+
         }
     }
 

@@ -11,14 +11,15 @@ public class RoomPresenter : MonoBehaviour {
 	
 	private void Awake() {
 		sceneName.text = SceneManager.GetActiveScene().name;
-		StartCoroutine(FadeTo(255, 2));
+		
 	}
 
 	private void Start() {
-		StartCoroutine(FadeTo(0, 3));
+		
+		StartCoroutine(FadeTo(255, 3));
 	}
 	
-
+	
 	private IEnumerator FadeTo(float value, float time) {
 		var alpha = sceneName.color.a;
 		for (var t = 0.0f; t < 1.0f; t += Time.deltaTime / time) {
@@ -27,5 +28,7 @@ public class RoomPresenter : MonoBehaviour {
 			sceneName.color = newColor;
 			yield return null;
 		}
+		
+		
 	}
 }
