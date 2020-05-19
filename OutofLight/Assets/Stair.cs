@@ -5,26 +5,37 @@ using UnityEngine;
 using UnityEngine.Experimental.TerrainAPI;
 
 public class Stair : MonoBehaviour, IInteractable {
-	
 
+
+	public TransitInfo up;
+	public float speed;
+	public float timeToWaitUntilRotationCorrection;
+	private Transform player;
+	
+	
 	private void Awake() {
 		ChangeLayerMask("Default");
 	}
 	
 	private void OnTriggerEnter(Collider other) {
-		if (other.gameObject.CompareTag("Player")) { 
-			ChangeLayerMask("Interactable");
-		}
+		if (!other.gameObject.CompareTag("Player")) return;
+		ChangeLayerMask("Interactable");
+		player = other.gameObject.transform;
 	}
 
 	private void OnTriggerExit(Collider other) {
-		if (other.gameObject.CompareTag("Player")) {
-			ChangeLayerMask("Default");
-		}
+		if (!other.gameObject.CompareTag("Player")) return;
+		ChangeLayerMask("Default");
 	}
 	
 	public void Use() {
-		Debug.Log("Stair");
+		StartCoroutine(MoveUp());
+	}
+
+	private IEnumerator MoveUp(){
+		StartCoroutine(player.GetComponent<Movement>().Move(up.otherSide, speed));
+		yield return new WaitForSeconds(timeToWaitUntilRotationCorrection);
+		player.localRotation = new Quaternion(0, 0, 0, 0);
 	}
 
 	private void ChangeLayerMask(string arg) {
