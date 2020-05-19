@@ -20,9 +20,11 @@ public class Movement : MonoBehaviour {
 
 
     private void Awake() {
+        ArrivedAtTarget.Raise();
         thisTransform = GetComponent<Transform>();
 
         touchInput = GetComponent<TouchInput>();
+        Start();
     }
 
     private void Start() {

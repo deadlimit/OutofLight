@@ -19,13 +19,10 @@ public class UINewRoom : MonoBehaviour {
     }
 
     private IEnumerator ShowSequence() {
-        Debug.Log("Fade image");
         StartCoroutine(ImageFade(0, fadeTime));
         yield return new WaitForSeconds(fadeTime);
-        Debug.Log("Fade in Text");
         StartCoroutine(SceneText(1, fadeTime));
         yield return new WaitForSeconds(fadeTime + waitBeforeTextFade);
-        Debug.Log("Fade out Text");
         StartCoroutine(SceneText(0, fadeTime));
         yield return new WaitForSeconds(fadeTime);
         Destroy(gameObject);

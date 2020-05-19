@@ -6,5 +6,6 @@ public class TransitInfo : ScriptableObject {
 
     public Vector3 otherSide;
     public int sceneNumber;
+    public Quaternion rotation;
 
 }

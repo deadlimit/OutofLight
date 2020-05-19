@@ -17,7 +17,8 @@ public class Tile : MonoBehaviour {
     }
 
 
-    public void HighlightTile(Color color ) {
+    public void HighlightTile(Color color) {
+        Debug.Log(gameObject);
         mesh.material.color = color;
     }
 
