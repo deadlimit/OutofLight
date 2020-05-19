@@ -166,7 +166,6 @@ GameObject:
   - component: {fileID: 2785662515727607794}
   - component: {fileID: 2785662515727607789}
   - component: {fileID: 4156053362566443199}
-  - component: {fileID: 6917707205422716396}
   m_Layer: 5
   m_Name: DisplayJournalPage
   m_TagString: Untagged
@@ -245,30 +244,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bea493abdc8c5114c8ced28eb1307b66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 6917707205422716396}
+  anim: {fileID: 0}
   journal: {fileID: 11400000, guid: 5d111ad1152b49e45a8d8633010986d3, type: 2}
   day: {fileID: 2785662516029886219}
   header: {fileID: 2235454267605144730}
   entry: {fileID: 2235454265988546303}
---- !u!95 &6917707205422716396
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2785662515727607791}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 102e0ccbf97934642a54a0b4dca34049, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2785662516029886213
 GameObject:
   m_ObjectHideFlags: 0
