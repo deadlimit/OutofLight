@@ -9,10 +9,12 @@ public class ScreenCreep : MonoBehaviour
     public GameState gameState;
     public IntVariable darkStepAmount;
     public float creepDuration;
+    public Color lowTarget, middleTarget, highTarget, current;
 
     private void Start()
     {
         creep.enabled = false;
+
     }
 
     private void Update()
@@ -22,25 +24,25 @@ public class ScreenCreep : MonoBehaviour
             creep.enabled = true;
         }
         CreepState();
+        current = creep.color;
     }
 
     private void CreepState()
     {
         if (darkStepAmount.GetValue() == 4)
         {
-            creep.CrossFadeAlpha(125f, creepDuration, false);
+            creep.color = Color.Lerp(current, lowTarget, Time.deltaTime * creepDuration);
         }
 
         if (darkStepAmount.GetValue() == 5)
         {
-            creep.CrossFadeAlpha(200f, creepDuration, false);
+            creep.color = Color.Lerp(current, middleTarget, Time.deltaTime * creepDuration);
         }
 
         if (darkStepAmount.GetValue() >= 6)
         {
-            creep.CrossFadeAlpha(255f, creepDuration, false);
+            creep.color = Color.Lerp(current, highTarget, Time.deltaTime * creepDuration);
         }
-        else creep.CrossFadeAlpha(0.1f, creepDuration, false);
     }
 
 
