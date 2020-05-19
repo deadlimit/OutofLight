@@ -7,6 +7,7 @@ public class UINewRoom : MonoBehaviour {
     
     public Image fadeImage;
     public Text room;
+    public Image presenterbg;
 
     public float fadeTime;
     public float waitBeforeTextFade;
@@ -40,10 +41,12 @@ public class UINewRoom : MonoBehaviour {
     
     private IEnumerator SceneText(float value, float time) {
         var alpha = room.color.a;
+        var alpha2 = presenterbg.color.a;
         for (var t = 0.0f; t < 1.0f; t += Time.deltaTime / time) {
             var newColor = new Color(room.color.r, room.color.g, room.color.b,
                 Mathf.Lerp(alpha, value, t));
             room.color = newColor;
+            presenterbg.color = newColor;
             yield return null;
         }
         yield return new WaitForSeconds(waitBeforeTextFade);
