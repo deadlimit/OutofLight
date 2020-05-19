@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 8084979887941454779}
   - component: {fileID: 6429020835011620928}
   m_Layer: 5
-  m_Name: Bar  (placeholder)
+  m_Name: FuelBar
   m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -273,7 +273,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepAmount: {fileID: 11400000, guid: 88431f49dcf46fb45aa9686e9310270c, type: 2}
   lanternSlider: {fileID: 8084979887941454779}
-  lerpSpeed: 0
+  lerpSpeed: 1.1
   lerpColor: 5
   fill: {fileID: 4335479182694822382}
   high: {r: 0.12696587, g: 0.8867924, b: 0.079476655, a: 1}
@@ -574,7 +574,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6509434, g: 0.6417319, b: 0.6417319, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

@@ -15,6 +15,7 @@ public class Lantern : MonoBehaviour {
 
     private void Awake() {
         lanternLight = GetComponentInChildren<Light>();
+        fuelSlider = GameObject.Find("FuelBar").GetComponent<Slider>();
     }
 
     private void Start()
