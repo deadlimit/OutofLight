@@ -20,19 +20,17 @@ public class Movement : MonoBehaviour {
 
 
     private void Awake() {
-        ArrivedAtTarget.Raise();
+        
         thisTransform = GetComponent<Transform>();
 
         touchInput = GetComponent<TouchInput>();
-        Start();
-    }
-
-    private void Start() {
-        isMoving = false;
         if (Time.time > 1f)
             thisTransform.position = SpawnPosition.spawnPosition;
+        isMoving = false;
 
     }
+    
+    
 
     private void Update() {
 

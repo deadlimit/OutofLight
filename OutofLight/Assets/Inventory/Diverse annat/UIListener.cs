@@ -7,6 +7,7 @@ public class UIListener : MonoBehaviour {
 	public GameObject roomPresenter;
 
 	private void Awake() {
+		
 		var presenter = Instantiate(roomPresenter, gameObject.transform);
 		presenter.transform.SetAsFirstSibling();
 	}

@@ -10,12 +10,9 @@ public class NearbyTileList: MonoBehaviour {
     public Color highlightColor = Color.red;
     private Color defaultColor = Color.white;
 
-    private void Awake() {
-        UpdateNearbyTiles(transform);
-    }
-    
     private void Start() {
-        
+
+        UpdateNearbyTiles(transform);
     }
 
     public void ResetTileColors() {
