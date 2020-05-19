@@ -10,15 +10,14 @@ public class JournalHandler : MonoBehaviour {
     public Text entry;
     
     public void Awake() {
-	    anim.SetTrigger("Open");
-        var page = journal.latest;
+	    var page = journal.latest;
         if (page == null) return; 
         day.text = page.day;
         header.text = page.header;
         entry.text = page.entry;
     }
     
-    public void Close() {
+    public void Close() { 
 	    anim.SetTrigger("Close");
        Destroy(gameObject, 1.01f);
     }
