@@ -11,7 +11,6 @@ public class TouchInput : MonoBehaviour {
     
     
     private void GetSwipeDirection() {
-        
         direction = Vector3.zero;
         if (Input.touchCount > 0) {
             theTouch = Input.GetTouch(0);

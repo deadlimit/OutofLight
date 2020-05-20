@@ -29,6 +29,7 @@ public class InteractButton : MonoBehaviour {
     public void Reset() {
         thisButton.onClick.RemoveAllListeners();
         thisImage.enabled = false;
+        interactPrompt.text = null;
     }
 
 

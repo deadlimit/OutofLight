@@ -6,18 +6,24 @@ using UnityEngine;
 public class HugeWindowInspection : MonoBehaviour, IInteractable {
 	
 	public GameObject dave;
-	
+	public GameEvent Inspecting;
+	public GameEvent StopInspectiong;
 	private bool isLooking;
+
+	private void Awake() {
+		isLooking = false;
+	}
 	
 	public void Use() {
 		if (!isLooking) {
+			Inspecting.Raise();
 			CameraController.instance.ActivateWindowCamera();
-			dave.transform.LookAt(new Vector3(transform.position.x, transform.position.y, 0));
 			isLooking = true;
 			dave.GetComponent<Movement>().ArrivedAtTarget.Raise();
 			
 		}
 		else {
+			StopInspectiong.Raise();
 			isLooking = false;
 			CameraController.instance.ActivateStaticCamera();
 		}
@@ -26,6 +32,6 @@ public class HugeWindowInspection : MonoBehaviour, IInteractable {
 
 
 	public string GetPrompt() {
-		return isLooking ? "Inspect" : "Stop inspect";
+		return !isLooking ? "Inspect" : "Stop inspect";
 	}
 }

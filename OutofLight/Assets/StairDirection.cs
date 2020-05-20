@@ -37,6 +37,10 @@ public class StairDirection : MonoBehaviour {
 		CameraController.instance.ActivateMainCamera();
 	}
 
+	public void FadeAwayTemporary() {
+		StartCoroutine(ImageFade(0, .1f, false));
+	}
+
 	private IEnumerator ImageFade(float value, float time, bool destroy) {
 		if(!destroy)
 			yield return new WaitForSeconds(2);
