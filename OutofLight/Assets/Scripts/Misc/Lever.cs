@@ -37,4 +37,8 @@ public class Lever : MonoBehaviour, IInteractable {
         LeverNoPulled.ChangeValue(true);
         GetComponent<Lever>().enabled = false;
     }
+
+    public string GetPrompt() {
+        return "Pull lever";
+    }
 }

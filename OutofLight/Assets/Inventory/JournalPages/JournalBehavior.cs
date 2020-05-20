@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,5 +13,9 @@ public class JournalBehavior : MonoBehaviour, IInteractable {
         journal.Add(page);
         PageFound.Raise();
         Destroy(gameObject);
+    }
+
+    public string GetPrompt() {
+        return "Pick up journal page";
     }
 }

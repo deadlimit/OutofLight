@@ -296,6 +296,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 92363d16ab2ce4247b5015084dfd54c9,
         type: 2}
+    - target: {fileID: -8787798481461181616, guid: a625efba65ba76c48bdb7405ac8f2759,
+        type: 3}
+      propertyPath: prompt
+      value: Enter Dining Hall
+      objectReference: {fileID: 0}
     - target: {fileID: 6361995105449852227, guid: a625efba65ba76c48bdb7405ac8f2759,
         type: 3}
       propertyPath: m_Name
@@ -610,6 +615,16 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1898197485140347043, guid: 683620493e9c3e845a4314e4a32315db,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6179561395484007929, guid: 683620493e9c3e845a4314e4a32315db,
+        type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6592980103191924075, guid: 683620493e9c3e845a4314e4a32315db,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -782,6 +797,7 @@ MonoBehaviour:
   transitInfo: {fileID: 0}
   NewSceneLoad: {fileID: 0}
   spawn: {fileID: 0}
+  prompt: 
 --- !u!65 &345856901
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1010,6 +1026,7 @@ MonoBehaviour:
   up: {fileID: 11400000, guid: c08caedb5e321bc41a7c0653e5b6d0ee, type: 2}
   speed: 6
   timeToWaitUntilRotationCorrection: 1
+  prompt: 
 --- !u!65 &434641633
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1499,6 +1516,7 @@ MonoBehaviour:
   transitInfo: {fileID: 0}
   NewSceneLoad: {fileID: 11400000, guid: d4690f16bc752554c9a68564c07f3891, type: 2}
   spawn: {fileID: 11400000, guid: 1eb3d7e2146cb2a4491e49ff4db4b671, type: 2}
+  prompt: 
 --- !u!1001 &648768103
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2057,6 +2075,7 @@ MonoBehaviour:
   up: {fileID: 11400000, guid: d5b81b3df3b1445489952b90384c3c16, type: 2}
   speed: 6
   timeToWaitUntilRotationCorrection: 1
+  prompt: 
 --- !u!65 &844065791
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2794,17 +2813,17 @@ PrefabInstance:
     - target: {fileID: 9070881222752194268, guid: 76c78237cf9b06549ba6a41581442e7b,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.00000003445893
+      value: 0.00000011175871
       objectReference: {fileID: 0}
     - target: {fileID: 9070881222752194268, guid: 76c78237cf9b06549ba6a41581442e7b,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0000000074505797
+      value: 0.000000037252903
       objectReference: {fileID: 0}
     - target: {fileID: 9070881222752194268, guid: 76c78237cf9b06549ba6a41581442e7b,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0021849421
+      value: -0.0021852031
       objectReference: {fileID: 0}
     - target: {fileID: 9070881222752194268, guid: 76c78237cf9b06549ba6a41581442e7b,
         type: 3}
@@ -2839,22 +2858,22 @@ PrefabInstance:
     - target: {fileID: 9070881223230914792, guid: 76c78237cf9b06549ba6a41581442e7b,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.13609709
+      value: -0.23401514
       objectReference: {fileID: 0}
     - target: {fileID: 9070881223230914792, guid: 76c78237cf9b06549ba6a41581442e7b,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.39281613
+      value: 0.34360415
       objectReference: {fileID: 0}
     - target: {fileID: 9070881223230914792, guid: 76c78237cf9b06549ba6a41581442e7b,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.9058154
+      value: -0.85299885
       objectReference: {fileID: 0}
     - target: {fileID: 9070881223230914792, guid: 76c78237cf9b06549ba6a41581442e7b,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.081680045
+      value: -0.31554085
       objectReference: {fileID: 0}
     - target: {fileID: 9070881223230914792, guid: 76c78237cf9b06549ba6a41581442e7b,
         type: 3}
@@ -5664,6 +5683,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 9d7f308e48c993f4cb449cbb47f170e3,
         type: 2}
+    - target: {fileID: -8787798481461181616, guid: a625efba65ba76c48bdb7405ac8f2759,
+        type: 3}
+      propertyPath: prompt
+      value: Enter Library
+      objectReference: {fileID: 0}
     - target: {fileID: 6361995105449852227, guid: a625efba65ba76c48bdb7405ac8f2759,
         type: 3}
       propertyPath: m_Name

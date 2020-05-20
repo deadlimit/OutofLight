@@ -10,13 +10,16 @@ public class Door : MonoBehaviour, IInteractable {
     public GameEvent NewSceneLoad;
 
     public SpawnPosition spawn;
-    
-    public void Use()
-    {
+
+    public string prompt;
+
+    public void Use() {
         NewSceneLoad.Raise();
         spawn.spawnPosition = transitInfo.otherSide;
         SceneManager.LoadScene(transitInfo.sceneNumber);
     }
 
-
+    public string GetPrompt() {
+        return prompt;
+    }
 }

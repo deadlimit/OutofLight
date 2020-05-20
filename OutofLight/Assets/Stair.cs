@@ -11,7 +11,8 @@ public class Stair : MonoBehaviour, IInteractable {
 	public float speed;
 	public float timeToWaitUntilRotationCorrection;
 	private Transform player;
-	
+
+	public string prompt;
 	
 	private void Awake() {
 		ChangeLayerMask("Default");
@@ -30,6 +31,10 @@ public class Stair : MonoBehaviour, IInteractable {
 	
 	public void Use() {
 		StartCoroutine(MoveUp());
+	}
+
+	public string GetPrompt() {
+		return prompt;
 	}
 
 	private IEnumerator MoveUp(){

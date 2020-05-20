@@ -18,6 +18,10 @@ public class MovableBox : MonoBehaviour, IInteractable {
             StartCoroutine(Move(lockedDirection));
     }
 
+    public string GetPrompt() {
+        return "Push box";
+    }
+
     private void OnTriggerStay(Collider other) {
         if (other.gameObject.CompareTag("Player"))
             canBeMoved = true;
