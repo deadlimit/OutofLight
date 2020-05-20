@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIListener : MonoBehaviour {
 
-	public GameObject journalPageDisplay, respawnMechanic, player;
+	public GameObject journalPageDisplay, respawnMechanic, player, directionArrows;
 	[Header("Fade in + room text")]
 	public GameObject roomPresenter;
 
@@ -33,6 +33,11 @@ public class UIListener : MonoBehaviour {
 		var presenter = Instantiate(roomPresenter, gameObject.transform);
 		presenter.transform.SetAsFirstSibling();
 
+	}
+
+	public void ShowStairArrows() {
+		var arrows = Instantiate(directionArrows, gameObject.transform);
+		arrows.transform.SetAsLastSibling();
 	}
 
 	public void Blink() {

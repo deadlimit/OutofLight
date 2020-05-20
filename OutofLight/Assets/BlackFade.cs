@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class BlackFade : MonoBehaviour {
 
 	public Image image;
+	public GameEvent BlackFadeDone;
 	public float seconds;
 	private void Awake() {
 		StartCoroutine(Fade());
@@ -16,6 +15,8 @@ public class BlackFade : MonoBehaviour {
 		StartCoroutine(ImageFade(1, seconds));
 		yield return new WaitForSeconds(seconds * 2);
 		StartCoroutine(ImageFade(0, seconds));
+		BlackFadeDone.Raise();
+
 	}
 	
 

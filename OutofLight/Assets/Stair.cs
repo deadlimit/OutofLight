@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Net.Mime;
+using System.Runtime.CompilerServices;
 using Cinemachine;
 using UnityEditor.Experimental.TerrainAPI;
 using UnityEditor.Rendering.Universal.ShaderGUI;
@@ -12,17 +13,13 @@ using UnityEngine.UI;
 public class Stair : MonoBehaviour, IInteractable {
 
 	public GameEvent ClimbStairs;
-	public CinemachineVirtualCamera stairCamera;
 	public TransitInfo up;
-	public float speed;
-	public float timeToWaitUntilRotationCorrection;
 	private Transform player;
 
 	public string prompt;
 	
 	private void Awake() {
 		ChangeLayerMask("Default");
-		stairCamera.gameObject.SetActive(false);
 	}
 	
 	private void OnTriggerEnter(Collider other) {
@@ -37,19 +34,18 @@ public class Stair : MonoBehaviour, IInteractable {
 	}
 	
 	public void Use() {
-		StartCoroutine(MoveUp());
+		StartCoroutine(MoveUp(up.otherSide));
 	}
 
 	public string GetPrompt() {
 		return prompt;
 	}
-
-	private IEnumerator MoveUp() {
-		stairCamera.gameObject.SetActive(true);
+	public IEnumerator MoveUp(Vector3 direction) {
 		ClimbStairs.Raise();
 		
-		yield return new WaitForSeconds(2);
-		player.position = up.otherSide;
+		yield return new WaitForSeconds(1);
+		Debug.Log("MOVE!");
+		player.position = direction;
 		player.GetComponent<Movement>().ArrivedAtTarget.Raise();
 	}
 
@@ -57,8 +53,5 @@ public class Stair : MonoBehaviour, IInteractable {
 		gameObject.layer = LayerMask.NameToLayer(arg);
 	}
 
-	public void MoveCamera() {
-		
-	}
-
+	
 }
