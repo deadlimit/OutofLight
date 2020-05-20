@@ -1,14 +1,5 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
-using System.Net.Mime;
-using System.Runtime.CompilerServices;
-using Cinemachine;
-using UnityEditor.Experimental.TerrainAPI;
-using UnityEditor.Rendering.Universal.ShaderGUI;
-using UnityEditor.SceneManagement;
 using UnityEngine;
-using UnityEngine.Experimental.TerrainAPI;
-using UnityEngine.UI;
 
 public class Stair : MonoBehaviour, IInteractable {
 
@@ -44,8 +35,7 @@ public class Stair : MonoBehaviour, IInteractable {
 		ClimbStairs.Raise();
 		
 		yield return new WaitForSeconds(1);
-		Debug.Log("MOVE!");
-		player.position = direction;
+		player.position = direction;	
 		player.GetComponent<Movement>().StartedMoving.Raise();
 		player.GetComponent<Movement>().ArrivedAtTarget.Raise();
 	}
