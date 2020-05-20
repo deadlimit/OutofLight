@@ -6,15 +6,19 @@ using UnityEngine.SceneManagement;
 
 public class Respawn : MonoBehaviour
 {
-    public Text gameOverText;
-    [SerializeField]
+    [SerializeField][Header ("Check för den aktiva scenen:")]
     private int currentScene;
+    private GameObject respawnMenu;
 
     private void Update()
     {
-        if (gameOverText.enabled == true)
-        {
-            SceneManager.LoadScene(currentScene);
-        }
+        currentScene = SceneManager.GetActiveScene().buildIndex;
+    }
+
+    public void respawn()
+    {
+        SceneManager.LoadScene(currentScene);
+        respawnMenu = GameObject.Find("RespawnMechanic_2.0");
+        Destroy(respawnMenu);
     }
 }

@@ -9,7 +9,7 @@ public class ScreenCreep : MonoBehaviour
     public GameState gameState;
     public IntVariable darkStepAmount;
     public float creepDuration;
-    public Color lowTarget, middleTarget, highTarget, current;
+    public Color lowTarget, middleTarget, highTarget, current, disabled;
 
     private void Start()
     {
@@ -29,6 +29,10 @@ public class ScreenCreep : MonoBehaviour
 
     private void CreepState()
     {
+        if (darkStepAmount.GetValue() < 4)
+        {
+            creep.color = Color.Lerp(current, disabled, Time.deltaTime * creepDuration);
+        }
         if (darkStepAmount.GetValue() == 4)
         {
             creep.color = Color.Lerp(current, lowTarget, Time.deltaTime * creepDuration);

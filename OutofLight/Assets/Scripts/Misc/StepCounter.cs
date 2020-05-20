@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class StepCounter : MonoBehaviour {
 
-    public GameEvent stepsDepleted;
+    public GameEvent stepsDepleted, gameOver;
     public BoolVariable safezone;
     public IntVariable stepAmount;
     public GameState gameState;
@@ -14,12 +14,15 @@ public class StepCounter : MonoBehaviour {
     [SerializeField]
     private int startingDarkSteps;
 
+    private bool menuDisplayed;
+
     private void Awake() {
         stepAmount.ChangeValue(-100);
         stepAmount.ChangeValue(startingStepsAmount);
         darkStepAmount.ChangeValue(-100);
         darkStepAmount.ChangeValue(startingDarkSteps);
         gameState.EnterLightMode();
+        menuDisplayed = false;
     }
 
     private void Update()
@@ -52,6 +55,11 @@ public class StepCounter : MonoBehaviour {
         if (stepAmount.GetValue() > 0)
         {
             gameState.EnterLightMode();
+        }
+        if (darkStepAmount.GetValue() == 7 && !menuDisplayed)
+        {
+            gameOver.Raise();
+            menuDisplayed = true;
         }
     }
 
