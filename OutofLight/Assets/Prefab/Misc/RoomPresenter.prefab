@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -127,6 +127,7 @@ MonoBehaviour:
   fadeImage: {fileID: 3499028220086555214}
   room: {fileID: 3499028220556353758}
   presenterbg: {fileID: 385197241420186244}
+  roomColors: {fileID: 11400000, guid: cdc0112cf650bb246a4aa0c210a3ffbd, type: 2}
   fadeTime: 2
   waitBeforeTextFade: 1
 --- !u!1 &3499028220086555200
@@ -236,7 +237,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -3.5000153, y: 9.199998}
+  m_AnchoredPosition: {x: -3.5, y: 9.199997}
   m_SizeDelta: {x: -73.00002, y: -21.599997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3499028220556353759
@@ -260,7 +261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 1}
+  m_Color: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

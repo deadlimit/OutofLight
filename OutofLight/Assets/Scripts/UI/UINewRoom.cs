@@ -1,5 +1,7 @@
 ﻿using System.Collections;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -8,7 +10,8 @@ public class UINewRoom : MonoBehaviour {
     public Image fadeImage;
     public Text room;
     public Image presenterbg;
-
+    public RoomColors roomColors;
+    
     public float fadeTime;
     public float waitBeforeTextFade;
 
@@ -16,10 +19,10 @@ public class UINewRoom : MonoBehaviour {
         room.text = SceneManager.GetActiveScene().name;
         fadeImage.enabled = true;
         StartCoroutine(ShowSequence());
-
     }
 
     private IEnumerator ShowSequence() {
+        room.color = roomColors.roomColors[SceneManager.GetActiveScene().name];
         StartCoroutine(ImageFade(0, fadeTime));
         yield return new WaitForSeconds(fadeTime);
         StartCoroutine(SceneText(1, fadeTime));
