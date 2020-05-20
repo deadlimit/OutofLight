@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.TerrainAPI;
 using UnityEditor.Rendering.Universal.ShaderGUI;
 using UnityEngine;
 using UnityEngine.Experimental.TerrainAPI;
 
 public class Stair : MonoBehaviour, IInteractable {
 
-
+	public GameEvent ClimpStairs;
 	public TransitInfo up;
 	public float speed;
 	public float timeToWaitUntilRotationCorrection;
@@ -38,13 +39,21 @@ public class Stair : MonoBehaviour, IInteractable {
 	}
 
 	private IEnumerator MoveUp(){
-		StartCoroutine(player.GetComponent<Movement>().Move(up.otherSide, speed));
+		ClimpStairs.Raise();
+		Vector3 look = new Vector3(up.otherSide.x, 0, up.otherSide.z);
+		player.GetComponent<Movement>().LookDirection(look);
+		StartCoroutine(player.GetComponent<Movement>().Move(up.otherSide, speed, false));
 		yield return new WaitForSeconds(timeToWaitUntilRotationCorrection);
 		player.localRotation = new Quaternion(0, 0, 0, 0);
+		
 	}
 
 	private void ChangeLayerMask(string arg) {
 		gameObject.layer = LayerMask.NameToLayer(arg);
+	}
+
+	public void MoveCamera() {
+		
 	}
 
 }
