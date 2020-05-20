@@ -5,34 +5,13 @@ public class TouchInput : MonoBehaviour {
 
     private Touch theTouch;
     private Vector3 touchStartPosition, touchEndPosition, direction;
-    
     private void Update() {
         GetSwipeDirection();
-        
     }
     
-    /*private void TouchRay() {
-       Gammal metod, Touch Interact sköts genom UI-button istället
-       
-        if (Input.touchCount <= 0) return;
-
-        var ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
-
-        if (!Physics.Raycast(ray, out var hit)) return;
-
-        var temp = hit.transform.gameObject.GetComponent<IInteractable>();
-
-        if (temp == null) return;
-
-        StartCoroutine(CooldownTimer());
-        temp.Use();
-    }*/
-
     
-
     private void GetSwipeDirection() {
         direction = Vector3.zero;
-
         if (Input.touchCount > 0) {
             theTouch = Input.GetTouch(0);
 
@@ -43,11 +22,7 @@ public class TouchInput : MonoBehaviour {
 
                 var x = touchEndPosition.x - touchStartPosition.x;
                 var y = touchEndPosition.y - touchStartPosition.y;
-
-                /*Rimligt att kolla om noll input?
-                 if (Mathf.Abs(x) == 0 && Mathf.Abs(y) == 0)
-                    direction = Vector3.zero;
-                */
+                
                 if (Mathf.Abs(x) > Mathf.Abs(y))
                     direction = x > 0 ? Vector3.right : Vector3.left;
 
@@ -55,7 +30,7 @@ public class TouchInput : MonoBehaviour {
                     direction = y > 0 ? Vector3.forward : Vector3.back;
 
             }
-
+            
         }
     }
 

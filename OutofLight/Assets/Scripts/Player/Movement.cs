@@ -61,7 +61,7 @@ public class Movement : MonoBehaviour {
         } else {
             isMoving = true;
             var destination = direction + transform.position;
-            StartCoroutine(Move(destination, speed, true));
+            StartCoroutine(Move(destination, speed, true, timeToMove));
             direction = Vector3.zero;
         }
 
@@ -76,7 +76,7 @@ public class Movement : MonoBehaviour {
         } else {
             isMoving = true;
             var destination = swipeDirection + transform.position;
-            StartCoroutine(Move(destination, speed, true));
+            StartCoroutine(Move(destination, speed, true, timeToMove));
         }
     }
 
@@ -85,12 +85,12 @@ public class Movement : MonoBehaviour {
     }
 
 
-    public  IEnumerator Move(Vector3 direction, float movementSpeed, bool turn) {
+    public  IEnumerator Move(Vector3 direction, float movementSpeed, bool turn, float moveTime) {
         StartedMoving.Raise();
 
         float startTime = 0;
 
-        while (startTime < timeToMove) {
+        while (startTime < moveTime) {
             transform.position = Vector3.MoveTowards(transform.position, direction, .6f * Time.deltaTime * movementSpeed);
             
             if(turn)
