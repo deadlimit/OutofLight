@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -22,7 +23,13 @@ public class UINewRoom : MonoBehaviour {
     }
 
     private IEnumerator ShowSequence() {
-        room.color = roomColors.roomColors[SceneManager.GetActiveScene().name];
+        try {
+            room.color = roomColors.roomColors[SceneManager.GetActiveScene().name];
+        }
+        catch (KeyNotFoundException e) {
+            
+        }
+
         StartCoroutine(ImageFade(0, fadeTime));
         yield return new WaitForSeconds(fadeTime);
         StartCoroutine(SceneText(1, fadeTime));

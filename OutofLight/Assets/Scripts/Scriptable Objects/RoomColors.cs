@@ -21,10 +21,7 @@ public class RoomColors : ScriptableObject {
 		for (int i = 0; i < scenes.Length; i++) {
 			roomColors.Add(scenes[i], colors[i]);
 		}
-
-		foreach (var key in roomColors.Keys) {
-			Debug.Log(key);
-		}
+		
 	}
 
 }
