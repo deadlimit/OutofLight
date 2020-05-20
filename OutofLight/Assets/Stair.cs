@@ -46,6 +46,7 @@ public class Stair : MonoBehaviour, IInteractable {
 		yield return new WaitForSeconds(1);
 		Debug.Log("MOVE!");
 		player.position = direction;
+		player.GetComponent<Movement>().StartedMoving.Raise();
 		player.GetComponent<Movement>().ArrivedAtTarget.Raise();
 	}
 

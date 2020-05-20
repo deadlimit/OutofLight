@@ -7,10 +7,11 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour {
 
-	public CinemachineVirtualCamera mainViewCamera;
-	public CinemachineVirtualCamera staticStairCamera;
-	public CinemachineVirtualCamera leftBalconyCamera;
-	public CinemachineVirtualCamera rightBalconyCamera;
+	[SerializeField] private CinemachineVirtualCamera mainViewCamera;
+	[SerializeField] private CinemachineVirtualCamera staticStairCamera;
+	[SerializeField] private CinemachineVirtualCamera leftBalconyCamera;
+	[SerializeField] private CinemachineVirtualCamera rightBalconyCamera;
+	[SerializeField] private CinemachineVirtualCamera windowInspectCamera;
 
 	
 	public static CameraController instance;
@@ -26,6 +27,7 @@ public class CameraController : MonoBehaviour {
 		staticStairCamera.gameObject.SetActive(false);
 		leftBalconyCamera.gameObject.SetActive(false);
 		rightBalconyCamera.gameObject.SetActive(false);
+		windowInspectCamera.gameObject.SetActive(false);
 	}
 
 	public void ActivateLeftBalconyCamera() {
@@ -33,6 +35,7 @@ public class CameraController : MonoBehaviour {
 		staticStairCamera.gameObject.SetActive(false);
 		leftBalconyCamera.gameObject.SetActive(true);
 		rightBalconyCamera.gameObject.SetActive(false);
+		windowInspectCamera.gameObject.SetActive(false);
 	}
 
 	public void ActiveRightBalconyCamera() {
@@ -40,6 +43,7 @@ public class CameraController : MonoBehaviour {
 		staticStairCamera.gameObject.SetActive(false);
 		leftBalconyCamera.gameObject.SetActive(false);
 		rightBalconyCamera.gameObject.SetActive(true);
+		windowInspectCamera.gameObject.SetActive(false);
 	}
 	
 	public void ActivateStaticCamera() {
@@ -47,6 +51,15 @@ public class CameraController : MonoBehaviour {
 		staticStairCamera.gameObject.SetActive(true);
 		leftBalconyCamera.gameObject.SetActive(false);
 		rightBalconyCamera.gameObject.SetActive(false);
+		windowInspectCamera.gameObject.SetActive(false);
+	}
+
+	public void ActivateWindowCamera() {
+		mainViewCamera.gameObject.SetActive(false);
+		staticStairCamera.gameObject.SetActive(false);
+		leftBalconyCamera.gameObject.SetActive(false);
+		rightBalconyCamera.gameObject.SetActive(false);
+		windowInspectCamera.gameObject.SetActive(true);
 	}
 	
 }

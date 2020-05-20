@@ -11,27 +11,27 @@ public class TouchInput : MonoBehaviour {
     
     
     private void GetSwipeDirection() {
+        
         direction = Vector3.zero;
         if (Input.touchCount > 0) {
             theTouch = Input.GetTouch(0);
 
             if (theTouch.phase == TouchPhase.Began) {
                 touchStartPosition = theTouch.position;
-            }  else if (theTouch.phase == TouchPhase.Moved || theTouch.phase == TouchPhase.Ended) {
+            }  else if (theTouch.phase == TouchPhase.Moved) {
                 touchEndPosition = theTouch.position;
 
                 var x = touchEndPosition.x - touchStartPosition.x;
                 var y = touchEndPosition.y - touchStartPosition.y;
                 
-                if (Mathf.Abs(x) > Mathf.Abs(y))
-                    direction = x > 0 ? Vector3.right : Vector3.left;
+                    if (Mathf.Abs(x) > Mathf.Abs(y))
+                        direction = x > 0 ? Vector3.right : Vector3.left;
 
-                else
-                    direction = y > 0 ? Vector3.forward : Vector3.back;
-
+                    else
+                        direction = y > 0 ? Vector3.forward : Vector3.back;
             }
-            
         }
+        
     }
 
     public Vector3 GetDirection() {
