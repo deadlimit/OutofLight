@@ -117,4 +117,62 @@ public class Movement : MonoBehaviour {
         return false;
     }
 
+    public void UpButton()
+    {
+        direction = Vector3.forward;
+        if (direction == Vector3.zero || isMoving) return;
+        if (!CheckIfValidDirection(direction)){}
+        else
+        {
+            isMoving = true;
+            var destination = direction + transform.position;
+            StartCoroutine(Move(destination, speed, true, timeToMove));
+            direction = Vector3.zero;
+        }
+    }
+
+    public void DownButton()
+    {
+        direction = Vector3.back;
+        if (direction == Vector3.zero || isMoving) return;
+        if (!CheckIfValidDirection(direction)) { }
+        else
+        {
+            isMoving = true;
+            var destination = direction + transform.position;
+            StartCoroutine(Move(destination, speed, true, timeToMove));
+            direction = Vector3.zero;
+        }
+    }
+
+    public void LeftButton()
+    {
+        direction = Vector3.left;
+        if (direction == Vector3.zero || isMoving) return;
+        if (!CheckIfValidDirection(direction)) { }
+        else
+        {
+            isMoving = true;
+            var destination = direction + transform.position;
+            StartCoroutine(Move(destination, speed, true, timeToMove));
+            direction = Vector3.zero;
+        }
+    }
+
+    public void RightButton()
+    {
+        direction = Vector3.right;
+        if (direction == Vector3.zero || isMoving) return;
+        if (!CheckIfValidDirection(direction)) { }
+        else
+        {
+            isMoving = true;
+            var destination = direction + transform.position;
+            StartCoroutine(Move(destination, speed, true, timeToMove));
+            direction = Vector3.zero;
+        }
+    }
+
+
+
 }
