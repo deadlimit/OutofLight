@@ -15,7 +15,7 @@ public class MenuController : MonoBehaviour
     public void NewGame()
     {
         fadeImage.enabled = true;
-        fadeImage.CrossFadeAlpha(255f, 3f, false);
+        fadeImage.CrossFadeAlpha(255, 3f, false);
         if (fadeImage.color.a == 1f)
         {
            SceneManager.LoadScene(1);
