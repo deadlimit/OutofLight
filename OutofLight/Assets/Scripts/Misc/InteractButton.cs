@@ -7,6 +7,7 @@ public class InteractButton : MonoBehaviour {
     private Image thisImage;
     private Text interactPrompt;
     public InteractParameter interact;
+    public GameEvent InteractTrigger;
     
     private void Awake() {
         thisImage = GetComponent<Image>();
@@ -24,6 +25,7 @@ public class InteractButton : MonoBehaviour {
     private void Interact() {
         interact.thisObject.Use();
         thisImage.enabled = false;
+        InteractTrigger.Raise();
     }
     
     public void Reset() {

@@ -546,7 +546,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 25057324ef1d6f041a11ce6798cfa949, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
@@ -629,6 +629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interact: {fileID: 11400000, guid: 769e9d45634bceb49adf7cfc4d74245f, type: 2}
+  InteractTrigger: {fileID: 11400000, guid: b294ffb78a68d0c42bae7e8c35edcce6, type: 2}
 --- !u!114 &6612980207495786017
 MonoBehaviour:
   m_ObjectHideFlags: 0

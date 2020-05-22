@@ -17,10 +17,19 @@ ModelImporter:
     second: Armature|Jump
   - first:
       74: 8950463628159420271
-    second: Armature|Death1
+    second: Armature|Death1 (2)
   - first:
       74: 4311183173267888911
     second: Armature|Death1 (1)
+  - first:
+      74: -8945691123924629249
+    second: Armature|Idle
+  - first:
+      74: -2328835098782832033
+    second: Armature|Interact
+  - first:
+      74: 2460853405816944039
+    second: Armature|LookAround
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -50,11 +59,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Armature|Stand still
-      takeName: Armature|Stand still
+      name: Armature|Idle
+      takeName: Armature|Idle
       internalID: 0
       firstFrame: 0
-      lastFrame: 75
+      lastFrame: 48
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -171,6 +180,64 @@ ModelImporter:
       internalID: 0
       firstFrame: 0
       lastFrame: 75
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Interact
+      takeName: Armature|Interact
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|LookAround
+      takeName: Armature|LookAround
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 80
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
