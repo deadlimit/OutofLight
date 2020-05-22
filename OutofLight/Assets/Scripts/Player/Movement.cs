@@ -57,8 +57,9 @@ public class Movement : MonoBehaviour {
         }
 
         if (direction == Vector3.zero || isMoving) return;
-        if (!CheckIfValidDirection(direction)) {
-        } else {
+        if (!CheckIfValidDirection(direction))
+            LookDirection(direction);
+        else {
             isMoving = true;
             var destination = direction + transform.position;
             StartCoroutine(Move(destination, speed, true, timeToMove));
@@ -69,10 +70,10 @@ public class Movement : MonoBehaviour {
 
     private void SwipeInput() {
         swipeDirection = touchInput.GetDirection();
-
+        
         if (swipeDirection == Vector3.zero || isMoving) return;
         if (!CheckIfValidDirection(swipeDirection)) {
-            transform.LookAt(swipeDirection);
+            LookDirection(swipeDirection);
         } else {
             isMoving = true;
             var destination = swipeDirection + transform.position;

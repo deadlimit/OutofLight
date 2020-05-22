@@ -25,12 +25,10 @@ public class Interactable : MonoBehaviour {
     private void CastRays(Vector3 direction) {
         hitObject = Physics.BoxCast(_transform.position, _transform.localScale / 2, direction, out hit, Quaternion.identity, maxDistance, LayerMask.GetMask("Interactable"));
 
-        if (hitObject) {
-            Debug.Log(hit.transform.gameObject);
-            interactableObject.thisObject = hit.transform.gameObject.GetComponent<IInteractable>();
-            ActivateInteract.Raise(); 
-        }
-            
+        if (!hitObject) return;
+        interactableObject.thisObject = hit.transform.gameObject.GetComponent<IInteractable>();
+        ActivateInteract.Raise();
+
     }
     
 }
