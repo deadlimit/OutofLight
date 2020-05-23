@@ -1122,7 +1122,8 @@ MonoBehaviour:
     type: 2}
   SpawnPosition: {fileID: 11400000, guid: 1eb3d7e2146cb2a4491e49ff4db4b671, type: 2}
   UseKeyboard: {fileID: 11400000, guid: 980e7e8b695bb6f46b6566f6279707b8, type: 2}
-  speed: 2
+  moveSpeed: 2
+  rotationSpeed: 2
 --- !u!114 &2291619330867451633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1854,7 +1855,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6524612427788282672}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4943e33fc5ddfad4e956626d072e189e, type: 3}
   m_Name: 
