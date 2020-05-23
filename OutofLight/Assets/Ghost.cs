@@ -1,37 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Collections.Specialized;
 using System.Linq;
-using System.Linq.Expressions;
 using UnityEngine;
-using UnityEngine.Animations;
 
 public class Ghost : MonoBehaviour {
 
-	public List<Tile> tiles = new List<Tile>();
-
-	public List<Tile> path = new List<Tile>();
 	
+	public IntVariable steps;
+	public int lowerValue;
 	public Transform player;
 	public Transform rayCheckPosition;
+	
 	private Transform thisTransform;
+	public List<Tile> tiles = new List<Tile>();
+	public List<Tile> path = new List<Tile>();
+	
 	private void Awake() {
 		thisTransform = GetComponent<Transform>(); 
 		player = GameObject.FindWithTag("Player").transform;
-		StartCoroutine(MapOutPath());
+		Map();
 	}
 
 	private void Update() {
 		var wef = GetPlayerDirection();
-		thisTransform.rotation = Quaternion.Slerp(thisTransform.rotation, wef, Time.deltaTime);
+		thisTransform.rotation = Quaternion.Slerp(thisTransform.rotation, wef, Time.deltaTime * 2 );
 	}
 
-	public void Map() {
-		StartCoroutine(MapOutPath());
-	}
-
-	public void CastRays() {
+	
+	private void CastRays() {
 		Ray(rayCheckPosition, Vector3.back);
 		Ray(rayCheckPosition, Vector3.forward);
 		Ray(rayCheckPosition, Vector3.left);
@@ -43,34 +39,31 @@ public class Ghost : MonoBehaviour {
 	}
 	
 
+	public void Map() {
+		StartCoroutine(MapOutPath());
+	}
+	
 	private IEnumerator MapOutPath() {
 		path.Clear();
 		CastRays();
 		var target = player.position;
 		target.y = .5f; 
-		while(Vector3.Distance(rayCheckPosition.position, target) > .1f) {
+		while(Vector3.Distance(rayCheckPosition.position, target) > .1f && tiles.Count < 80) {
 			var newPosition = tiles[0].transform.position;
 			newPosition.y = .5f;
 			rayCheckPosition.position = newPosition;
-			tiles[0].HighlightTile(Color.green);
 			CastRays();
-			yield return null;
+			yield return new WaitForSeconds(1);
 		}
 		tiles.Clear();
-		rayCheckPosition.position = this.thisTransform.position;
-
-	}
-
-	public void ClearColor() {
-		foreach(Tile tile in path)
-			tile.HighlightTile(Color.white);
-	}
-
-	public void Movee() {
-		StartCoroutine(Move());
+		rayCheckPosition.position = thisTransform.position;
 	}
 	
-	private IEnumerator Move() {
+	public void Move() {
+		StartCoroutine(MoveGhost());
+	}
+	
+	private IEnumerator MoveGhost() {
 		while (Vector3.Distance(thisTransform.position, path[0].transform.position) > .1f) {
 				var target = path[0].transform.position;
 				target.y = .5f;
@@ -79,6 +72,7 @@ public class Ghost : MonoBehaviour {
 				
 				yield return null;
 		}
+
 	}
 	
 
@@ -99,6 +93,11 @@ public class Ghost : MonoBehaviour {
 
 		Debug.DrawRay(thisOrigin.position, direction - new Vector3(0, .5f, 0), Color.red, 0);
 	}
-	
 
+	private void OnTriggerEnter(Collider other) {
+		if (other.gameObject.CompareTag("Player")) {
+			steps.ChangeValue(lowerValue);
+		} 
+	}
+	
 }

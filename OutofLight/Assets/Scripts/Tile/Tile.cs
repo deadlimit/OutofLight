@@ -6,11 +6,7 @@ public class Tile : MonoBehaviour {
 
     private MeshRenderer mesh;
 
-    [SerializeField] private GameEvent TurnTiles;
-
     public bool isTrapTile;
-    
-    
     
     private void Awake() {
 
