@@ -9,8 +9,9 @@ public class Tile : MonoBehaviour {
     [SerializeField] private GameEvent TurnTiles;
 
     public bool isTrapTile;
-
-
+    
+    
+    
     private void Awake() {
 
         mesh = GetComponent<MeshRenderer>();
