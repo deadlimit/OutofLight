@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Cinemachine.Utility;
 using UnityEngine;
 
 public class Movement : MonoBehaviour {
@@ -15,8 +16,8 @@ public class Movement : MonoBehaviour {
     private Transform thisTransform;
 
     public BoolVariable UseKeyboard;
-    [SerializeField] private float timeToMove;
-    [SerializeField] private float speed;
+    [SerializeField] private float moveSpeed;
+    [SerializeField] private float rotationSpeed;
 
 
     private void Awake() {
@@ -62,7 +63,7 @@ public class Movement : MonoBehaviour {
         else {
             isMoving = true;
             var destination = direction + transform.position;
-            StartCoroutine(Move(destination, speed, true, timeToMove));
+            StartCoroutine(Move(destination, moveSpeed, false));
             direction = Vector3.zero;
         }
 
@@ -77,27 +78,28 @@ public class Movement : MonoBehaviour {
         } else {
             isMoving = true;
             var destination = swipeDirection + transform.position;
-            StartCoroutine(Move(destination, speed, true, timeToMove));
+            StartCoroutine(Move(destination, moveSpeed, true));
         }
     }
 
-    public void LookDirection(Vector3 direction) {
-        transform.LookAt(direction);
+    private void LookDirection(Vector3 lookDirection) {
+        transform.LookAt(lookDirection);
     }
 
 
-    public  IEnumerator Move(Vector3 direction, float movementSpeed, bool turn, float moveTime) {
+    private IEnumerator Move(Vector3 direction, float movementSpeed, bool turn) {
         StartedMoving.Raise();
 
-        float startTime = 0;
-
-        while (startTime < moveTime) {
-            transform.position = Vector3.MoveTowards(transform.position, direction, .6f * Time.deltaTime * movementSpeed);
-            
+        var lookDirection = (direction - transform.position).normalized;
+        var lookRotation = Quaternion.LookRotation(lookDirection);
+        
+        
+        while (transform.position != direction ) {
+            transform.position = Vector3.MoveTowards(transform.position, direction,  .6f* Time.deltaTime * movementSpeed);
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * movementSpeed * rotationSpeed);
             if(turn)
                 LookDirection(direction);
-            
-            startTime += Time.deltaTime;
+  
             yield return null;
         }
 
@@ -127,7 +129,7 @@ public class Movement : MonoBehaviour {
         {
             isMoving = true;
             var destination = direction + transform.position;
-            StartCoroutine(Move(destination, speed, true, timeToMove));
+            StartCoroutine(Move(destination, moveSpeed, true));
             direction = Vector3.zero;
         }
     }
@@ -141,7 +143,7 @@ public class Movement : MonoBehaviour {
         {
             isMoving = true;
             var destination = direction + transform.position;
-            StartCoroutine(Move(destination, speed, true, timeToMove));
+            StartCoroutine(Move(destination, moveSpeed, true));
             direction = Vector3.zero;
         }
     }
@@ -155,7 +157,7 @@ public class Movement : MonoBehaviour {
         {
             isMoving = true;
             var destination = direction + transform.position;
-            StartCoroutine(Move(destination, speed, true, timeToMove));
+            StartCoroutine(Move(destination, moveSpeed, true));
             direction = Vector3.zero;
         }
     }
@@ -169,7 +171,7 @@ public class Movement : MonoBehaviour {
         {
             isMoving = true;
             var destination = direction + transform.position;
-            StartCoroutine(Move(destination, speed, true, timeToMove));
+            StartCoroutine(Move(destination, moveSpeed, true));
             direction = Vector3.zero;
         }
     }
