@@ -8,14 +8,14 @@ public class Movement : MonoBehaviour {
     public GameEvent StartedMoving;
     public Vector3List ValidMoveDirections;
     public SpawnPosition SpawnPosition;
-
+    public BoolVariable UseKeyboard;
+    
     private bool isMoving;
     private Vector3 swipeDirection;
     private Vector3 direction;
     private TouchInput touchInput;
     private Transform thisTransform;
-
-    public BoolVariable UseKeyboard;
+    
     [SerializeField] private float moveSpeed;
     [SerializeField] private float rotationSpeed;
 
