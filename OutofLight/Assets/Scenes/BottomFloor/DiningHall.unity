@@ -196,7 +196,7 @@ PrefabInstance:
     - target: {fileID: 3756306722654696676, guid: 92051e02ff1fb97419ef68f34601ca40,
         type: 3}
       propertyPath: m_RootOrder
-      value: 26
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 3756306722654696676, guid: 92051e02ff1fb97419ef68f34601ca40,
         type: 3}
@@ -1623,7 +1623,7 @@ Transform:
   m_LocalScale: {x: 7.25, y: 2.5, z: 0.25}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &837273262
 GameObject:
@@ -1736,7 +1736,6 @@ GameObject:
   - component: {fileID: 915583026}
   - component: {fileID: 915583025}
   - component: {fileID: 915583024}
-  - component: {fileID: 915583028}
   - component: {fileID: 915583029}
   - component: {fileID: 915583030}
   m_Layer: 0
@@ -1820,26 +1819,8 @@ Transform:
   - {fileID: 2096360108}
   - {fileID: 1231696080}
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &915583028
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 915583023}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2cd2b45b2b2b9d499a08f2d6e990361, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  steps: {fileID: 11400000, guid: 88431f49dcf46fb45aa9686e9310270c, type: 2}
-  lowerValue: -1
-  player: {fileID: 0}
-  rayCheckPosition: {fileID: 1231696080}
-  tiles: []
-  path: []
 --- !u!114 &915583029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1856,7 +1837,7 @@ MonoBehaviour:
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 915583028}
+      - m_Target: {fileID: 0}
         m_MethodName: Move
         m_Mode: 1
         m_Arguments:
@@ -2124,7 +2105,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2.5, z: 0.25}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1001 &1216950141
 PrefabInstance:
@@ -2219,9 +2200,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1231696080}
-  - component: {fileID: 1231696084}
   - component: {fileID: 1231696082}
   - component: {fileID: 1231696081}
+  - component: {fileID: 1231696083}
   m_Layer: 0
   m_Name: RayChecks
   m_TagString: Untagged
@@ -2238,7 +2219,7 @@ Transform:
   m_GameObject: {fileID: 1231696079}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 915583027}
   m_RootOrder: 1
@@ -2290,7 +2271,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1231696084
+--- !u!114 &1231696083
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2299,24 +2280,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1231696079}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f624fc09539ff242ad601509638ac53, type: 3}
+  m_Script: {fileID: 11500000, guid: 40126ea2ad9102f45a798f20e2c4864d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 27f316f1df5a3fe4b950f524f7dd62e3, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 915583028}
-        m_MethodName: Map
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  player: {fileID: 0}
+  tiles: []
+  closestPath: []
+  visited: []
 --- !u!1001 &1354349759
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3531,7 +3501,7 @@ Transform:
   m_LocalScale: {x: 1, y: 2.5, z: 0.25}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1001 &9025304574030982767
 PrefabInstance:
