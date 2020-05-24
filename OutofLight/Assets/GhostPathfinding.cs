@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.WebSockets;
 using System.Security.Cryptography.X509Certificates;
 using UnityEditor.Rendering;
 using UnityEngine;
@@ -10,23 +11,35 @@ using UnityEngine.Internal;
 public class GhostPathfinding : MonoBehaviour {
 
 	public Transform player;
-	public List<Tile> tiles = new List<Tile>();
 	public List<Tile> closestPath = new List<Tile>();
-
-	public List<Tile> visited = new List<Tile>();
 	
-	private void Awake() {
+	private List<Tile> tiles = new List<Tile>();
+	private List<Tile> visited = new List<Tile>();
+	
+	public void Awake() {
 		player = GameObject.FindWithTag("Player").transform;
 		Debug.Log(player.transform.position);
+		GeneratePath();
+	}
+
+	public void GeneratePath() {
+		transform.position = transform.parent.position;
+		tiles.Clear();
+		closestPath.Clear();
+		visited.Clear();
 		CastRays();
 		StartCoroutine(CreatePath());
 	}
 
+	public Vector3 NextTile() {
+		return closestPath.Count > 0 ? closestPath[0].transform.position : transform.position;
+	}
+	
 	public IEnumerator CreatePath() {
 		while (Vector3.Distance(transform.position, player.position) > 1f) {
 			MoveToNextTile();
 			CastRays();
-			yield return new WaitForSeconds(2);
+			yield return null;
 		}
 	}
 	
@@ -45,8 +58,6 @@ public class GhostPathfinding : MonoBehaviour {
 		var ray = new Ray(transform.position, rayTarget);
 		if (!Physics.Raycast(ray, out var hit, 3)) return;
 		var tile = hit.transform.gameObject.GetComponent<Tile>();
-		Debug.Log(tile);
-		Debug.DrawRay(transform.position, rayTarget, Color.red, 3);
 		if (tile != null && !(visited.Contains(tile))) {
 			tiles.Add(tile);
 		}
