@@ -16,10 +16,10 @@ public class Interactable : MonoBehaviour {
         _transform = GetComponent<Transform>();
     }
     public void LookAround() {
-        CastRays(Vector3.right);
-        CastRays(Vector3.forward);
-        CastRays(Vector3.left);
-        CastRays(Vector3.back);
+       // /CastRays(Vector3.right);
+        CastRays(transform.parent.forward);
+       // CastRays(Vector3.left);
+       // CastRays(Vector3.back);
     }
 
     private void CastRays(Vector3 direction) {
