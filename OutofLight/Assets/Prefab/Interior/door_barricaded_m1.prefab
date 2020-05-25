@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 2075388736249216930}
   - component: {fileID: 7031884491949082004}
   - component: {fileID: 3650955689192323437}
-  m_Layer: 0
+  - component: {fileID: 45909007}
+  - component: {fileID: 45909008}
+  m_Layer: 9
   m_Name: door_barricaded_m1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82,3 +84,29 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &45909007
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3068669709595299249}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 3, z: 4.081149}
+  m_Center: {x: -0.27, y: -0.040421307, z: -0.01900804}
+--- !u!114 &45909008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3068669709595299249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 940ef353606257e40833352be8a7119f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpecialEvent: {fileID: 11400000, guid: f199dc89ef640bf4d9d2554849b64adf, type: 2}
