@@ -20,7 +20,7 @@ public class Lantern : MonoBehaviour {
 
     private void Start()
     {
-        lanternLight.range = fuelSlider.maxValue;
+        lanternLight.intensity = fuelSlider.maxValue;
     }
 
     private void Update()
