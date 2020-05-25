@@ -26,7 +26,9 @@ public class Lantern : MonoBehaviour {
     private void Update()
     {
         if (stepsAmount.GetValue() >= 0)
-        lanternLight.range = Mathf.Lerp(fuelSlider.value, stepsAmount.GetValue(), Time.deltaTime * decreaseLightModifier);
+        {
+            lanternLight.range = Mathf.Lerp(fuelSlider.value, stepsAmount.GetValue(), Time.deltaTime * decreaseLightModifier);
+        }
     }
 
 

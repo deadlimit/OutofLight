@@ -6,8 +6,10 @@ public class Lever : MonoBehaviour, IInteractable {
 
     public GameEvent LeverPulled;
     public BoolVariable LeverNoPulled;
+    public string prompt;
 
     private bool isPlayerInRange; 
+    
 
     private void Update()
     {
@@ -39,6 +41,6 @@ public class Lever : MonoBehaviour, IInteractable {
     }
 
     public string GetPrompt() {
-        return "Pull lever";
+        return prompt;
     }
 }

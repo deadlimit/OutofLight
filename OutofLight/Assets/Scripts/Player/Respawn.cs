@@ -9,6 +9,12 @@ public class Respawn : MonoBehaviour
     [SerializeField][Header ("Check för den aktiva scenen:")]
     private int currentScene;
     private GameObject respawnMenu;
+    private GameObject player;
+
+    private void Awake()
+    {
+        player = GameObject.Find("Player");
+    }
 
     private void Update()
     {
