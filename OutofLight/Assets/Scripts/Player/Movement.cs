@@ -8,11 +8,13 @@ public class Movement : MonoBehaviour {
 
     public GameEvent ArrivedAtTarget;
     public GameEvent StartedMoving;
+    public GameEvent RotationComplete;
     public Vector3List ValidMoveDirections;
     public SpawnPosition SpawnPosition;
     public BoolVariable UseKeyboard;
     
     private bool isMoving;
+    private bool isTurning;
     private Vector3 swipeDirection;
     private Vector3 direction;
     private TouchInput touchInput;
@@ -30,6 +32,7 @@ public class Movement : MonoBehaviour {
         if (Time.time > 1f)
             thisTransform.position = SpawnPosition.spawnPosition;
         isMoving = false;
+        isTurning = false;
 
     }
     
@@ -59,9 +62,12 @@ public class Movement : MonoBehaviour {
             direction = Vector3.right;
         }
 
-        if (direction == Vector3.zero || isMoving) return;
-        if (!CheckIfValidDirection(direction))
-            LookDirection(direction);
+        if (direction == Vector3.zero || isMoving || isTurning) return;
+        if (!CheckIfValidDirection(direction) || isTurning) {
+            isTurning = true;
+            StartCoroutine(LookDirection(direction));
+            direction = Vector3.zero;
+        }
         else {
             isMoving = true;
             var destination = direction + transform.position;
@@ -74,9 +80,10 @@ public class Movement : MonoBehaviour {
     private void SwipeInput() {
         swipeDirection = touchInput.GetDirection();
         
-        if (swipeDirection == Vector3.zero || isMoving) return;
-        if (!CheckIfValidDirection(swipeDirection)) {
-           LookDirection(swipeDirection);
+        if (swipeDirection == Vector3.zero || isMoving || isTurning) return;
+        if (!CheckIfValidDirection(swipeDirection) && !isTurning) {
+            isTurning = true;
+            StartCoroutine(LookDirection(swipeDirection));
         } else {
             isMoving = true;
             var destination = swipeDirection + transform.position;
@@ -84,11 +91,19 @@ public class Movement : MonoBehaviour {
         }
     }
 
-    private void LookDirection(Vector3 dir) {
+    private IEnumerator LookDirection(Vector3 dir) {
         var lookDirection = dir;
         var lookRotation = Quaternion.LookRotation(lookDirection);
-        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * rotationSpeed * 3);
-        ArrivedAtTarget.Raise();
+        float start = 0;
+        float end = .5f;
+        while (start < end) {
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * rotationSpeed * 3);
+            start += Time.deltaTime;
+            yield return null;
+        }
+        RotationComplete.Raise();
+        isTurning = false;
+        Debug.Log("Turned");
     }
     
     private IEnumerator Move(Vector3 direction, float movementSpeed, bool turn) {

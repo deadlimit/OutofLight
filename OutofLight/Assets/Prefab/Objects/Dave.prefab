@@ -807,6 +807,7 @@ GameObject:
   - component: {fileID: 6004774610557995559}
   - component: {fileID: 1391338689}
   - component: {fileID: 1391338690}
+  - component: {fileID: 3711642319222954910}
   m_Layer: 2
   m_Name: Interact
   m_TagString: Untagged
@@ -885,6 +886,33 @@ MonoBehaviour:
   maxDistance: 1
   ActivateInteract: {fileID: 11400000, guid: bba60d1bc8a16384f85907d1985f48ef, type: 2}
   interactableObject: {fileID: 11400000, guid: 769e9d45634bceb49adf7cfc4d74245f, type: 2}
+--- !u!114 &3711642319222954910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2659361232078224163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f624fc09539ff242ad601509638ac53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: b39fc4b8a01a0254d9f0a60917edff95, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6004774610557995559}
+        m_MethodName: LookAround
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2877787508693865458
 GameObject:
   m_ObjectHideFlags: 0
@@ -1118,6 +1146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ArrivedAtTarget: {fileID: 11400000, guid: 27f316f1df5a3fe4b950f524f7dd62e3, type: 2}
   StartedMoving: {fileID: 11400000, guid: 37e1f53acba6d5547bdec44c33be60ac, type: 2}
+  RotationComplete: {fileID: 11400000, guid: b39fc4b8a01a0254d9f0a60917edff95, type: 2}
   ValidMoveDirections: {fileID: 11400000, guid: b685b32982e43d34088519d89e77eea9,
     type: 2}
   SpawnPosition: {fileID: 11400000, guid: 1eb3d7e2146cb2a4491e49ff4db4b671, type: 2}
@@ -1969,6 +1998,7 @@ GameObject:
   - component: {fileID: 1420021256396204390}
   - component: {fileID: 7148223760915031674}
   - component: {fileID: 7125516159815182525}
+  - component: {fileID: 1176837195787738240}
   m_Layer: 0
   m_Name: Raycasts
   m_TagString: Player
@@ -2045,6 +2075,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Event: {fileID: 11400000, guid: 27f316f1df5a3fe4b950f524f7dd62e3, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1420021256396204390}
+        m_MethodName: UpdateNearbyTiles
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 9097565075402011493}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1176837195787738240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7045970926450075185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f624fc09539ff242ad601509638ac53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: b39fc4b8a01a0254d9f0a60917edff95, type: 2}
   Response:
     m_PersistentCalls:
       m_Calls:

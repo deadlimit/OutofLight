@@ -1126,8 +1126,8 @@ Camera:
   m_GameObject: {fileID: 138731277}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1167,7 +1167,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 138731277}
-  m_LocalRotation: {x: 0.07734361, y: -0.90145075, z: 0.38564, w: 0.18079382}
+  m_LocalRotation: {x: 0.058620617, y: -0.90593493, z: 0.39748603, w: 0.13360539}
   m_LocalPosition: {x: 6.09, y: 9.75, z: 11.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -4687,7 +4687,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 715750898}
-  m_LocalRotation: {x: 0.07734361, y: -0.90145075, z: 0.38564, w: 0.18079382}
+  m_LocalRotation: {x: 0.058620617, y: -0.90593493, z: 0.39748603, w: 0.13360539}
   m_LocalPosition: {x: 6.09, y: 9.75, z: 11.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5461,7 +5461,7 @@ PrefabInstance:
     - target: {fileID: 3756306721272862509, guid: 92051e02ff1fb97419ef68f34601ca40,
         type: 3}
       propertyPath: m_Range
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3756306721272862509, guid: 92051e02ff1fb97419ef68f34601ca40,
         type: 3}
@@ -10723,6 +10723,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2950940166436822649, guid: a625efba65ba76c48bdb7405ac8f2759,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 3061789821900480081, guid: a625efba65ba76c48bdb7405ac8f2759,
         type: 3}
       propertyPath: m_TrackedObjectOffset.x
@@ -10771,7 +10776,7 @@ PrefabInstance:
     - target: {fileID: 7931121585875472208, guid: a625efba65ba76c48bdb7405ac8f2759,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.0488405
+      value: 2.932
       objectReference: {fileID: 0}
     - target: {fileID: 7931121585875472208, guid: a625efba65ba76c48bdb7405ac8f2759,
         type: 3}
@@ -12485,7 +12490,7 @@ PrefabInstance:
     - target: {fileID: 7561133256319160789, guid: be593d54a61f66a419c137fc466b40ea,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.5
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 7561133256319160789, guid: be593d54a61f66a419c137fc466b40ea,
         type: 3}
