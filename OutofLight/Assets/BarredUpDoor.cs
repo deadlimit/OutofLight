@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class BarredUpDoor : MonoBehaviour, IInteractable {
 
-    public void Use() {
+	public GameEvent SpecialEvent;
+	
+	public void Use() {
 	    Debug.Log("Barred door");
+	    SpecialEvent.Raise();
 	}
 
     public string GetPrompt() {
@@ -13,3 +16,4 @@ public class BarredUpDoor : MonoBehaviour, IInteractable {
     }
 
 }
+
