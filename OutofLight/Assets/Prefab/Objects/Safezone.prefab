@@ -4805,7 +4805,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2789390351587808288}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -4866,8 +4866,8 @@ MonoBehaviour:
   stepAmount: {fileID: 11400000, guid: 88431f49dcf46fb45aa9686e9310270c, type: 2}
   darkSteps: {fileID: 11400000, guid: 813f415f9d92ae5418f8d31e6358aa9a, type: 2}
   insideSafezone: 0
-  refillStepAmount: 2
-  removeAmount: 5
+  refillStepAmount: 0
+  removeAmount: 6
 --- !u!108 &2789390351587808291
 Light:
   m_ObjectHideFlags: 0
