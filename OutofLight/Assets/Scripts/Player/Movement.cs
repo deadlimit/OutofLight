@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
+using System.Security.Cryptography;
 using Cinemachine.Utility;
 using UnityEngine;
 
@@ -74,7 +76,7 @@ public class Movement : MonoBehaviour {
         
         if (swipeDirection == Vector3.zero || isMoving) return;
         if (!CheckIfValidDirection(swipeDirection)) {
-            LookDirection(swipeDirection);
+           LookDirection(swipeDirection);
         } else {
             isMoving = true;
             var destination = swipeDirection + transform.position;
@@ -82,23 +84,24 @@ public class Movement : MonoBehaviour {
         }
     }
 
-    private void LookDirection(Vector3 lookDirection) {
-        transform.LookAt(lookDirection);
+    private void LookDirection(Vector3 dir) {
+        var lookDirection = dir;
+        var lookRotation = Quaternion.LookRotation(lookDirection);
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * rotationSpeed * 3);
+        ArrivedAtTarget.Raise();
     }
-
-
+    
     private IEnumerator Move(Vector3 direction, float movementSpeed, bool turn) {
         StartedMoving.Raise();
 
         var lookDirection = (direction - transform.position).normalized;
         var lookRotation = Quaternion.LookRotation(lookDirection);
-        
-        
+
         while (transform.position != direction ) {
             transform.position = Vector3.MoveTowards(transform.position, direction,  .6f* Time.deltaTime * movementSpeed);
             transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * movementSpeed * rotationSpeed);
-            if(turn)
-                LookDirection(direction);
+            //if(turn)
+              //  LookDirection();
   
             yield return null;
         }
