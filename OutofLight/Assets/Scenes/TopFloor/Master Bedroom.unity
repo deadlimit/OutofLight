@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1167,7 +1167,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 138731277}
-  m_LocalRotation: {x: 0.058620617, y: -0.90593493, z: 0.39748603, w: 0.13360539}
+  m_LocalRotation: {x: 0.058620613, y: -0.90593493, z: 0.39748603, w: 0.13360539}
   m_LocalPosition: {x: 6.09, y: 9.75, z: 11.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -2041,18 +2041,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 429e302b3ccf7454f88530a136ad31f0, type: 3}
---- !u!114 &324235782 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6592980103191924085, guid: 683620493e9c3e845a4314e4a32315db,
-    type: 3}
-  m_PrefabInstance: {fileID: 313897006}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 044b5261eee2a58418916bc2f8692f90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &327041852
 GameObject:
   m_ObjectHideFlags: 0
@@ -4687,7 +4675,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 715750898}
-  m_LocalRotation: {x: 0.058620617, y: -0.90593493, z: 0.39748603, w: 0.13360539}
+  m_LocalRotation: {x: 0.058620613, y: -0.90593493, z: 0.39748603, w: 0.13360539}
   m_LocalPosition: {x: 6.09, y: 9.75, z: 11.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -12338,154 +12326,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1056948091, guid: be593d54a61f66a419c137fc466b40ea, type: 3}
-      propertyPath: Response.m_PersistentCalls.m_Calls.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1056948091, guid: be593d54a61f66a419c137fc466b40ea, type: 3}
-      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1056948091, guid: be593d54a61f66a419c137fc466b40ea, type: 3}
-      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1056948091, guid: be593d54a61f66a419c137fc466b40ea, type: 3}
-      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[4].m_Target
-      value: 
-      objectReference: {fileID: 324235782}
-    - target: {fileID: 1056948091, guid: be593d54a61f66a419c137fc466b40ea, type: 3}
-      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
-      value: DisplayGameOver
-      objectReference: {fileID: 0}
-    - target: {fileID: 1056948091, guid: be593d54a61f66a419c137fc466b40ea, type: 3}
-      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 1056948092, guid: be593d54a61f66a419c137fc466b40ea, type: 3}
-      propertyPath: respawnMenu
-      value: 
-      objectReference: {fileID: 8193819112782970037, guid: 25b7e3f04410b47419652898e620d249,
-        type: 3}
-    - target: {fileID: 232246480314286925, guid: be593d54a61f66a419c137fc466b40ea,
-        type: 3}
-      propertyPath: fuelSlider
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 232246480314286925, guid: be593d54a61f66a419c137fc466b40ea,
-        type: 3}
-      propertyPath: decreaseLightModifier
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 232246480314286925, guid: be593d54a61f66a419c137fc466b40ea,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3471985235137391480, guid: be593d54a61f66a419c137fc466b40ea,
         type: 3}
       propertyPath: m_Name
       value: Dave
-      objectReference: {fileID: 0}
-    - target: {fileID: 3821396841667894396, guid: be593d54a61f66a419c137fc466b40ea,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.9671791
-      objectReference: {fileID: 0}
-    - target: {fileID: 3821396841667894396, guid: be593d54a61f66a419c137fc466b40ea,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3821396841667894396, guid: be593d54a61f66a419c137fc466b40ea,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3821396841667894396, guid: be593d54a61f66a419c137fc466b40ea,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.25409567
-      objectReference: {fileID: 0}
-    - target: {fileID: 3821396841667894396, guid: be593d54a61f66a419c137fc466b40ea,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 150.56
-      objectReference: {fileID: 0}
-    - target: {fileID: 3821396841667894396, guid: be593d54a61f66a419c137fc466b40ea,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3821396841667894396, guid: be593d54a61f66a419c137fc466b40ea,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3821396841667894396, guid: be593d54a61f66a419c137fc466b40ea,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.11
-      objectReference: {fileID: 0}
-    - target: {fileID: 3821396841667894396, guid: be593d54a61f66a419c137fc466b40ea,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3821396841667894396, guid: be593d54a61f66a419c137fc466b40ea,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3821396841667894396, guid: be593d54a61f66a419c137fc466b40ea,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6507352441875676019, guid: be593d54a61f66a419c137fc466b40ea,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6507352441875676019, guid: be593d54a61f66a419c137fc466b40ea,
-        type: 3}
-      propertyPath: m_Range
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 6507352441875676019, guid: be593d54a61f66a419c137fc466b40ea,
-        type: 3}
-      propertyPath: m_Intensity
-      value: 5.18
-      objectReference: {fileID: 0}
-    - target: {fileID: 6507352441875676019, guid: be593d54a61f66a419c137fc466b40ea,
-        type: 3}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6507352441875676019, guid: be593d54a61f66a419c137fc466b40ea,
-        type: 3}
-      propertyPath: m_SpotAngle
-      value: 128.28711
-      objectReference: {fileID: 0}
-    - target: {fileID: 6507352441875676019, guid: be593d54a61f66a419c137fc466b40ea,
-        type: 3}
-      propertyPath: m_InnerSpotAngle
-      value: 120.08916
-      objectReference: {fileID: 0}
-    - target: {fileID: 6507352441875676019, guid: be593d54a61f66a419c137fc466b40ea,
-        type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6597788461116171010, guid: be593d54a61f66a419c137fc466b40ea,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.61
-      objectReference: {fileID: 0}
-    - target: {fileID: 6597788461116171010, guid: be593d54a61f66a419c137fc466b40ea,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 3.74
       objectReference: {fileID: 0}
     - target: {fileID: 7561133256319160789, guid: be593d54a61f66a419c137fc466b40ea,
         type: 3}

@@ -615,13 +615,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2384309261501683086}
-  m_LocalRotation: {x: 0.70272106, y: -0.40689912, z: 0.55537874, w: 0.17936191}
-  m_LocalPosition: {x: -0.0039123995, y: 1.4767518, z: -0.005289971}
-  m_LocalScale: {x: 1, y: 0.99999994, z: 1}
+  m_LocalRotation: {x: 0.9671791, y: 0, z: 0, w: 0.25409567}
+  m_LocalPosition: {x: 0, y: 1.5, z: 0.11}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7135927924484230855}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 135.247, y: -63.32898, z: 31.650986}
+  m_LocalEulerAnglesHint: {x: 150.56, y: 0, z: 0}
 --- !u!108 &6507352441875676019
 Light:
   m_ObjectHideFlags: 0
@@ -631,13 +631,13 @@ Light:
   m_GameObject: {fileID: 2384309261501683086}
   m_Enabled: 1
   serializedVersion: 10
-  m_Type: 2
+  m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 0.8113309, b: 0.15601929, a: 1}
-  m_Intensity: 3
-  m_Range: 5
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
+  m_Intensity: 5.18
+  m_Range: 1000
+  m_SpotAngle: 138.97046
+  m_InnerSpotAngle: 130.77254
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -673,7 +673,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -1441,7 +1441,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4335108730969274635}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0.005247891, y: 0.000000047683724, z: 0.0058286316}
+  m_LocalPosition: {x: -2.61, y: 0.000000047683724, z: 3.74}
   m_LocalScale: {x: 72.918434, y: 72.91839, z: 72.91839}
   m_Children: []
   m_Father: {fileID: 7561133256319160789}
@@ -1886,7 +1886,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6524612427788282672}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4943e33fc5ddfad4e956626d072e189e, type: 3}
   m_Name: 
