@@ -39,7 +39,7 @@ public class GhostPathfinding : MonoBehaviour {
 		while (Vector3.Distance(transform.position, player.position) > 1f) {
 			MoveToNextTile();
 			CastRays();
-			yield return null;
+			yield return new WaitForSeconds(.5f);
 		}
 	}
 	
