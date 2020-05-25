@@ -8,6 +8,7 @@ public class GhostMovement : MonoBehaviour {
 	public IntVariable steps;
 	public int lowerValue;
 	public Transform player;
+	public float ghostSpeed;
 
 	public GhostPathfinding pathfinding;
 	public GameEvent GhostUpdatePath;
@@ -35,7 +36,7 @@ public class GhostMovement : MonoBehaviour {
 		nextTile.y = .5f;
 		while (Vector3.Distance(thisTransform.position, nextTile) > .01f) {
 			thisTransform.position =
-				Vector3.MoveTowards(thisTransform.position, nextTile, Time.deltaTime * 10);
+				Vector3.MoveTowards(thisTransform.position, nextTile, Time.deltaTime * ghostSpeed);
 			yield return null;
 		}
 		GhostUpdatePath.Raise();

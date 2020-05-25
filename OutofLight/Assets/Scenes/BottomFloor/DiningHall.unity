@@ -279,7 +279,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 17226121}
-  m_LocalRotation: {x: 0.2827271, y: 0.3884756, z: -0.12595004, w: 0.86792207}
+  m_LocalRotation: {x: 0.28272712, y: 0.38847563, z: -0.12595007, w: 0.86792207}
   m_LocalPosition: {x: 5.655, y: 3.86, z: -1.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -392,6 +392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 940ef353606257e40833352be8a7119f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpecialEvent: {fileID: 11400000, guid: f199dc89ef640bf4d9d2554849b64adf, type: 2}
 --- !u!1001 &103969012
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1299,6 +1300,82 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: f178c9600d5a02646894dbaf15063ac1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b59686d973636184aafafd0d28be8ccc, type: 3}
+--- !u!1 &363285130
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 363285132}
+  - component: {fileID: 363285131}
+  - component: {fileID: 363285133}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &363285131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363285130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4e51efa91d588442a782905f77f0397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  events: []
+  objectSpawn:
+  - {fileID: 7421310525834820955, guid: f4fea648c08ea4e40b198dbdff6ed5fa, type: 3}
+  spawnLocations:
+  - {x: 8.5, y: 0.5, z: 5.5}
+--- !u!4 &363285132
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363285130}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.3345318, y: -2.6300569, z: 13.131568}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &363285133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363285130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f624fc09539ff242ad601509638ac53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: f199dc89ef640bf4d9d2554849b64adf, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 363285131}
+        m_MethodName: SpawnObjects
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &643468622
 GameObject:
   m_ObjectHideFlags: 0
@@ -1535,7 +1612,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 764870199}
-  m_LocalRotation: {x: 0.2827271, y: 0.3884756, z: -0.12595004, w: 0.86792207}
+  m_LocalRotation: {x: 0.28272712, y: 0.38847563, z: -0.12595007, w: 0.86792207}
   m_LocalPosition: {x: 5.655, y: 3.86, z: -1.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -2152,7 +2229,7 @@ PrefabInstance:
     - target: {fileID: 2950940166436822649, guid: a625efba65ba76c48bdb7405ac8f2759,
         type: 3}
       propertyPath: m_Center.x
-      value: -0.3
+      value: -0.45
       objectReference: {fileID: 0}
     - target: {fileID: 6361995105449852227, guid: a625efba65ba76c48bdb7405ac8f2759,
         type: 3}
@@ -2182,7 +2259,7 @@ PrefabInstance:
     - target: {fileID: 7931121585875472208, guid: a625efba65ba76c48bdb7405ac8f2759,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10
+      value: 10.038
       objectReference: {fileID: 0}
     - target: {fileID: 7931121585875472208, guid: a625efba65ba76c48bdb7405ac8f2759,
         type: 3}
