@@ -23,7 +23,6 @@ public class GhostMovement : MonoBehaviour {
 	private void Update() {
 		var direction = GetPlayerDirection();
 		thisTransform.rotation = Quaternion.Slerp(thisTransform.rotation, direction, Time.deltaTime * 2 );
-
 	}
 	
 	
