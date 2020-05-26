@@ -103,7 +103,6 @@ public class Movement : MonoBehaviour {
         }
         RotationComplete.Raise();
         isTurning = false;
-        Debug.Log("Turned");
     }
     
     private IEnumerator Move(Vector3 direction, float movementSpeed, bool turn) {
