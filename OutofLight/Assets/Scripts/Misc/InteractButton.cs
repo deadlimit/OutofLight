@@ -1,24 +1,29 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class InteractButton : MonoBehaviour {
     
-    private Button thisButton;
-    private Image thisImage;
-    private Text interactPrompt;
+    
     public InteractParameter interact;
     public GameEvent InteractTrigger;
+    public Text interactTextFront, interactTextBack;
+    
+    private Button thisButton;
+    private Image thisImage;
+    
     
     private void Awake() {
         thisImage = GetComponent<Image>();
         thisImage.enabled = false;
         thisButton = GetComponent<Button>();
-        interactPrompt = GetComponentInChildren<Text>();
+        
     }
-    
+
     public void SetNewInteract() {
         thisImage.enabled = true;
-        interactPrompt.text = interact.thisObject.GetPrompt();
+        interactTextFront.text = interact.thisObject.GetPrompt();
+        interactTextBack.text = interact.thisObject.GetPrompt();
         thisButton.onClick.AddListener(Interact);
     }
 
@@ -31,7 +36,8 @@ public class InteractButton : MonoBehaviour {
     public void Reset() {
         thisButton.onClick.RemoveAllListeners();
         thisImage.enabled = false;
-        interactPrompt.text = null;
+        interactTextFront.text = null;
+        interactTextBack.text = null;
     }
 
 
