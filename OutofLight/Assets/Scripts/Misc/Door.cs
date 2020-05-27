@@ -6,16 +6,17 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Door : MonoBehaviour, IInteractable {
+public class Door : MonoBehaviour, IInteractable, IAnimation {
 
     public TransitInfo transitInfo;
     
     public GameEvent NewSceneLoad;
+    public GameEvent PlayerOpenAnimationTrigger;
     
     public CinemachineVirtualCamera doorCamera;
     public SpawnPosition spawn;
     public Sprite interactImage;
-
+    
     public string prompt;
 
     private void Awake() {
@@ -28,6 +29,7 @@ public class Door : MonoBehaviour, IInteractable {
 
     private IEnumerator NewSceneSequence() {
         NewSceneLoad.Raise();
+        PlayerOpenAnimationTrigger.Raise();
         doorCamera.gameObject.SetActive(true);
         spawn.spawnPosition = transitInfo.otherSide;
         yield return new WaitForSeconds(2);
@@ -41,5 +43,9 @@ public class Door : MonoBehaviour, IInteractable {
 
     public Sprite CustomSprite() {
         return interactImage;
+    }
+
+    public string AnimationTrigger() {
+        throw new System.NotImplementedException();
     }
 }

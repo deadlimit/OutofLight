@@ -553,7 +553,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e01f8738ebf7db84cba185cc65325864, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -634,7 +634,7 @@ MonoBehaviour:
   InteractTrigger: {fileID: 11400000, guid: b294ffb78a68d0c42bae7e8c35edcce6, type: 2}
   interactTextFront: {fileID: 6179561395484007929}
   interactTextBack: {fileID: 3769000993899608165}
-  defaultSprite: {fileID: 0}
+  defaultSprite: {fileID: 21300000, guid: 8d67f2dc7595f224b81c4dc4fc571dbe, type: 3}
 --- !u!114 &6612980207495786017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1000,6 +1000,8 @@ GameObject:
   - component: {fileID: 6592980103191924084}
   - component: {fileID: 8755857885598429971}
   - component: {fileID: 3697060523188674193}
+  - component: {fileID: 2129726480}
+  - component: {fileID: 2129726482}
   m_Layer: 5
   m_Name: UI 3.0
   m_TagString: UI
@@ -1108,11 +1110,14 @@ MonoBehaviour:
   respawnMechanic: {fileID: 8193819112782970037, guid: 25b7e3f04410b47419652898e620d249,
     type: 3}
   player: {fileID: 0}
-  stairArrows: {fileID: 0}
-  optionalArrows: {fileID: 0}
+  stairArrows: {fileID: 6732842976574784174, guid: 9e2c225ac8363f141b161767ed4a60b4,
+    type: 3}
+  optionalArrows: {fileID: 6732842976574784174, guid: 9e2c225ac8363f141b161767ed4a60b4,
+    type: 3}
   roomPresenter: {fileID: 3499028219621105309, guid: 939ccbaeb771c254d9f56f73a3cbe8f3,
     type: 3}
-  blackFade: {fileID: 0}
+  blackFade: {fileID: 6591775689881986742, guid: a02bdeec1620e3a43b6520b7da51f1b6,
+    type: 3}
 --- !u!114 &6592980103191924084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1185,6 +1190,60 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6592980103191924085}
         m_MethodName: DisplayOptionalArrows
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2129726480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6592980103191924079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f624fc09539ff242ad601509638ac53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 5e24268eb1aa7fb46a0f46b8fc5accd9, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6592980103191924085}
+        m_MethodName: Blink
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2129726482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6592980103191924079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f624fc09539ff242ad601509638ac53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 524437c8adc278e4a83dd9ec9ee8ddb9, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6592980103191924085}
+        m_MethodName: ShowStairArrows
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1734,7 +1793,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.12, y: 0.12}
   m_AnchorMax: {x: 0.88, y: 0.85}
-  m_AnchoredPosition: {x: 1.5, y: 0}
+  m_AnchoredPosition: {x: 1.4499817, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1563916040445143487

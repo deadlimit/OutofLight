@@ -24,8 +24,9 @@ public class InteractButton : MonoBehaviour {
     public void SetNewInteract() {
         defaultImage.enabled = true;
         var interactImage = interact.thisObject.CustomSprite();
-        if (interactImage != null)
-            defaultImage.sprite = interact.thisObject.CustomSprite();
+        defaultImage.sprite = interact.thisObject.CustomSprite() == null
+            ? defaultSprite
+            : interact.thisObject.CustomSprite();
         interactTextFront.text = interact.thisObject.GetPrompt();
         interactTextBack.text = interact.thisObject.GetPrompt();
         thisButton.onClick.AddListener(Interact);
