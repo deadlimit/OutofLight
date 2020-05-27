@@ -4,6 +4,7 @@ using System.Diagnostics;
 using Cinemachine;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Door : MonoBehaviour, IInteractable {
 
@@ -13,6 +14,7 @@ public class Door : MonoBehaviour, IInteractable {
     
     public CinemachineVirtualCamera doorCamera;
     public SpawnPosition spawn;
+    public Sprite interactImage;
 
     public string prompt;
 
@@ -34,5 +36,10 @@ public class Door : MonoBehaviour, IInteractable {
 
     public string GetPrompt() {
         return prompt;
+    }
+    
+
+    public Sprite CustomSprite() {
+        return interactImage;
     }
 }

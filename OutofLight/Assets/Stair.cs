@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Stair : MonoBehaviour, IInteractable {
 
 	public GameEvent ClimbStairs;
 	public TransitInfo up;
+	public Sprite interactImage;
 	private Transform player;
 
 	public string prompt;
@@ -31,6 +33,13 @@ public class Stair : MonoBehaviour, IInteractable {
 	public string GetPrompt() {
 		return prompt;
 	}
+
+	public Sprite CustomSprite() {
+		return interactImage;
+	}
+
+
+
 	public IEnumerator MoveUp(Vector3 direction) {
 		ClimbStairs.Raise();
 		

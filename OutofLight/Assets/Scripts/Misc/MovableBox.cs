@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MovableBox : MonoBehaviour, IInteractable {
 
@@ -12,6 +13,7 @@ public class MovableBox : MonoBehaviour, IInteractable {
     private bool canBeMoved;
 
     public GameEvent UpdateTiles;
+    public Sprite interactImage;
 
     public void Use() {
         if (canBeMoved && tileMoves > 0)
@@ -20,6 +22,10 @@ public class MovableBox : MonoBehaviour, IInteractable {
 
     public string GetPrompt() {
         return "Push box";
+    }
+
+    public Sprite CustomSprite() {
+        return interactImage;
     }
 
     private void OnTriggerStay(Collider other) {

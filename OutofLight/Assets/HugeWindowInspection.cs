@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HugeWindowInspection : MonoBehaviour, IInteractable {
 	
 	public GameObject dave;
 	public GameEvent Inspecting;
 	public GameEvent StopInspectiong;
+	public Sprite interactImage;
+	public string prompt;
 	private bool isLooking;
 
 	private void Awake() {
@@ -29,9 +32,13 @@ public class HugeWindowInspection : MonoBehaviour, IInteractable {
 		}
 		
 	}
-
-
+	
 	public string GetPrompt() {
-		return !isLooking ? "Inspect" : "Stop inspect";
+		return prompt;
 	}
+
+	public Sprite CustomSprite() {
+		return interactImage;
+	}
+	
 }
