@@ -17,6 +17,7 @@ public class InteractButton : MonoBehaviour {
     private void Awake() {
         defaultImage = GetComponent<Image>();
         defaultImage.enabled = false;
+        defaultImage.sprite = null;
         thisButton = GetComponent<Button>();
     }
 
