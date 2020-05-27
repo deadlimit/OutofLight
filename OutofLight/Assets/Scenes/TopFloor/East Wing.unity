@@ -272,7 +272,7 @@ PrefabInstance:
     - target: {fileID: -8787798481461181616, guid: a625efba65ba76c48bdb7405ac8f2759,
         type: 3}
       propertyPath: prompt
-      value: Enter Living Room
+      value: To Living Room
       objectReference: {fileID: 0}
     - target: {fileID: 1683273802868364820, guid: a625efba65ba76c48bdb7405ac8f2759,
         type: 3}
@@ -708,6 +708,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 853742726845568855, guid: 683620493e9c3e845a4314e4a32315db,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1.4499512
+      objectReference: {fileID: 0}
     - target: {fileID: 1898197485140347043, guid: 683620493e9c3e845a4314e4a32315db,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -717,6 +722,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6592980103111234497, guid: 683620493e9c3e845a4314e4a32315db,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 10.030273
       objectReference: {fileID: 0}
     - target: {fileID: 6592980103191924075, guid: 683620493e9c3e845a4314e4a32315db,
         type: 3}
@@ -1114,6 +1124,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &834777907 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3471985235137391480, guid: be593d54a61f66a419c137fc466b40ea,
+    type: 3}
+  m_PrefabInstance: {fileID: 45026114}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &834777908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834777907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0166b317a8cc22e4aad939a6def2eaaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &897744814
 GameObject:
   m_ObjectHideFlags: 0
@@ -1310,7 +1338,7 @@ PrefabInstance:
     - target: {fileID: -8787798481461181616, guid: a625efba65ba76c48bdb7405ac8f2759,
         type: 3}
       propertyPath: prompt
-      value: Enter Master bedroom
+      value: To Master bedroom
       objectReference: {fileID: 0}
     - target: {fileID: -8787798481461181616, guid: a625efba65ba76c48bdb7405ac8f2759,
         type: 3}
@@ -1846,7 +1874,7 @@ PrefabInstance:
     - target: {fileID: -8787798481461181616, guid: a625efba65ba76c48bdb7405ac8f2759,
         type: 3}
       propertyPath: prompt
-      value: Enter Main Hall
+      value: To Main Hall
       objectReference: {fileID: 0}
     - target: {fileID: -8787798481461181616, guid: a625efba65ba76c48bdb7405ac8f2759,
         type: 3}

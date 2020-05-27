@@ -1,37 +1,49 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class InteractButton : MonoBehaviour {
     
-    private Button thisButton;
-    private Image thisImage;
-    private Text interactPrompt;
+    
     public InteractParameter interact;
     public GameEvent InteractTrigger;
+    public Text interactTextFront, interactTextBack;
+    public Sprite defaultSprite;
     
+    private Button thisButton;
+    private Image defaultImage;
+   
+
     private void Awake() {
-        thisImage = GetComponent<Image>();
-        thisImage.enabled = false;
+        defaultImage = GetComponent<Image>();
+        defaultImage.enabled = false;
+        defaultImage.sprite = null;
         thisButton = GetComponent<Button>();
-        interactPrompt = GetComponentInChildren<Text>();
     }
-    
+
     public void SetNewInteract() {
-        thisImage.enabled = true;
-        interactPrompt.text = interact.thisObject.GetPrompt();
+        defaultImage.enabled = true;
+        var interactImage = interact.thisObject.CustomSprite();
+        defaultImage.sprite = interact.thisObject.CustomSprite() == null
+            ? defaultSprite
+            : interact.thisObject.CustomSprite();
+        interactTextFront.text = interact.thisObject.GetPrompt();
+        interactTextBack.text = interact.thisObject.GetPrompt();
         thisButton.onClick.AddListener(Interact);
     }
 
     private void Interact() {
         interact.thisObject.Use();
-        thisImage.enabled = false;
+        defaultImage.enabled = false;
         InteractTrigger.Raise();
     }
     
     public void Reset() {
         thisButton.onClick.RemoveAllListeners();
-        thisImage.enabled = false;
-        interactPrompt.text = null;
+        defaultImage.enabled = false;
+        defaultImage.sprite = defaultSprite;
+        interactTextFront.text = null;
+        interactTextBack.text = null;
     }
 
 

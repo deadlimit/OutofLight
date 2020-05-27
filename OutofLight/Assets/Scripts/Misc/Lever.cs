@@ -1,13 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Lever : MonoBehaviour, IInteractable {
 
     public GameEvent LeverPulled;
     public BoolVariable LeverNoPulled;
     public string prompt;
-
+    public Sprite interactImage;
     private bool isPlayerInRange; 
     
 
@@ -42,5 +45,13 @@ public class Lever : MonoBehaviour, IInteractable {
 
     public string GetPrompt() {
         return prompt;
+    }
+
+    public Sprite CustomSprite() {
+        return interactImage;
+    }
+
+    public Sprite customImage() {
+        return interactImage;
     }
 }
