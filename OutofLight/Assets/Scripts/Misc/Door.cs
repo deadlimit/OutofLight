@@ -1,6 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics;
 using Cinemachine;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -9,10 +7,8 @@ using UnityEngine.UI;
 public class Door : MonoBehaviour, IInteractable {
 
     public TransitInfo transitInfo;
-    
     public GameEvent NewSceneLoad;
     public GameEvent PlayerOpenAnimationTrigger;
-    
     public CinemachineVirtualCamera doorCamera;
     public SpawnPosition spawn;
     public Button interactImage;
@@ -40,12 +36,9 @@ public class Door : MonoBehaviour, IInteractable {
         return prompt;
     }
     
-
     public Button CustomSprite() {
         return interactImage;
     }
-
-    public string AnimationTrigger() {
-        throw new System.NotImplementedException();
-    }
+    
+    
 }

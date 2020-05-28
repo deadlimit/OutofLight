@@ -898,7 +898,6 @@ GameObject:
   - component: {fileID: 3042578058696863333}
   - component: {fileID: 6004774610557995559}
   - component: {fileID: 1391338689}
-  - component: {fileID: 1391338690}
   - component: {fileID: 3711642319222954910}
   m_Layer: 2
   m_Name: Interact
@@ -952,7 +951,7 @@ MonoBehaviour:
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1391338690}
+      - m_Target: {fileID: 6004774610557995559}
         m_MethodName: LookAround
         m_Mode: 1
         m_Arguments:
@@ -963,21 +962,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1391338690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2659361232078224163}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f3b256e0656b7a48bec4173cf5039ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxDistance: 1
-  ActivateInteract: {fileID: 11400000, guid: bba60d1bc8a16384f85907d1985f48ef, type: 2}
-  interactableObject: {fileID: 11400000, guid: 769e9d45634bceb49adf7cfc4d74245f, type: 2}
 --- !u!114 &3711642319222954910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1446,18 +1430,6 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1056948092}
         m_MethodName: DropLantern
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 6591775689881986738, guid: a02bdeec1620e3a43b6520b7da51f1b6,
-          type: 3}
-        m_MethodName: Darkness
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

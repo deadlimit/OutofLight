@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -24,12 +25,17 @@ public class InteractButton : MonoBehaviour {
 
     public void SetNewInteract() {
         defaultImage.enabled = true;
-        var interactImage = interact.thisObject.CustomSprite();
-        SetNewButtonSprites(interactImage != null ? interactImage : defaultButton);
-        print(thisButton);
-        interactTextFront.text = interact.thisObject.GetPrompt();
-        interactTextBack.text = interact.thisObject.GetPrompt();
-        thisButton.onClick.AddListener(Interact);
+        try {
+            var interactImage = interact.thisObject.CustomSprite();
+            SetNewButtonSprites(interactImage != null ? interactImage : defaultButton);
+            print(thisButton);
+            interactTextFront.text = interact.thisObject.GetPrompt();
+            interactTextBack.text = interact.thisObject.GetPrompt();
+            thisButton.onClick.AddListener(Interact);
+        }
+        catch (NullReferenceException e) {
+            print(e);
+        }
     }
 
     private void Interact() {
