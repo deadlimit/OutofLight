@@ -25,6 +25,6 @@ public class DaveSFX : MonoBehaviour {
 
 		if (!obj) return;
 		Debug.Log(hit.transform.gameObject);
-		currentMaterial = hit.transform.gameObject.GetComponent<MeshRenderer>().material;
+		currentMaterial = hit.transform.gameObject.GetComponent<MeshRenderer>().sharedMaterial;
 	}
 }

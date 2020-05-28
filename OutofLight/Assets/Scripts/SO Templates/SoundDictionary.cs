@@ -8,7 +8,8 @@ public class SoundDictionary : ScriptableObject {
 	
 	public Dictionary<MaterialList, AudioClip> soundLibrary = new Dictionary<MaterialList, AudioClip>();
 
-	public void Awake() {
+	public void OnEnable() {
+		
 		foreach(var materialList in materials)
 			soundLibrary.Add(materialList, materialList.assosiatedSound);
 	}
@@ -18,11 +19,9 @@ public class SoundDictionary : ScriptableObject {
 			if (key.ContainsMaterial(material))
 				return soundLibrary[key];
 
-		
-		Debug.Log("IN looop");
 		return null;
 	}
-
+	
 }
 
 
