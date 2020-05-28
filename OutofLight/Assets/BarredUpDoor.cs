@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class BarredUpDoor : MonoBehaviour, IInteractable {
 
 	public GameEvent SpecialEvent;
-	public Sprite interactImage;
+	public Button interactImage;
 	
 	public void Use() {
 	    Debug.Log("Barred door");
@@ -17,12 +17,9 @@ public class BarredUpDoor : MonoBehaviour, IInteractable {
 	    return "Try to open";
     }
 
-    public Sprite CustomSprite() {
+    public Button CustomSprite() {
 	    return interactImage;
     }
-
-    public Sprite customImage() {
-	    return interactImage;
-    }
+    
 }
 

@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Door : MonoBehaviour, IInteractable, IAnimation {
+public class Door : MonoBehaviour, IInteractable {
 
     public TransitInfo transitInfo;
     
@@ -15,7 +15,7 @@ public class Door : MonoBehaviour, IInteractable, IAnimation {
     
     public CinemachineVirtualCamera doorCamera;
     public SpawnPosition spawn;
-    public Sprite interactImage;
+    public Button interactImage;
     
     public string prompt;
 
@@ -41,7 +41,7 @@ public class Door : MonoBehaviour, IInteractable, IAnimation {
     }
     
 
-    public Sprite CustomSprite() {
+    public Button CustomSprite() {
         return interactImage;
     }
 

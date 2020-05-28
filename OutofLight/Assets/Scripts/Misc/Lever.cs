@@ -10,7 +10,7 @@ public class Lever : MonoBehaviour, IInteractable {
     public GameEvent LeverPulled;
     public BoolVariable LeverNoPulled;
     public string prompt;
-    public Sprite interactImage;
+    public Button interactImage;
     private bool isPlayerInRange; 
     
 
@@ -47,11 +47,8 @@ public class Lever : MonoBehaviour, IInteractable {
         return prompt;
     }
 
-    public Sprite CustomSprite() {
+    public Button CustomSprite() {
         return interactImage;
     }
-
-    public Sprite customImage() {
-        return interactImage;
-    }
+    
 }

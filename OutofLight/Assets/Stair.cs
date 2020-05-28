@@ -6,7 +6,7 @@ public class Stair : MonoBehaviour, IInteractable {
 
 	public GameEvent ClimbStairs;
 	public TransitInfo up;
-	public Sprite interactImage;
+	public Button interactImage;
 	private Transform player;
 
 	public string prompt;
@@ -34,7 +34,7 @@ public class Stair : MonoBehaviour, IInteractable {
 		return prompt;
 	}
 
-	public Sprite CustomSprite() {
+	public Button CustomSprite() {
 		return interactImage;
 	}
 

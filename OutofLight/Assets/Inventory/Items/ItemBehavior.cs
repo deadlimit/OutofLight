@@ -4,13 +4,13 @@ using UnityEngine.UI;
 public class ItemBehavior : MonoBehaviour, IInteractable {
 
     public Item item;
-    public Sprite interactImage;
+    public Button interactImage;
     public string prompt;
     public string GetPrompt() {
         return prompt;
     }
 
-    public Sprite CustomSprite() {
+    public Button CustomSprite() {
         return interactImage;
     }
 

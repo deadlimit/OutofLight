@@ -9,6 +9,7 @@ public class InteractButton : MonoBehaviour {
     public GameEvent InteractTrigger;
     public Text interactTextFront, interactTextBack;
     public Sprite defaultSprite;
+    public Button defaultButton;
     
     private Button thisButton;
     private Image defaultImage;
@@ -24,9 +25,8 @@ public class InteractButton : MonoBehaviour {
     public void SetNewInteract() {
         defaultImage.enabled = true;
         var interactImage = interact.thisObject.CustomSprite();
-        defaultImage.sprite = interact.thisObject.CustomSprite() == null
-            ? defaultSprite
-            : interact.thisObject.CustomSprite();
+        SetNewButtonSprites(interactImage != null ? interactImage : defaultButton);
+        print(thisButton);
         interactTextFront.text = interact.thisObject.GetPrompt();
         interactTextBack.text = interact.thisObject.GetPrompt();
         thisButton.onClick.AddListener(Interact);
@@ -45,6 +45,12 @@ public class InteractButton : MonoBehaviour {
         interactTextFront.text = null;
         interactTextBack.text = null;
     }
+
+    private void SetNewButtonSprites(Selectable newButton) {
+        defaultImage.sprite = newButton.image.sprite;
+        thisButton.spriteState = newButton.spriteState;
+    }
+    
 
 
 

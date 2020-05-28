@@ -9,7 +9,7 @@ public class JournalBehavior : MonoBehaviour, IInteractable {
     public GameEvent PageFound;
     public JournalPage page;
     public Journal journal;
-    public Sprite interactImage;
+    public Button interactImage;
     
     
     
@@ -23,7 +23,7 @@ public class JournalBehavior : MonoBehaviour, IInteractable {
         return "Pick up journal page";
     }
 
-    public Sprite CustomSprite() {
+    public Button CustomSprite() {
         return interactImage;
     }
 }

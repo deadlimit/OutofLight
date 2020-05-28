@@ -7,9 +7,8 @@ using UnityEngine.UI;
 public class HugeWindowInspection : MonoBehaviour, IInteractable {
 	
 	public GameObject dave;
-	public GameEvent Inspecting;
-	public GameEvent StopInspectiong;
-	public Sprite interactImage;
+	public GameEvent UpdateTileCheck;
+	public Button interactImage;
 	public string prompt;
 	private bool isLooking;
 
@@ -18,26 +17,24 @@ public class HugeWindowInspection : MonoBehaviour, IInteractable {
 	}
 	
 	public void Use() {
-		if (!isLooking) {
-			Inspecting.Raise();
-			CameraController.instance.ActivateWindowCamera();
-			isLooking = true;
-			dave.GetComponent<Movement>().ArrivedAtTarget.Raise();
-			
-		}
-		else {
-			StopInspectiong.Raise();
-			isLooking = false;
-			CameraController.instance.ActivateStaticCamera();
-		}
-		
+		StartCoroutine(InspectSequence());
+	}
+
+
+	private IEnumerator InspectSequence() {
+		dave.GetComponent<Movement>().enabled = false;
+		CameraController.instance.ActivateWindowCamera();
+		yield return new WaitForSeconds(3);
+		dave.GetComponent<Movement>().enabled = true;
+		CameraController.instance.ActivateStaticCamera();
+		UpdateTileCheck.Raise();
 	}
 	
 	public string GetPrompt() {
 		return prompt;
 	}
 
-	public Sprite CustomSprite() {
+	public Button CustomSprite() {
 		return interactImage;
 	}
 	

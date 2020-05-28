@@ -13,7 +13,7 @@ public class MovableBox : MonoBehaviour, IInteractable {
     private bool canBeMoved;
 
     public GameEvent UpdateTiles;
-    public Sprite interactImage;
+    public Button interactImage;
 
     public void Use() {
         if (canBeMoved && tileMoves > 0)
@@ -24,7 +24,7 @@ public class MovableBox : MonoBehaviour, IInteractable {
         return "Push box";
     }
 
-    public Sprite CustomSprite() {
+    public Button CustomSprite() {
         return interactImage;
     }
 
