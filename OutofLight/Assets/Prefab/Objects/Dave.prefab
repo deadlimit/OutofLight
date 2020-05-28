@@ -1,5 +1,97 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1584144302
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1584144303}
+  - component: {fileID: 1584144304}
+  m_Layer: 0
+  m_Name: Light (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1584144303
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584144302}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.06, y: 13.85, z: -6.03}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7135927924484230855}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &1584144304
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584144302}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 0.8113309, b: 0.15601929, a: 1}
+  m_Intensity: 17.46
+  m_Range: 2.8
+  m_SpotAngle: 132.56046
+  m_InnerSpotAngle: 124.36251
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 0
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 9.6
+  m_ShadowAngle: 0
 --- !u!1 &277635917743125275
 GameObject:
   m_ObjectHideFlags: 0
@@ -616,7 +708,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2384309261501683086}
   m_LocalRotation: {x: 0.76537085, y: 0, z: 0, w: 0.6435895}
-  m_LocalPosition: {x: 0, y: 2.8, z: 0.06}
+  m_LocalPosition: {x: -0, y: 2.8, z: 0.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7135927924484230855}
@@ -634,10 +726,10 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 0.8113309, b: 0.15601929, a: 1}
-  m_Intensity: 14.36
-  m_Range: 94
-  m_SpotAngle: 141.3158
-  m_InnerSpotAngle: 67.1705
+  m_Intensity: 26.5
+  m_Range: 47.44
+  m_SpotAngle: 132.56046
+  m_InnerSpotAngle: 124.36251
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -668,7 +760,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -676,12 +768,12 @@ Light:
   m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
-  m_ShadowRadius: 0
+  m_ShadowRadius: 0.7
   m_ShadowAngle: 0
 --- !u!1 &2433670156920801940
 GameObject:
@@ -1087,7 +1179,8 @@ GameObject:
   - component: {fileID: 3151053298364596272}
   - component: {fileID: 1056948091}
   - component: {fileID: 1056948092}
-  - component: {fileID: 6682784137755914063}
+  - component: {fileID: 747460001}
+  - component: {fileID: 2048968705982643085}
   m_Layer: 2
   m_Name: Dave
   m_TagString: Player
@@ -1297,7 +1390,7 @@ MonoBehaviour:
   force: 30
   respawnMenu: {fileID: 8193819112782970037, guid: 25b7e3f04410b47419652898e620d249,
     type: 3}
---- !u!114 &6682784137755914063
+--- !u!114 &747460001
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1309,7 +1402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f624fc09539ff242ad601509638ac53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: b294ffb78a68d0c42bae7e8c35edcce6, type: 2}
+  Event: {fileID: 11400000, guid: a3a1957f36721b74d8fc96a4413c2d46, type: 2}
   Response:
     m_PersistentCalls:
       m_Calls:
@@ -1321,7 +1414,57 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Use
+          m_StringArgument: Open Door left
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2048968705982643085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3471985235137391480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f624fc09539ff242ad601509638ac53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 9f53fa651cb0c6e47adc4326b676295d, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1967549788124060638}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1056948092}
+        m_MethodName: DropLantern
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6591775689881986738, guid: a02bdeec1620e3a43b6520b7da51f1b6,
+          type: 3}
+        m_MethodName: Darkness
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &3915287397164629556
@@ -1876,6 +2019,7 @@ Transform:
   - {fileID: 3696810168288376269}
   - {fileID: 3821396841667894396}
   - {fileID: 4645955976666080647}
+  - {fileID: 1584144303}
   m_Father: {fileID: 1745587035094344253}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 68.318, y: -7.4880004, z: -13.562}
@@ -1893,6 +2037,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepsAmount: {fileID: 11400000, guid: 88431f49dcf46fb45aa9686e9310270c, type: 2}
   fuelSlider: {fileID: 0}
+  light1: {fileID: 6507352441875676019}
+  light2: {fileID: 1584144304}
   decreaseLightModifier: 0
 --- !u!1 &6686704712665646842
 GameObject:
@@ -2298,7 +2444,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8186320030775889154}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0, y: 1.5, z: 0}
+  m_LocalPosition: {x: -0, y: 1.63, z: 0.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7135927924484230855}

@@ -7,27 +7,27 @@ public class Lantern : MonoBehaviour {
 
     public IntVariable stepsAmount;
     public Slider fuelSlider;
-    private Light lanternLight;
-
+    public Light light1, light2;
 
     [SerializeField]
     private float decreaseLightModifier;
 
     private void Awake() {
-        lanternLight = GetComponentInChildren<Light>();
         fuelSlider = GameObject.Find("FuelBar").GetComponent<Slider>();
     }
 
     private void Start()
     {
-        lanternLight.intensity = fuelSlider.maxValue;
+        light1.range = fuelSlider.maxValue;
+        light2.range = fuelSlider.maxValue;
     }
 
     private void Update()
     {
         if (stepsAmount.GetValue() >= 0)
         {
-            lanternLight.range = Mathf.Lerp(fuelSlider.value, stepsAmount.GetValue(), Time.deltaTime * decreaseLightModifier);
+            light1.range = Mathf.Lerp(fuelSlider.value, stepsAmount.GetValue(), Time.deltaTime * decreaseLightModifier);
+            light2.range = Mathf.Lerp(fuelSlider.value, stepsAmount.GetValue(), Time.deltaTime * decreaseLightModifier);
         }
     }
 
