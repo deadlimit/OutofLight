@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using UnityEditor.Rendering;
 using UnityEngine;
 [CreateAssetMenu]
 public class SoundDictionary : ScriptableObject {
@@ -9,9 +8,11 @@ public class SoundDictionary : ScriptableObject {
 	public Dictionary<MaterialList, AudioClip> soundLibrary = new Dictionary<MaterialList, AudioClip>();
 
 	public void OnEnable() {
-		
-		foreach(var materialList in materials)
-			soundLibrary.Add(materialList, materialList.assosiatedSound);
+		foreach (var materialList in materials) {
+			if(!soundLibrary.ContainsKey(materialList))
+				soundLibrary.Add(materialList, materialList.assosiatedSound);
+		}
+			
 	}
 	
 	public AudioClip GetAudioClip(Material material) {

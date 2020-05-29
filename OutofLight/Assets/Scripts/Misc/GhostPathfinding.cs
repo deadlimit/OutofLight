@@ -59,7 +59,7 @@ public class GhostPathfinding : MonoBehaviour {
 		var ray = new Ray(transform.position, rayTarget);
 		if (!Physics.Raycast(ray, out var hit, 3, LayerMask.GetMask("Tile"))) return;
 		var tile = hit.transform.gameObject.GetComponent<Tile>();
-		if (tile != null && !(visited.Contains(tile))) {
+		if (tile != null && !(visited.Contains(tile)) && !tile.IsSafezoneTile()) {
 			tiles.Add(tile);
 		}
 	}
@@ -74,6 +74,7 @@ public class GhostPathfinding : MonoBehaviour {
 	}
 	
 	private void MoveToNextTile() {
+		if (tiles.Count < 1) return;
 		var closestTile = tiles[0];
 		closestPath.Add(closestTile);
 		Debug.Log(closestTile);

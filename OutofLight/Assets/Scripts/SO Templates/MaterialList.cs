@@ -8,7 +8,6 @@ public class MaterialList : ScriptableObject {
 	public AudioClip assosiatedSound;
 
 	public bool ContainsMaterial(Material material) {
-		Debug.Log(materials.Contains(material));
 		return materials.Contains(material);
 	}
 }

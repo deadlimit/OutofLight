@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class GhostMovement : MonoBehaviour {
 	
-	public IntVariable steps;
-	public int lowerValue;
 	public Transform player;
 	public float ghostSpeed;
 
@@ -14,7 +12,7 @@ public class GhostMovement : MonoBehaviour {
 	public GameEvent GhostUpdatePath;
 
 	private Transform thisTransform;
-
+	
 	private void Awake() {
 		thisTransform = GetComponent<Transform>(); 
 		player = GameObject.FindWithTag("Player").transform;
@@ -22,6 +20,8 @@ public class GhostMovement : MonoBehaviour {
 
 	private void Update() {
 		var direction = GetPlayerDirection();
+		direction.x = 0; 
+		direction.z = 0; 
 		thisTransform.rotation = Quaternion.Slerp(thisTransform.rotation, direction, Time.deltaTime * 2 );
 	}
 	
@@ -47,11 +47,6 @@ public class GhostMovement : MonoBehaviour {
 		lookDirection.y = .25f;
 		return Quaternion.LookRotation(lookDirection);
 	}
-	private void OnTriggerEnter(Collider other) {
-		if (other.gameObject.CompareTag("Player")) {
-			steps.ChangeValue(lowerValue);
-		} 
-	}
-	
+
 	
 }
