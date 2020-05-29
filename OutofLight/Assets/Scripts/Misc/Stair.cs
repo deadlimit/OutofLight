@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-
 public class Stair : MonoBehaviour, IInteractable {
 
 	public GameEvent ClimbStairs;
@@ -10,11 +9,13 @@ public class Stair : MonoBehaviour, IInteractable {
 	private Transform player;
 
 	public string prompt;
+
+	public AudioSource audio;
 	
 	private void Awake() {
 		ChangeLayerMask("Default");
 	}
-	
+
 	private void OnTriggerEnter(Collider other) {
 		if (!other.gameObject.CompareTag("Player")) return;
 		ChangeLayerMask("Interactable");
@@ -27,6 +28,7 @@ public class Stair : MonoBehaviour, IInteractable {
 	}
 	
 	public void Use() {
+		audio.Play();
 		StartCoroutine(MoveUp(up.otherSide));
 	}
 

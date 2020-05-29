@@ -18,7 +18,7 @@ public class Door : MonoBehaviour, IInteractable {
     private AudioSource audio;
     
     private void Awake() {
-        audio = GetComponent<AudioSource>();
+        audio = GetComponentInChildren<AudioSource>();
         doorCamera.gameObject.SetActive(false);
     }
     

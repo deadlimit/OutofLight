@@ -12,16 +12,20 @@ public class HugeWindowInspection : MonoBehaviour, IInteractable {
 	public string prompt;
 	private bool isLooking;
 
+	public AudioSource audio;
+	
 	private void Awake() {
 		isLooking = false;
 	}
 	
 	public void Use() {
 		StartCoroutine(InspectSequence());
+		audio.Play();
 	}
 
 
 	private IEnumerator InspectSequence() {
+		
 		dave.GetComponent<Movement>().enabled = false;
 		CameraController.instance.ActivateWindowCamera();
 		yield return new WaitForSeconds(3);

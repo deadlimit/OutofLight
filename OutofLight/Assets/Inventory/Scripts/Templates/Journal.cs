@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using UnityEngine;
 [CreateAssetMenu(menuName = "Inventory/Journal")]
 public class Journal : ScriptableObject {
@@ -15,5 +16,9 @@ public class Journal : ScriptableObject {
     public void OnEnable() {
         journal = new JournalPage[pages];
         latest = null;
+    }
+
+    public bool Contains(JournalPage page) {
+        return journal.Contains(page);
     }
 }

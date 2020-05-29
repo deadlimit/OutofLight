@@ -10,8 +10,11 @@ public class JournalBehavior : MonoBehaviour, IInteractable {
     public JournalPage page;
     public Journal journal;
     public Button interactImage;
-    
-    
+
+    private void Awake() {
+        if (journal.Contains(page))
+            Destroy(gameObject);
+    }
     
     public void Use() {
         journal.Add(page);
