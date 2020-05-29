@@ -15,7 +15,10 @@ public class Door : MonoBehaviour, IInteractable {
     
     public string prompt;
 
+    private AudioSource audio;
+    
     private void Awake() {
+        audio = GetComponent<AudioSource>();
         doorCamera.gameObject.SetActive(false);
     }
     
@@ -24,6 +27,7 @@ public class Door : MonoBehaviour, IInteractable {
     }
 
     private IEnumerator NewSceneSequence() {
+        audio.Play();
         NewSceneLoad.Raise();
         PlayerOpenAnimationTrigger.Raise();
         doorCamera.gameObject.SetActive(true);
@@ -40,5 +44,5 @@ public class Door : MonoBehaviour, IInteractable {
         return interactImage;
     }
     
-    
+
 }

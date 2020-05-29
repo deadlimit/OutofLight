@@ -56,7 +56,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4044717213e31446939f7bd49c896ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TrackedObjectOffset: {x: 0, y: 0, z: 0}
+  m_TrackedObjectOffset: {x: 0, y: -0.72, z: 0}
   m_LookaheadTime: 0
   m_LookaheadSmoothing: 10
   m_LookaheadIgnoreY: 0
@@ -87,7 +87,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6859483857877476345
 Transform:
   m_ObjectHideFlags: 0
@@ -95,8 +95,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1683273802868364820}
-  m_LocalRotation: {x: 0.27492675, y: 0.8800411, z: 0.36812508, w: 0.12011178}
-  m_LocalPosition: {x: -6.177431, y: -8.712375, z: 10.47215}
+  m_LocalRotation: {x: 0.6855754, y: -0.4523099, z: -0.31414056, w: 0.47614902}
+  m_LocalPosition: {x: 4.86, y: 0.64, z: 1.97}
   m_LocalScale: {x: 2, y: 1.9999995, z: 1.9999995}
   m_Children:
   - {fileID: 1190442810272930442}
@@ -151,6 +151,7 @@ GameObject:
   - component: {fileID: 4645057140796328351}
   - component: {fileID: 2950940166436822649}
   - component: {fileID: -8787798481461181616}
+  - component: {fileID: 858240636}
   m_Layer: 9
   m_Name: Door 2.0
   m_TagString: Door
@@ -247,8 +248,107 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdb8f1962f709af4fb3b72f548c7f921, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitInfo: {fileID: 0}
+  transitInfo: {fileID: 11400000, guid: 92363d16ab2ce4247b5015084dfd54c9, type: 2}
   NewSceneLoad: {fileID: 11400000, guid: d4690f16bc752554c9a68564c07f3891, type: 2}
+  PlayerOpenAnimationTrigger: {fileID: 11400000, guid: a3a1957f36721b74d8fc96a4413c2d46,
+    type: 2}
   doorCamera: {fileID: 3890551430688088948}
   spawn: {fileID: 11400000, guid: 1eb3d7e2146cb2a4491e49ff4db4b671, type: 2}
-  prompt: 
+  interactImage: {fileID: 0}
+  prompt: To Dining Hall
+--- !u!82 &858240636
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6361995105449852227}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: c5c205562e35cdd4e8d88355e1c475bf, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1.1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

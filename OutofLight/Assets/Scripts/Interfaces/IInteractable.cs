@@ -6,4 +6,5 @@ public interface IInteractable {
     string GetPrompt();
 
     Button CustomSprite();
+    
 }

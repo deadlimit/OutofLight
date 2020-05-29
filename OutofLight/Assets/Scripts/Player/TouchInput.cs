@@ -12,15 +12,11 @@ public class TouchInput : MonoBehaviour {
     private void Awake() {
         noSwipeZoneHeight = Screen.height * .3f;
         noSwipeZoneWidth = Screen.width - (Screen.width * .3f);
-        print(noSwipeZoneHeight);
-        print(noSwipeZoneWidth);
     }
     
     private void Update() {
         GetSwipeDirection();
     }
-    
-    
     private void GetSwipeDirection() {
         direction = Vector3.zero;
         if (Input.touchCount <= 0) return;

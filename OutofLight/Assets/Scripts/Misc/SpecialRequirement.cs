@@ -13,25 +13,25 @@ public class SpecialRequirement : MonoBehaviour, IInteractable {
 	public Button button;
 	private BoxCollider thisCollider;
 	public List<BoolVariable> requirements = new List<BoolVariable>();
-
+	
 	private bool requirementsMet;
 	private BoxCollider[] collidersInParent;
 	
 	public void Awake() {
-		
 		thisCollider = GetComponent<BoxCollider>();
 		collidersInParent = GetComponentsInParent<BoxCollider>();
 		DelegateCheckRequirements();
+		if (requirementsMet) return;
 		EnableColliders(false);
-
 		thisCollider.enabled = true;
-		
 	}
 
 	public void Use() {
-
+		var text = GetComponentInChildren<RequirementText>();
+		text.SetText(prompt);
+		text.MoveAndShowText();
 	}
-
+	
 	public string GetPrompt() {
 		return prompt;
 	}

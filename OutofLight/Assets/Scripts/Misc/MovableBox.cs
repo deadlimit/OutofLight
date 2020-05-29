@@ -10,6 +10,8 @@ public class MovableBox : MonoBehaviour, IInteractable {
     [Header("Ange antal tiles lådan rör sig åt hållet angivet ovan")]
     [SerializeField] private int tileMoves;
 
+    public AudioClip audio;
+    
     private bool canBeMoved;
 
     public GameEvent UpdateTiles;
@@ -26,6 +28,10 @@ public class MovableBox : MonoBehaviour, IInteractable {
 
     public Button CustomSprite() {
         return interactImage;
+    }
+
+    public AudioClip Audio() {
+        return audio;
     }
 
     private void OnTriggerStay(Collider other) {

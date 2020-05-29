@@ -12,9 +12,9 @@ public class BlackFade : MonoBehaviour {
 	}
 
 	private IEnumerator Fade() {
-		StartCoroutine(ImageFade(1, seconds));
+		StartCoroutine(ImageFade(1.1f, seconds));
 		yield return new WaitForSeconds(seconds * 2);
-		StartCoroutine(ImageFade(0, seconds));
+		StartCoroutine(ImageFade(-0.1f, seconds));
 		BlackFadeDone.Raise();
 
 	}
