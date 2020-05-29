@@ -24,7 +24,6 @@ public class DaveSFX : MonoBehaviour {
 		bool obj = Physics.Raycast(ray, out var hit);
 
 		if (!obj) return;
-		Debug.Log(hit.transform.gameObject);
 		currentMaterial = hit.transform.gameObject.GetComponent<MeshRenderer>().sharedMaterial;
 	}
 }
