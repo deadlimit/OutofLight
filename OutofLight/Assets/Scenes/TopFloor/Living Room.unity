@@ -302,6 +302,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1725095156, guid: 66d22870652dcd34eb25eacc0f08726b, type: 3}
+      propertyPath: leverObject
+      value: 
+      objectReference: {fileID: 754497109}
     - target: {fileID: 1467175072798211999, guid: 66d22870652dcd34eb25eacc0f08726b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -396,6 +400,11 @@ PrefabInstance:
         type: 3}
       propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
       value: Pull
+      objectReference: {fileID: 0}
+    - target: {fileID: 6014260920867168368, guid: 66d22870652dcd34eb25eacc0f08726b,
+        type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8369564551918424015, guid: 66d22870652dcd34eb25eacc0f08726b,
         type: 3}
@@ -508,8 +517,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 138731277}
-  m_LocalRotation: {x: 0.2840081, y: -0.0132059865, z: 0.003988313, w: 0.95872265}
-  m_LocalPosition: {x: 16.563005, y: 2.9891434, z: -20.199799}
+  m_LocalRotation: {x: 0.32583472, y: 0.34693247, z: -0.12984307, w: 0.8698336}
+  m_LocalPosition: {x: 13.41, y: 3.82, z: -9.61}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1020,6 +1029,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1725095156, guid: 66d22870652dcd34eb25eacc0f08726b, type: 3}
+      propertyPath: leverObject
+      value: 
+      objectReference: {fileID: 2054162536}
     - target: {fileID: 1467175072798211999, guid: 66d22870652dcd34eb25eacc0f08726b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2656,7 +2669,6 @@ GameObject:
   - component: {fileID: 754497111}
   - component: {fileID: 754497110}
   - component: {fileID: 754497114}
-  - component: {fileID: 754497115}
   - component: {fileID: 754497116}
   m_Layer: 0
   m_Name: WallOne
@@ -2753,33 +2765,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wallOne: {fileID: 754497113}
   newY: -90
---- !u!114 &754497115
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 754497109}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f624fc09539ff242ad601509638ac53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 01350d9ba6d14a44e802f03cacb5dac4, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 754497114}
-        m_MethodName: RotateWalls
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &754497116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9387,7 +9372,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2100113550}
-  m_LocalRotation: {x: 0.32554883, y: 0.34884173, z: -0.13055828, w: 0.86906964}
+  m_LocalRotation: {x: 0.32583472, y: 0.34693247, z: -0.12984307, w: 0.8698336}
   m_LocalPosition: {x: 13.41, y: 3.82, z: -9.61}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

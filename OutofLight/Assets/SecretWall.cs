@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SecretWall : MonoBehaviour {
+public class SecretWall : MonoBehaviour, ILever {
 
 	public Transform wallOne;
 
@@ -16,5 +16,8 @@ public class SecretWall : MonoBehaviour {
 	public void RotateBack() {
 		wallOne.LeanRotateY(0, 2);
 	}
-	
+
+	public void Method() {
+		RotateWalls();
+	}
 }
