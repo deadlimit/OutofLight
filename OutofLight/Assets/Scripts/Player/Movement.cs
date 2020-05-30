@@ -62,6 +62,8 @@ public class Movement : MonoBehaviour {
             direction = Vector3.right;
         }
 
+        Debug.Log(direction);
+        
         if (direction == Vector3.zero || isMoving || isTurning) return;
         if (!CheckIfValidDirection(direction) || isTurning) {
             isTurning = true;
