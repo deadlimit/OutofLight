@@ -61,8 +61,6 @@ public class Movement : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.D)) {
             direction = Vector3.right;
         }
-
-        Debug.Log(direction);
         
         if (direction == Vector3.zero || isMoving || isTurning) return;
         if (!CheckIfValidDirection(direction) || isTurning) {

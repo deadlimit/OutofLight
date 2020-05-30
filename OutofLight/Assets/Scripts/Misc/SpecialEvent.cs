@@ -19,9 +19,15 @@ public class SpecialEvent : MonoBehaviour {
     }
     
     public void RaiseGameEvents() {
-	    foreach(var e in events) {
-		    e.Raise();
+	    try {
+		    foreach (var e in events) {
+			    e.Raise();
+		    }
 	    }
+	    catch (MissingComponentException e) {
+		    print(e.Message);
+	    }
+
     }
 
     public void SpawnObjects() {
