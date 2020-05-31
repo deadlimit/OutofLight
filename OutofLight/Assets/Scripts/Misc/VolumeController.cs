@@ -9,15 +9,17 @@ public class VolumeController : MonoBehaviour
     public FloatVariable volumeVar;
     //public AudioSource[] audioSources = new AudioSource[10];
     public Slider volumeControl;
+
     private void Awake()
     {
-        volumeControl.maxValue = volumeVar.GetValue();
+        volumeControl.maxValue = 1f;
         volumeControl.value = volumeVar.GetValue();
         //audioSources = (AudioSource[])GameObject.FindObjectsOfType(typeof(AudioSource));
     }
 
     private void Update()
     {
+        VolumeCheck();
         AudioListener.volume = volumeControl.value;
     }
 
@@ -33,15 +35,15 @@ public class VolumeController : MonoBehaviour
 
     //}
 
- //   private void VolumeCheck()
- //   {
- //       if (volumeControl.value < volumeVar.GetValue())
- //       {
- //           volumeVar.ChangeValue(-0.1f);
- //       }
- //       if (volumeControl.value > volumeVar.GetValue())
-  //      {
-    //        volumeVar.ChangeValue(+0.1f);
-      //  }
-    //}
+    private void VolumeCheck()
+    {
+        if (volumeControl.value < volumeVar.GetValue())
+        {
+          volumeVar.ChangeValue(-0.1f);
+        }
+       if (volumeControl.value > volumeVar.GetValue())
+        {
+            volumeVar.ChangeValue(+0.1f);
+        }
+    }
 }
