@@ -20,7 +20,7 @@ public class DangerousBallPatrol : MonoBehaviour {
 	}
 
 	public void Update() {
-		if(canMove || moveList.Count > 0)
+		if(canMove && moveList.Count > 0)
 			StartCoroutine(Move());
 	}
 
@@ -40,7 +40,7 @@ public class DangerousBallPatrol : MonoBehaviour {
 		if (index > moveList.Count -1 )
 			index = 0;
 
-		return moveList[index++].transform.position + Vector3.up;;
+		return moveList[index++].transform.position + Vector3.up;
 	}
 
 

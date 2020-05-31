@@ -717,7 +717,6 @@ GameObject:
   - component: {fileID: 6592980103191924085}
   - component: {fileID: 6592980103191924084}
   - component: {fileID: 8755857885598429971}
-  - component: {fileID: 3697060523188674193}
   - component: {fileID: 2129726480}
   - component: {fileID: 2129726482}
   - component: {fileID: 548391743}
@@ -831,8 +830,6 @@ MonoBehaviour:
   player: {fileID: 0}
   stairArrows: {fileID: 6732842976574784174, guid: 9e2c225ac8363f141b161767ed4a60b4,
     type: 3}
-  optionalArrows: {fileID: 6732842976574784174, guid: 9e2c225ac8363f141b161767ed4a60b4,
-    type: 3}
   roomPresenter: {fileID: 3499028219621105309, guid: 939ccbaeb771c254d9f56f73a3cbe8f3,
     type: 3}
   blackFade: {fileID: 6591775689881986742, guid: a02bdeec1620e3a43b6520b7da51f1b6,
@@ -882,33 +879,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6592980103191924085}
         m_MethodName: DisplayGameOver
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &3697060523188674193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6592980103191924079}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f624fc09539ff242ad601509638ac53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: f6b8072122c145143b9023f036319ef2, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6592980103191924085}
-        m_MethodName: DisplayOptionalArrows
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
