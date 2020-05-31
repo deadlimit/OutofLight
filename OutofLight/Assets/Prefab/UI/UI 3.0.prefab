@@ -1621,12 +1621,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6592980103191924075}
     m_Modifications:
+    - target: {fileID: 352376917666746226, guid: b4121e80933904c46a3510f720d5d18c,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 2100000, guid: 7c6c40d1973fa06438a46367f4dab1d9, type: 2}
     - target: {fileID: 1294684748653336997, guid: b4121e80933904c46a3510f720d5d18c,
         type: 3}
       propertyPath: defaultButton
       value: 
       objectReference: {fileID: 6965452767747339399, guid: b4121e80933904c46a3510f720d5d18c,
         type: 3}
+    - target: {fileID: 1294684748653336997, guid: b4121e80933904c46a3510f720d5d18c,
+        type: 3}
+      propertyPath: shader
+      value: 
+      objectReference: {fileID: 2100000, guid: 7c6c40d1973fa06438a46367f4dab1d9, type: 2}
     - target: {fileID: 4589260288202177999, guid: b4121e80933904c46a3510f720d5d18c,
         type: 3}
       propertyPath: m_Name

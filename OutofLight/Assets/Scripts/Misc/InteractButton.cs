@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,17 +15,16 @@ public class InteractButton : MonoBehaviour {
     
     private Button thisButton;
     private Image defaultImage;
-   
-
+    public Material shader;
     private void Awake() {
         defaultImage = GetComponent<Image>();
-        defaultImage.enabled = false;
-        defaultImage.sprite = null;
+        defaultImage.sprite = defaultSprite;
         thisButton = GetComponent<Button>();
     }
 
     public void SetNewInteract() {
-        defaultImage.enabled = true;
+        Debug.Log("New interact");
+        StartCoroutine(ChangeShader(-3));
         try {
             var interactImage = interact.thisObject.CustomSprite();
             SetNewButtonSprites(interactImage != null ? interactImage : defaultButton);
@@ -39,24 +39,33 @@ public class InteractButton : MonoBehaviour {
 
     private void Interact() {
         interact.thisObject.Use();
-        defaultImage.enabled = false;
+        StartCoroutine(ChangeShader(3));
         InteractTrigger.Raise();
     }
     
     public void Reset() {
+        StartCoroutine(ChangeShader(3));
         thisButton.onClick.RemoveAllListeners();
-        defaultImage.enabled = false;
         defaultImage.sprite = defaultSprite;
         interactTextFront.text = null;
         interactTextBack.text = null;
     }
-
+    
     private void SetNewButtonSprites(Selectable newButton) {
         defaultImage.sprite = newButton.image.sprite;
         thisButton.spriteState = newButton.spriteState;
     }
-    
 
 
+    private IEnumerator ChangeShader(int value) {
+        float start = 0;
+        float end = 1;
+        while (start < end) {
+            float changeValue = Mathf.Lerp(shader.GetFloat("Vector1_380668A9"), value, Time.deltaTime * 1.5f);
+            shader.SetFloat("Vector1_380668A9", changeValue);
+            start += Time.deltaTime;
+            yield return null;
+        }
+    }
 
 }

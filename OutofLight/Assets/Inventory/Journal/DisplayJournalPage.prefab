@@ -76,7 +76,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: The courier is a nice fellow. We usually talk throughout the whole trip
+    to town. I consider us quite familiar acquaintances. I'm Looking forward to us
+    meeting up again next week for the pick up.
 --- !u!1 &2235454267605144728
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,7 +155,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: Journal of Baron James Tristan
 --- !u!1 &2785662515727607791
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,7 +246,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bea493abdc8c5114c8ced28eb1307b66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
   journal: {fileID: 11400000, guid: 5d111ad1152b49e45a8d8633010986d3, type: 2}
   day: {fileID: 2785662516029886219}
   header: {fileID: 2235454267605144730}
@@ -325,7 +326,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: Day 1
 --- !u!1 &4748682166709903168
 GameObject:
   m_ObjectHideFlags: 0

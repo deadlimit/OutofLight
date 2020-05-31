@@ -15,11 +15,10 @@ public class SpecialRequirement : MonoBehaviour, IInteractable {
 	public List<BoolVariable> requirements = new List<BoolVariable>();
 	
 	private bool requirementsMet;
-	private BoxCollider[] collidersInParent;
+	public BoxCollider[] collidersInParent;
 	
 	public void Awake() {
 		thisCollider = GetComponent<BoxCollider>();
-		collidersInParent = GetComponentsInParent<BoxCollider>();
 		DelegateCheckRequirements();
 		if (requirementsMet) return;
 		EnableColliders(false);
