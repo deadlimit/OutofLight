@@ -18,6 +18,7 @@ public class FuelUI : MonoBehaviour
         lanternSlider = lanternSlider.GetComponent<Slider>();
         lanternSlider.maxValue = stepAmount.GetValue();
         lanternSlider.value = stepAmount.GetValue();
+        lanternSlider.interactable = false;
         SetColors();
     }
 
