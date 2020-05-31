@@ -14,12 +14,12 @@ public class Stair : MonoBehaviour, IInteractable {
 	
 	private void Awake() {
 		ChangeLayerMask("Default");
+		player = GameObject.Find("Dave").transform;
 	}
 
 	private void OnTriggerEnter(Collider other) {
 		if (!other.gameObject.CompareTag("Player")) return;
 		ChangeLayerMask("Interactable");
-		player = other.gameObject.transform;
 	}
 
 	private void OnTriggerExit(Collider other) {
@@ -44,7 +44,6 @@ public class Stair : MonoBehaviour, IInteractable {
 
 	public IEnumerator MoveUp(Vector3 direction) {
 		ClimbStairs.Raise();
-		
 		yield return new WaitForSeconds(1.5f);
 		player.position = direction;	
 		player.GetComponent<Movement>().StartedMoving.Raise();

@@ -107,11 +107,10 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 8d67f2dc7595f224b81c4dc4fc571dbe,
-      type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 8d67f2dc7595f224b81c4dc4fc571dbe, type: 3}
-    m_SelectedSprite: {fileID: 21300000, guid: 8d67f2dc7595f224b81c4dc4fc571dbe, type: 3}
-    m_DisabledSprite: {fileID: 21300000, guid: e01f8738ebf7db84cba185cc65325864, type: 3}
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -151,7 +150,7 @@ MonoBehaviour:
   interactTextFront: {fileID: 5017814111944455660}
   interactTextBack: {fileID: 2607236115963596912}
   defaultSprite: {fileID: 21300000, guid: 8d67f2dc7595f224b81c4dc4fc571dbe, type: 3}
-  defaultButton: {fileID: 0}
+  defaultButton: {fileID: 6965452767747339399}
   shader: {fileID: 0}
 --- !u!114 &5451303292906178100
 MonoBehaviour:
