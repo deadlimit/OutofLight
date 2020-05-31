@@ -45,7 +45,7 @@ public class Stair : MonoBehaviour, IInteractable {
 	public IEnumerator MoveUp(Vector3 direction) {
 		ClimbStairs.Raise();
 		
-		yield return new WaitForSeconds(1);
+		yield return new WaitForSeconds(1.5f);
 		player.position = direction;	
 		player.GetComponent<Movement>().StartedMoving.Raise();
 		player.GetComponent<Movement>().ArrivedAtTarget.Raise();
