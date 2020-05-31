@@ -12,22 +12,21 @@ public class InteractButton : MonoBehaviour {
     public Text interactTextFront, interactTextBack;
     public Sprite defaultSprite;
     public Button defaultButton;
-    
+    public Material shader;
     private Button thisButton;
     private Image defaultImage;
-    public Material shader;
+   
     private void Awake() {
         defaultImage = GetComponent<Image>();
-        defaultImage.sprite = defaultSprite;
+        defaultImage.sprite = null;
         thisButton = GetComponent<Button>();
     }
 
     public void SetNewInteract() {
-        Debug.Log("New interact");
         StartCoroutine(ChangeShader(-3));
         try {
-            var interactImage = interact.thisObject.CustomSprite();
-            SetNewButtonSprites(interactImage != null ? interactImage : defaultButton);
+            var interactButton = interact.thisObject.CustomSprite();
+            SetNewButtonSprites(interactButton != null ? interactButton : defaultButton);
             interactTextFront.text = interact.thisObject.GetPrompt();
             interactTextBack.text = interact.thisObject.GetPrompt();
             thisButton.onClick.AddListener(Interact);
@@ -46,23 +45,22 @@ public class InteractButton : MonoBehaviour {
     public void Reset() {
         StartCoroutine(ChangeShader(3));
         thisButton.onClick.RemoveAllListeners();
-        defaultImage.sprite = defaultSprite;
         interactTextFront.text = null;
         interactTextBack.text = null;
     }
     
     private void SetNewButtonSprites(Selectable newButton) {
-        defaultImage.sprite = newButton.image.sprite;
+        shader = newButton.image.material;
+        defaultImage.material = newButton.image.material;
         thisButton.spriteState = newButton.spriteState;
     }
-
-
+    
     private IEnumerator ChangeShader(int value) {
         float start = 0;
         float end = 1;
         while (start < end) {
-            float changeValue = Mathf.Lerp(shader.GetFloat("Vector1_380668A9"), value, Time.deltaTime * 1.5f);
-            shader.SetFloat("Vector1_380668A9", changeValue);
+            float changeValue = Mathf.Lerp(shader.GetFloat("ShaderController"), value, Time.deltaTime * 1.5f);
+            shader.SetFloat("ShaderController", changeValue);
             start += Time.deltaTime;
             yield return null;
         }

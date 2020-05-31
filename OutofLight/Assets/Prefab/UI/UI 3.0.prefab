@@ -484,6 +484,8 @@ MonoBehaviour:
   highTarget: {r: 0.3584906, g: 0.33650768, b: 0.33650768, a: 1}
   current: {r: 0, g: 0, b: 0, a: 0}
   disabled: {r: 0, g: 0, b: 0, a: 0}
+  dave: {fileID: 0}
+  heartbeat: {fileID: 0}
 --- !u!1 &6592980103111234496
 GameObject:
   m_ObjectHideFlags: 0
@@ -1626,6 +1628,16 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 2100000, guid: 7c6c40d1973fa06438a46367f4dab1d9, type: 2}
+    - target: {fileID: 352376917666746226, guid: b4121e80933904c46a3510f720d5d18c,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 352376917666746226, guid: b4121e80933904c46a3510f720d5d18c,
+        type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1294684748653336997, guid: b4121e80933904c46a3510f720d5d18c,
         type: 3}
       propertyPath: defaultButton
@@ -1637,6 +1649,12 @@ PrefabInstance:
       propertyPath: shader
       value: 
       objectReference: {fileID: 2100000, guid: 7c6c40d1973fa06438a46367f4dab1d9, type: 2}
+    - target: {fileID: 2607236115963596912, guid: b4121e80933904c46a3510f720d5d18c,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 7c48c4f16a5631d4f8b8fc289fad025e,
+        type: 3}
     - target: {fileID: 4589260288202177999, guid: b4121e80933904c46a3510f720d5d18c,
         type: 3}
       propertyPath: m_Name
@@ -1647,6 +1665,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5017814111944455660, guid: b4121e80933904c46a3510f720d5d18c,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 7c48c4f16a5631d4f8b8fc289fad025e,
+        type: 3}
     - target: {fileID: 6590264753865190161, guid: b4121e80933904c46a3510f720d5d18c,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -63,7 +63,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 7c6c40d1973fa06438a46367f4dab1d9, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
@@ -152,6 +152,7 @@ MonoBehaviour:
   interactTextBack: {fileID: 2607236115963596912}
   defaultSprite: {fileID: 21300000, guid: 8d67f2dc7595f224b81c4dc4fc571dbe, type: 3}
   defaultButton: {fileID: 0}
+  shader: {fileID: 0}
 --- !u!114 &5451303292906178100
 MonoBehaviour:
   m_ObjectHideFlags: 0
