@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e443842ec6ffa4cabce4a648444af8, type: 3}
   m_Name: PlayerHitByDeath
   m_EditorClassIdentifier: 
-  events: []
-  assosiatedSound: {fileID: 0}
+  events:
+  - {fileID: 11400000, guid: 25318bbb7888ef04f94dcc59f55884fe, type: 2}
+  assosiatedSound: {fileID: 8300000, guid: 02a64b07f03ea3042a0428aa2bfa6772, type: 3}
