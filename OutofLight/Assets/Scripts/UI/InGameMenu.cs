@@ -17,8 +17,10 @@ public class InGameMenu : MonoBehaviour
 
     private void Awake()
     {
-        volumeController.maxValue = volumeVar.GetValue();
-        volumeController.value = volumeVar.GetValue();
+        //volumeController.maxValue = volumeVar.GetValue();
+        //volumeController.value = volumeVar.GetValue();
+        movement = GameObject.FindWithTag("Player").GetComponent<Movement>();
+        touch = GameObject.FindWithTag("Player").GetComponent<TouchInput>();
     }
 
     private void Start()
@@ -30,14 +32,14 @@ public class InGameMenu : MonoBehaviour
 
     private void Update()
     {
-        if (volumeController.value < volumeVar.GetValue())
-        {
-            volumeVar.ChangeValue(-0.1f);
-        }
-        if (volumeController.value > volumeVar.GetValue())
-        {
-            volumeVar.ChangeValue(+0.1f);
-        }
+        //if (volumeController.value < volumeVar.GetValue())
+        //{
+          //  volumeVar.ChangeValue(-0.1f);
+        //}
+        //if (volumeController.value > volumeVar.GetValue())
+        //{
+          //  volumeVar.ChangeValue(+0.1f);
+        //}
         if (freezeTime)
         {
             Time.timeScale = 0;
