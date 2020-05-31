@@ -61,7 +61,7 @@ public class Movement : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.D)) {
             direction = Vector3.right;
         }
-
+        
         if (direction == Vector3.zero || isMoving || isTurning) return;
         if (!CheckIfValidDirection(direction) || isTurning) {
             isTurning = true;
@@ -114,9 +114,7 @@ public class Movement : MonoBehaviour {
         while (transform.position != direction ) {
             transform.position = Vector3.MoveTowards(transform.position, direction,  .6f* Time.deltaTime * movementSpeed);
             transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * movementSpeed * rotationSpeed);
-            //if(turn)
-              //  LookDirection();
-  
+            
             yield return null;
         }
 
@@ -136,63 +134,5 @@ public class Movement : MonoBehaviour {
 
         return false;
     }
-
-    public void UpButton()
-    {
-        direction = Vector3.forward;
-        if (direction == Vector3.zero || isMoving) return;
-        if (!CheckIfValidDirection(direction)){}
-        else
-        {
-            isMoving = true;
-            var destination = direction + transform.position;
-            StartCoroutine(Move(destination, moveSpeed, true));
-            direction = Vector3.zero;
-        }
-    }
-
-    public void DownButton()
-    {
-        direction = Vector3.back;
-        if (direction == Vector3.zero || isMoving) return;
-        if (!CheckIfValidDirection(direction)) { }
-        else
-        {
-            isMoving = true;
-            var destination = direction + transform.position;
-            StartCoroutine(Move(destination, moveSpeed, true));
-            direction = Vector3.zero;
-        }
-    }
-
-    public void LeftButton()
-    {
-        direction = Vector3.left;
-        if (direction == Vector3.zero || isMoving) return;
-        if (!CheckIfValidDirection(direction)) { }
-        else
-        {
-            isMoving = true;
-            var destination = direction + transform.position;
-            StartCoroutine(Move(destination, moveSpeed, true));
-            direction = Vector3.zero;
-        }
-    }
-
-    public void RightButton()
-    {
-        direction = Vector3.right;
-        if (direction == Vector3.zero || isMoving) return;
-        if (!CheckIfValidDirection(direction)) { }
-        else
-        {
-            isMoving = true;
-            var destination = direction + transform.position;
-            StartCoroutine(Move(destination, moveSpeed, true));
-            direction = Vector3.zero;
-        }
-    }
-
-
-
+    
 }
