@@ -2,17 +2,18 @@
 using UnityEngine.UI;
 
 public class JournalHandler : MonoBehaviour {
-
-	public Animator anim;
+	
     public Journal journal;
     public Text day;
     public Text header;
     public Text entry;
-    
+
+    public JournalPage page;
+
     public void Awake() {
 	    transform.localScale = Vector3.zero;
 	    LeanTween.scale(gameObject, new Vector3(1, 1, 1), .5f);
-	    var page = journal.latest;
+	    page = journal.latest;
         if (page == null) return; 
         day.text = page.day;
         header.text = page.header;
