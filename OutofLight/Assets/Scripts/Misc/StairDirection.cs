@@ -23,17 +23,17 @@ public class StairDirection : MonoBehaviour {
 
 	public void MoveLeft() {
 		StartCoroutine(stair.MoveUp(leftPosition.otherSide));
-		StartCoroutine(ImageFade(0, 1, true));
+		StartCoroutine(ImageFade(0, .5f, true));
 		CameraController.instance.ActivateLeftBalconyCamera();
 	}
 	public void MoveRight() {
 		StartCoroutine(stair.MoveUp(rightPosition.otherSide));
-		StartCoroutine(ImageFade(0, 1, true));
+		StartCoroutine(ImageFade(0, .5f, true));
 		CameraController.instance.ActiveRightBalconyCamera();
 	}
 	public void MoveDown() {
 		StartCoroutine(stair.MoveUp(downPosition.otherSide));
-		StartCoroutine(ImageFade(0,1 , true));
+		StartCoroutine(ImageFade(0,.5f , true));
 		CameraController.instance.ActivateMainCamera();
 	}
 
@@ -60,7 +60,7 @@ public class StairDirection : MonoBehaviour {
 		}
 
 		if(destroy)
-			Destroy(gameObject, 1);
+			Destroy(gameObject, 4);
 	}
 
 }

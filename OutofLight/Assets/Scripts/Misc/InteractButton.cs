@@ -15,8 +15,11 @@ public class InteractButton : MonoBehaviour {
     public Material shader;
     private Button thisButton;
     private Image defaultImage;
+
+    private AudioSource audio;
    
     private void Awake() {
+        audio = GetComponent<AudioSource>();
         defaultImage = GetComponent<Image>();
         defaultImage.sprite = null;
         thisButton = GetComponent<Button>();
@@ -38,6 +41,7 @@ public class InteractButton : MonoBehaviour {
 
     private void Interact() {
         interact.thisObject.Use();
+        audio.Play();
         StartCoroutine(ChangeShader(3));
         InteractTrigger.Raise();
     }

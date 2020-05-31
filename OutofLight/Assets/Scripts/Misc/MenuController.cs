@@ -13,7 +13,7 @@ public class MenuController : MonoBehaviour
 
     private void Awake()
     {
-        volumeController.maxValue = volumeVar.GetValue();
+        volumeController.maxValue = 1f;
         volumeController.value = volumeVar.GetValue();
     }
     private void Start()

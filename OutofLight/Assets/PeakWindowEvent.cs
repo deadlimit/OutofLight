@@ -31,6 +31,7 @@ public class PeakWindowEvent : MonoBehaviour, IInteractable {
 		peakCamera.gameObject.SetActive(true);
 		yield return new WaitForSeconds(waitBeforeShowingGhost);
 		StartCoroutine(ChangeShader(-3));
+		yield return new WaitForSeconds(.3f);
 		audio.Play();
 		yield return new WaitForSeconds(1);
 		StartCoroutine(ChangeShader(3));
