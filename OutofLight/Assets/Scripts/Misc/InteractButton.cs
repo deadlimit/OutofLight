@@ -23,7 +23,7 @@ public class InteractButton : MonoBehaviour {
     }
 
     public void SetNewInteract() {
-        StartCoroutine(ChangeShader(-3));
+        StartCoroutine(ChangeShader(-2));
         try {
             var interactButton = interact.thisObject.CustomSprite();
             SetNewButtonSprites(interactButton != null ? interactButton : defaultButton);
@@ -43,10 +43,8 @@ public class InteractButton : MonoBehaviour {
     }
     
     public void Reset() {
-        StartCoroutine(ChangeShader(3));
+        StartCoroutine(ChangeShader(2));
         thisButton.onClick.RemoveAllListeners();
-        interactTextFront.text = null;
-        interactTextBack.text = null;
     }
     
     private void SetNewButtonSprites(Selectable newButton) {
@@ -58,6 +56,7 @@ public class InteractButton : MonoBehaviour {
     private IEnumerator ChangeShader(int value) {
         float start = 0;
         float end = 1;
+        StartCoroutine(TextFade(-value, end * .7f));
         while (start < end) {
             float changeValue = Mathf.Lerp(shader.GetFloat("ShaderController"), value, Time.deltaTime * 1.5f);
             shader.SetFloat("ShaderController", changeValue);
@@ -66,4 +65,16 @@ public class InteractButton : MonoBehaviour {
         }
     }
 
+
+    private IEnumerator TextFade(float value, float time) {
+        var alpha = interactTextFront.color.a;
+        for (var t = 0.0f; t < 1.0f; t += Time.deltaTime / time) {
+            var newColor = new Color(interactTextFront.color.r, interactTextFront.color.g, interactTextFront.color.b,
+                Mathf.Lerp(alpha, value, t));
+            interactTextFront.color = newColor;
+            interactTextBack.color = newColor;
+            yield return null;
+        }
+    }
+    
 }

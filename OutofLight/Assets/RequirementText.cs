@@ -20,10 +20,7 @@ public class RequirementText : MonoBehaviour {
 		LeanTween.moveY(gameObject, yDirection, 3);
 
 	}
-	public void SetText(string text) {
-		this.text.text = text;
-	}
-	
+
 	private IEnumerator ShowText() {
 		StartCoroutine(TextFade(1, fadeInTime));
 		yield return new WaitForSeconds(2);

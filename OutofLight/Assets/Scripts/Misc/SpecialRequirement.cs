@@ -27,7 +27,6 @@ public class SpecialRequirement : MonoBehaviour, IInteractable {
 
 	public void Use() {
 		var text = GetComponentInChildren<RequirementText>();
-		text.SetText(prompt);
 		text.MoveAndShowText();
 	}
 	
