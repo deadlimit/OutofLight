@@ -11,9 +11,10 @@ public class Lever : MonoBehaviour, IInteractable {
     public BoolVariable LeverNoPulled;
     public string prompt;
     public Button interactImage;
-    private bool isPlayerInRange; 
-    
+    private bool isPlayerInRange;
 
+    public GameObject leverObject;
+    
     private void Update()
     {
         if (!isPlayerInRange) return;
@@ -37,6 +38,8 @@ public class Lever : MonoBehaviour, IInteractable {
     }
 
     public void Use() {
+        var leverObj = leverObject.GetComponent<ILever>();
+        leverObj?.Method();
         print("Level pulled!");
         LeverPulled.Raise();
         LeverNoPulled.ChangeValue(true);

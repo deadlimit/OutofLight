@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,9 +19,15 @@ public class SpecialEvent : MonoBehaviour {
     }
     
     public void RaiseGameEvents() {
-	    foreach(var e in events) {
-		    e.Raise();
+	    try {
+		    foreach (var e in events) {
+			    e.Raise();
+		    }
 	    }
+	    catch (MissingComponentException e) {
+		    print(e.Message);
+	    }
+
     }
 
     public void SpawnObjects() {
@@ -28,7 +35,11 @@ public class SpecialEvent : MonoBehaviour {
 		    Instantiate(e, map[e], Quaternion.identity);
 	    }
     }
-    
-    
 
+    private void OnTriggerEnter(Collider other) {
+	    if (other.gameObject.CompareTag("Player")) {
+		    RaiseGameEvents();
+		    SpawnObjects();
+	    }
+    }
 }

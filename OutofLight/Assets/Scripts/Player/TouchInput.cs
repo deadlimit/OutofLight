@@ -44,7 +44,7 @@ public class TouchInput : MonoBehaviour {
     }
 
     public Vector3 GetDirection() {
-        return direction.normalized;
+        return direction.normalized + Camera.main.transform.forward;
     }
     
     
