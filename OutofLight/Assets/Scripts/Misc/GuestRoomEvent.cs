@@ -10,6 +10,7 @@ public class GuestRoomEvent : MonoBehaviour
     public Vector3[] spawnPoint = new Vector3[7];
     public bool waveSpawned;
     public bool pagePickedUp;
+    public AudioClip waveSound;
 
     private void Awake()
     {
@@ -43,6 +44,7 @@ public class GuestRoomEvent : MonoBehaviour
     public void pickedUpPage()
     {
         pagePickedUp = true;
+        AudioSource.PlayClipAtPoint(waveSound, enemyWave[1].transform.position);
     }
 
     private IEnumerator Wait()
