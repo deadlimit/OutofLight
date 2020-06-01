@@ -11,11 +11,15 @@ public class MovableBox : MonoBehaviour, IInteractable {
     [SerializeField] private int tileMoves;
 
     public AudioClip audio;
-    
     private bool canBeMoved;
-
     public GameEvent UpdateTiles;
     public Button interactImage;
+    private AudioSource audioPlayer;
+
+    void Awake()
+    {
+        audioPlayer = GetComponentInChildren<AudioSource>();
+    }
 
     public void Use() {
         if (canBeMoved && tileMoves > 0)
@@ -58,6 +62,12 @@ public class MovableBox : MonoBehaviour, IInteractable {
         tileMoves--;
         UpdateTiles.Raise();
 
+    }
+
+    public void PlaySound()
+    {
+        audioPlayer.clip = audio;
+        audioPlayer.Play();
     }
 
 
