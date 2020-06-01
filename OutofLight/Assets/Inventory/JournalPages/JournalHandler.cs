@@ -13,11 +13,15 @@ public class JournalHandler : MonoBehaviour {
     public void Awake() {
 	    transform.localScale = Vector3.zero;
 	    LeanTween.scale(gameObject, new Vector3(1, 1, 1), .5f);
-	    page = journal.latest;
-        if (page == null) return; 
-        day.text = page.day;
-        header.text = page.header;
-        entry.text = page.entry;
+		PopulateJournalWindow(journal.latest);
+    }
+
+    public void PopulateJournalWindow(JournalPage page) {
+	    this.page = page;
+	    if(page == null) return;
+	    day.text = page.day;
+	    header.text = page.header;
+	    entry.text = page.entry;
     }
     
     public void Close() { 

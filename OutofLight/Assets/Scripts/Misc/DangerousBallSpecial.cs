@@ -6,33 +6,17 @@ public class DangerousBallSpecial : MonoBehaviour
 {
 	public GameEvent HitByTrap;
 	public float moveSpeed;
-	public GuestRoomEvent target;
 
-	private Transform thisTransform;
-	private Vector3 thisTarget;
-	private void Awake()
+	private void Update()
 	{
-		//Move();
+		Move();
 	}
 
-	private void Move()
+	public void Move()
 	{
-		StartCoroutine(MoveEnemy());
+		transform.position = Vector3.Lerp(transform.position, new Vector3(transform.position.x, 0f, 14), moveSpeed * Time.deltaTime);
 	}
-	private IEnumerator MoveEnemy()
-	{
 
-		for (int i = 0; i < target.target.Length; i++)
-		{
-			thisTarget = target.target[i];
-			while (Vector3.Distance(thisTransform.position, thisTarget) > .01f)
-			{
-				thisTransform.position =
-					Vector3.MoveTowards(thisTransform.position, thisTarget, Time.deltaTime * moveSpeed);
-				yield return null;
-			}
-		}
-	}
 	private void OnTriggerEnter(Collider other)
 	{
 		if (other.gameObject.CompareTag("Player"))
@@ -41,4 +25,6 @@ public class DangerousBallSpecial : MonoBehaviour
 			Destroy(gameObject);
 		}
 	}
+
+
 }

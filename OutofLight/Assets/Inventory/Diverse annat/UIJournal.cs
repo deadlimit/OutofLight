@@ -17,8 +17,10 @@ public class UIJournal : MonoBehaviour {
     }
 
     private void Fill() {
-        foreach (var page in journal.journal) {
+        JournalPage[] pages = journal.journal;
+        foreach (var page in pages) {
             if (page == null) continue;
+            Debug.Log(page);
             slots[page.journalPageEntry].image.sprite = occupiedSlot;
             slotTexts[page.journalPageEntry].text = page.day;
             slots[page.journalPageEntry].onClick.AddListener(delegate { Display(page);});
@@ -29,7 +31,7 @@ public class UIJournal : MonoBehaviour {
         var g = Instantiate(journalHandler, transform.parent);
         g.GetComponent<RectTransform>().offsetMin = Vector2.zero;
         g.GetComponent<RectTransform>().offsetMax = Vector2.zero;
-        g.GetComponent<JournalHandler>().page = page;
+        g.GetComponent<JournalHandler>().PopulateJournalWindow(page);
     }
     
 }
