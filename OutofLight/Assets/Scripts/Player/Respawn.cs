@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Respawn : MonoBehaviour {
-    
+    public GameEvent RespawnEvent;
     public Image fade;
     public float fadeSpeed;
     public Color start;
@@ -25,11 +25,14 @@ public class Respawn : MonoBehaviour {
         Fader();
     }
 
-    public void respawn()
-    {
+    public void respawn() {
+        StartCoroutine(RespawnSequence());
+    }
+
+    private IEnumerator RespawnSequence() {
+        RespawnEvent.Raise();
+        yield return new WaitForSeconds(1);
         SceneManager.LoadScene(currentScene);
-        respawnMenu = GameObject.Find("RespawnMechanic_2.0");
-        Destroy(respawnMenu);
     }
 
     private void Fader()

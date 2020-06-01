@@ -20,7 +20,6 @@ public class UIJournal : MonoBehaviour {
         JournalPage[] pages = journal.journal;
         foreach (var page in pages) {
             if (page == null) continue;
-            Debug.Log(page);
             slots[page.journalPageEntry].image.sprite = occupiedSlot;
             slotTexts[page.journalPageEntry].text = page.day;
             slots[page.journalPageEntry].onClick.AddListener(delegate { Display(page);});
