@@ -13,7 +13,6 @@ public class ScreenCreep : MonoBehaviour
     public Color lowTarget, middleTarget, highTarget, current, disabled;
     public AudioSource dave;
     public AudioClip heartbeat;
-
     private void Start()
     {
         creep.enabled = false;
@@ -25,7 +24,7 @@ public class ScreenCreep : MonoBehaviour
         if (gameState.CurrentState() == State.DARK && darkStepAmount.GetValue() >= 3)
         {
             creep.enabled = true;
-            PlayHeartbeat();
+            //PlayHeartbeat();
         }
         CreepState();
         current = creep.color;

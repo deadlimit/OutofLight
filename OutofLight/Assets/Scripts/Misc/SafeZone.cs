@@ -19,10 +19,13 @@ public class SafeZone : MonoBehaviour {
     private void Start() {
         InsideSafezone.ChangeValue(insideSafezone);
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (!other.gameObject.CompareTag("Player")) return;
-        InsideSafezone.ChangeValue(true);
+        if (other.gameObject.CompareTag("Player"))
+        { 
+            InsideSafezone.ChangeValue(true);
+        }
         if (stepAmount.GetValue() < refillStepAmount)
             stepAmount.ChangeValue(+refillStepAmount);
         if (darkSteps.GetValue() >= 0)
@@ -36,6 +39,11 @@ public class SafeZone : MonoBehaviour {
         if (other.gameObject.CompareTag("Player")) {
             InsideSafezone.ChangeValue(false);
         }
+    }
+
+    public void RemoveDarksteps()
+    {
+        darkSteps.ChangeValue(-removeAmount);
     }
 
     

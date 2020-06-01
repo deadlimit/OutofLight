@@ -4849,8 +4849,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3, y: 1, z: 2}
-  m_Center: {x: 0, y: 0, z: 1.5}
+  m_Size: {x: 2.3559017, y: 2.733869, z: 1.660543}
+  m_Center: {x: 0.02611208, y: 0.86693454, z: 1.3302715}
 --- !u!114 &2789390351587808290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4866,6 +4866,7 @@ MonoBehaviour:
   InsideSafezone: {fileID: 11400000, guid: 8f854e48a0a7e9141b3e08409ccb05d2, type: 2}
   stepAmount: {fileID: 11400000, guid: 88431f49dcf46fb45aa9686e9310270c, type: 2}
   darkSteps: {fileID: 11400000, guid: 813f415f9d92ae5418f8d31e6358aa9a, type: 2}
+  enteredSafezone: {fileID: 11400000, guid: 2d21a6270b637a742821c55ce4e80275, type: 2}
   insideSafezone: 0
   refillStepAmount: 0
   removeAmount: 6
