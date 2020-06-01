@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Fuel : MonoBehaviour {
+public class Fuel : MonoBehaviour, IInteractable {
 
     private Transform _transform;
     public GameEvent FuelPickedUp;
@@ -26,13 +27,18 @@ public class Fuel : MonoBehaviour {
 
         _transform.Rotate(angle * Time.deltaTime / 10, Space.World);
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (!other.gameObject.CompareTag("Player")) return;
+    
+    public void Use() {
         FuelPickedUp.Raise();
         stepAmount.ChangeValue(+refillAmount);
-        Destroy(gameObject);
+        Destroy(transform.parent.gameObject);
     }
 
+    public string GetPrompt() {
+        return "Pick up fuel";
+    }
+
+    public Button CustomSprite() {
+        return null;
+    }
 }

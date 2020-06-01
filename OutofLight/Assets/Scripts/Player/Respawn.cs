@@ -4,15 +4,16 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Respawn : MonoBehaviour
-{
+public class Respawn : MonoBehaviour {
+    
     public Image fade;
     public float fadeSpeed;
     public Color start;
     [SerializeField][Header ("Check för den aktiva scenen:")]
     private int currentScene;
     private GameObject respawnMenu;
-
+    
+    
     private void Awake()
     {
         fade.color = start;
