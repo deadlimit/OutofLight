@@ -7,9 +7,10 @@ public class DaveSFX : MonoBehaviour {
 
 	public AudioSource audio;
 	public SoundDictionary soundLibrary;
+	public AudioClip[] deathSounds = new AudioClip[3];
 
 	private Material currentMaterial;
-	
+	private AudioClip sound;
 	public void Awake() {
 		audio = GetComponent<AudioSource>();
 		CheckWalkingMaterial();
@@ -25,5 +26,12 @@ public class DaveSFX : MonoBehaviour {
 
 		if (!obj) return;
 		currentMaterial = hit.transform.gameObject.GetComponent<MeshRenderer>().sharedMaterial;
+	}
+
+	public void PlayDeathSound()
+	{
+		audio.clip = deathSounds[UnityEngine.Random.Range(0, deathSounds.Length)];
+		audio.Play();
+
 	}
 }

@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 133493717}
   - component: {fileID: 133493716}
   - component: {fileID: 133493718}
+  - component: {fileID: 1732265019}
+  - component: {fileID: 7069262578331343001}
   m_Layer: 2
   m_Name: Sounds
   m_TagString: Audio
@@ -48,6 +50,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audio: {fileID: 133493716}
   soundLibrary: {fileID: 11400000, guid: 59408454252c0a9428ae7a7113e3f5f1, type: 2}
+  deathSounds:
+  - {fileID: 8300000, guid: dcdf6426f6136424d9f5443bc50b351c, type: 3}
+  - {fileID: 8300000, guid: dfd2813161b63ad4cb4e70a7d7ace56a, type: 3}
+  - {fileID: 8300000, guid: 02a64b07f03ea3042a0428aa2bfa6772, type: 3}
 --- !u!114 &133493717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,6 +195,60 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 133493715}
         m_MethodName: CheckWalkingMaterial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1732265019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133493713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f624fc09539ff242ad601509638ac53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 25318bbb7888ef04f94dcc59f55884fe, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 133493715}
+        m_MethodName: PlayDeathSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7069262578331343001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133493713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f624fc09539ff242ad601509638ac53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 0a4d480159c8a69479c3252200470614, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: PlayGrowl
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
