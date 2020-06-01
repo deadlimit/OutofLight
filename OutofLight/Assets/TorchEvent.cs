@@ -1,8 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class TorchEvent : MonoBehaviour {
 
@@ -51,9 +53,15 @@ public class TorchEvent : MonoBehaviour {
 	}
 
 	public void AddTorchToSolutionList(int sequenceNumber) {
-		chosenOrder[turn] = sequenceNumber;
-		turn++;
-		CheckICorrect();
+		try {
+			chosenOrder[turn] = sequenceNumber;
+			turn++;
+			CheckICorrect();
+		}
+		catch (IndexOutOfRangeException e) {
+			
+		}
+		
 	}
 
 	private void CheckICorrect() {

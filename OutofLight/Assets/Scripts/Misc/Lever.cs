@@ -14,6 +14,12 @@ public class Lever : MonoBehaviour, IInteractable {
     private bool isPlayerInRange;
 
     public GameObject leverObject;
+
+    private AudioSource audio;
+
+    private void Awake() {
+        audio = GetComponent<AudioSource>();
+    }
     
     private void Update()
     {
@@ -42,6 +48,7 @@ public class Lever : MonoBehaviour, IInteractable {
         leverObj?.Method();
         print("Level pulled!");
         LeverPulled.Raise();
+        audio.Play();
         LeverNoPulled.ChangeValue(true);
         GetComponent<Lever>().enabled = false;
     }
