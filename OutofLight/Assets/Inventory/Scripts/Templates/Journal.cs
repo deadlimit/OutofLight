@@ -23,6 +23,16 @@ public class Journal : ScriptableObject {
         return journal[index];
     }
 
+    public void Remove(JournalPage page) {
+        for (var i = 0; i < journal.Length; i++) {
+            if (journal[i].day.Equals(page.day)) {
+                journal[i] = null;
+                Debug.Log("Removed: " + page.day);
+                return;
+            }
+        }
+    }
+
     public bool Contains(JournalPage page) {
         return journal.Contains(page);
     }

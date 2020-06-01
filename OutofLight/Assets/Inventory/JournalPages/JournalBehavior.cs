@@ -7,9 +7,10 @@ public class JournalBehavior : MonoBehaviour, IInteractable {
     public JournalPage page;
     public Journal journal;
     public Button interactImage;
-
+    
+    
     private void Awake() {
-        if (journal.Contains(page))
+        if (journal.Contains(page) || page.dontRespawn)
             Destroy(gameObject);
     }
     
@@ -17,6 +18,10 @@ public class JournalBehavior : MonoBehaviour, IInteractable {
         journal.Add(page);
         PageFound.Raise();
         Destroy(gameObject);
+    }
+
+    public JournalPage GetJournalPage() {
+        return page;
     }
 
     public string GetPrompt() {
