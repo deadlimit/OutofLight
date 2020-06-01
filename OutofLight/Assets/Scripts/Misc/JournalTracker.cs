@@ -10,7 +10,7 @@ public class JournalTracker : MonoBehaviour
 
     [SerializeField]
     private Scene currentScene;
-    private Vector3 respawnPosition;
+    private Transform respawnPosition;
 
     private void Awake()
     {
@@ -23,7 +23,7 @@ public class JournalTracker : MonoBehaviour
             if (journal.tag == "Journal")
             {
                 journalsInScene.Add(journal);
-                respawnPosition = journal.transform.position;
+                respawnPosition.position = journal.transform.position;
             }
         }
     }
@@ -32,7 +32,7 @@ public class JournalTracker : MonoBehaviour
     {
         foreach (GameObject journal in journalsInScene)
         {
-            Instantiate(journal);
+            Instantiate(journal, respawnPosition.position, Quaternion.identity);
         }
     }
 
