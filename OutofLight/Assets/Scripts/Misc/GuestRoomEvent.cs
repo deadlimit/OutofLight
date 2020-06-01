@@ -3,27 +3,49 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GuestRoomEvent : MonoBehaviour
+
 {
-    public List<GameObject> objectSpawn = new List<GameObject>();
-    public List<Vector3> spawnLocations = new List<Vector3>();
+    public GameObject enemy;
+    public GameObject[] enemyWave = new GameObject[7];
+    public Vector3[] spawnPoint = new Vector3[7];
+    public Vector3[] target = new Vector3[7];
+    public bool waveSpawned;
+    public float moveSpeed;
 
-
-    private Dictionary<GameObject, Vector3> map = new Dictionary<GameObject, Vector3>();
-
+    private Vector3 _target;
     private void Awake()
     {
-        for (int i = 0; i < objectSpawn.Count; i++)
+        for (int i = 0; i < enemyWave.Length; i++)
         {
-            map.Add(objectSpawn[i], spawnLocations[i]);
+            enemyWave[i] = enemy;
         }
     }
 
-    public void SpawnObjects()
+    private void Start()
     {
-        foreach (var e in objectSpawn)
+        waveSpawned = false;
+    }
+    private void Update()
+    {
+        if (!waveSpawned)
         {
-            Instantiate(e, map[e], Quaternion.identity);
+            SpawnEnemy(enemy);
+            waveSpawned = true;
         }
     }
+    void SpawnEnemy(GameObject enemy)
+    {
+        for (int i = 0; i < enemyWave.Length; i++)
+        {
+            Instantiate(enemyWave[i], spawnPoint[i], Quaternion.identity);
+            for (int j = 0; j < target.Length; j++)
+            {
+                _target = target[j];
+            }
+            this.transform.position = Vector3.MoveTowards(transform.position, _target, Time.deltaTime * moveSpeed);
+            if (Vector3.Distance(transform.position, _target) < .1f)
+                Destroy(gameObject);
 
+        }
+    }
 }
