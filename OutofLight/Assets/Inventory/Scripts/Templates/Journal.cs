@@ -8,6 +8,7 @@ public class Journal : ScriptableObject {
 
     public JournalPage[] journal;
     public JournalPage latest;
+    
     public void Add(JournalPage page) {
         journal[page.journalPageEntry] = page;
         latest = page;
@@ -16,6 +17,10 @@ public class Journal : ScriptableObject {
     public void OnEnable() {
         journal = new JournalPage[pages];
         latest = null;
+    }
+
+    public JournalPage GetPage(int index) {
+        return journal[index];
     }
 
     public bool Contains(JournalPage page) {
