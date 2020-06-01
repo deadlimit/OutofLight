@@ -11,7 +11,8 @@ public class JournalHandler : MonoBehaviour {
     public JournalPage page;
 
     public void Awake() {
-	    transform.localScale = Vector3.zero;
+		DestroyOthers();
+		transform.localScale = Vector3.zero;
 	    LeanTween.scale(gameObject, new Vector3(1, 1, 1), .5f);
 		PopulateJournalWindow(journal.latest);
     }
@@ -30,6 +31,14 @@ public class JournalHandler : MonoBehaviour {
 
     private void DestroyThis() {
 	    Destroy(gameObject);
+    }
+
+    private void DestroyOthers() {
+	    JournalHandler[] others = FindObjectsOfType<JournalHandler>();
+	    if (others.Length > 1) {
+		    for (int i = 1; i < others.Length; i++)
+			    Destroy(others[i].gameObject);
+	    }
     }
     
 }

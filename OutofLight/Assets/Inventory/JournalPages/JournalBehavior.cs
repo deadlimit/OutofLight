@@ -7,11 +7,12 @@ public class JournalBehavior : MonoBehaviour, IInteractable {
     public JournalPage page;
     public Journal journal;
     public Button interactImage;
-    
-    
+    public Material material;
+
     private void Awake() {
         if (journal.Contains(page) || page.dontRespawn)
             Destroy(gameObject);
+
     }
     
     public void Use() {
