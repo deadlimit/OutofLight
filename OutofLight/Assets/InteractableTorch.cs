@@ -12,6 +12,8 @@ public class InteractableTorch : MonoBehaviour, IInteractable {
 	public int sequenceNumber;
 
 	public TorchEvent torchList;
+
+	public AudioSource audio;
 	
 	private IEnumerator ChangeLight(int value, int index) {
 		var main = torchEffects[index].main;
@@ -47,6 +49,7 @@ public class InteractableTorch : MonoBehaviour, IInteractable {
 	public void Use() {
 		ChangeMaxParticles(1000);
 		torchList.AddTorchToSolutionList(sequenceNumber);
+		audio.Play();
 	}
 
 	public string GetPrompt() {

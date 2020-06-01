@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1253,7 +1253,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 790999636}
-  m_LocalRotation: {x: 0.19807127, y: 0.0023008254, z: -0.00046479717, w: 0.98018485}
+  m_LocalRotation: {x: 0.1980713, y: 0.002300858, z: -0.00046480383, w: 0.98018485}
   m_LocalPosition: {x: 5.46, y: 3.59, z: -2.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -2505,7 +2505,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1466391180}
-  m_LocalRotation: {x: 0.19807127, y: 0.0023008254, z: -0.00046479717, w: 0.98018485}
+  m_LocalRotation: {x: 0.1980713, y: 0.002300858, z: -0.00046480383, w: 0.98018485}
   m_LocalPosition: {x: 5.46, y: 3.59, z: -2.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2532,7 +2532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorToGetrudesRoom: {fileID: 1076821225}
-  canEnterRoom: {fileID: 11400000, guid: 11f1057139951a54f8f6f23cf71f3b5e, type: 2}
+  canEnterRoom: {fileID: 11400000, guid: 90786079b2daa15448096c2d53e36ca4, type: 2}
 --- !u!1 &1888440939
 GameObject:
   m_ObjectHideFlags: 0
