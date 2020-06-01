@@ -24,6 +24,7 @@ public class Journal : ScriptableObject {
     }
 
     public void Remove(JournalPage page) {
+        if (journal.Length < 1) return;
         for (var i = 0; i < journal.Length; i++) {
             if (journal[i].day.Equals(page.day)) {
                 journal[i] = null;
