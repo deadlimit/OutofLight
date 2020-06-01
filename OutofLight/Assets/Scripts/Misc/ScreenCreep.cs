@@ -38,9 +38,14 @@ public class ScreenCreep : MonoBehaviour
 
     private void CreepState()
     {
+        if (darkStepAmount.GetValue() == 0)
+        {
+            audio.enabled = false;
+        }
         if (darkStepAmount.GetValue() < 4)
         {
             creep.color = Color.Lerp(current, disabled, Time.deltaTime * creepDuration);
+            audio.enabled = true;
             audio.volume = 0.2f;
         }
         if (darkStepAmount.GetValue() == 4)

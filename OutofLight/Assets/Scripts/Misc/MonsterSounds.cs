@@ -20,6 +20,7 @@ public class MonsterSounds : MonoBehaviour
         {
             audio.clip = growls[2];
             audio.PlayOneShot(audio.clip);
+            Debug.Log("Growl_played");
         }
     }
 

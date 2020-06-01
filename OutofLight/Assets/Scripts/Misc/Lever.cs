@@ -8,7 +8,6 @@ using UnityEngine.UI;
 public class Lever : MonoBehaviour, IInteractable {
 
     public GameEvent LeverPulled;
-    public BoolVariable LeverNoPulled;
     public string prompt;
     public Button interactImage;
     private bool isPlayerInRange;
@@ -21,7 +20,6 @@ public class Lever : MonoBehaviour, IInteractable {
         if (!Input.GetKeyDown(KeyCode.E)) return;
         print("Level pulled!");
         LeverPulled.Raise();
-        LeverNoPulled.IsTrue();
         GetComponent<Lever>().enabled = false;
     }
 
@@ -42,7 +40,6 @@ public class Lever : MonoBehaviour, IInteractable {
         leverObj?.Method();
         print("Level pulled!");
         LeverPulled.Raise();
-        LeverNoPulled.ChangeValue(true);
         GetComponent<Lever>().enabled = false;
     }
 

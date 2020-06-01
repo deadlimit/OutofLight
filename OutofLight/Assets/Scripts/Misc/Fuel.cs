@@ -7,7 +7,7 @@ public class Fuel : MonoBehaviour, IInteractable {
 
     private Transform _transform;
     public GameEvent FuelPickedUp;
-    public IntVariable stepAmount;
+    public IntVariable stepAmount, darkStepAmount;
     public bool rotate;
 
     [SerializeField]
@@ -32,6 +32,7 @@ public class Fuel : MonoBehaviour, IInteractable {
         FuelPickedUp.Raise();
         stepAmount.ChangeValue(+refillAmount);
         Destroy(transform.parent.gameObject);
+        darkStepAmount.ChangeValue(-6);
     }
 
     public string GetPrompt() {
