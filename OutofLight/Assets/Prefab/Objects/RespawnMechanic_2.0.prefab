@@ -120,7 +120,9 @@ MonoBehaviour:
   fade: {fileID: 4089026888377874124}
   fadeSpeed: 1
   start: {r: 0, g: 0, b: 0, a: 0.003921569}
+  journal: {fileID: 11400000, guid: 5d111ad1152b49e45a8d8633010986d3, type: 2}
   currentScene: 0
+  journalsInScene: []
 --- !u!1 &8193819113164304163
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,7 +312,6 @@ GameObject:
   - component: {fileID: 8193819114068342137}
   - component: {fileID: 8193819114068342136}
   - component: {fileID: 8193819114068342139}
-  - component: {fileID: 1055816630441560421}
   m_Layer: 5
   m_Name: ReturnToMenuButton
   m_TagString: Untagged
@@ -417,7 +418,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1055816630441560421}
+      - m_Target: {fileID: 8193819112782970042}
         m_MethodName: ReturnToMenu
         m_Mode: 1
         m_Arguments:
@@ -428,18 +429,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1055816630441560421
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8193819114068342133}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbec673a8517d68488ce602a801bdbd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8193819114366998650
 GameObject:
   m_ObjectHideFlags: 0

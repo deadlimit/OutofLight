@@ -9,9 +9,9 @@ public class Respawn : MonoBehaviour
     public Image fade;
     public float fadeSpeed;
     public Color start;
+    public Journal journal;
     [SerializeField][Header ("Check för den aktiva scenen:")]
     private int currentScene;
-    private GameObject respawnMenu;
 
     private void Awake()
     {
@@ -27,12 +27,19 @@ public class Respawn : MonoBehaviour
     public void respawn()
     {
         SceneManager.LoadScene(currentScene);
-        respawnMenu = GameObject.Find("RespawnMechanic_2.0");
-        Destroy(respawnMenu);
     }
 
     private void Fader()
     {
         fade.CrossFadeAlpha(254f, fadeSpeed, false);
+    }
+    public void ReturnToMenu()
+    {
+        for (int i = 0; i < journal.journal.Length; i++)
+        {
+            var journalEntry = journal.GetPage(i);
+            Destroy(journalEntry);
+        }
+        SceneManager.LoadScene(0);
     }
 }
