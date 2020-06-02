@@ -7,7 +7,7 @@ public class JournalHandler : MonoBehaviour {
     public Text day;
     public Text header;
     public Text entry;
-
+    public Image image;
     public JournalPage page;
 
     public void Awake() {
@@ -23,6 +23,7 @@ public class JournalHandler : MonoBehaviour {
 	    day.text = page.day;
 	    header.text = page.header;
 	    entry.text = page.entry;
+	    image.sprite = page.image;
     }
     
     public void Close() { 

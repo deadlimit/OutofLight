@@ -11,7 +11,7 @@ public class JournalPage : ScriptableObject, IComparable {
     public string header = "Journal of Baron James Tristan";
     [TextAreaAttribute(10, 15)]
     public string entry;
-
+    public Sprite image;
     public bool dontRespawn;
     
     private void OnEnable() {
