@@ -4,9 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class MenuController : MonoBehaviour
-{
-    public Image fadeImage;
+public class MenuController : MonoBehaviour {
+    public Image fadeImage, howToPlayImage;
     public Button newGame, options, exitGame, returnToMenu, howTo;
     public Slider volumeController;
     public FloatVariable volumeVar;
@@ -19,6 +18,7 @@ public class MenuController : MonoBehaviour
 
     private void Awake()
     {
+        spawn.spawnPosition = transitInfo.otherSide;
         volumeController.maxValue = 1f;
         volumeController.value = volumeVar.GetValue();
     }
@@ -32,6 +32,7 @@ public class MenuController : MonoBehaviour
         volumeController.gameObject.SetActive(false);
         howTo.gameObject.SetActive(true);
         howToPlay.gameObject.SetActive(false);
+        howToPlayImage.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -47,7 +48,7 @@ public class MenuController : MonoBehaviour
     }
     public void NewGame()
     {
-        spawn.spawnPosition = transitInfo.otherSide;
+       
         foreach (var e in progression)
         {
             e.ChangeValue(false);
@@ -86,6 +87,8 @@ public class MenuController : MonoBehaviour
         volumeController.gameObject.SetActive(false);
         howTo.gameObject.SetActive(true);
         howToPlay.gameObject.SetActive(false);
+        howToPlayImage.gameObject.SetActive(false);
+        howToPlayImage.gameObject.SetActive(false);
     }
 
     public void HowToPlay()
@@ -97,6 +100,7 @@ public class MenuController : MonoBehaviour
         volumeController.gameObject.SetActive(false);
         howTo.gameObject.SetActive(false);
         howToPlay.gameObject.SetActive(true);
+        howToPlayImage.gameObject.SetActive(true);
 
     }
 }
