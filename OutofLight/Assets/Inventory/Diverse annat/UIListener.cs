@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using UnityEditor.SceneManagement;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
 public class UIListener : MonoBehaviour {
 

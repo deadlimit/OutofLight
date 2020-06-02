@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.WebSockets;
-using System.Security.Cryptography.X509Certificates;
-using UnityEditor.Rendering;
 using UnityEngine;
-using UnityEngine.Experimental.TerrainAPI;
-using UnityEngine.Internal;
 
 public class GhostPathfinding : MonoBehaviour {
 

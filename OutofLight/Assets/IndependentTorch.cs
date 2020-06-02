@@ -1,5 +1,4 @@
-﻿using System.Data.Odbc;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class IndependentTorch : InteractableTorch {
 

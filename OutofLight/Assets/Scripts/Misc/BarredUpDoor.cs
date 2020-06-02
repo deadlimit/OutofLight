@@ -7,9 +7,9 @@ public class BarredUpDoor : MonoBehaviour, IInteractable {
 
 	public GameEvent SpecialEvent;
 	public Button interactImage;
-	
+	public BoolVariable CanEnterLibrary;
 	public void Use() {
-	    Debug.Log("Barred door");
+	 	CanEnterLibrary.ChangeValue(true);
 	    SpecialEvent.Raise();
 	}
 
