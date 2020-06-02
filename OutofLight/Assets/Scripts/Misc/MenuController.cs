@@ -7,13 +7,14 @@ using UnityEngine.UI;
 public class MenuController : MonoBehaviour
 {
     public Image fadeImage;
-    public Button newGame, options, exitGame, returnToMenu;
+    public Button newGame, options, exitGame, returnToMenu, howTo;
     public Slider volumeController;
     public FloatVariable volumeVar;
     public IntVariable darkSteps;
     public TransitInfo transitInfo;
     public SpawnPosition spawn;
     public List<BoolVariable> progression = new List<BoolVariable>();
+    public Text howToPlay;
 
 
     private void Awake()
@@ -29,6 +30,8 @@ public class MenuController : MonoBehaviour
         exitGame.gameObject.SetActive(true);
         returnToMenu.gameObject.SetActive(false);
         volumeController.gameObject.SetActive(false);
+        howTo.gameObject.SetActive(true);
+        howToPlay.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -65,6 +68,8 @@ public class MenuController : MonoBehaviour
         exitGame.gameObject.SetActive(false);
         returnToMenu.gameObject.SetActive(true);
         volumeController.gameObject.SetActive(true);
+        howTo.gameObject.SetActive(false);
+        howToPlay.gameObject.SetActive(false);
     }
 
     public void ExitGame()
@@ -79,5 +84,19 @@ public class MenuController : MonoBehaviour
         exitGame.gameObject.SetActive(true);
         returnToMenu.gameObject.SetActive(false);
         volumeController.gameObject.SetActive(false);
+        howTo.gameObject.SetActive(true);
+        howToPlay.gameObject.SetActive(false);
+    }
+
+    public void HowToPlay()
+    {
+        newGame.gameObject.SetActive(false);
+        options.gameObject.SetActive(false);
+        exitGame.gameObject.SetActive(false);
+        returnToMenu.gameObject.SetActive(true);
+        volumeController.gameObject.SetActive(false);
+        howTo.gameObject.SetActive(false);
+        howToPlay.gameObject.SetActive(true);
+
     }
 }
