@@ -11,7 +11,6 @@ public class MovableBox : MonoBehaviour, IInteractable {
     [Header("Ange antal tiles lådan rör sig åt hållet angivet ovan")]
     [SerializeField] private int tileMoves;
 
-    public AudioClip audio;
     private bool canBeMoved;
     public GameEvent UpdateTiles;
     public Button interactImage;
@@ -25,7 +24,11 @@ public class MovableBox : MonoBehaviour, IInteractable {
 
     public void Use() {
         if (canBeMoved && tileMoves > 0)
+        {
             StartCoroutine(Move(lockedDirection));
+            audioPlayer.Play();
+        }
+
     }
 
     public string GetPrompt() {
@@ -67,13 +70,7 @@ public class MovableBox : MonoBehaviour, IInteractable {
         UpdateTiles.Raise();
 
     }
-
-    public void PlaySound()
-    {
-        audioPlayer.clip = audio;
-        audioPlayer.Play();
-    }
-    
+   
     private void ChangeLayerMask(string arg) {
         gameObject.layer = LayerMask.NameToLayer(arg);
     }
