@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.NetworkInformation;
+using System.Runtime.InteropServices;
 using UnityEngine;
 [CreateAssetMenu(menuName = "Inventory/JournalPage")]
 public class JournalPage : ScriptableObject, IComparable {
@@ -15,7 +16,6 @@ public class JournalPage : ScriptableObject, IComparable {
     public bool dontRespawn;
     
     private void OnEnable() {
-        dontRespawn = false;
         day = "Day " + (journalPageEntry + 1);
     }
 

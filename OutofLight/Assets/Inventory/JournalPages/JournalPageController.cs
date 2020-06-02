@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Unity.Jobs.LowLevel.Unsafe;
 using UnityEngine;
 
 public class JournalPageController : MonoBehaviour {
@@ -7,12 +8,14 @@ public class JournalPageController : MonoBehaviour {
 	public List<JournalPage> pagesInScene = new List<JournalPage>();
 	public Journal journal;
 	
-	private void Awake() {
+	private void Start() {
 		JournalBehavior[] all = FindObjectsOfType<JournalBehavior>();
-
+		if(all.Length < 1)
+			Destroy(gameObject);
+		
 		foreach (var page in all) {
 			var journalPage = page.GetJournalPage();
-			if (!journalPage.dontRespawn)
+			if (!journalPage.dontRespawn && !journal.Contains(journalPage))
 				pagesInScene.Add(journalPage);
 		}
 	}
