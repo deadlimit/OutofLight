@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.Experimental.TerrainAPI;
 using UnityEngine.UI;
 
 public class MovableBox : MonoBehaviour, IInteractable {
@@ -18,6 +19,7 @@ public class MovableBox : MonoBehaviour, IInteractable {
 
     void Awake()
     {
+        ChangeLayerMask("Default");
         audioPlayer = GetComponentInChildren<AudioSource>();
     }
 
@@ -33,19 +35,21 @@ public class MovableBox : MonoBehaviour, IInteractable {
     public Button CustomSprite() {
         return interactImage;
     }
-
-    public AudioClip Audio() {
-        return audio;
-    }
-
+    
     private void OnTriggerStay(Collider other) {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player")) {
+            ChangeLayerMask("Interactable");
             canBeMoved = true;
+        }
+            
     }
 
     private void OnTriggerExit(Collider other) {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player")) {
+            ChangeLayerMask("Default");
             canBeMoved = false;
+        }
+            
     }
 
     private IEnumerator Move(Vector3 direction) {
@@ -68,6 +72,10 @@ public class MovableBox : MonoBehaviour, IInteractable {
     {
         audioPlayer.clip = audio;
         audioPlayer.Play();
+    }
+    
+    private void ChangeLayerMask(string arg) {
+        gameObject.layer = LayerMask.NameToLayer(arg);
     }
 
 
