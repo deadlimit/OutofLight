@@ -48,10 +48,16 @@ public class MenuController : MonoBehaviour {
     }
     public void NewGame()
     {
-       
-        foreach (var e in progression)
+        try
         {
-            e.ChangeValue(false);
+            foreach (var e in progression)
+            {
+                e.ChangeValue(false);
+            }
+        }
+        catch (MissingComponentException e)
+        {
+            print(e.Message);
         }
         fadeImage.enabled = true;
         fadeImage.CrossFadeAlpha(255, 3f, false);

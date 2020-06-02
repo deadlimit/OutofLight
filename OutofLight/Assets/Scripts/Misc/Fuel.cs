@@ -17,16 +17,6 @@ public class Fuel : MonoBehaviour, IInteractable {
         _transform = GetComponent<Transform>(); 
     }
 
-    private void Update() {
-        if (rotate)
-            Rotate();
-    }
-
-    private void Rotate(){
-        var angle = new Vector3(Random.Range(1, 360), Random.Range(1, 360), Random.Range(1, 360));
-
-        _transform.Rotate(angle * Time.deltaTime / 10, Space.World);
-    }
     
     public void Use() {
         FuelPickedUp.Raise();
