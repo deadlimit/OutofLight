@@ -17,9 +17,9 @@ public class StepCounter : MonoBehaviour {
     private bool menuDisplayed;
 
     private void Awake() {
-        stepAmount.ChangeValue(-100);
+        stepAmount.ChangeValue(-1000);
         stepAmount.ChangeValue(startingStepsAmount);
-        darkStepAmount.ChangeValue(-100);
+        darkStepAmount.ChangeValue(-1000);
         darkStepAmount.ChangeValue(startingDarkSteps);
         gameState.EnterLightMode();
         menuDisplayed = false;
