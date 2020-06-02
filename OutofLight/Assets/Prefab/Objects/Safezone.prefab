@@ -4866,7 +4866,6 @@ MonoBehaviour:
   InsideSafezone: {fileID: 11400000, guid: 8f854e48a0a7e9141b3e08409ccb05d2, type: 2}
   stepAmount: {fileID: 11400000, guid: 88431f49dcf46fb45aa9686e9310270c, type: 2}
   darkSteps: {fileID: 11400000, guid: 813f415f9d92ae5418f8d31e6358aa9a, type: 2}
-  enteredSafezone: {fileID: 11400000, guid: 2d21a6270b637a742821c55ce4e80275, type: 2}
   insideSafezone: 0
   refillStepAmount: 0
   removeAmount: 6
@@ -4942,6 +4941,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Safezone Visual
+      objectReference: {fileID: 0}
+    - target: {fileID: 8010077698690470275, guid: 6a3c7e8d7fbde2241b25cfb457ec094c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8010077698690470284, guid: 6a3c7e8d7fbde2241b25cfb457ec094c,
         type: 3}

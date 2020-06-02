@@ -11,7 +11,7 @@ public class MonsterSounds : MonoBehaviour
 
     private void Awake()
     {
-        audio = GameObject.FindWithTag("Audio").GetComponent<AudioSource>();
+        audio = gameObject.GetComponent<AudioSource>();
     }
 
     public void PlayGrowl()

@@ -7,12 +7,23 @@ public class MasterBedroomMovable : MonoBehaviour
 	public Vector3 destination;
 	public Quaternion rotate;
 
+	private AudioSource audio;
+
+	private void Awake()
+	{
+		audio = GetComponent<AudioSource>();
+	}
 	public void Method()
 	{
 		StartCoroutine(IMove());
 		if (gameObject.CompareTag("LockedMBDoor"))
 		{
 			OpenDoor();
+			audio.Play();
+		}
+		if (gameObject.CompareTag("MBSecretDoor"))
+		{
+			audio.Play();
 		}
 	}
 
