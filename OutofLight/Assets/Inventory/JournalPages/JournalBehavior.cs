@@ -7,7 +7,7 @@ public class JournalBehavior : MonoBehaviour, IInteractable {
     public JournalPage page;
     public Journal journal;
     public Button interactImage;
-
+    public BoolVariable requirement;
     private AudioSource audio;
     
     private void Awake() {
@@ -18,6 +18,8 @@ public class JournalBehavior : MonoBehaviour, IInteractable {
     }
     
     public void Use() {
+        if (requirement != null)
+            requirement.ChangeValue(true);
         audio.Play();
         journal.Add(page);
         PageFound.Raise();

@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2576,8 +2576,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 32.4
       objectReference: {fileID: 0}
+    - target: {fileID: 4044997063862184813, guid: ff5a9a10d7388ce4aa066e866abec80d,
+        type: 3}
+      propertyPath: requirement
+      value: 
+      objectReference: {fileID: 11400000, guid: 1f84ab180da44004eb8dc118beaabc9a,
+        type: 2}
+    - target: {fileID: 4044997063862184813, guid: ff5a9a10d7388ce4aa066e866abec80d,
+        type: 3}
+      propertyPath: page
+      value: 
+      objectReference: {fileID: 11400000, guid: acca559d34044ea4f97a3c18cf02922d,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff5a9a10d7388ce4aa066e866abec80d, type: 3}
+--- !u!65 &1049985922 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 45909007, guid: a06b9f2566cb3f24cbc358cc180cbda4,
+    type: 3}
+  m_PrefabInstance: {fileID: 45909005}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1058196713
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3668,6 +3686,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 45909006}
     m_Modifications:
+    - target: {fileID: 1718059005410657683, guid: 646626f15498446478eadf0864bb2f0f,
+        type: 3}
+      propertyPath: m_Text
+      value: This door is barred
+      objectReference: {fileID: 0}
     - target: {fileID: 8694563811859495818, guid: 646626f15498446478eadf0864bb2f0f,
         type: 3}
       propertyPath: m_Name
@@ -3731,13 +3754,41 @@ PrefabInstance:
     - target: {fileID: 8694563811859495829, guid: 646626f15498446478eadf0864bb2f0f,
         type: 3}
       propertyPath: requirements.Array.size
-      value: 0
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8694563811859495829, guid: 646626f15498446478eadf0864bb2f0f,
+        type: 3}
+      propertyPath: collidersInParent.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8694563811859495829, guid: 646626f15498446478eadf0864bb2f0f,
         type: 3}
       propertyPath: prompt
-      value: This door is barred
+      value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8694563811859495829, guid: 646626f15498446478eadf0864bb2f0f,
+        type: 3}
+      propertyPath: requirements.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 10411ae2c925af347b14a0029f95efd8,
+        type: 2}
+    - target: {fileID: 8694563811859495829, guid: 646626f15498446478eadf0864bb2f0f,
+        type: 3}
+      propertyPath: requirements.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: a7f2cfac1e2c5d14a9b0ab88396b03cd,
+        type: 2}
+    - target: {fileID: 8694563811859495829, guid: 646626f15498446478eadf0864bb2f0f,
+        type: 3}
+      propertyPath: requirements.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1f84ab180da44004eb8dc118beaabc9a,
+        type: 2}
+    - target: {fileID: 8694563811859495829, guid: 646626f15498446478eadf0864bb2f0f,
+        type: 3}
+      propertyPath: collidersInParent.Array.data[0]
+      value: 
+      objectReference: {fileID: 1049985922}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 646626f15498446478eadf0864bb2f0f, type: 3}
 --- !u!1001 &2030772105
