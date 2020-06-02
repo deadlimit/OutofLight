@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -13850,7 +13850,7 @@ PrefabInstance:
         type: 3}
       propertyPath: transitInfo
       value: 
-      objectReference: {fileID: 11400000, guid: 6227713a93b62fe4689dd94226eda02d,
+      objectReference: {fileID: 11400000, guid: 105cf0f73ae622b4087874b48a425f8c,
         type: 2}
     - target: {fileID: -8787798481461181616, guid: a625efba65ba76c48bdb7405ac8f2759,
         type: 3}
@@ -13890,7 +13890,7 @@ PrefabInstance:
     - target: {fileID: 6361995105449852227, guid: a625efba65ba76c48bdb7405ac8f2759,
         type: 3}
       propertyPath: m_Name
-      value: Door 2.0
+      value: DoorToWestWing
       objectReference: {fileID: 0}
     - target: {fileID: 6859483857877476345, guid: a625efba65ba76c48bdb7405ac8f2759,
         type: 3}
