@@ -121,9 +121,7 @@ MonoBehaviour:
   fade: {fileID: 4089026888377874124}
   fadeSpeed: 1
   start: {r: 0, g: 0, b: 0, a: 0.003921569}
-  journal: {fileID: 11400000, guid: 5d111ad1152b49e45a8d8633010986d3, type: 2}
   currentScene: 0
-  journalsInScene: []
 --- !u!1 &8193819113164304163
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,7 +418,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8193819112782970042}
-        m_MethodName: ReturnToMenu
+        m_MethodName: respawn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
