@@ -27,7 +27,7 @@ public class TorchEvent : MonoBehaviour {
 	}
 	
 	public IEnumerator ShowLightOrder() {
-		yield return new WaitForSeconds(2);
+		yield return new WaitForSeconds(5);
 		for (int i = 0; i < torches.Count; i++) {
 			torches[i].ChangeMaxParticles(1000);
 			yield return new WaitForSeconds(1);

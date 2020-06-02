@@ -11,9 +11,11 @@ public class UIJournal : MonoBehaviour {
     public Journal journal;
     public Button[] slots;
     public Text[] slotTexts;
-    
+
+    private AudioSource audio;
     private void Awake(){
         Fill();
+        audio = GetComponent<AudioSource>();
     }
 
     private void Fill() {
@@ -31,6 +33,7 @@ public class UIJournal : MonoBehaviour {
         g.GetComponent<RectTransform>().offsetMin = Vector2.zero;
         g.GetComponent<RectTransform>().offsetMax = Vector2.zero;
         g.GetComponent<JournalHandler>().PopulateJournalWindow(page);
+        audio.Play();
     }
     
 }

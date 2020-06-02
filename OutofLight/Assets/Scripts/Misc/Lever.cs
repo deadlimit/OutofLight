@@ -10,20 +10,27 @@ public class Lever : MonoBehaviour, IInteractable {
     public GameEvent LeverPulled;
     public string prompt;
     public Button interactImage;
-    private bool isPlayerInRange;
+    
 
     public GameObject leverObject;
+
+    private AudioSource audio;
+    private bool isPlayerInRange;
+
+    private void Awake() {
+        audio = GetComponent<AudioSource>();
+    }
     
-    private void Update()
+    /*private void Update()
     {
         if (!isPlayerInRange) return;
         if (!Input.GetKeyDown(KeyCode.E)) return;
         print("Level pulled!");
         LeverPulled.Raise();
         GetComponent<Lever>().enabled = false;
-    }
+    }*/
 
-    private void OnTriggerStay(Collider other)
+    /*private void OnTriggerStay(Collider other)
     {
         if (!other.gameObject.CompareTag("Player")) return;
         isPlayerInRange = true;
@@ -33,13 +40,13 @@ public class Lever : MonoBehaviour, IInteractable {
     {
         if (!other.gameObject.CompareTag("Player")) return;
         isPlayerInRange = false;
-    }
+    }*/
 
     public void Use() {
         var leverObj = leverObject.GetComponent<ILever>();
         leverObj?.Method();
-        print("Level pulled!");
         LeverPulled.Raise();
+        audio.Play();
         GetComponent<Lever>().enabled = false;
     }
 

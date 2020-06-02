@@ -7,18 +7,21 @@ public class JournalBehavior : MonoBehaviour, IInteractable {
     public JournalPage page;
     public Journal journal;
     public Button interactImage;
-    public Material material;
 
+    private AudioSource audio;
+    
     private void Awake() {
         if (journal.Contains(page) || page.dontRespawn)
             Destroy(gameObject);
-
+        
+        audio = GetComponent<AudioSource>();
     }
     
     public void Use() {
+        audio.Play();
         journal.Add(page);
         PageFound.Raise();
-        Destroy(gameObject);
+        Destroy(gameObject, 3);
     }
 
     public JournalPage GetJournalPage() {

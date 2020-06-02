@@ -283,7 +283,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1584144302}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.06, y: 1.35, z: 0.22}
+  m_LocalPosition: {x: 0.81, y: 1.35, z: 0.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7135927924484230855}
@@ -301,7 +301,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.8113309, b: 0.15601929, a: 1}
-  m_Intensity: 17.46
+  m_Intensity: 4
   m_Range: 2.8
   m_SpotAngle: 132.56046
   m_InnerSpotAngle: 124.36251
@@ -984,8 +984,8 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 0.8113309, b: 0.15601929, a: 1}
-  m_Intensity: 26.5
-  m_Range: 47.44
+  m_Intensity: 15
+  m_Range: 30
   m_SpotAngle: 132.56046
   m_InnerSpotAngle: 124.36251
   m_CookieSize: 10
@@ -2706,7 +2706,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6257072a5a85f874e8d57741766dbc5f, type: 2}
+  - {fileID: 2100000, guid: 986453054de28874ea09bafb5e295eb8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
