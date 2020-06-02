@@ -6713,12 +6713,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 133493716, guid: be593d54a61f66a419c137fc466b40ea, type: 3}
       propertyPath: BypassEffects
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 133493716, guid: be593d54a61f66a419c137fc466b40ea, type: 3}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: b9c6ae463f7a45842a62c961a255af1f, type: 3}
+    - target: {fileID: 133493716, guid: be593d54a61f66a419c137fc466b40ea, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1584144303, guid: be593d54a61f66a419c137fc466b40ea, type: 3}
       propertyPath: m_RootOrder
       value: 4

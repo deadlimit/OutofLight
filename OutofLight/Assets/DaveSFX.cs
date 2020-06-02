@@ -17,7 +17,11 @@ public class DaveSFX : MonoBehaviour {
 	}
 	
 	public void Play() {
+		if(audio.isPlaying)
+			audio.Stop();
+		
 		audio.PlayOneShot(soundLibrary.GetAudioClip(currentMaterial));
+		audio.volume = .7f;
 	}
 
 	public void CheckWalkingMaterial() {

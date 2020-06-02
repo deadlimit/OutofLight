@@ -47,7 +47,7 @@ public class Movement : MonoBehaviour {
     }
 
     private void KeyboardInput() {
-
+       
 
         if (Input.GetKeyDown(KeyCode.W)) {
             direction = Vector3.forward;
@@ -61,7 +61,7 @@ public class Movement : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.D)) {
             direction = Vector3.right;
         }
-        
+
         if (direction == Vector3.zero || isMoving || isTurning) return;
         if (!CheckIfValidDirection(direction) || isTurning) {
             isTurning = true;
