@@ -54,8 +54,7 @@ public class GhostPathfinding : MonoBehaviour {
 		tiles = tiles.OrderBy(tile => Vector3.Distance(tile.transform.position, player.transform.position)).ToList();
 	}
 	
-	private void GetNeighbourTiles(Vector3 direction) {
-		print("Eyeballed!");
+	private void GetNeighbourTiles(Vector3 direction) { 
 		var rayTarget = new Vector3(direction.x, -.5f, direction.z);
 		var ray = new Ray(transform.position, rayTarget);
 		if (!Physics.Raycast(ray, out var hit, 3, LayerMask.GetMask("Tile"))) return;
