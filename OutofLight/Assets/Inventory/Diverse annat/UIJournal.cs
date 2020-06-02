@@ -12,6 +12,7 @@ public class UIJournal : MonoBehaviour {
     public Text[] slotTexts;
 
     private AudioSource audio;
+    private Canvas canvas;
     private void Awake(){
         Fill();
         audio = GetComponent<AudioSource>();
@@ -28,7 +29,8 @@ public class UIJournal : MonoBehaviour {
     }
     
     private void Display(JournalPage page) {
-        var g = Instantiate(journalHandler, transform.parent);
+        canvas = GameObject.Find("UI").GetComponent<Canvas>();
+        var g = Instantiate(journalHandler, canvas.transform.parent);
         g.GetComponent<RectTransform>().offsetMin = Vector2.zero;
         g.GetComponent<RectTransform>().offsetMax = Vector2.zero;
         g.GetComponent<JournalHandler>().PopulateJournalWindow(page);

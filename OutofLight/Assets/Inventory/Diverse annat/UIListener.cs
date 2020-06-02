@@ -6,6 +6,7 @@ public class UIListener : MonoBehaviour {
 	[Header("Fade in + room text")]
 	public GameObject roomPresenter;
 
+	public Canvas canvas;
 	public GameObject blackFade;
 
 	private void Awake() {
@@ -15,7 +16,7 @@ public class UIListener : MonoBehaviour {
 	
 	public void DisplayPage() {
 		var UITransform = GameObject.FindWithTag("UI").transform;
-		Instantiate(journalPageDisplay, UITransform.position, Quaternion.identity, UITransform);
+		Instantiate(journalPageDisplay, canvas.transform.position, Quaternion.identity, UITransform);
 	}
 
 	public void DisplayGameOver()
