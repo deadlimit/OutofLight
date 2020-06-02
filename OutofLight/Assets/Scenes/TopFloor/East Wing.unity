@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -287,7 +287,7 @@ PrefabInstance:
     - target: {fileID: 6361995105449852227, guid: a625efba65ba76c48bdb7405ac8f2759,
         type: 3}
       propertyPath: m_Name
-      value: Door 2.0 (1)
+      value: DoorToLivingRoom
       objectReference: {fileID: 0}
     - target: {fileID: 6859483857877476345, guid: a625efba65ba76c48bdb7405ac8f2759,
         type: 3}
@@ -431,7 +431,7 @@ PrefabInstance:
     - target: {fileID: 9160768988458088296, guid: 429e302b3ccf7454f88530a136ad31f0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9160768988458088296, guid: 429e302b3ccf7454f88530a136ad31f0,
         type: 3}
@@ -1448,7 +1448,7 @@ PrefabInstance:
     - target: {fileID: 6361995105449852227, guid: a625efba65ba76c48bdb7405ac8f2759,
         type: 3}
       propertyPath: m_Name
-      value: Door 2.0
+      value: DoorToMasterBedroom
       objectReference: {fileID: 0}
     - target: {fileID: 6859483857877476345, guid: a625efba65ba76c48bdb7405ac8f2759,
         type: 3}
