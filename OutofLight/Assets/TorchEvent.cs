@@ -8,7 +8,7 @@ using Random = UnityEngine.Random;
 
 public class TorchEvent : MonoBehaviour {
 
-	public List<InteractableTorch> torches = new List<InteractableTorch>();
+	public List<EventTorch> torches = new List<EventTorch>();
 	public int[] correctOrder;
 
 	public int[] chosenOrder;

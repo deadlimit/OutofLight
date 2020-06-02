@@ -47,6 +47,5 @@ public class Wind : MonoBehaviour {
         trapActive = false;
         triggerCollider.enabled = false;
     }
-
-
+    
 }
