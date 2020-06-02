@@ -430,8 +430,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 500, y: 200}
+  m_AnchoredPosition: {x: 6.75, y: -5.52}
+  m_SizeDelta: {x: 405, y: 138}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &138192784
 MonoBehaviour:
@@ -456,17 +456,17 @@ MonoBehaviour:
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 0.6
   m_Text: "How To Play:\nSwipe in the direction you want to move.\r\nTo interact
-    with objects you need to stand next to them and push the button in the bottom
-    right corner.\r\nWatch out for dangers!\nHave Fun!\n\nCreators: Jonathan Haag,
+    with objects you need to stand next\nto them and push the button in the bottom
+    right corner.\r\nWatch out for dangers and have Fun!\n\nCreators: Jonathan Haag,
     Thobias Hellstr\xF6m, Kristoffer Lindroth"
 --- !u!222 &138192785
 CanvasRenderer:
@@ -512,8 +512,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.4162265}
   m_AnchorMax: {x: 0.5, y: 0.4162265}
-  m_AnchoredPosition: {x: 0, y: -3}
-  m_SizeDelta: {x: 148, y: 88}
+  m_AnchoredPosition: {x: 0, y: -3.1}
+  m_SizeDelta: {x: 146, y: 49.03}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &149939648
 MonoBehaviour:
@@ -640,10 +640,10 @@ RectTransform:
   m_Father: {fileID: 1618569373}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.1307735}
-  m_AnchorMax: {x: 0.5, y: 0.1307735}
-  m_AnchoredPosition: {x: 2, y: 1.4000244}
-  m_SizeDelta: {x: 150, y: 50}
+  m_AnchorMin: {x: 0.5, y: 0.29089934}
+  m_AnchorMax: {x: 0.5, y: 0.29089934}
+  m_AnchoredPosition: {x: 0, y: -4.5}
+  m_SizeDelta: {x: 146.79999, y: 55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &208567178
 MonoBehaviour:
@@ -720,7 +720,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 0b9ab8e58c82f2642bd00f23385729a7, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -6745,8 +6745,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.273}
   m_AnchorMax: {x: 0.5, y: 0.273}
-  m_AnchoredPosition: {x: 0, y: -2.5}
-  m_SizeDelta: {x: 146, y: 47}
+  m_AnchoredPosition: {x: 0, y: -61.48}
+  m_SizeDelta: {x: 146, y: 48.95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1105981056
 MonoBehaviour:
@@ -27251,8 +27251,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.55}
   m_AnchorMax: {x: 0.5, y: 0.55}
-  m_AnchoredPosition: {x: 0, y: -2}
-  m_SizeDelta: {x: 146, y: 48}
+  m_AnchoredPosition: {x: 0, y: -2.68}
+  m_SizeDelta: {x: 146, y: 49.35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1675398763
 MonoBehaviour:
@@ -27493,8 +27493,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.273}
   m_AnchorMax: {x: 0.5, y: 0.273}
-  m_AnchoredPosition: {x: 0.5, y: -4}
-  m_SizeDelta: {x: 153, y: 50}
+  m_AnchoredPosition: {x: -0.000019073, y: -4}
+  m_SizeDelta: {x: 146, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1728203388
 MonoBehaviour:
