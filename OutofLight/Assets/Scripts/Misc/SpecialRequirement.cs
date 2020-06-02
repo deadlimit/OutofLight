@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Net.Configuration;
 using UnityEngine;
-using UnityEngine.Animations;
 using UnityEngine.UI;
 public class SpecialRequirement : MonoBehaviour, IInteractable {
 
