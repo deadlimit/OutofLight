@@ -11,6 +11,10 @@ public class MenuController : MonoBehaviour
     public Slider volumeController;
     public FloatVariable volumeVar;
     public IntVariable darkSteps;
+    public TransitInfo transitInfo;
+    public SpawnPosition spawn;
+    public List<BoolVariable> progression = new List<BoolVariable>();
+
 
     private void Awake()
     {
@@ -40,12 +44,17 @@ public class MenuController : MonoBehaviour
     }
     public void NewGame()
     {
+        spawn.spawnPosition = transitInfo.otherSide;
+        foreach (var e in progression)
+        {
+            e.ChangeValue(false);
+        }
         fadeImage.enabled = true;
         fadeImage.CrossFadeAlpha(255, 3f, false);
         darkSteps.ChangeValue(-7);
         if (fadeImage.color.a == 1f)
         {
-           SceneManager.LoadScene(1);
+           SceneManager.LoadScene(transitInfo.sceneNumber);
         }
     }
 
