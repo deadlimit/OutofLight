@@ -10,6 +10,7 @@ public class MenuController : MonoBehaviour
     public Button newGame, options, exitGame, returnToMenu;
     public Slider volumeController;
     public FloatVariable volumeVar;
+    public IntVariable darkSteps;
 
     private void Awake()
     {
@@ -41,6 +42,7 @@ public class MenuController : MonoBehaviour
     {
         fadeImage.enabled = true;
         fadeImage.CrossFadeAlpha(255, 3f, false);
+        darkSteps.ChangeValue(-7);
         if (fadeImage.color.a == 1f)
         {
            SceneManager.LoadScene(1);
