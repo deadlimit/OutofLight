@@ -23,6 +23,8 @@ public class JournalBehavior : MonoBehaviour, IInteractable {
         audio.Play();
         journal.Add(page);
         PageFound.Raise();
+        GetComponent<BoxCollider>().enabled = false;
+        GetComponent<MeshRenderer>().enabled = false;
         Destroy(gameObject, 3);
     }
 

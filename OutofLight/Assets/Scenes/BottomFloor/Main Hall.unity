@@ -2465,6 +2465,12 @@ PrefabInstance:
       propertyPath: prompt
       value: Go up
       objectReference: {fileID: 0}
+    - target: {fileID: 8694563811859495829, guid: 646626f15498446478eadf0864bb2f0f,
+        type: 3}
+      propertyPath: requirements.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 289f0ea60e1cda84bb3d499a9311e36d,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 646626f15498446478eadf0864bb2f0f, type: 3}
 --- !u!4 &492346014 stripped
@@ -3199,6 +3205,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 601589844}
+  - component: {fileID: 601589845}
+  - component: {fileID: 601589846}
   m_Layer: 5
   m_Name: MagicBarricade
   m_TagString: Untagged
@@ -3223,6 +3231,49 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &601589845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601589843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86157fb9f31e28943a89970e39a5e4db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  barrierOne: {fileID: 342636923344422549}
+  barrierTwo: {fileID: 1037143694}
+  barrierThree: {fileID: 5366612353550460142}
+  CanUseStairs: {fileID: 11400000, guid: 289f0ea60e1cda84bb3d499a9311e36d, type: 2}
+--- !u!114 &601589846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601589843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f624fc09539ff242ad601509638ac53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 27f316f1df5a3fe4b950f524f7dd62e3, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 601589845}
+        m_MethodName: Awake
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &602916594
 GameObject:
   m_ObjectHideFlags: 3
@@ -3694,6 +3745,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 213668666646595820, guid: ff5a9a10d7388ce4aa066e866abec80d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1930861756633594928, guid: ff5a9a10d7388ce4aa066e866abec80d,
         type: 3}
       propertyPath: m_Name
@@ -5333,6 +5389,12 @@ PrefabInstance:
 --- !u!4 &1037143693 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8058560154052832003, guid: 9ba86eee484165a49992e0e8fa7ce4ed,
+    type: 3}
+  m_PrefabInstance: {fileID: 1037143692}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1037143694 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5530125752080363239, guid: 9ba86eee484165a49992e0e8fa7ce4ed,
     type: 3}
   m_PrefabInstance: {fileID: 1037143692}
   m_PrefabAsset: {fileID: 0}
@@ -7894,6 +7956,12 @@ PrefabInstance:
       propertyPath: collidersInParent.Array.data[0]
       value: 
       objectReference: {fileID: 504239339}
+    - target: {fileID: 8694563811859495829, guid: 646626f15498446478eadf0864bb2f0f,
+        type: 3}
+      propertyPath: requirements.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: aa67a9edd6f6ad54aa589fb223ba9e40,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 646626f15498446478eadf0864bb2f0f, type: 3}
 --- !u!1 &1790116871
@@ -11872,6 +11940,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ba86eee484165a49992e0e8fa7ce4ed, type: 3}
+--- !u!1 &342636923344422549 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5530125752080363239, guid: 9ba86eee484165a49992e0e8fa7ce4ed,
+    type: 3}
+  m_PrefabInstance: {fileID: 342636923344422548}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1686873804386485030
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12154,6 +12228,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2af37fcf3d99d8543b41162f7374ab2a, type: 3}
+--- !u!1 &5366612353550460142 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5019208439976153682, guid: 2af37fcf3d99d8543b41162f7374ab2a,
+    type: 3}
+  m_PrefabInstance: {fileID: 5366612353550460141}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5375393009533083669
 PrefabInstance:
   m_ObjectHideFlags: 0
