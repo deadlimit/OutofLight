@@ -8,6 +8,7 @@ public class Journal : ScriptableObject {
 
     public JournalPage[] journal;
     public JournalPage latest;
+
     
     public void Add(JournalPage page) {
         journal[page.journalPageEntry] = page;
@@ -29,7 +30,6 @@ public class Journal : ScriptableObject {
             if(journal[i] == null) continue;
             if (journal[i].day.Equals(page.day)) {
                 journal[i] = null;
-                Debug.Log("Removed: " + page.day);
                 return;
             }
         }

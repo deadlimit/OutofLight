@@ -17,7 +17,8 @@ public class SafeZone : MonoBehaviour {
     private int removeAmount;
 
     private void Start() {
-        InsideSafezone.ChangeValue(insideSafezone);
+     //   print("safe");
+      //  InsideSafezone.ChangeValue(insideSafezone);
     }
     private void OnTriggerStay(Collider other)
     {

@@ -20,15 +20,15 @@ public class JournalPageController : MonoBehaviour {
 		}
 	}
 
-	public void SetPageRespawn(bool dontRespawn) {
+	/*public void SetPageRespawn(bool dontRespawn) {
 		foreach (var page in pagesInScene.Where(page => journal.Contains(page))) {
 			page.dontRespawn = dontRespawn;
 		}
-	}
+	}*/
 	
 	public void ResetJournalPage() {
 		foreach (var page in pagesInScene) {
-			SetPageRespawn(false);
+		//	SetPageRespawn(false);
 			journal.Remove(page);
 		}
 	}

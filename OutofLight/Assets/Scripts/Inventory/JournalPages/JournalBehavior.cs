@@ -6,13 +6,12 @@ public class JournalBehavior : MonoBehaviour, IInteractable {
     public GameEvent PageFound;
     public JournalPage page;
     public Journal journal;
-    public Button interactImage;
     public BoolVariable requirement;
     private AudioSource audio;
     
     private void Awake() {
         if (journal.Contains(page) || page.dontRespawn)
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         
         audio = GetComponent<AudioSource>();
     }
@@ -37,6 +36,6 @@ public class JournalBehavior : MonoBehaviour, IInteractable {
     }
 
     public Button CustomSprite() {
-        return interactImage;
+        return null;
     }
 }

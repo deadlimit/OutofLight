@@ -28,7 +28,6 @@ public class AmbientSounds : MonoBehaviour {
         if (!audio.isPlaying && startTime > randomWaitTime) {
             startTime = 0;
             randomWaitTime = Random.Range(5, 10) + audioClipLength;
-            print(randomWaitTime);
             audio.PlayOneShot(GetAudioClip());
         }
         
@@ -37,7 +36,6 @@ public class AmbientSounds : MonoBehaviour {
     private AudioClip GetAudioClip() {
         int randomIndex = Random.Range(0, soundClips.Count);
         var clip = soundClips[randomIndex];
-        print(clip);
         audioClipLength = clip.length;
         return clip;
     }

@@ -9,7 +9,6 @@ public class SpecialRequirement : MonoBehaviour, IInteractable {
 	public Button button;
 	private BoxCollider thisCollider;
 	public List<BoolVariable> requirements = new List<BoolVariable>();
-	
 	private bool requirementsMet;
 	public BoxCollider[] collidersInParent;
 	

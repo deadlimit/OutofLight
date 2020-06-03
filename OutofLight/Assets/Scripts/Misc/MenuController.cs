@@ -14,10 +14,17 @@ public class MenuController : MonoBehaviour {
     public SpawnPosition spawn;
     public List<BoolVariable> progression = new List<BoolVariable>();
     public Text howToPlay;
-
+    public Journal journal;
 
     private void Awake()
     {
+        foreach (var e in progression) {
+            e.ChangeValue(false);
+        }
+
+        foreach (var page in journal.journal)
+            journal.Remove(page);
+
         spawn.spawnPosition = transitInfo.otherSide;
         volumeController.maxValue = 1f;
         volumeController.value = volumeVar.GetValue();
@@ -48,17 +55,9 @@ public class MenuController : MonoBehaviour {
     }
     public void NewGame()
     {
-        try
-        {
-            foreach (var e in progression)
-            {
-                e.ChangeValue(false);
-            }
-        }
-        catch (MissingComponentException e)
-        {
-            print(e.Message);
-        }
+    
+        
+
         fadeImage.enabled = true;
         fadeImage.CrossFadeAlpha(255, 3f, false);
         darkSteps.ChangeValue(-7);
