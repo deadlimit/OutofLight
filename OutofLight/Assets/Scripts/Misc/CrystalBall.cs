@@ -11,6 +11,7 @@ public class CrystalBall : MonoBehaviour, IInteractable {
 	public BoolVariable canUseStairs;
 	public ParticleSystem particles;
 	public Light light;
+	public GameObject Barrier;
 	private void Awake() {
 		if (canUseStairs.IsTrue()) {
 			light.enabled = false;
@@ -41,5 +42,6 @@ public class CrystalBall : MonoBehaviour, IInteractable {
 		}
 		
 		canUseStairs.ChangeValue(true);
+		Destroy(Barrier);
 	}
 }
