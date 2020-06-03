@@ -55,9 +55,6 @@ public class MenuController : MonoBehaviour {
     }
     public void NewGame()
     {
-    
-        
-
         fadeImage.enabled = true;
         fadeImage.CrossFadeAlpha(255, 3f, false);
         darkSteps.ChangeValue(-7);

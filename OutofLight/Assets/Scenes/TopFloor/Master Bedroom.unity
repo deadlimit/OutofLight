@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -6716,7 +6716,7 @@ PrefabInstance:
     - target: {fileID: 4857512262309675714, guid: fbea92cc639ab26489c902cd319dc4ac,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.7
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 4857512262309675714, guid: fbea92cc639ab26489c902cd319dc4ac,
         type: 3}
@@ -23610,7 +23610,7 @@ PrefabInstance:
     - target: {fileID: 4857512262309675714, guid: fbea92cc639ab26489c902cd319dc4ac,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.7
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 4857512262309675714, guid: fbea92cc639ab26489c902cd319dc4ac,
         type: 3}
@@ -25409,6 +25409,7 @@ MonoBehaviour:
   hasKey: {fileID: 11400000, guid: ac02286ca68df8d47b8a98723d108401, type: 2}
   interactImage: {fileID: 0}
   prompt: Pick Up Key!
+  currentScene: 0
 --- !u!4 &1777608204 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2586354566746681067, guid: b59686d973636184aafafd0d28be8ccc,
@@ -30421,7 +30422,6 @@ MonoBehaviour:
   FuelPickedUp: {fileID: 11400000, guid: 3609975667b99a144b92492c999b9e11, type: 2}
   stepAmount: {fileID: 11400000, guid: 88431f49dcf46fb45aa9686e9310270c, type: 2}
   darkStepAmount: {fileID: 11400000, guid: 813f415f9d92ae5418f8d31e6358aa9a, type: 2}
-  rotate: 1
   refillAmount: 10
 --- !u!1 &2451974891196133931
 GameObject:

@@ -39,4 +39,15 @@ public class Respawn : MonoBehaviour {
     {
         fade.CrossFadeAlpha(254f, fadeSpeed, false);
     }
+
+    public void ReturnToMainMenu()
+    {
+        StartCoroutine(MainMenu());
+    }
+
+    private IEnumerator MainMenu()
+    {
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(0);
+    }
 }

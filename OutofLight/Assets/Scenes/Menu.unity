@@ -164,7 +164,7 @@ Transform:
   m_LocalScale: {x: 1.118034, y: 1.118034, z: 1.118034}
   m_Children: []
   m_Father: {fileID: 1618569373}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &92080286
 GameObject:
@@ -426,7 +426,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1618569373}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5883,9 +5883,10 @@ RectTransform:
   - {fileID: 1105981055}
   - {fileID: 208567177}
   - {fileID: 1728203387}
+  - {fileID: 629568486}
   - {fileID: 1480485777}
   m_Father: {fileID: 1618569373}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.2, y: 0.2}
   m_AnchorMax: {x: 0.8, y: 0.8}
@@ -6110,7 +6111,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 629568485}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -6118,12 +6119,12 @@ RectTransform:
   - {fileID: 518213307}
   - {fileID: 336811959}
   - {fileID: 1314798865}
-  m_Father: {fileID: 1618569373}
-  m_RootOrder: 2
+  m_Father: {fileID: 452681131}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.404}
   m_AnchorMax: {x: 0.5, y: 0.404}
-  m_AnchoredPosition: {x: 0.5, y: -0.5}
+  m_AnchoredPosition: {x: 0.49996376, y: 2.0827801}
   m_SizeDelta: {x: 163, y: 19}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &629568487
@@ -6462,7 +6463,7 @@ RectTransform:
   m_LocalScale: {x: 1.2331, y: 1.2331, z: 1.2331}
   m_Children: []
   m_Father: {fileID: 1618569373}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.8135099, y: 0.43500003}
   m_AnchorMax: {x: 0.8135099, y: 0.43500003}
@@ -7117,7 +7118,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: aa67a9edd6f6ad54aa589fb223ba9e40, type: 2}
   - {fileID: 11400000, guid: 90786079b2daa15448096c2d53e36ca4, type: 2}
   - {fileID: 11400000, guid: 289f0ea60e1cda84bb3d499a9311e36d, type: 2}
-  - {fileID: 11400000, guid: ae6552c2130cf9c42b909050199d4c90, type: 2}
+  - {fileID: 11400000, guid: 608a2b62aa6385949bd4bd45a2ba3405, type: 2}
   howToPlay: {fileID: 138192784}
   journal: {fileID: 11400000, guid: 5d111ad1152b49e45a8d8633010986d3, type: 2}
 --- !u!4 &1138824709
@@ -26949,7 +26950,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 452681131}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -27352,7 +27353,6 @@ RectTransform:
   m_Children:
   - {fileID: 1539927431}
   - {fileID: 1758731541}
-  - {fileID: 629568486}
   - {fileID: 770945021}
   - {fileID: 138192783}
   - {fileID: 17060058}
