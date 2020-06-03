@@ -43,5 +43,6 @@ public class CrystalBall : MonoBehaviour, IInteractable {
 		
 		canUseStairs.ChangeValue(true);
 		Destroy(Barrier);
+		gameObject.layer = LayerMask.GetMask("Default");
 	}
 }
