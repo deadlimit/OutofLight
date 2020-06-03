@@ -7,11 +7,12 @@ using UnityEngine.UI;
 public class JournalButton : MonoBehaviour {
 
     public GameObject journalUI;
-
+    public Canvas canvas;
     private GameObject internalReference;
     private Button menuButton;
     private bool journalShowing;
-
+    
+    
     private void Awake() {
         menuButton = GetComponent<Button>();
         journalShowing = false;
@@ -19,8 +20,8 @@ public class JournalButton : MonoBehaviour {
     }
     
     private void OpenJournal() {
-        var journal = Instantiate(journalUI);
-        journal.transform.SetParent(GameObject.FindWithTag("UI").transform, false);
+        var journal = Instantiate(journalUI, canvas.transform);
+        //journal.transform.SetParent(canvas.transform, false);
         internalReference = journal;
         journalShowing = true;
         ChangeOnClick();
