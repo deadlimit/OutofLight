@@ -23,7 +23,7 @@ public class Fuel : MonoBehaviour, IInteractable {
     }
 
     private void Rotate(){
-        var angle = new Vector3(Random.Range(1, 360), Random.Range(1, 360), Random.Range(1, 360));
+        var angle = new Vector3(Random.Range(0, 90), Random.Range(-45, 45), Random.Range(-45, 45));
 
         _transform.Rotate(angle * Time.deltaTime / 10, Space.World);
     }
