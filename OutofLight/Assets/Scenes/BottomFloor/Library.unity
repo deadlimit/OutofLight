@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -8544,7 +8544,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2034849886, guid: 683620493e9c3e845a4314e4a32315db, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1898197485140347043, guid: 683620493e9c3e845a4314e4a32315db,
         type: 3}
@@ -8709,7 +8709,7 @@ PrefabInstance:
     - target: {fileID: 8657786527352766050, guid: 683620493e9c3e845a4314e4a32315db,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 683620493e9c3e845a4314e4a32315db, type: 3}
@@ -10443,7 +10443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 815d8cc8728287342bea9da1f493ee5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canEnterLibrary: {fileID: 0}
+  canEnterLibrary: {fileID: 11400000, guid: ae6552c2130cf9c42b909050199d4c90, type: 2}
   anim: {fileID: 1099953386}
 --- !u!4 &1099953389 stripped
 Transform:

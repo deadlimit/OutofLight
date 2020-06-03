@@ -20,8 +20,7 @@ public class JournalButton : MonoBehaviour {
     }
     
     private void OpenJournal() {
-        var journal = Instantiate(journalUI, canvas.transform);
-        //journal.transform.SetParent(canvas.transform, false);
+        var journal = Instantiate(journalUI, canvas.transform.position, Quaternion.identity, canvas.transform);
         internalReference = journal;
         journalShowing = true;
         ChangeOnClick();
