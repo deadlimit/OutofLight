@@ -1,4 +1,5 @@
 ﻿
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,6 +17,7 @@ public class UIJournal : MonoBehaviour {
     private void Awake(){
         Fill();
         audio = GetComponent<AudioSource>();
+        canvas = GameObject.Find("UI 3.0").GetComponentInParent<Canvas>();
     }
 
     private void Fill() {
@@ -29,10 +31,9 @@ public class UIJournal : MonoBehaviour {
     }
     
     private void Display(JournalPage page) {
-        canvas = GameObject.Find("UI").GetComponent<Canvas>();
-        var g = Instantiate(journalHandler, canvas.transform.parent);
-        g.GetComponent<RectTransform>().offsetMin = Vector2.zero;
-        g.GetComponent<RectTransform>().offsetMax = Vector2.zero;
+        var g = Instantiate(journalHandler, canvas.transform.position, quaternion.identity, canvas.transform);
+        //g.GetComponent<RectTransform>().offsetMin = Vector2.zero;
+        //g.GetComponent<RectTransform>().offsetMax = Vector2.zero;
         g.GetComponent<JournalHandler>().PopulateJournalWindow(page);
         audio.Play();
     }
