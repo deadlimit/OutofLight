@@ -1,22 +1,24 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 [CreateAssetMenu(menuName = "Inventory/Journal")]
 public class Journal : ScriptableObject {
 
     public int pages;
-
-    public JournalPage[] journal;
+    
+    public List<JournalPage> journal;
     public JournalPage latest;
-
     
     public void Add(JournalPage page) {
-        journal[page.journalPageEntry] = page;
+        journal.Add(page);
+        journal.Sort();
         latest = page;
     }
     
     public void OnEnable() {
-        journal = new JournalPage[pages];
+        journal = new List<JournalPage>(12);
+        journal.Sort();
         latest = null;
     }
 
@@ -25,11 +27,10 @@ public class Journal : ScriptableObject {
     }
 
     public void Remove(JournalPage page) {
-        if (journal.Length < 1) return;
-        for (var i = 0; i < journal.Length; i++) {
-            if(journal[i] == null) continue;
+        if (journal.Count < 1) return;
+        for (var i = 0; i < journal.Count; i++) {
             if (journal[i].day.Equals(page.day)) {
-                journal[i] = null;
+                journal.Remove(journal[i]);
                 return;
             }
         }

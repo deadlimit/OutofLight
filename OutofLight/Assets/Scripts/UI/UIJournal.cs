@@ -1,4 +1,6 @@
 ﻿
+using System.Collections.Generic;
+using System.Linq;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,9 +23,9 @@ public class UIJournal : MonoBehaviour {
     }
 
     private void Fill() {
-        JournalPage[] pages = journal.journal;
-        foreach (var page in pages) {
-            if (page == null) continue;
+        List<JournalPage> pages = journal.journal;
+        foreach (var page in pages.Where(page => page != null)) {
+            print(page.day);
             slots[page.journalPageEntry].image.sprite = occupiedSlot;
             slotTexts[page.journalPageEntry].text = page.day;
             slots[page.journalPageEntry].onClick.AddListener(delegate { Display(page);});
@@ -32,8 +34,6 @@ public class UIJournal : MonoBehaviour {
     
     private void Display(JournalPage page) {
         var g = Instantiate(journalHandler, canvas.transform.position, quaternion.identity, canvas.transform);
-        //g.GetComponent<RectTransform>().offsetMin = Vector2.zero;
-        //g.GetComponent<RectTransform>().offsetMax = Vector2.zero;
         g.GetComponent<JournalHandler>().PopulateJournalWindow(page);
         audio.Play();
     }

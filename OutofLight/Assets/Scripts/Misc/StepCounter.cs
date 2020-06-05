@@ -46,7 +46,6 @@ public class StepCounter : MonoBehaviour {
         if (gameState.CurrentState() != State.DARK || safezone.IsTrue()) return;
 
         darkStepAmount.ChangeValue(+1);
-        Debug.Log("Dark Steps Is: " + darkStepAmount.GetValue());
     }
 
     private void CheckIfStepsDepleted() {

@@ -13,7 +13,6 @@ public class GhostAttack : MonoBehaviour {
 	}
 	
 	private void OnTriggerEnter(Collider other) {
-		Debug.Log("HIT");
 		if (other.gameObject.CompareTag("Player")) {
 			anim.SetTrigger("Attack");
 			steps.ChangeValue(lowerValue);

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -18,13 +19,19 @@ public class MenuController : MonoBehaviour {
 
     private void Awake()
     {
-        foreach (var e in progression) {
-            e.ChangeValue(false);
+        print(journal);
+        try {
+
+            foreach (var e in progression) {
+                e.ChangeValue(false);
+            }
+
+            journal.journal.Clear();
+
         }
-
-        foreach (var page in journal.journal)
-            journal.Remove(page);
-
+        catch (NullReferenceException e) {
+            print(e);
+        }
         spawn.spawnPosition = transitInfo.otherSide;
         volumeController.maxValue = 1f;
         volumeController.value = volumeVar.GetValue();

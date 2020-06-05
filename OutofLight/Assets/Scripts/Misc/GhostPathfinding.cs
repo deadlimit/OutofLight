@@ -13,7 +13,6 @@ public class GhostPathfinding : MonoBehaviour {
 	
 	public void Awake() {
 		player = GameObject.FindWithTag("Player").transform;
-		Debug.Log(player.transform.position);
 		GeneratePath();
 	}
 
@@ -71,7 +70,6 @@ public class GhostPathfinding : MonoBehaviour {
 		if (tiles.Count < 1) return;
 		var closestTile = tiles[0];
 		closestPath.Add(closestTile);
-		Debug.Log(closestTile);
 		transform.position = new Vector3(closestTile.transform.position.x, .5f, closestTile.transform.position.z);
 		tiles.Clear();
 	}
