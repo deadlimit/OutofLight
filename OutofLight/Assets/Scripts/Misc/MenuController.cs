@@ -6,16 +6,16 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MenuController : MonoBehaviour {
-    public Image fadeImage, howToPlayImage;
-    public Button newGame, options, exitGame, returnToMenu, howTo;
+    public Image fadeImage;
+    public Button newGame, options, exitGame, returnToMenu, howTo, next;
     public Slider volumeController;
     public FloatVariable volumeVar;
     public IntVariable darkSteps;
     public TransitInfo transitInfo;
     public SpawnPosition spawn;
     public List<BoolVariable> progression = new List<BoolVariable>();
-    public Text howToPlay;
     public Journal journal;
+    public GameObject buttonP, howToPlayPanel, howF, howS, howH;
 
     private void Awake()
     {
@@ -45,8 +45,10 @@ public class MenuController : MonoBehaviour {
         returnToMenu.gameObject.SetActive(false);
         volumeController.gameObject.SetActive(false);
         howTo.gameObject.SetActive(true);
-        howToPlay.gameObject.SetActive(false);
-        howToPlayImage.gameObject.SetActive(false);
+        howToPlayPanel.SetActive(false);
+        howF.gameObject.SetActive(false);
+        howS.gameObject.SetActive(false);
+        howH.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -76,10 +78,13 @@ public class MenuController : MonoBehaviour {
         newGame.gameObject.SetActive(false);
         options.gameObject.SetActive(false);
         exitGame.gameObject.SetActive(false);
+        howTo.gameObject.SetActive(false);
         returnToMenu.gameObject.SetActive(true);
         volumeController.gameObject.SetActive(true);
-        howTo.gameObject.SetActive(false);
-        howToPlay.gameObject.SetActive(false);
+        howToPlayPanel.SetActive(false);
+        howF.gameObject.SetActive(false);
+        howS.gameObject.SetActive(false);
+        howH.gameObject.SetActive(false);
     }
 
     public void ExitGame()
@@ -93,11 +98,12 @@ public class MenuController : MonoBehaviour {
         options.gameObject.SetActive(true);
         exitGame.gameObject.SetActive(true);
         returnToMenu.gameObject.SetActive(false);
-        volumeController.gameObject.SetActive(false);
         howTo.gameObject.SetActive(true);
-        howToPlay.gameObject.SetActive(false);
-        howToPlayImage.gameObject.SetActive(false);
-        howToPlayImage.gameObject.SetActive(false);
+        volumeController.gameObject.SetActive(false);
+        howToPlayPanel.SetActive(false);
+        howF.gameObject.SetActive(false);
+        howS.gameObject.SetActive(false);
+        howH.gameObject.SetActive(false);
     }
 
     public void HowToPlay()
@@ -105,11 +111,65 @@ public class MenuController : MonoBehaviour {
         newGame.gameObject.SetActive(false);
         options.gameObject.SetActive(false);
         exitGame.gameObject.SetActive(false);
-        returnToMenu.gameObject.SetActive(true);
+        returnToMenu.gameObject.SetActive(false);
         volumeController.gameObject.SetActive(false);
+        howToPlayPanel.SetActive(true);
         howTo.gameObject.SetActive(false);
-        howToPlay.gameObject.SetActive(true);
-        howToPlayImage.gameObject.SetActive(true);
+    }
 
+    public void NextButton()
+    {
+        newGame.gameObject.SetActive(false);
+        options.gameObject.SetActive(false);
+        exitGame.gameObject.SetActive(false);
+        returnToMenu.gameObject.SetActive(false);
+        volumeController.gameObject.SetActive(false);
+        howToPlayPanel.SetActive(false);
+        howTo.gameObject.SetActive(false);
+        howF.gameObject.SetActive(true);
+        howS.gameObject.SetActive(false);
+        howH.gameObject.SetActive(false);
+    }
+
+    public void NextButton2()
+    {
+        newGame.gameObject.SetActive(false);
+        options.gameObject.SetActive(false);
+        exitGame.gameObject.SetActive(false);
+        returnToMenu.gameObject.SetActive(false);
+        volumeController.gameObject.SetActive(false);
+        howToPlayPanel.SetActive(false);
+        howTo.gameObject.SetActive(false);
+        howF.gameObject.SetActive(false);
+        howS.gameObject.SetActive(true);
+        howH.gameObject.SetActive(false);
+    }
+
+    public void NextButton3()
+    {
+        newGame.gameObject.SetActive(false);
+        options.gameObject.SetActive(false);
+        exitGame.gameObject.SetActive(false);
+        returnToMenu.gameObject.SetActive(false);
+        volumeController.gameObject.SetActive(false);
+        howToPlayPanel.SetActive(false);
+        howTo.gameObject.SetActive(false);
+        howF.gameObject.SetActive(false);
+        howS.gameObject.SetActive(false);
+        howH.gameObject.SetActive(true);
+    }
+
+    public void NextButton4()
+    {
+        newGame.gameObject.SetActive(false);
+        options.gameObject.SetActive(false);
+        exitGame.gameObject.SetActive(false);
+        returnToMenu.gameObject.SetActive(false);
+        volumeController.gameObject.SetActive(false);
+        howToPlayPanel.SetActive(true);
+        howTo.gameObject.SetActive(false);
+        howF.gameObject.SetActive(false);
+        howS.gameObject.SetActive(false);
+        howH.gameObject.SetActive(false);
     }
 }
