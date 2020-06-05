@@ -11,7 +11,7 @@ public class JournalBehavior : MonoBehaviour, IInteractable {
     
     private void Awake() {
         if (journal.Contains(page) || page.dontRespawn)
-            gameObject.SetActive(false);
+            Destroy(gameObject);
         
         audio = GetComponent<AudioSource>();
     }
