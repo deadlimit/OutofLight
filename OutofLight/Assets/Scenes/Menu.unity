@@ -467,8 +467,9 @@ MonoBehaviour:
   m_Text: "How To Play:\r\nEscape the haunted mansion! Swipe in the direction you\r\nwant
     to move (WASD for PC). To interact with objects, you need to\r\nstand next to
     them and push the button in the bottom right corner.\r\nUse the sparkling safe
-    zones when you need refuge, and keep\r\nyour lantern fueled and bright, or darkness
-    will engulf you!\r\n\r\nCreators: Jonathan Haag, Thobias Hellstr\xF6m, Kristoffer
+    zones when you need refuge, and keep your\r\nlantern fueled and bright. Keep
+    the fuel meter up with pick ups\r\nand minimize your steps, or darkness will
+    engulf you!\r\n\r\nCreators: Jonathan Haag, Thobias Hellstr\xF6m, Kristoffer
     Lindroth"
 --- !u!222 &138192785
 CanvasRenderer:
@@ -32679,7 +32680,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.75
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
