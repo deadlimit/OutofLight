@@ -143,7 +143,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LeverPulled: {fileID: 11400000, guid: 01350d9ba6d14a44e802f03cacb5dac4, type: 2}
-  LeverNoPulled: {fileID: 11400000, guid: 0457d74e3bbbcd948b4466db44f3a14c, type: 2}
   prompt: Lever Pulled
   interactImage: {fileID: 0}
   leverObject: {fileID: 0}
@@ -359,6 +358,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 9663de1594a0b67469d4a565f2b011e4, type: 2}
+  - {fileID: 2100000, guid: f4c95601a01c61b419d6ecc92a993649, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
