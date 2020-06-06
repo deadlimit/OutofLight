@@ -235,10 +235,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.6
-  m_Text: 'Safe Zones:
+  m_Text: 'Dark Steps:
 
-    Use the sparkling safe zones when you need refuge. The
-    engulfing darkness and entities can''t harm you while you''re in the safe zone.'
+    After running out of fuel, you can take a few more steps
+    in the darkness before the monsters get you. You''ll start hearing a heartbeat
+    and eventually the border of the screen will turn red to warn you that youre
+    running out of remaining steps. Get to a fuelsource or safezone fast!'
 --- !u!222 &54207694
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -644,11 +646,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.6
-  m_Text: 'Hazards:
+  m_Text: 'Safe Zones:
 
-    Watch out for hazards. Wind will put out your lantern fast.
-    Avoiding it or playing Leeroy is up to you. Watching out for dark entities and
-    fires is also advisable.'
+    Use the sparkling safe zones when you need refuge. The
+    engulfing darkness and entities can''t harm you while you''re in the safe zone.'
 --- !u!222 &125439659
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8395,12 +8396,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.6
-  m_Text: 'Dark Steps:
+  m_Text: 'Hazards:
 
-    After running out of fuel, you can take a few more steps
-    in the darkness before the monsters get you. You''ll start hearing a heartbeat
-    and eventually the border of the screen will turn red to warn you that youre
-    running out of remaining steps. Get to a fuelsource or safezone fast!'
+    Watch out for hazards. Wind will put out your lantern fast.
+    Avoiding it or playing Leeroy is up to you. Watching out for dark entities and
+    fires is also advisable.'
 --- !u!222 &854474917
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8721,7 +8721,7 @@ GameObject:
   - component: {fileID: 1008132687}
   - component: {fileID: 1008132686}
   m_Layer: 5
-  m_Name: HowToPlayDark
+  m_Name: HowToPlayHazard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8842,7 +8842,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e6688b780ab03b94a8ed9e1849244e89, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 696a44b9c286e4045b4ae56e3e086e5c, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -9265,10 +9265,10 @@ MonoBehaviour:
   journal: {fileID: 11400000, guid: 5d111ad1152b49e45a8d8633010986d3, type: 2}
   buttonP: {fileID: 452681130}
   howToPlayPanel: {fileID: 1302201120}
-  howF: {fileID: 648888883}
-  howS: {fileID: 1392758589}
-  howH: {fileID: 1681055623}
-  howD: {fileID: 1008132685}
+  how1: {fileID: 648888883}
+  how2: {fileID: 1392758589}
+  how3: {fileID: 1681055623}
+  how4: {fileID: 1008132685}
 --- !u!4 &1138824709
 Transform:
   m_ObjectHideFlags: 0
@@ -14219,7 +14219,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: faea45e6404efcc4c97ff7bc794abd36, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e6688b780ab03b94a8ed9e1849244e89, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -29622,7 +29622,7 @@ GameObject:
   - component: {fileID: 1392758592}
   - component: {fileID: 1392758591}
   m_Layer: 5
-  m_Name: HowToPlaySafeZone
+  m_Name: HowToPlayDarkSteps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29902,7 +29902,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 696a44b9c286e4045b4ae56e3e086e5c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: faea45e6404efcc4c97ff7bc794abd36, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -30648,7 +30648,7 @@ GameObject:
   - component: {fileID: 1681055625}
   - component: {fileID: 1681055624}
   m_Layer: 5
-  m_Name: HowToPlayHazard
+  m_Name: HowToPlaySafeZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

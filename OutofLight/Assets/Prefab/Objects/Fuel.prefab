@@ -183,8 +183,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.96
-  m_Center: {x: -0.000000007450581, y: 0.000000014901165, z: 0.398914}
+  m_Radius: 0.7274949
+  m_Center: {x: -0.0070456862, y: 0.014091849, z: 0.39891386}
 --- !u!82 &3207692895410704221
 AudioSource:
   m_ObjectHideFlags: 0
@@ -315,8 +315,8 @@ MonoBehaviour:
   FuelPickedUp: {fileID: 11400000, guid: 3609975667b99a144b92492c999b9e11, type: 2}
   stepAmount: {fileID: 11400000, guid: 88431f49dcf46fb45aa9686e9310270c, type: 2}
   darkStepAmount: {fileID: 11400000, guid: 813f415f9d92ae5418f8d31e6358aa9a, type: 2}
-  refillAmount: 10
   audio: {fileID: 0}
+  refillAmount: 10
 --- !u!1001 &3163265164955242899
 PrefabInstance:
   m_ObjectHideFlags: 0

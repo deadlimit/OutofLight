@@ -9,7 +9,12 @@ public class PlayerDeath : MonoBehaviour {
 	public GameObject lantern;
 	public float force;
 	public GameObject respawnMenu;
-	public Button interact;
+	public GameObject interact;
+
+	private void Awake()
+	{
+		interact = GameObject.FindWithTag("InteractButton");
+	}
 
 	public void DropLantern() {
 		lantern.transform.parent = null;
