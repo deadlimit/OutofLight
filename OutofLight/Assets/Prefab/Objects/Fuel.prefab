@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9037961556471538578}
   - component: {fileID: 1776307171880475376}
   - component: {fileID: 325518688}
+  - component: {fileID: 1067597746}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -43,11 +44,11 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 0.016202351, g: 0.5283019, b: 0, a: 1}
-  m_Intensity: 25.99
-  m_Range: 3.1
-  m_SpotAngle: 57.74945
-  m_InnerSpotAngle: 9.421053
+  m_Color: {r: 0.33333334, g: 0.54901963, b: 0, a: 1}
+  m_Intensity: 20
+  m_Range: 3
+  m_SpotAngle: 40
+  m_InnerSpotAngle: 9
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -106,6 +107,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_UsePipelineSettings: 1
+--- !u!95 &1067597746
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171354146809947997}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6151042e730fe354eab6dc88d64d4993, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4857512262309675720
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,23 +185,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.96
   m_Center: {x: -0.000000007450581, y: 0.000000014901165, z: 0.398914}
---- !u!114 &2259716066300299741
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8382157118038167098}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1e459add7457e744a5e886905f97ce3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FuelPickedUp: {fileID: 11400000, guid: 3609975667b99a144b92492c999b9e11, type: 2}
-  stepAmount: {fileID: 11400000, guid: 88431f49dcf46fb45aa9686e9310270c, type: 2}
-  darkStepAmount: {fileID: 11400000, guid: 813f415f9d92ae5418f8d31e6358aa9a, type: 2}
-  rotate: 1
-  refillAmount: 20
 --- !u!95 &298065847
 Animator:
   serializedVersion: 3
@@ -201,6 +204,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2259716066300299741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8382157118038167098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1e459add7457e744a5e886905f97ce3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FuelPickedUp: {fileID: 11400000, guid: 3609975667b99a144b92492c999b9e11, type: 2}
+  stepAmount: {fileID: 11400000, guid: 88431f49dcf46fb45aa9686e9310270c, type: 2}
+  darkStepAmount: {fileID: 11400000, guid: 813f415f9d92ae5418f8d31e6358aa9a, type: 2}
+  refillAmount: 10
 --- !u!1001 &3163265164955242899
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -226,7 +245,7 @@ PrefabInstance:
     - target: {fileID: 7633058542647111098, guid: cd6d6119a15fade4397ce81716883fdc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7633058542647111098, guid: cd6d6119a15fade4397ce81716883fdc,
         type: 3}

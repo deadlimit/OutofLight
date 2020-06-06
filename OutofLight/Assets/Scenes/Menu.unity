@@ -200,8 +200,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 16.499939, y: -19.000006}
-  m_SizeDelta: {x: 405, y: 138}
+  m_AnchoredPosition: {x: 16.5, y: -50}
+  m_SizeDelta: {x: 400, y: 200}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &54207693
 MonoBehaviour:
@@ -234,10 +234,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.6
-  m_Text: 'Safe Zones:
+  m_Text: 'Safe Zones - Angel chorus!
 
-    Use the sparkling safe zones when you need refuge. The
-    engulfing darkness and entities can''t harm you while you''re in the safe zone.'
+    Use the sparkling safe zones when you
+    need refuge. You won''t consume any dark steps nor fuel while stepping inside
+    these tiles. The engulfing darkness and most entities can''t harm you while you''re
+    in the safe zone.'
 --- !u!222 &54207694
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -359,8 +361,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.92, y: 0.10823077}
   m_AnchorMax: {x: 0.92, y: 0.10823077}
-  m_AnchoredPosition: {x: 78.99997, y: -13}
-  m_SizeDelta: {x: 151, y: 50}
+  m_AnchoredPosition: {x: 51.2, y: -2.100006}
+  m_SizeDelta: {x: 120, y: 50}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &101404364
 MonoBehaviour:
@@ -390,11 +392,11 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 8d67f2dc7595f224b81c4dc4fc571dbe,
+    m_HighlightedSprite: {fileID: 21300000, guid: ccc737037b1aca2418f1ca8278fb2986,
       type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 8d67f2dc7595f224b81c4dc4fc571dbe, type: 3}
-    m_SelectedSprite: {fileID: 21300000, guid: 8d67f2dc7595f224b81c4dc4fc571dbe, type: 3}
-    m_DisabledSprite: {fileID: 21300000, guid: e01f8738ebf7db84cba185cc65325864, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: ccc737037b1aca2418f1ca8278fb2986, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: ccc737037b1aca2418f1ca8278fb2986, type: 3}
+    m_DisabledSprite: {fileID: 21300000, guid: cec5b75249924684aa39963540bfb0eb, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -435,7 +437,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e01f8738ebf7db84cba185cc65325864, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cec5b75249924684aa39963540bfb0eb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -470,7 +472,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &115269731
 RectTransform:
   m_ObjectHideFlags: 0
@@ -686,8 +688,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 16.499939, y: -19.000006}
-  m_SizeDelta: {x: 405, y: 138}
+  m_AnchoredPosition: {x: 16.5, y: -50}
+  m_SizeDelta: {x: 400, y: 200}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &125439658
 MonoBehaviour:
@@ -720,11 +722,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.6
-  m_Text: 'Hazards:
+  m_Text: 'Hazards - You no touch.
 
-    Watch out for hazards. Wind will put out your lantern fast.
-    Avoiding it or playing Leeroy is up to you. Watching out for dark entities and
-    fires is also advisable.'
+    Watch out for various hazards. Wind will
+    kill your lantern fast. Avoiding it or playing Leeroy is up to you. Watching
+    out for dark entities and fires is also advisable.'
 --- !u!222 &125439659
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -798,8 +800,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 16.50003, y: -18.999996}
-  m_SizeDelta: {x: 405, y: 138}
+  m_AnchoredPosition: {x: 16.5, y: -67.7}
+  m_SizeDelta: {x: 400, y: 235}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &138192784
 MonoBehaviour:
@@ -826,16 +828,19 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 3
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.6
-  m_Text: "How To Play:\r\nEscape the haunted mansion! Swipe in the direction you
-    want to move, or WASD-keys for PC. \nTo interact with objects (like boxes and
-    journal pages), you need to stand next to them and push the button in the bottom
-    right corner.\n\nCreators: Jonathan Haag, Thobias Hellstr\xF6m, Kristoffer Lindroth"
+  m_Text: "How To Play \\(\xF4.\xD4)/\r\nTo take cover from the thunder storm, you've
+    found a mansion in the woods along the road. As you enter, the door slams shut.
+    What is this place, and is there a way to get out?\r\n\r\nSwipe in the direction
+    you want to move, or WASD-keys for PC. To interact with objects (like boxes and
+    journal pages), you need to stand next to them and push the interact button in
+    the bottom right corner.\r\n\r\nCreators: Jonathan Haag, Thobias Hellstr\xF6m,
+    Kristoffer Lindroth"
 --- !u!222 &138192785
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1010,8 +1015,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.92, y: 0.10823077}
   m_AnchorMax: {x: 0.92, y: 0.10823077}
-  m_AnchoredPosition: {x: 78.99997, y: -13}
-  m_SizeDelta: {x: 151, y: 50}
+  m_AnchoredPosition: {x: 51.19995, y: -2.0999756}
+  m_SizeDelta: {x: 120, y: 50}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &172976141
 MonoBehaviour:
@@ -1041,11 +1046,11 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 8d67f2dc7595f224b81c4dc4fc571dbe,
+    m_HighlightedSprite: {fileID: 21300000, guid: ccc737037b1aca2418f1ca8278fb2986,
       type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 8d67f2dc7595f224b81c4dc4fc571dbe, type: 3}
-    m_SelectedSprite: {fileID: 21300000, guid: 8d67f2dc7595f224b81c4dc4fc571dbe, type: 3}
-    m_DisabledSprite: {fileID: 21300000, guid: e01f8738ebf7db84cba185cc65325864, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: ccc737037b1aca2418f1ca8278fb2986, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: ccc737037b1aca2418f1ca8278fb2986, type: 3}
+    m_DisabledSprite: {fileID: 21300000, guid: cec5b75249924684aa39963540bfb0eb, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -1086,7 +1091,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e01f8738ebf7db84cba185cc65325864, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cec5b75249924684aa39963540bfb0eb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1491,8 +1496,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.92, y: 0.10823077}
   m_AnchorMax: {x: 0.92, y: 0.10823077}
-  m_AnchoredPosition: {x: 78.99997, y: -13}
-  m_SizeDelta: {x: 151, y: 50}
+  m_AnchoredPosition: {x: 24.6, y: -13}
+  m_SizeDelta: {x: 120, y: 50}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &326231220
 MonoBehaviour:
@@ -1522,11 +1527,11 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 8d67f2dc7595f224b81c4dc4fc571dbe,
+    m_HighlightedSprite: {fileID: 21300000, guid: ccc737037b1aca2418f1ca8278fb2986,
       type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 8d67f2dc7595f224b81c4dc4fc571dbe, type: 3}
-    m_SelectedSprite: {fileID: 21300000, guid: 8d67f2dc7595f224b81c4dc4fc571dbe, type: 3}
-    m_DisabledSprite: {fileID: 21300000, guid: e01f8738ebf7db84cba185cc65325864, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: ccc737037b1aca2418f1ca8278fb2986, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: ccc737037b1aca2418f1ca8278fb2986, type: 3}
+    m_DisabledSprite: {fileID: 21300000, guid: cec5b75249924684aa39963540bfb0eb, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -1567,7 +1572,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e01f8738ebf7db84cba185cc65325864, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cec5b75249924684aa39963540bfb0eb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6972,7 +6977,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &641395425
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28355,8 +28360,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 16.499939, y: -19.000006}
-  m_SizeDelta: {x: 405, y: 138}
+  m_AnchoredPosition: {x: 16.5, y: -50}
+  m_SizeDelta: {x: 400, y: 200}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1494285572
 MonoBehaviour:
@@ -28383,18 +28388,20 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 3
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.6
-  m_Text: 'The Fuel Meter:
+  m_Text: 'The Fuel Meter - Let there be light!
 
-    On the left hand side of the screen you can see
-    how much fuel you have left for your lantern. The number indicates the amount
-    of steps before your lantern goes dark. Pick up kerosene to fuel it up, or darkness
-    will engulf you!'
+    On the left hand side of the
+    screen you can see how much fuel you have left for your lantern. The number underneath
+    indicates the amount of steps before your lantern goes dark. Rooms have different
+    amounts of starting steps and some dark entities can diminish your fuel levels.
+    You can fuel your lantern with green kerosene pick ups. The amount of fuel in
+    the bottles may vary.'
 --- !u!222 &1494285573
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -28528,7 +28535,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1562163578
 RectTransform:
   m_ObjectHideFlags: 0
@@ -29447,8 +29454,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.92, y: 0.10823077}
   m_AnchorMax: {x: 0.92, y: 0.10823077}
-  m_AnchoredPosition: {x: 79, y: -13}
-  m_SizeDelta: {x: 151, y: 50}
+  m_AnchoredPosition: {x: 51.200073, y: -2.0999756}
+  m_SizeDelta: {x: 120, y: 50}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &1799624389
 MonoBehaviour:
@@ -29478,11 +29485,11 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 8d67f2dc7595f224b81c4dc4fc571dbe,
+    m_HighlightedSprite: {fileID: 21300000, guid: ccc737037b1aca2418f1ca8278fb2986,
       type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 8d67f2dc7595f224b81c4dc4fc571dbe, type: 3}
-    m_SelectedSprite: {fileID: 21300000, guid: 8d67f2dc7595f224b81c4dc4fc571dbe, type: 3}
-    m_DisabledSprite: {fileID: 21300000, guid: e01f8738ebf7db84cba185cc65325864, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: ccc737037b1aca2418f1ca8278fb2986, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: ccc737037b1aca2418f1ca8278fb2986, type: 3}
+    m_DisabledSprite: {fileID: 21300000, guid: cec5b75249924684aa39963540bfb0eb, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -29523,7 +29530,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e01f8738ebf7db84cba185cc65325864, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cec5b75249924684aa39963540bfb0eb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -34321,7 +34328,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1955711823
 RectTransform:
   m_ObjectHideFlags: 0
