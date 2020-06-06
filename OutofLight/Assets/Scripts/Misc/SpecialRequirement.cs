@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.UI;
 public class SpecialRequirement : MonoBehaviour, IInteractable {
@@ -8,11 +9,11 @@ public class SpecialRequirement : MonoBehaviour, IInteractable {
 	public string prompt;
 	public Button button;
 	private BoxCollider thisCollider;
-	public List<BoolVariable> requirements = new List<BoolVariable>();
+	public List<string> requirements = new List<string>();
 	private bool requirementsMet;
 	public BoxCollider[] collidersInParent;
 	
-	public void Awake() {
+	public void Start() {
 		thisCollider = GetComponent<BoxCollider>();
 		DelegateCheckRequirements();
 		if (requirementsMet) return;
@@ -40,14 +41,21 @@ public class SpecialRequirement : MonoBehaviour, IInteractable {
 
 	public void DelegateCheckRequirements() {
 		requirementsMet = CheckRequirements();
+		Debug.Log(requirementsMet);
 		if (requirementsMet) {
+			Debug.Log("MET!");
 			EnableColliders(true);
 			Destroy(gameObject);
 		}
 
 	}
-	
+
 	private bool CheckRequirements() {
-		return requirements.All(req => req.IsTrue());
+		foreach (var req in requirements) {
+			if (!RequirementManager.Instance.CheckSpecificRequirements(req))
+				return false;
+		}
+		return true;
 	}
+	
 }

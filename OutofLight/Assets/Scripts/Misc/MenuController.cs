@@ -15,7 +15,7 @@ public class MenuController : MonoBehaviour {
     public SpawnPosition spawn;
     public List<BoolVariable> progression = new List<BoolVariable>();
     public Journal journal;
-    public GameObject buttonP, howToPlayPanel, howF, howS, howH, howD;
+    public GameObject buttonP, howToPlayPanel, how1, how2, how3, how4;
 
     private void Awake()
     {
@@ -46,10 +46,10 @@ public class MenuController : MonoBehaviour {
         volumeController.gameObject.SetActive(false);
         howTo.gameObject.SetActive(true);
         howToPlayPanel.SetActive(false);
-        howF.gameObject.SetActive(false);
-        howS.gameObject.SetActive(false);
-        howH.gameObject.SetActive(false);
-        howD.gameObject.SetActive(false);
+        how1.gameObject.SetActive(false);
+        how2.gameObject.SetActive(false);
+        how3.gameObject.SetActive(false);
+        how4.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -83,10 +83,10 @@ public class MenuController : MonoBehaviour {
         returnToMenu.gameObject.SetActive(true);
         volumeController.gameObject.SetActive(true);
         howToPlayPanel.SetActive(false);
-        howF.gameObject.SetActive(false);
-        howS.gameObject.SetActive(false);
-        howH.gameObject.SetActive(false);
-        howD.gameObject.SetActive(false);
+        how1.gameObject.SetActive(false);
+        how2.gameObject.SetActive(false);
+        how3.gameObject.SetActive(false);
+        how4.gameObject.SetActive(false);
     }
 
     public void ExitGame()
@@ -103,10 +103,10 @@ public class MenuController : MonoBehaviour {
         howTo.gameObject.SetActive(true);
         volumeController.gameObject.SetActive(false);
         howToPlayPanel.SetActive(false);
-        howF.gameObject.SetActive(false);
-        howS.gameObject.SetActive(false);
-        howH.gameObject.SetActive(false);
-        howD.gameObject.SetActive(false);
+        how1.gameObject.SetActive(false);
+        how2.gameObject.SetActive(false);
+        how3.gameObject.SetActive(false);
+        how4.gameObject.SetActive(false);
     }
 
     public void HowToPlay()
@@ -129,10 +129,10 @@ public class MenuController : MonoBehaviour {
         volumeController.gameObject.SetActive(false);
         howToPlayPanel.SetActive(false);
         howTo.gameObject.SetActive(false);
-        howF.gameObject.SetActive(true);
-        howS.gameObject.SetActive(false);
-        howH.gameObject.SetActive(false);
-        howD.gameObject.SetActive(false);
+        how1.gameObject.SetActive(true);
+        how2.gameObject.SetActive(false);
+        how3.gameObject.SetActive(false);
+        how4.gameObject.SetActive(false);
     }
 
     public void NextButton2()
@@ -144,10 +144,10 @@ public class MenuController : MonoBehaviour {
         volumeController.gameObject.SetActive(false);
         howToPlayPanel.SetActive(false);
         howTo.gameObject.SetActive(false);
-        howF.gameObject.SetActive(false);
-        howS.gameObject.SetActive(true);
-        howH.gameObject.SetActive(false);
-        howD.gameObject.SetActive(false);
+        how1.gameObject.SetActive(false);
+        how2.gameObject.SetActive(true);
+        how3.gameObject.SetActive(false);
+        how4.gameObject.SetActive(false);
     }
 
     public void NextButton3()
@@ -159,10 +159,10 @@ public class MenuController : MonoBehaviour {
         volumeController.gameObject.SetActive(false);
         howToPlayPanel.SetActive(false);
         howTo.gameObject.SetActive(false);
-        howF.gameObject.SetActive(false);
-        howS.gameObject.SetActive(false);
-        howH.gameObject.SetActive(true);
-        howD.gameObject.SetActive(false);
+        how1.gameObject.SetActive(false);
+        how2.gameObject.SetActive(false);
+        how3.gameObject.SetActive(true);
+        how4.gameObject.SetActive(false);
     }
 
     public void NextButton4()
@@ -174,10 +174,10 @@ public class MenuController : MonoBehaviour {
         volumeController.gameObject.SetActive(false);
         howToPlayPanel.SetActive(false);
         howTo.gameObject.SetActive(false);
-        howF.gameObject.SetActive(false);
-        howS.gameObject.SetActive(false);
-        howH.gameObject.SetActive(false);
-        howD.gameObject.SetActive(true);
+        how1.gameObject.SetActive(false);
+        how2.gameObject.SetActive(false);
+        how3.gameObject.SetActive(false);
+        how4.gameObject.SetActive(true);
     }
 
     public void NextButton5()
@@ -189,10 +189,10 @@ public class MenuController : MonoBehaviour {
         volumeController.gameObject.SetActive(false);
         howToPlayPanel.SetActive(true);
         howTo.gameObject.SetActive(false);
-        howF.gameObject.SetActive(false);
-        howS.gameObject.SetActive(false);
-        howH.gameObject.SetActive(false);
-        howD.gameObject.SetActive(false);
+        how1.gameObject.SetActive(false);
+        how2.gameObject.SetActive(false);
+        how3.gameObject.SetActive(false);
+        how4.gameObject.SetActive(false);
     }
 
     public void BackButton()
@@ -204,10 +204,10 @@ public class MenuController : MonoBehaviour {
         volumeController.gameObject.SetActive(false);
         howToPlayPanel.SetActive(true);
         howTo.gameObject.SetActive(false);
-        howF.gameObject.SetActive(false);
-        howS.gameObject.SetActive(false);
-        howH.gameObject.SetActive(false);
-        howD.gameObject.SetActive(false);
+        how1.gameObject.SetActive(false);
+        how2.gameObject.SetActive(false);
+        how3.gameObject.SetActive(false);
+        how4.gameObject.SetActive(false);
     }
 
     public void BackButton2()
@@ -219,10 +219,10 @@ public class MenuController : MonoBehaviour {
         volumeController.gameObject.SetActive(false);
         howToPlayPanel.SetActive(false);
         howTo.gameObject.SetActive(false);
-        howF.gameObject.SetActive(true);
-        howS.gameObject.SetActive(false);
-        howH.gameObject.SetActive(false);
-        howD.gameObject.SetActive(false);
+        how1.gameObject.SetActive(true);
+        how2.gameObject.SetActive(false);
+        how3.gameObject.SetActive(false);
+        how4.gameObject.SetActive(false);
     }
 
     public void BackButton3()
@@ -234,10 +234,10 @@ public class MenuController : MonoBehaviour {
         volumeController.gameObject.SetActive(false);
         howToPlayPanel.SetActive(false);
         howTo.gameObject.SetActive(false);
-        howF.gameObject.SetActive(false);
-        howS.gameObject.SetActive(true);
-        howH.gameObject.SetActive(false);
-        howD.gameObject.SetActive(false);
+        how1.gameObject.SetActive(false);
+        how2.gameObject.SetActive(true);
+        how3.gameObject.SetActive(false);
+        how4.gameObject.SetActive(false);
     }
 
     public void BackButton4()
@@ -249,10 +249,10 @@ public class MenuController : MonoBehaviour {
         volumeController.gameObject.SetActive(false);
         howToPlayPanel.SetActive(false);
         howTo.gameObject.SetActive(false);
-        howF.gameObject.SetActive(false);
-        howS.gameObject.SetActive(false);
-        howH.gameObject.SetActive(true);
-        howD.gameObject.SetActive(false);
+        how1.gameObject.SetActive(false);
+        how2.gameObject.SetActive(false);
+        how3.gameObject.SetActive(true);
+        how4.gameObject.SetActive(false);
     }
 
     public void BackButton5()
@@ -264,9 +264,9 @@ public class MenuController : MonoBehaviour {
         volumeController.gameObject.SetActive(false);
         howToPlayPanel.SetActive(false);
         howTo.gameObject.SetActive(false);
-        howF.gameObject.SetActive(false);
-        howS.gameObject.SetActive(false);
-        howH.gameObject.SetActive(false);
-        howD.gameObject.SetActive(true);
+        how1.gameObject.SetActive(false);
+        how2.gameObject.SetActive(false);
+        how3.gameObject.SetActive(false);
+        how4.gameObject.SetActive(true);
     }
 }

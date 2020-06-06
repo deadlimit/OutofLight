@@ -8,12 +8,12 @@ using UnityEngine.UI;
 
 public class CrystalBall : MonoBehaviour, IInteractable {
 
-	public BoolVariable canUseStairs;
+	public string canUseStairs;
 	public ParticleSystem particles;
 	public Light light;
 	public GameObject Barrier;
 	private void Awake() {
-		if (canUseStairs.IsTrue()) {
+		if (RequirementManager.Instance.CheckSpecificRequirements(canUseStairs)) {
 			light.enabled = false;
 			particles.gameObject.SetActive(false);
 			gameObject.layer = LayerMask.GetMask("Default");
@@ -41,7 +41,7 @@ public class CrystalBall : MonoBehaviour, IInteractable {
 			yield return null;
 		}
 		
-		canUseStairs.ChangeValue(true);
+		RequirementManager.Instance.FulfillRequirement(canUseStairs, true);
 		Destroy(Barrier);
 		gameObject.layer = LayerMask.GetMask("Default");
 	}

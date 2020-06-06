@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -5008,6 +5008,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI 3.0
       objectReference: {fileID: 0}
+    - target: {fileID: 9000732783201284304, guid: 683620493e9c3e845a4314e4a32315db,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.39996338
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 683620493e9c3e845a4314e4a32315db, type: 3}
 --- !u!1001 &1290149392
@@ -7812,6 +7817,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f199dc89ef640bf4d9d2554849b64adf, type: 2}
   objectSpawn: []
   spawnLocations: []
+  requirementFulFilled: ChaseIsDone
 --- !u!65 &1711201970
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9520,6 +9526,11 @@ PrefabInstance:
         type: 3}
       propertyPath: requirement
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4044997063862184813, guid: ff5a9a10d7388ce4aa066e866abec80d,
+        type: 3}
+      propertyPath: requirementToSet
+      value: CanEnterGetrudesRoom
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff5a9a10d7388ce4aa066e866abec80d, type: 3}

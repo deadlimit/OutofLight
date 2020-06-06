@@ -8,5 +8,6 @@ public class SpawnPosition : ScriptableObject {
 
 
     public Vector3 spawnPosition;
+    public Quaternion spawnRotation;
 
 }
