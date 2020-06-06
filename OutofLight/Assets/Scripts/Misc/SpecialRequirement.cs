@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.UI;
 public class SpecialRequirement : MonoBehaviour, IInteractable {
