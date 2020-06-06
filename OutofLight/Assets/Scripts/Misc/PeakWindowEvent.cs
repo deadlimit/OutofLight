@@ -11,13 +11,18 @@ public class PeakWindowEvent : MonoBehaviour, IInteractable {
 	public Button button;
 	public Material ghostShader;
 	public GameObject ghostFlame;
-
+	public string ghostInWindow;
 	public float shaderSpeed;
 	public float waitBeforeShowingGhost;
 
 	public AudioSource audio;
 	
 	private void Awake() {
+		if (RequirementManager.Instance.CheckSpecificRequirements(ghostInWindow)) {
+			GetComponent<BoxCollider>().enabled = false;
+			Destroy(this);
+		}
+		
 		ghostFlame.gameObject.SetActive(false);
 		peakCamera.gameObject.SetActive(false);
 		StartCoroutine(ChangeShader(3));
@@ -36,6 +41,10 @@ public class PeakWindowEvent : MonoBehaviour, IInteractable {
 		yield return new WaitForSeconds(1);
 		StartCoroutine(ChangeShader(3));
 		peakCamera.gameObject.SetActive(false);
+		RequirementManager.Instance.FulfillRequirement(ghostInWindow, true);
+		yield return new WaitForSeconds(2);
+		GetComponent<BoxCollider>().enabled = false;
+		Destroy(this);
 	}
 	
 	public string GetPrompt() {

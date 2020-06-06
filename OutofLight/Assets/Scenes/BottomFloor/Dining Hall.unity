@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -378,6 +378,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 608a2b62aa6385949bd4bd45a2ba3405,
         type: 2}
+    - target: {fileID: 45909008, guid: a06b9f2566cb3f24cbc358cc180cbda4, type: 3}
+      propertyPath: fulfillRequirement
+      value: CanEnterLibrary
+      objectReference: {fileID: 0}
     - target: {fileID: 2075388736249216930, guid: a06b9f2566cb3f24cbc358cc180cbda4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3323,6 +3327,7 @@ MonoBehaviour:
   - {fileID: 6840830183486717675, guid: 5c60fceba708caf47919b910a0da638f, type: 3}
   spawnLocations:
   - {x: 2.5, y: 0.5, z: 8.5}
+  requirementFulFilled: CanEnterLibrary
 --- !u!4 &363285132
 Transform:
   m_ObjectHideFlags: 0
@@ -10123,6 +10128,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: acca559d34044ea4f97a3c18cf02922d,
         type: 2}
+    - target: {fileID: 4044997063862184813, guid: ff5a9a10d7388ce4aa066e866abec80d,
+        type: 3}
+      propertyPath: requirementToSet
+      value: ThirdPageRead
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff5a9a10d7388ce4aa066e866abec80d, type: 3}
 --- !u!1001 &941248675
@@ -22918,21 +22928,18 @@ PrefabInstance:
     - target: {fileID: 8694563811859495829, guid: 646626f15498446478eadf0864bb2f0f,
         type: 3}
       propertyPath: requirements.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 109f9f5a86b1a784bb26b526ec22e806,
-        type: 2}
+      value: FirstPageRead
+      objectReference: {fileID: 0}
     - target: {fileID: 8694563811859495829, guid: 646626f15498446478eadf0864bb2f0f,
         type: 3}
       propertyPath: requirements.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: 5517fc204a8e5ac4fb1097da9ab58adb,
-        type: 2}
+      value: SecondPageRead
+      objectReference: {fileID: 0}
     - target: {fileID: 8694563811859495829, guid: 646626f15498446478eadf0864bb2f0f,
         type: 3}
       propertyPath: requirements.Array.data[2]
-      value: 
-      objectReference: {fileID: 11400000, guid: 33201603455ee7f4f828f794c382378c,
-        type: 2}
+      value: ThirdPageRead
+      objectReference: {fileID: 0}
     - target: {fileID: 8694563811859495829, guid: 646626f15498446478eadf0864bb2f0f,
         type: 3}
       propertyPath: collidersInParent.Array.data[0]

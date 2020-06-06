@@ -6,8 +6,9 @@ public class JournalBehavior : MonoBehaviour, IInteractable {
     public GameEvent PageFound;
     public JournalPage page;
     public Journal journal;
-    public BoolVariable requirement;
     private AudioSource audio;
+
+    public string requirementToSet;
     
     private void Awake() {
         if (journal.Contains(page) || page.dontRespawn)
@@ -17,8 +18,8 @@ public class JournalBehavior : MonoBehaviour, IInteractable {
     }
     
     public void Use() {
-        if (requirement != null)
-            requirement.ChangeValue(true);
+        if(requirementToSet.Length > 0)
+            RequirementManager.Instance.FulfillRequirement(requirementToSet, true);
         audio.Play();
         journal.Add(page);
         PageFound.Raise();

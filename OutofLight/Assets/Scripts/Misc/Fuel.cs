@@ -20,7 +20,7 @@ public class Fuel : MonoBehaviour, IInteractable {
         FuelPickedUp.Raise();
         audio.Play();
         stepAmount.ChangeValue(+refillAmount);
-        transform.localScale = Vector3.Lerp(transform.localScale, new Vector3(0f, 0f, 0f), Time.deltaTime * 100f);
+        GetComponent<SphereCollider>().enabled = false;
         Destroy(transform.parent.gameObject, 1.5f);
         darkStepAmount.ChangeValue(-6);
     }

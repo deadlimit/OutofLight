@@ -7,10 +7,11 @@ public class BarredUpDoor : MonoBehaviour, IInteractable {
 
 	public GameEvent SpecialEvent;
 	public Button interactImage;
-	public BoolVariable CanEnterLibrary;
+	public string fulfillRequirement;
 	public void Use() {
-	 	CanEnterLibrary.ChangeValue(true);
-	    SpecialEvent.Raise();
+		if(fulfillRequirement.Length > 0)
+			RequirementManager.Instance.FulfillRequirement(fulfillRequirement, true);
+		SpecialEvent.Raise();
 	}
 
     public string GetPrompt() {

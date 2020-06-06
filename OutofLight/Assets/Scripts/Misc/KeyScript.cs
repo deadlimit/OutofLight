@@ -7,25 +7,20 @@ using UnityEngine.SceneManagement;
 public class KeyScript : MonoBehaviour, IInteractable
 {
     public AudioSource audio;
-    public BoolVariable hasKey;
+    public string hasKey;
     public Button interactImage;
     public string prompt;
-    public int currentScene;
 
     private void Awake()
     {
         audio = GetComponent<AudioSource>();
-        currentScene = SceneManager.GetActiveScene().buildIndex;
     }
 
     public void Use() 
     {
-        if (SceneManager.GetActiveScene().buildIndex == currentScene)
-        {
-            audio.Play();
-            hasKey.ChangeValue(true);
-            Destroy(gameObject);
-        }
+        audio.Play();
+        RequirementManager.Instance.FulfillRequirement(hasKey, true);
+        Destroy(gameObject);
     }
 
     public string GetPrompt()
