@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.coffee.ui-particle": "file:C:/Users/Klump/Desktop/MAPP Spelprojektet/ParticleEffectForUGUI-upm",
+    "com.coffee.ui-particle": "https://github.com/mob-sakai/ParticleEffectForUGUI.git",
     "com.unity.2d.animation": "3.2.1",
     "com.unity.2d.pixel-perfect": "2.0.4",
     "com.unity.2d.psdimporter": "2.1.3",
@@ -50,5 +50,11 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0"
+  },
+  "lock": {
+    "com.coffee.ui-particle": {
+      "revision": "HEAD",
+      "hash": "901e7f16478a3baa451e8de79a4a61d3879d521d"
+    }
   }
 }
