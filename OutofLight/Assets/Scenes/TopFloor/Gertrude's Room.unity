@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1663,12 +1663,12 @@ PrefabInstance:
     - target: {fileID: 8534830947963694275, guid: 07432dbebb018e1469d4f807f995b70b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.7352421
+      value: 3.74
       objectReference: {fileID: 0}
     - target: {fileID: 8534830947963694275, guid: 07432dbebb018e1469d4f807f995b70b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.3679509
+      value: 0.382
       objectReference: {fileID: 0}
     - target: {fileID: 8534830947963694275, guid: 07432dbebb018e1469d4f807f995b70b,
         type: 3}
@@ -6983,7 +6983,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerHitByWind: {fileID: 11400000, guid: 25318bbb7888ef04f94dcc59f55884fe, type: 2}
   StepAmount: {fileID: 11400000, guid: 88431f49dcf46fb45aa9686e9310270c, type: 2}
-  lossAmount: 2
+  lossAmount: -2
 --- !u!65 &590326287
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8401,7 +8401,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerHitByWind: {fileID: 11400000, guid: 25318bbb7888ef04f94dcc59f55884fe, type: 2}
   StepAmount: {fileID: 11400000, guid: 88431f49dcf46fb45aa9686e9310270c, type: 2}
-  lossAmount: 2
+  lossAmount: -2
 --- !u!65 &660036626
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13247,7 +13247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerHitByWind: {fileID: 11400000, guid: 25318bbb7888ef04f94dcc59f55884fe, type: 2}
   StepAmount: {fileID: 11400000, guid: 88431f49dcf46fb45aa9686e9310270c, type: 2}
-  lossAmount: 2
+  lossAmount: -2
 --- !u!65 &1134492920
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13884,6 +13884,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2950940166436822649, guid: a625efba65ba76c48bdb7405ac8f2759,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -1.33
+      objectReference: {fileID: 0}
     - target: {fileID: 3061789821900480081, guid: a625efba65ba76c48bdb7405ac8f2759,
         type: 3}
       propertyPath: m_TrackedObjectOffset.x
@@ -13952,7 +13957,7 @@ PrefabInstance:
     - target: {fileID: 7931121585875472208, guid: a625efba65ba76c48bdb7405ac8f2759,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.112
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7931121585875472208, guid: a625efba65ba76c48bdb7405ac8f2759,
         type: 3}
