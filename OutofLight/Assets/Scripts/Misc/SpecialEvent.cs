@@ -13,8 +13,9 @@ public class SpecialEvent : MonoBehaviour {
     private Dictionary<GameObject, Vector3> map = new Dictionary<GameObject, Vector3>();
 
     private void Awake() {
-	    if (RequirementManager.Instance.CheckSpecificRequirements(requirementFulFilled))
-		    Destroy(gameObject);
+	    if(requirementFulFilled.Length > 0)
+	    	if (RequirementManager.Instance.CheckSpecificRequirements(requirementFulFilled))
+		    	Destroy(gameObject);
 	    
 	    for (int i = 0; i < objectSpawn.Count; i++) {
 		    map.Add(objectSpawn[i], spawnLocations[i]);
@@ -45,6 +46,7 @@ public class SpecialEvent : MonoBehaviour {
 		    SpawnObjects();
 	    }
 	    
-	    RequirementManager.Instance.FulfillRequirement(requirementFulFilled, true);
+	    if(requirementFulFilled.Length > 0)
+	    	RequirementManager.Instance.FulfillRequirement(requirementFulFilled, true);
     }
 }
