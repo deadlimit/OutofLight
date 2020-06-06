@@ -19,7 +19,6 @@ public class MenuController : MonoBehaviour {
 
     private void Awake()
     {
-        print(journal);
         try {
 
             foreach (var e in progression) {
@@ -129,6 +128,7 @@ public class MenuController : MonoBehaviour {
         volumeController.gameObject.SetActive(false);
         howToPlayPanel.SetActive(false);
         howTo.gameObject.SetActive(false);
+        
         howF.gameObject.SetActive(true);
         howS.gameObject.SetActive(false);
         howH.gameObject.SetActive(false);
@@ -144,6 +144,7 @@ public class MenuController : MonoBehaviour {
         volumeController.gameObject.SetActive(false);
         howToPlayPanel.SetActive(false);
         howTo.gameObject.SetActive(false);
+        
         howF.gameObject.SetActive(false);
         howS.gameObject.SetActive(true);
         howH.gameObject.SetActive(false);
@@ -159,6 +160,7 @@ public class MenuController : MonoBehaviour {
         volumeController.gameObject.SetActive(false);
         howToPlayPanel.SetActive(false);
         howTo.gameObject.SetActive(false);
+        
         howF.gameObject.SetActive(false);
         howS.gameObject.SetActive(false);
         howH.gameObject.SetActive(true);
@@ -174,6 +176,7 @@ public class MenuController : MonoBehaviour {
         volumeController.gameObject.SetActive(false);
         howToPlayPanel.SetActive(false);
         howTo.gameObject.SetActive(false);
+        
         howF.gameObject.SetActive(false);
         howS.gameObject.SetActive(false);
         howH.gameObject.SetActive(false);
@@ -187,6 +190,7 @@ public class MenuController : MonoBehaviour {
         exitGame.gameObject.SetActive(false);
         returnToMenu.gameObject.SetActive(false);
         volumeController.gameObject.SetActive(false);
+        
         howToPlayPanel.SetActive(true);
         howTo.gameObject.SetActive(false);
         howF.gameObject.SetActive(false);

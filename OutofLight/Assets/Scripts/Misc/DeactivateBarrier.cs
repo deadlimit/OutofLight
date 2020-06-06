@@ -5,20 +5,15 @@ using UnityEngine;
 
 public class DeactivateBarrier : MonoBehaviour {
 
-	public GameObject barrierOne;
-	public GameObject barrierTwo;
-	public GameObject barrierThree;
-	public BoolVariable CanUseStairs;
+	public List<GameObject> barriers = new List<GameObject>();
+	public string canUseStairs;
 
 	public void Awake() {
-		if (CanUseStairs.IsTrue()) {
-			Destroy(barrierOne);
-			Destroy(barrierTwo);
-			Destroy(barrierThree);
-			Destroy(gameObject);
-		}
+		if (!RequirementManager.Instance.CheckSpecificRequirements(canUseStairs)) return;
+		foreach (var obj in barriers)
+			Destroy(obj);
 		
-		
+		Destroy(gameObject);
 	}
 
 }

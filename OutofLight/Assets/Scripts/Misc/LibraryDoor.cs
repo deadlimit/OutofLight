@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class LibraryDoor : MonoBehaviour {
 
-	public BoolVariable canEnterLibrary;
+	public string canEnterLibrary;
 	public Animator anim;
 	public void Awake() {
-		if (canEnterLibrary.IsTrue())
+		if (RequirementManager.Instance.CheckSpecificRequirements(canEnterLibrary))
 			anim.enabled = true;
 		else {
 			anim.enabled = false;
