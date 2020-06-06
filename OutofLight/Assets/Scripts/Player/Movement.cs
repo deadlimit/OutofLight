@@ -12,7 +12,8 @@ public class Movement : MonoBehaviour {
     public Vector3List ValidMoveDirections;
     public SpawnPosition SpawnPosition;
     public BoolVariable UseKeyboard;
-    
+    public bool isDead;
+
     private bool isMoving;
     private bool isTurning;
     private Vector3 swipeDirection;
@@ -33,17 +34,20 @@ public class Movement : MonoBehaviour {
             thisTransform.position = SpawnPosition.spawnPosition;
         isMoving = false;
         isTurning = false;
-
+        isDead = false;
     }
-    
-    
 
-    private void Update() {
 
-        if (UseKeyboard.IsTrue())
-            KeyboardInput();
-        else
-            SwipeInput();
+
+    private void Update()
+    {
+        if (isDead == false)
+        {
+            if (UseKeyboard.IsTrue())
+                KeyboardInput();
+            else
+                SwipeInput();
+        }
     }
 
     private void KeyboardInput() {
@@ -133,6 +137,11 @@ public class Movement : MonoBehaviour {
         }
 
         return false;
+    }
+
+    public void IsDead()
+    {
+        isDead = true;
     }
     
 }
