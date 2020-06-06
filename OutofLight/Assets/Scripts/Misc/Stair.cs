@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Cinemachine;
 using UnityEngine;
 using UnityEngine.UI;
 public class Stair : MonoBehaviour, IInteractable {
@@ -6,6 +7,7 @@ public class Stair : MonoBehaviour, IInteractable {
 	public GameEvent ClimbStairs;
 	public TransitInfo up;
 	public Button interactImage;
+	public CinemachineVirtualCamera camera;
 	private Transform player;
 
 	public string prompt;
@@ -30,6 +32,7 @@ public class Stair : MonoBehaviour, IInteractable {
 	public void Use() {
 		audio.Play();
 		StartCoroutine(MoveUp(up.otherSide));
+		CameraController.instance.ActivateCamera(camera);
 	}
 
 	public string GetPrompt() {
@@ -40,8 +43,7 @@ public class Stair : MonoBehaviour, IInteractable {
 		return interactImage;
 	}
 
-
-
+	
 	public IEnumerator MoveUp(Vector3 direction) {
 		ClimbStairs.Raise();
 		yield return new WaitForSeconds(1.5f);

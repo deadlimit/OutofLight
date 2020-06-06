@@ -5,12 +5,14 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class HugeWindowInspection : MonoBehaviour, IInteractable {
-	
+
+	public CinemachineVirtualCamera camera, cameraTwo;
 	public GameObject dave;
 	public GameEvent UpdateTileCheck;
 	public Button interactImage;
 	public string prompt;
 	private bool isLooking;
+	
 
 	public AudioSource audio;
 	
@@ -27,10 +29,10 @@ public class HugeWindowInspection : MonoBehaviour, IInteractable {
 	private IEnumerator InspectSequence() {
 		
 		dave.GetComponent<Movement>().enabled = false;
-		CameraController.instance.ActivateWindowCamera();
+		CameraController.instance.ActivateCamera(camera);
 		yield return new WaitForSeconds(3);
 		dave.GetComponent<Movement>().enabled = true;
-		CameraController.instance.ActivateStaticCamera();
+		CameraController.instance.ActivateCamera(cameraTwo);
 		UpdateTileCheck.Raise();
 	}
 	

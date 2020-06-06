@@ -13,7 +13,7 @@ public class SpecialRequirement : MonoBehaviour, IInteractable {
 	private bool requirementsMet;
 	public BoxCollider[] collidersInParent;
 	
-	public void Awake() {
+	public void Start() {
 		thisCollider = GetComponent<BoxCollider>();
 		DelegateCheckRequirements();
 		if (requirementsMet) return;

@@ -1520,6 +1520,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI 3.0
       objectReference: {fileID: 0}
+    - target: {fileID: 9000732783201284304, guid: 683620493e9c3e845a4314e4a32315db,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.39996338
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 683620493e9c3e845a4314e4a32315db, type: 3}
 --- !u!4 &281391882 stripped
@@ -2104,7 +2109,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &390007254
 Transform:
   m_ObjectHideFlags: 0
@@ -2136,7 +2141,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 10
+  m_Priority: 1
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 1299855466}
   m_Follow: {fileID: 0}
@@ -3181,6 +3186,83 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1091840613}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &558604714
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 558604715}
+  - component: {fileID: 558604718}
+  - component: {fileID: 558604717}
+  - component: {fileID: 558604716}
+  m_Layer: 9
+  m_Name: MiddleToGround
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &558604715
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558604714}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
+  m_LocalPosition: {x: -2.6, y: 3.89, z: -1.28}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1011810310}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
+--- !u!65 &558604716
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558604714}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000002, y: 1, z: 3.5084968}
+  m_Center: {x: 2.0000002, y: 2, z: 0.9628725}
+--- !u!114 &558604717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558604714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5945c254a646e024d98c8765943928fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClimbStairs: {fileID: 11400000, guid: 5e24268eb1aa7fb46a0f46b8fc5accd9, type: 2}
+  up: {fileID: 11400000, guid: 877f26ac1970f754393691556d45d448, type: 2}
+  interactImage: {fileID: 0}
+  camera: {fileID: 9070881223680195793}
+  prompt: Go Down
+  audio: {fileID: 1821406694}
+--- !u!65 &558604718
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558604714}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 3.9920006}
+  m_Center: {x: 0.000000043470408, y: 0, z: 0.81767195}
 --- !u!1 &562391195
 GameObject:
   m_ObjectHideFlags: 0
@@ -4063,7 +4145,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &676816683
 Transform:
   m_ObjectHideFlags: 0
@@ -4071,7 +4153,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 676816682}
-  m_LocalRotation: {x: 0.13164333, y: 0.17689928, z: -0.023882452, w: 0.975093}
+  m_LocalRotation: {x: 0.13164334, y: 0.17689927, z: -0.023882454, w: 0.975093}
   m_LocalPosition: {x: -7.92, y: -3.55, z: 5.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4095,7 +4177,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 10
+  m_Priority: 1
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 108394045}
   m_Follow: {fileID: 0}
@@ -4407,64 +4489,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1818381616}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &745187311
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 745187312}
-  - component: {fileID: 745187313}
-  - component: {fileID: 745187314}
-  m_Layer: 0
-  m_Name: ArrowTrigger
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &745187312
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 745187311}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.27, y: 4.9, z: -2.12}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1011810310}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &745187313
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 745187311}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.84, y: 1.6, z: 3.32}
-  m_Center: {x: 0, y: 0.25, z: 0}
---- !u!114 &745187314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 745187311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c696722d04275149989904a9a36388a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowStairArrows: {fileID: 11400000, guid: 524437c8adc278e4a83dd9ec9ee8ddb9, type: 2}
 --- !u!1 &747460000 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3471985235137391480, guid: be593d54a61f66a419c137fc466b40ea,
@@ -4940,7 +4964,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &796244055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4957,7 +4981,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 10
+  m_Priority: 1
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 1299855466}
   m_Follow: {fileID: 0}
@@ -5035,8 +5059,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 2, y: 2, z: 1}
+  m_Size: {x: 0.99999976, y: 1, z: 4.061141}
+  m_Center: {x: 1.9999999, y: 2, z: 1.4764804}
 --- !u!114 &843132546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5052,6 +5076,7 @@ MonoBehaviour:
   ClimbStairs: {fileID: 11400000, guid: 5e24268eb1aa7fb46a0f46b8fc5accd9, type: 2}
   up: {fileID: 11400000, guid: 4103d1f501e514342b77a5be180aaa49, type: 2}
   interactImage: {fileID: 0}
+  camera: {fileID: 796244055}
   prompt: Go Down
   audio: {fileID: 1821406694}
 --- !u!65 &843132547
@@ -5065,8 +5090,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 1}
+  m_Size: {x: 1, y: 1, z: 3.2355957}
+  m_Center: {x: -0.00000014542795, y: 0, z: 1.6099695}
 --- !u!1 &844065787
 GameObject:
   m_ObjectHideFlags: 0
@@ -5129,6 +5154,7 @@ MonoBehaviour:
   ClimbStairs: {fileID: 11400000, guid: 5e24268eb1aa7fb46a0f46b8fc5accd9, type: 2}
   up: {fileID: 11400000, guid: d5b81b3df3b1445489952b90384c3c16, type: 2}
   interactImage: {fileID: 0}
+  camera: {fileID: 796244055}
   prompt: Go up
   audio: {fileID: 1821406694}
 --- !u!65 &844065791
@@ -5771,7 +5797,9 @@ Transform:
   - {fileID: 844065788}
   - {fileID: 843132544}
   - {fileID: 1196133274}
-  - {fileID: 745187312}
+  - {fileID: 1922418002}
+  - {fileID: 558604715}
+  - {fileID: 1432852083}
   m_Father: {fileID: 307303121}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6730,8 +6758,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 2, y: 2, z: 1}
+  m_Size: {x: 0.99999976, y: 1, z: 3.1816957}
+  m_Center: {x: 2, y: 2, z: -0.09084771}
 --- !u!114 &1196133276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6747,7 +6775,8 @@ MonoBehaviour:
   ClimbStairs: {fileID: 11400000, guid: 5e24268eb1aa7fb46a0f46b8fc5accd9, type: 2}
   up: {fileID: 11400000, guid: 936172388a2bbd2439beb04f89d9bdad, type: 2}
   interactImage: {fileID: 0}
-  prompt: Go down
+  camera: {fileID: 796244055}
+  prompt: Go Down
   audio: {fileID: 1821406694}
 --- !u!65 &1196133277
 BoxCollider:
@@ -6760,8 +6789,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 1}
+  m_Size: {x: 1, y: 1, z: 3.3791578}
+  m_Center: {x: 0, y: 0, z: -0.18957873}
 --- !u!1001 &1264751334
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7480,7 +7509,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1391063810}
   - component: {fileID: 1391063809}
-  - component: {fileID: 1391063811}
   m_Layer: 0
   m_Name: CameraController
   m_TagString: Untagged
@@ -7500,11 +7528,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd88b2ea4bc372649937057bef0d03e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainViewCamera: {fileID: 9070881223680195793}
-  staticStairCamera: {fileID: 796244055}
-  leftBalconyCamera: {fileID: 676816684}
-  rightBalconyCamera: {fileID: 1848538020}
-  windowInspectCamera: {fileID: 390007255}
+  cameraList:
+  - {fileID: 9070881223680195793}
+  - {fileID: 676816684}
+  - {fileID: 1848538020}
+  - {fileID: 796244055}
+  - {fileID: 390007255}
+  activeCamera: {fileID: 9070881223680195793}
 --- !u!4 &1391063810
 Transform:
   m_ObjectHideFlags: 0
@@ -7524,33 +7554,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 57
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1391063811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1391063808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f624fc09539ff242ad601509638ac53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 5e24268eb1aa7fb46a0f46b8fc5accd9, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1391063809}
-        m_MethodName: ActivateStaticCamera
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1001 &1391338687
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7724,6 +7727,83 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 36115202}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1432852082
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1432852083}
+  - component: {fileID: 1432852086}
+  - component: {fileID: 1432852085}
+  - component: {fileID: 1432852084}
+  m_Layer: 9
+  m_Name: UpToRight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1432852083
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432852082}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -7.22, y: 3.89, z: 1.58}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1011810310}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &1432852084
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432852082}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 2}
+  m_Center: {x: 2, y: 2, z: 1}
+--- !u!114 &1432852085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432852082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5945c254a646e024d98c8765943928fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClimbStairs: {fileID: 11400000, guid: 5e24268eb1aa7fb46a0f46b8fc5accd9, type: 2}
+  up: {fileID: 11400000, guid: 1ee5815ff31951a418c3f9170edff545, type: 2}
+  interactImage: {fileID: 0}
+  camera: {fileID: 1848538020}
+  prompt: Go Up
+  audio: {fileID: 1821406694}
+--- !u!65 &1432852086
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432852082}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 3.434913}
+  m_Center: {x: 0, y: 0, z: 1.096216}
 --- !u!1 &1453952945
 GameObject:
   m_ObjectHideFlags: 0
@@ -7781,6 +7861,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 986d037546457fa42acc885e4cbec1e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camera: {fileID: 0}
+  cameraTwo: {fileID: 0}
   dave: {fileID: 747460000}
   UpdateTileCheck: {fileID: 11400000, guid: 27f316f1df5a3fe4b950f524f7dd62e3, type: 2}
   interactImage: {fileID: 8056081773800310474, guid: 7bd3ab2c6cf9e754e968c96ca88bd4ab,
@@ -10910,7 +10992,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1848538019
 Transform:
   m_ObjectHideFlags: 0
@@ -10918,7 +11000,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1848538018}
-  m_LocalRotation: {x: 0.13080598, y: -0.17835212, z: 0.02392919, w: 0.9749399}
+  m_LocalRotation: {x: 0.130806, y: -0.17835213, z: 0.023929186, w: 0.9749399}
   m_LocalPosition: {x: -0.17, y: -3.69, z: 5.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -10942,7 +11024,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 10
+  m_Priority: 1
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 734551173}
   m_Follow: {fileID: 0}
@@ -11453,6 +11535,83 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1439e19583b69d54cb4abf9db129b24c, type: 3}
+--- !u!1 &1922418001
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1922418002}
+  - component: {fileID: 1922418005}
+  - component: {fileID: 1922418004}
+  - component: {fileID: 1922418003}
+  m_Layer: 9
+  m_Name: UpToLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1922418002
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922418001}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -5.07, y: 3.89, z: -5.56}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1011810310}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!65 &1922418003
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922418001}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 2}
+  m_Center: {x: 2, y: 2, z: 1}
+--- !u!114 &1922418004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922418001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5945c254a646e024d98c8765943928fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClimbStairs: {fileID: 11400000, guid: 5e24268eb1aa7fb46a0f46b8fc5accd9, type: 2}
+  up: {fileID: 11400000, guid: c08caedb5e321bc41a7c0653e5b6d0ee, type: 2}
+  interactImage: {fileID: 0}
+  camera: {fileID: 676816684}
+  prompt: Go Up
+  audio: {fileID: 1821406694}
+--- !u!65 &1922418005
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922418001}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 3.434913}
+  m_Center: {x: 0, y: 0, z: 1.096216}
 --- !u!1001 &1936026825
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13448,7 +13607,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 1
+  m_Priority: 300
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 56489077}
   m_Follow: {fileID: 9070881224442032868}
