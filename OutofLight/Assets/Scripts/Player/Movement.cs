@@ -31,7 +31,10 @@ public class Movement : MonoBehaviour {
 
         touchInput = GetComponent<TouchInput>();
         if (Time.time > 1f)
+        {
             thisTransform.position = SpawnPosition.spawnPosition;
+            thisTransform.rotation = SpawnPosition.spawnRotation;
+        }
         isMoving = false;
         isTurning = false;
         isDead = false;
