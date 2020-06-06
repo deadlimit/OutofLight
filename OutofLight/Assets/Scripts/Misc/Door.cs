@@ -32,6 +32,7 @@ public class Door : MonoBehaviour, IInteractable {
         PlayerOpenAnimationTrigger.Raise();
         doorCamera.gameObject.SetActive(true);
         spawn.spawnPosition = transitInfo.otherSide;
+        spawn.spawnRotation = transitInfo.rotation;
         yield return new WaitForSeconds(2);
         SceneManager.LoadScene(transitInfo.sceneNumber);
     }
