@@ -8,22 +8,30 @@ public class MasterBedroomMovable : MonoBehaviour
 	public Quaternion rotate;
 
 	private AudioSource audio;
-
+	public bool wallMoved;
 	private void Awake()
 	{
 		audio = GetComponent<AudioSource>();
+		wallMoved = false;
 	}
 	public void Method()
 	{
-		StartCoroutine(IMove());
-		if (gameObject.CompareTag("LockedMBDoor"))
+		if (wallMoved == false)
 		{
-			OpenDoor();
-			audio.Play();
-		}
-		if (gameObject.CompareTag("MBSecretDoor"))
-		{
-			audio.Play();
+			StartCoroutine(IMove());
+			if (gameObject.CompareTag("LockedMBDoor"))
+			{
+				OpenDoor();
+				audio.Play();
+			}
+			if (gameObject.CompareTag("MBSecretDoor"))
+			{
+				if (wallMoved == false)
+				{
+					audio.Play();
+					wallMoved = true;
+				}				
+			}
 		}
 	}
 

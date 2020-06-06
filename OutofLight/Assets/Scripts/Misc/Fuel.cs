@@ -5,22 +5,23 @@ using UnityEngine.UI;
 
 public class Fuel : MonoBehaviour, IInteractable {
 
-    private Transform _transform;
     public GameEvent FuelPickedUp;
     public IntVariable stepAmount, darkStepAmount;
+    public AudioSource audio;
 
     [SerializeField]
     private int refillAmount;
-
     private void Awake() {
-        _transform = GetComponent<Transform>(); 
+        audio = GetComponent<AudioSource>();
     }
 
     
     public void Use() {
         FuelPickedUp.Raise();
+        audio.Play();
         stepAmount.ChangeValue(+refillAmount);
-        Destroy(transform.parent.gameObject);
+        transform.localScale = Vector3.Lerp(transform.localScale, new Vector3(0f, 0f, 0f), Time.deltaTime * 100f);
+        Destroy(transform.parent.gameObject, 1.5f);
         darkStepAmount.ChangeValue(-6);
     }
 
