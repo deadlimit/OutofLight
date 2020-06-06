@@ -1077,6 +1077,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI 3.0
       objectReference: {fileID: 0}
+    - target: {fileID: 9000732783201284304, guid: 683620493e9c3e845a4314e4a32315db,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.100097656
+      objectReference: {fileID: 0}
+    - target: {fileID: 9000732783201284304, guid: 683620493e9c3e845a4314e4a32315db,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.4000244
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 683620493e9c3e845a4314e4a32315db, type: 3}
 --- !u!1 &772739888
@@ -2440,7 +2450,7 @@ PrefabInstance:
     - target: {fileID: 8534830947963694268, guid: 07432dbebb018e1469d4f807f995b70b,
         type: 3}
       propertyPath: startingStepsAmount
-      value: 20
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8534830947963694270, guid: 07432dbebb018e1469d4f807f995b70b,
         type: 3}

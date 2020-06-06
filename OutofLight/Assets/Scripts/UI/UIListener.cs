@@ -5,7 +5,6 @@ public class UIListener : MonoBehaviour {
 	public GameObject journalPageDisplay, respawnMechanic, player, stairArrows;
 	[Header("Fade in + room text")]
 	public GameObject roomPresenter;
-
 	public Canvas canvas;
 	public GameObject blackFade;
 
@@ -42,9 +41,5 @@ public class UIListener : MonoBehaviour {
 		var b = Instantiate(blackFade, gameObject.transform);
 		b.transform.SetAsFirstSibling();
 	}
-
-	
-
-
 	
 }
