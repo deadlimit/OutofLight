@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3611,22 +3611,22 @@ PrefabInstance:
     - target: {fileID: 3211230711405006371, guid: ff5a9a10d7388ce4aa066e866abec80d,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.60404056
+      value: -0.6040333
       objectReference: {fileID: 0}
     - target: {fileID: 3211230711405006371, guid: ff5a9a10d7388ce4aa066e866abec80d,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.36760718
+      value: 0.36761907
       objectReference: {fileID: 0}
     - target: {fileID: 3211230711405006371, guid: ff5a9a10d7388ce4aa066e866abec80d,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.36760718
+      value: 0.36761907
       objectReference: {fileID: 0}
     - target: {fileID: 3211230711405006371, guid: ff5a9a10d7388ce4aa066e866abec80d,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.60404056
+      value: 0.6040333
       objectReference: {fileID: 0}
     - target: {fileID: 3211230711405006371, guid: ff5a9a10d7388ce4aa066e866abec80d,
         type: 3}
@@ -3636,7 +3636,7 @@ PrefabInstance:
     - target: {fileID: 3211230711405006371, guid: ff5a9a10d7388ce4aa066e866abec80d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -90.00001
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 3211230711405006371, guid: ff5a9a10d7388ce4aa066e866abec80d,
         type: 3}
@@ -3646,7 +3646,7 @@ PrefabInstance:
     - target: {fileID: 3211230711405006371, guid: ff5a9a10d7388ce4aa066e866abec80d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 62.648003
+      value: 62.65
       objectReference: {fileID: 0}
     - target: {fileID: 4044997063862184813, guid: ff5a9a10d7388ce4aa066e866abec80d,
         type: 3}
@@ -11146,6 +11146,16 @@ PrefabInstance:
       propertyPath: prompt
       value: Escape!
       objectReference: {fileID: 0}
+    - target: {fileID: 2950940166436822649, guid: a625efba65ba76c48bdb7405ac8f2759,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 2950940166436822649, guid: a625efba65ba76c48bdb7405ac8f2759,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.36
+      objectReference: {fileID: 0}
     - target: {fileID: 6361995105449852227, guid: a625efba65ba76c48bdb7405ac8f2759,
         type: 3}
       propertyPath: m_Name
@@ -11229,7 +11239,7 @@ PrefabInstance:
     - target: {fileID: 7931121585875472208, guid: a625efba65ba76c48bdb7405ac8f2759,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.6
+      value: 0.55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a625efba65ba76c48bdb7405ac8f2759, type: 3}
@@ -12405,7 +12415,7 @@ Transform:
   m_GameObject: {fileID: 1383110278}
   m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
   m_LocalPosition: {x: 12.5, y: 3, z: 12.38}
-  m_LocalScale: {x: 0.75, y: 3, z: 1}
+  m_LocalScale: {x: 0.75, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 68
@@ -15539,7 +15549,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1767270903}
-  m_LocalRotation: {x: 0.6279078, y: 0.18732223, z: -0.15928657, w: 0.73842406}
+  m_LocalRotation: {x: 0.62790775, y: 0.1873224, z: -0.15928672, w: 0.73842394}
   m_LocalPosition: {x: 1.73, y: 9.92, z: -0.92}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -48081,7 +48091,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8069627058321407877}
-  m_LocalRotation: {x: 0.6279078, y: 0.18732223, z: -0.15928657, w: 0.73842406}
+  m_LocalRotation: {x: 0.62790775, y: 0.1873224, z: -0.15928672, w: 0.73842394}
   m_LocalPosition: {x: 1.73, y: 9.92, z: -0.92}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
